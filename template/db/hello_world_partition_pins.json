@@ -1,0 +1,45 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "oLEDG[7]",
+					"strict" : false
+				},
+				{
+					"name" : "oLEDG[6]",
+					"strict" : false
+				},
+				{
+					"name" : "oLEDG[5]",
+					"strict" : false
+				},
+				{
+					"name" : "oLEDG[4]",
+					"strict" : false
+				},
+				{
+					"name" : "oLEDG[3]",
+					"strict" : false
+				},
+				{
+					"name" : "oLEDG[2]",
+					"strict" : false
+				},
+				{
+					"name" : "oLEDG[1]",
+					"strict" : false
+				},
+				{
+					"name" : "oLEDG[0]",
+					"strict" : false
+				},
+				{
+					"name" : "iCLK_50",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

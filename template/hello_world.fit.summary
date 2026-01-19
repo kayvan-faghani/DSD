@@ -1,0 +1,20 @@
+Fitter Status : Successful - Mon Jan 19 12:53:09 2026
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : hello_world
+Top-level Entity Name : hello_world
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 1,381 / 32,070 ( 4 % )
+Total registers : 2148
+Total pins : 47 / 457 ( 10 % )
+Total virtual pins : 0
+Total block memory bits : 210,048 / 4,065,280 ( 5 % )
+Total RAM Blocks : 45 / 397 ( 11 % )
+Total DSP Blocks : 0 / 87 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

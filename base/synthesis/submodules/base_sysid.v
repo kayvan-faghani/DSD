@@ -31,7 +31,7 @@
 // altera message_level Level1 
 // altera message_off 10034 10035 10036 10037 10230 10240 10030 
 
-module task1_sysid (
+module base_sysid (
                // inputs:
                 address,
                 clock,
@@ -49,7 +49,7 @@ module task1_sysid (
 
   wire    [ 31: 0] readdata;
   //control_slave, which is an e_avalon_slave
-  assign readdata = address ? 1768782591 : 0;
+  assign readdata = address ? 1768852496 : 0;
 
 endmodule
 

@@ -237,7 +237,7 @@ https://fpgasoftware.intel.com/eula.
 	(annotation_block (location)(rect 280 400 344 416))
 )
 (symbol
-	(rect 640 80 1136 224)
+	(rect 664 80 1160 224)
 	(text "task1" (rect 234 -1 278 18)(font "Arial" (font_size 10)))
 	(text "inst" (rect 8 128 31 143)(font "Arial" ))
 	(port
@@ -275,20 +275,31 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (connector
-	(pt 640 192)
-	(pt 536 192)
-	(bus)
-)
-(connector
-	(pt 536 192)
 	(pt 536 232)
+	(pt 536 192)
 	(bus)
 )
 (connector
-	(pt 640 152)
+	(pt 544 136)
 	(pt 544 152)
 )
 (connector
 	(pt 544 152)
-	(pt 544 136)
+	(pt 664 152)
 )
+(connector
+	(pt 664 152)
+	(pt 672 152)
+)
+(connector
+	(pt 536 192)
+	(pt 664 192)
+	(bus)
+)
+(connector
+	(pt 664 192)
+	(pt 672 192)
+	(bus)
+)
+(junction (pt 664 152))
+(junction (pt 664 192))

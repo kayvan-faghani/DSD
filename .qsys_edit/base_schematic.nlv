@@ -1,0 +1,22 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst base.sys_clk_timer -pg 1 -lvl 2 -y 130
+preplace inst base.sysid -pg 1 -lvl 2 -y 310
+preplace inst base.cpu.cpu -pg 1
+preplace inst base.onchip_mem -pg 1 -lvl 2 -y 230
+preplace inst base.led_pio -pg 1 -lvl 2 -y 410
+preplace inst base.jtag_uart -pg 1 -lvl 2 -y 30
+preplace inst base.cpu -pg 1 -lvl 1 -y 280
+preplace inst base.cpu.reset_bridge -pg 1
+preplace inst base.cpu.clock_bridge -pg 1
+preplace inst base.clk_0 -pg 1 -lvl 2 -y 530
+preplace inst base -pg 1 -lvl 1 -y 40 -regy -20
+preplace netloc FAN_OUT<net_container>base</net_container>(MASTER)cpu.irq,(SLAVE)sys_clk_timer.irq,(SLAVE)jtag_uart.irq) 1 1 1 610
+preplace netloc FAN_OUT<net_container>base</net_container>(SLAVE)cpu.reset,(SLAVE)sysid.reset,(SLAVE)jtag_uart.reset,(SLAVE)onchip_mem.reset1,(SLAVE)led_pio.reset,(SLAVE)sys_clk_timer.reset,(MASTER)clk_0.clk_reset) 1 0 3 230 420 650 520 880
+preplace netloc POINT_TO_POINT<net_container>base</net_container>(MASTER)cpu.debug_reset_request,(SLAVE)clk_0.clk_in_reset) 1 1 1 590
+preplace netloc EXPORT<net_container>base</net_container>(SLAVE)base.led_pio_external_connection,(SLAVE)led_pio.external_connection) 1 0 2 NJ 440 NJ
+preplace netloc FAN_OUT<net_container>base</net_container>(SLAVE)cpu.clk,(SLAVE)sys_clk_timer.clk,(SLAVE)sysid.clk,(MASTER)clk_0.clk,(SLAVE)onchip_mem.clk1,(SLAVE)led_pio.clk,(SLAVE)jtag_uart.clk) 1 0 3 230 240 670 400 900
+preplace netloc INTERCONNECT<net_container>base</net_container>(SLAVE)onchip_mem.s1,(MASTER)cpu.data_master,(SLAVE)cpu.debug_mem_slave,(SLAVE)sys_clk_timer.s1,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)sysid.control_slave,(MASTER)cpu.instruction_master,(SLAVE)led_pio.s1) 1 0 2 210 220 630
+preplace netloc EXPORT<net_container>base</net_container>(SLAVE)base.clk,(SLAVE)clk_0.clk_in) 1 0 2 NJ 540 NJ
+levelinfo -pg 1 0 180 940
+levelinfo -hier base 190 350 710 920

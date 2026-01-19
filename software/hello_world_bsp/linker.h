@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'task1'
  * SOPC Builder design path: C:/DSD/DSD_Task_1/task1.sopcinfo
  *
- * Generated: Mon Jan 19 01:49:43 GMT 2026
+ * Generated: Mon Jan 19 20:39:30 GMT 2026
  */
 
 /*
@@ -65,9 +65,9 @@
  *
  */
 
-#define ONCHIP_MEM_REGION_BASE 0x8020
-#define ONCHIP_MEM_REGION_SPAN 20448
-#define RESET_REGION_BASE 0x8000
+#define ONCHIP_MEM_REGION_BASE 0x80020
+#define ONCHIP_MEM_REGION_SPAN 299968
+#define RESET_REGION_BASE 0x80000
 #define RESET_REGION_SPAN 32
 
 

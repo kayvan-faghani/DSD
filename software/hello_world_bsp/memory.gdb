@@ -3,7 +3,7 @@
 # Machine generated for CPU 'cpu' in SOPC Builder design 'task1'
 # SOPC Builder design path: C:/DSD/DSD_Task_1/task1.sopcinfo
 #
-# Generated: Mon Jan 19 01:49:43 GMT 2026
+# Generated: Mon Jan 19 20:39:30 GMT 2026
 
 # DO NOT MODIFY THIS FILE
 #
@@ -47,4 +47,4 @@
 # by allowing GDB to cache memory contents on the host.
 
 # onchip_mem
-memory 0x8000 0xd000 cache
+memory 0x80000 0xc93e0 cache

@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'task1'
  * SOPC Builder design path: C:/DSD/DSD_Task_1/task1.sopcinfo
  *
- * Generated: Mon Jan 19 01:49:43 GMT 2026
+ * Generated: Mon Jan 19 20:39:30 GMT 2026
  */
 
 /*
@@ -50,12 +50,12 @@
 
 MEMORY
 {
-    reset : ORIGIN = 0x8000, LENGTH = 32
-    onchip_mem : ORIGIN = 0x8020, LENGTH = 20448
+    reset : ORIGIN = 0x80000, LENGTH = 32
+    onchip_mem : ORIGIN = 0x80020, LENGTH = 299968
 }
 
 /* Define symbols for each memory base-address */
-__alt_mem_onchip_mem = 0x8000;
+__alt_mem_onchip_mem = 0x80000;
 
 OUTPUT_FORMAT( "elf32-littlenios2",
                "elf32-littlenios2",
@@ -368,7 +368,7 @@ SECTIONS
 /*
  * Don't override this, override the __alt_stack_* symbols instead.
  */
-__alt_data_end = 0xd000;
+__alt_data_end = 0xc93e0;
 
 /*
  * The next two symbols define the location of the default stack.  You can
@@ -384,4 +384,4 @@ PROVIDE( __alt_stack_limit   = __alt_stack_base );
  * Override this symbol to put the heap in a different memory.
  */
 PROVIDE( __alt_heap_start    = end );
-PROVIDE( __alt_heap_limit    = 0xd000 );
+PROVIDE( __alt_heap_limit    = 0xc93e0 );

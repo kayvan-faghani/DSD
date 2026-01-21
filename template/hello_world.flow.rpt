@@ -1,5 +1,5 @@
 Flow report for hello_world
-Mon Jan 19 20:37:54 2026
+Mon Jan 19 20:57:37 2026
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Mon Jan 19 20:37:46 2026          ;
+; Flow Status                     ; Successful - Mon Jan 19 20:57:29 2026          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; hello_world                                    ;
 ; Top-level Entity Name           ; hello_world                                    ;
@@ -49,7 +49,7 @@ https://fpgasoftware.intel.com/eula.
 ; Device                          ; 5CSEMA5F31C6                                   ;
 ; Timing Models                   ; Final                                          ;
 ; Logic utilization (in ALMs)     ; 1,521 / 32,070 ( 5 % )                         ;
-; Total registers                 ; 2230                                           ;
+; Total registers                 ; 2220                                           ;
 ; Total pins                      ; 47 / 457 ( 10 % )                              ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 2,446,720 / 4,065,280 ( 60 % )                 ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/19/2026 20:32:10 ;
+; Start date & time ; 01/19/2026 20:53:38 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; hello_world         ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 273771395523107.176885473010904        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 273771395523107.176885601833912        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -87,7 +87,6 @@ https://fpgasoftware.intel.com/eula.
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
-; SEARCH_PATH                         ; c:/dsd/dsd_task_1                      ; --            ; --          ; --         ;
 ; SEARCH_PATH                         ; c:/dsd/dsd_git/dsd                     ; --            ; --          ; --         ;
 ; TIMING_ANALYZER_DO_REPORT_TIMING    ; On                                     ; Off           ; --          ; --         ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
@@ -98,11 +97,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:08     ; 1.0                     ; 5163 MB             ; 00:01:36                           ;
-; Fitter               ; 00:04:18     ; 1.1                     ; 7316 MB             ; 00:20:36                           ;
+; Analysis & Synthesis ; 00:00:42     ; 1.0                     ; 5147 MB             ; 00:01:00                           ;
+; Fitter               ; 00:02:59     ; 1.1                     ; 7285 MB             ; 00:15:37                           ;
 ; Assembler            ; 00:00:06     ; 1.0                     ; 5265 MB             ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:07     ; 3.1                     ; 5511 MB             ; 00:00:19                           ;
-; Total                ; 00:05:39     ; --                      ; --                  ; 00:22:37                           ;
+; Timing Analyzer      ; 00:00:07     ; 3.0                     ; 5511 MB             ; 00:00:18                           ;
+; Total                ; 00:03:54     ; --                      ; --                  ; 00:17:01                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

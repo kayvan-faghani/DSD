@@ -21,4 +21,7 @@ download:
 terminal:
 	"$(NIOS2_SHELL)" nios2-terminal.exe
 
+elf_size:
+	"$(NIOS2_SHELL)" nios2-elf-size.exe software/hello_world/hello_world.elf
+
 run: download terminal

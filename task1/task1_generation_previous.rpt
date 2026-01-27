@@ -1,6 +1,6 @@
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate C:\DSD\DSD_Task_1\task1.qsys --block-symbol-file --output-directory=C:\DSD\DSD_Task_1\task1 --family="Cyclone V" --part=5CSEMA5F31C6
-Progress: Loading DSD_Task_1/task1.qsys
+Info: qsys-generate C:\DSD\DSD_git\DSD\task1.qsys --block-symbol-file --output-directory=C:\DSD\DSD_git\DSD\task1 --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading DSD/task1.qsys
 Progress: Reading input file
 Progress: Adding clk_0 [clock_source 23.1]
 Progress: Parameterizing module clk_0
@@ -28,8 +28,8 @@ Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate C:\DSD\DSD_Task_1\task1.qsys --synthesis=VERILOG --output-directory=C:\DSD\DSD_Task_1\task1\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
-Progress: Loading DSD_Task_1/task1.qsys
+Info: qsys-generate C:\DSD\DSD_git\DSD\task1.qsys --synthesis=VERILOG --output-directory=C:\DSD\DSD_git\DSD\task1\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading DSD/task1.qsys
 Progress: Reading input file
 Progress: Adding clk_0 [clock_source 23.1]
 Progress: Parameterizing module clk_0
@@ -56,19 +56,19 @@ Info: task1.sysid: Time stamp will be automatically updated when this component 
 Info: task1: Generating task1 "task1" for QUARTUS_SYNTH
 Info: cpu: "task1" instantiated altera_nios2_gen2 "cpu"
 Info: jtag_uart: Starting RTL generation for module 'task1_jtag_uart'
-Info: jtag_uart:   Generation command is [exec C:/intelfpga_lite/23.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/23.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=task1_jtag_uart --dir=C:/Users/kayfa/AppData/Local/Temp/alt0472_1719251754078775122.dir/0002_jtag_uart_gen/ --quartus_dir=C:/intelfpga_lite/23.1std/quartus --verilog --config=C:/Users/kayfa/AppData/Local/Temp/alt0472_1719251754078775122.dir/0002_jtag_uart_gen//task1_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart:   Generation command is [exec C:/intelfpga_lite/23.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/23.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=task1_jtag_uart --dir=C:/Users/kayfa/AppData/Local/Temp/alt0480_1536125205492196320.dir/0002_jtag_uart_gen/ --quartus_dir=C:/intelfpga_lite/23.1std/quartus --verilog --config=C:/Users/kayfa/AppData/Local/Temp/alt0480_1536125205492196320.dir/0002_jtag_uart_gen//task1_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
 Info: jtag_uart: Done RTL generation for module 'task1_jtag_uart'
 Info: jtag_uart: "task1" instantiated altera_avalon_jtag_uart "jtag_uart"
 Info: led_pio: Starting RTL generation for module 'task1_led_pio'
-Info: led_pio:   Generation command is [exec C:/intelfpga_lite/23.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/23.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=task1_led_pio --dir=C:/Users/kayfa/AppData/Local/Temp/alt0472_1719251754078775122.dir/0003_led_pio_gen/ --quartus_dir=C:/intelfpga_lite/23.1std/quartus --verilog --config=C:/Users/kayfa/AppData/Local/Temp/alt0472_1719251754078775122.dir/0003_led_pio_gen//task1_led_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: led_pio:   Generation command is [exec C:/intelfpga_lite/23.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/23.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=task1_led_pio --dir=C:/Users/kayfa/AppData/Local/Temp/alt0480_1536125205492196320.dir/0003_led_pio_gen/ --quartus_dir=C:/intelfpga_lite/23.1std/quartus --verilog --config=C:/Users/kayfa/AppData/Local/Temp/alt0480_1536125205492196320.dir/0003_led_pio_gen//task1_led_pio_component_configuration.pl  --do_build_sim=0  ]
 Info: led_pio: Done RTL generation for module 'task1_led_pio'
 Info: led_pio: "task1" instantiated altera_avalon_pio "led_pio"
 Info: onchip_mem: Starting RTL generation for module 'task1_onchip_mem'
-Info: onchip_mem:   Generation command is [exec C:/intelfpga_lite/23.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/23.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=task1_onchip_mem --dir=C:/Users/kayfa/AppData/Local/Temp/alt0472_1719251754078775122.dir/0004_onchip_mem_gen/ --quartus_dir=C:/intelfpga_lite/23.1std/quartus --verilog --config=C:/Users/kayfa/AppData/Local/Temp/alt0472_1719251754078775122.dir/0004_onchip_mem_gen//task1_onchip_mem_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_mem:   Generation command is [exec C:/intelfpga_lite/23.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/23.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=task1_onchip_mem --dir=C:/Users/kayfa/AppData/Local/Temp/alt0480_1536125205492196320.dir/0004_onchip_mem_gen/ --quartus_dir=C:/intelfpga_lite/23.1std/quartus --verilog --config=C:/Users/kayfa/AppData/Local/Temp/alt0480_1536125205492196320.dir/0004_onchip_mem_gen//task1_onchip_mem_component_configuration.pl  --do_build_sim=0  ]
 Info: onchip_mem: Done RTL generation for module 'task1_onchip_mem'
 Info: onchip_mem: "task1" instantiated altera_avalon_onchip_memory2 "onchip_mem"
 Info: sys_clk_timer: Starting RTL generation for module 'task1_sys_clk_timer'
-Info: sys_clk_timer:   Generation command is [exec C:/intelFPGA_lite/23.1std/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/23.1std/quartus/bin64//perl/lib -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=task1_sys_clk_timer --dir=C:/Users/kayfa/AppData/Local/Temp/alt0472_1719251754078775122.dir/0005_sys_clk_timer_gen/ --quartus_dir=C:/intelfpga_lite/23.1std/quartus --verilog --config=C:/Users/kayfa/AppData/Local/Temp/alt0472_1719251754078775122.dir/0005_sys_clk_timer_gen//task1_sys_clk_timer_component_configuration.pl  --do_build_sim=0  ]
+Info: sys_clk_timer:   Generation command is [exec C:/intelFPGA_lite/23.1std/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/23.1std/quartus/bin64//perl/lib -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=task1_sys_clk_timer --dir=C:/Users/kayfa/AppData/Local/Temp/alt0480_1536125205492196320.dir/0005_sys_clk_timer_gen/ --quartus_dir=C:/intelfpga_lite/23.1std/quartus --verilog --config=C:/Users/kayfa/AppData/Local/Temp/alt0480_1536125205492196320.dir/0005_sys_clk_timer_gen//task1_sys_clk_timer_component_configuration.pl  --do_build_sim=0  ]
 Info: sys_clk_timer: Done RTL generation for module 'task1_sys_clk_timer'
 Info: sys_clk_timer: "task1" instantiated altera_avalon_timer "sys_clk_timer"
 Info: sysid: "task1" instantiated altera_avalon_sysid_qsys "sysid"
@@ -82,21 +82,21 @@ Info: mm_interconnect_0: "task1" instantiated altera_mm_interconnect "mm_interco
 Info: irq_mapper: "task1" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "task1" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'task1_cpu_cpu'
-Info: cpu:   Generation command is [exec C:/intelFPGA_lite/23.1std/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/23.1std/quartus/bin64//perl/lib -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/23.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=task1_cpu_cpu --dir=C:/Users/kayfa/AppData/Local/Temp/alt0472_1719251754078775122.dir/0009_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/23.1std/quartus/bin64/ --verilog --config=C:/Users/kayfa/AppData/Local/Temp/alt0472_1719251754078775122.dir/0009_cpu_gen//task1_cpu_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2026.01.19 00:30:11 (*) Starting Nios II generation
-Info: cpu: # 2026.01.19 00:30:11 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2026.01.19 00:30:11 (*)   Creating all objects for CPU
-Info: cpu: # 2026.01.19 00:30:11 (*)     Testbench
-Info: cpu: # 2026.01.19 00:30:11 (*)     Instruction decoding
-Info: cpu: # 2026.01.19 00:30:11 (*)       Instruction fields
-Info: cpu: # 2026.01.19 00:30:11 (*)       Instruction decodes
-Info: cpu: # 2026.01.19 00:30:11 (*)       Signals for RTL simulation waveforms
-Info: cpu: # 2026.01.19 00:30:11 (*)       Instruction controls
-Info: cpu: # 2026.01.19 00:30:11 (*)     Pipeline frontend
-Info: cpu: # 2026.01.19 00:30:11 (*)     Pipeline backend
-Info: cpu: # 2026.01.19 00:30:12 (*)   Generating RTL from CPU objects
-Info: cpu: # 2026.01.19 00:30:12 (*)   Creating plain-text RTL
-Info: cpu: # 2026.01.19 00:30:13 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/23.1std/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/23.1std/quartus/bin64//perl/lib -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/23.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=task1_cpu_cpu --dir=C:/Users/kayfa/AppData/Local/Temp/alt0480_1536125205492196320.dir/0009_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/23.1std/quartus/bin64/ --verilog --config=C:/Users/kayfa/AppData/Local/Temp/alt0480_1536125205492196320.dir/0009_cpu_gen//task1_cpu_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2026.01.27 16:29:50 (*) Starting Nios II generation
+Info: cpu: # 2026.01.27 16:29:50 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2026.01.27 16:29:50 (*)   Creating all objects for CPU
+Info: cpu: # 2026.01.27 16:29:50 (*)     Testbench
+Info: cpu: # 2026.01.27 16:29:50 (*)     Instruction decoding
+Info: cpu: # 2026.01.27 16:29:50 (*)       Instruction fields
+Info: cpu: # 2026.01.27 16:29:50 (*)       Instruction decodes
+Info: cpu: # 2026.01.27 16:29:50 (*)       Signals for RTL simulation waveforms
+Info: cpu: # 2026.01.27 16:29:50 (*)       Instruction controls
+Info: cpu: # 2026.01.27 16:29:50 (*)     Pipeline frontend
+Info: cpu: # 2026.01.27 16:29:50 (*)     Pipeline backend
+Info: cpu: # 2026.01.27 16:29:51 (*)   Generating RTL from CPU objects
+Info: cpu: # 2026.01.27 16:29:51 (*)   Creating plain-text RTL
+Info: cpu: # 2026.01.27 16:29:52 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'task1_cpu_cpu'
 Info: cpu: "cpu" instantiated altera_nios2_gen2_unit "cpu"
 Info: cpu_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "cpu_data_master_translator"
@@ -109,18 +109,18 @@ Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_
 Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
 Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
 Info: cpu_data_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "cpu_data_master_limiter"
-Info: Reusing file C:/DSD/DSD_Task_1/task1/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file C:/DSD/DSD_git/DSD/task1/synthesis/submodules/altera_avalon_sc_fifo.v
 Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
 Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
 Info: cmd_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_002"
-Info: Reusing file C:/DSD/DSD_Task_1/task1/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/DSD/DSD_git/DSD/task1/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_002"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file C:/DSD/DSD_Task_1/task1/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/DSD/DSD_git/DSD/task1/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
-Info: Reusing file C:/DSD/DSD_Task_1/task1/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/DSD/DSD_git/DSD/task1/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
 Info: task1: Done "task1" with 31 modules, 51 files

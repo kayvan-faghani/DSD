@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Fri Jan 23 15:47:23 2026
+Analysis & Synthesis Status : Successful - Tue Jan 27 16:38:37 2026
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : hello_world
 Top-level Entity Name : hello_world
@@ -7,7 +7,7 @@ Logic utilization (in ALMs) : N/A
 Total registers : 2100
 Total pins : 47
 Total virtual pins : 0
-Total block memory bits : 2,446,720
+Total block memory bits : 3,159,680
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

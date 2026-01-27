@@ -3,7 +3,7 @@
 # Machine generated for CPU 'cpu' in SOPC Builder design 'task1'
 # SOPC Builder design path: C:/DSD/DSD_Task_1/task1.sopcinfo
 #
-# Generated: Mon Jan 19 20:58:37 GMT 2026
+# Generated: Tue Jan 27 15:40:28 GMT 2026
 
 # DO NOT MODIFY THIS FILE
 #

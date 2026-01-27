@@ -1,8 +1,22 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
-preplace inst unsaved.clk_0 -pg 1 -lvl 1 -y 30
-preplace inst unsaved -pg 1 -lvl 1 -y 40 -regy -20
-preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)unsaved.reset) 1 0 1 NJ
-preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)clk_0.clk_in,(SLAVE)unsaved.clk) 1 0 1 NJ
-levelinfo -pg 1 0 50 270
-levelinfo -hier unsaved 60 90 260
+preplace inst task1.sys_clk_timer -pg 1 -lvl 2 -y 130
+preplace inst task1.cpu -pg 1 -lvl 1 -y 210
+preplace inst task1 -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst task1.led_pio -pg 1 -lvl 2 -y 410
+preplace inst task1.clk_0 -pg 1 -lvl 2 -y 530
+preplace inst task1.jtag_uart -pg 1 -lvl 2 -y 30
+preplace inst task1.cpu.cpu -pg 1
+preplace inst task1.cpu.clock_bridge -pg 1
+preplace inst task1.sysid -pg 1 -lvl 2 -y 310
+preplace inst task1.onchip_mem -pg 1 -lvl 2 -y 230
+preplace inst task1.cpu.reset_bridge -pg 1
+preplace netloc EXPORT<net_container>task1</net_container>(SLAVE)led_pio.external_connection,(SLAVE)task1.led_pio_external_connection) 1 0 2 NJ 440 NJ
+preplace netloc FAN_OUT<net_container>task1</net_container>(SLAVE)sys_clk_timer.irq,(SLAVE)jtag_uart.irq,(MASTER)cpu.irq) 1 1 1 630
+preplace netloc INTERCONNECT<net_container>task1</net_container>(SLAVE)led_pio.s1,(SLAVE)onchip_mem.s1,(MASTER)cpu.instruction_master,(SLAVE)sysid.control_slave,(SLAVE)sys_clk_timer.s1,(MASTER)cpu.data_master,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)cpu.debug_mem_slave) 1 0 2 210 480 610
+preplace netloc EXPORT<net_container>task1</net_container>(SLAVE)task1.clk,(SLAVE)clk_0.clk_in) 1 0 2 NJ 540 NJ
+preplace netloc POINT_TO_POINT<net_container>task1</net_container>(SLAVE)clk_0.clk_in_reset,(MASTER)cpu.debug_reset_request) 1 1 1 650
+preplace netloc FAN_OUT<net_container>task1</net_container>(SLAVE)cpu.clk,(SLAVE)jtag_uart.clk,(SLAVE)sys_clk_timer.clk,(MASTER)clk_0.clk,(SLAVE)sysid.clk,(SLAVE)led_pio.clk,(SLAVE)onchip_mem.clk1) 1 0 3 230 350 670 600 920
+preplace netloc FAN_OUT<net_container>task1</net_container>(SLAVE)led_pio.reset,(SLAVE)sysid.reset,(SLAVE)jtag_uart.reset,(SLAVE)sys_clk_timer.reset,(SLAVE)onchip_mem.reset1,(SLAVE)cpu.reset,(MASTER)clk_0.clk_reset) 1 0 3 250 460 690 620 900
+levelinfo -pg 1 0 180 960
+levelinfo -hier task1 190 370 730 940

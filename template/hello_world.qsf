@@ -105,10 +105,10 @@ set_location_assignment PIN_AK12 -to oDRAM_DQM[1]
 set_location_assignment PIN_AB13 -to oDRAM_DQM[0]
 
 set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
-set_global_assignment -name QSYS_FILE ../../../DSD_Leo/DSD/system_template_de1_soc/first_nios2_system.qsys
+set_global_assignment -name QSYS_FILE ../DSD_Leo/DSD/de1_soc/first_nios2_system.qsys
 set_global_assignment -name SDC_FILE hw_dev_tutorial.sdc
 set_global_assignment -name BDF_FILE hello_world.bdf
 set_global_assignment -name SOURCE_FILE db/hello_world.cmp.rdb
-set_global_assignment -name SEARCH_PATH "c:/dsd/dsd_leo/dsd/system_template_de1_soc"
+set_global_assignment -name SEARCH_PATH "c:/dsd/dsd_git/dsd/dsd_leo/dsd/de1_soc"
 set_global_assignment -name SEARCH_PATH "c:/dsd/dsd_git/dsd"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

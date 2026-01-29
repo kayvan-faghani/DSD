@@ -1,5 +1,5 @@
 Flow report for hello_world
-Thu Jan 29 15:23:40 2026
+Thu Jan 29 17:40:22 2026
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -41,14 +41,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Thu Jan 29 15:23:28 2026          ;
+; Flow Status                     ; Successful - Thu Jan 29 17:40:14 2026          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; hello_world                                    ;
 ; Top-level Entity Name           ; hello_world                                    ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CSEMA5F31C6                                   ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 1,561 / 32,070 ( 5 % )                         ;
+; Logic utilization (in ALMs)     ; 1,570 / 32,070 ( 5 % )                         ;
 ; Total registers                 ; 2268                                           ;
 ; Total pins                      ; 47 / 457 ( 10 % )                              ;
 ; Total virtual pins              ; 0                                              ;
@@ -68,29 +68,29 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/29/2026 15:17:42 ;
+; Start date & time ; 01/29/2026 17:35:58 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; hello_world         ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                            ;
-+-------------------------------------+--------------------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                                      ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+--------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 1097331289747.176969986227952              ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                         ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                          ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family)     ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)     ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)     ; --            ; --          ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                        ; --            ; --          ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW      ; --            ; --          ; --         ;
-; SEARCH_PATH                         ; c:/dsd/dsd_leo/dsd/system_template_de1_soc ; --            ; --          ; --         ;
-; SEARCH_PATH                         ; c:/dsd/dsd_git/dsd                         ; --            ; --          ; --         ;
-; TIMING_ANALYZER_DO_REPORT_TIMING    ; On                                         ; Off           ; --          ; --         ;
-+-------------------------------------+--------------------------------------------+---------------+-------------+------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                        ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 18126396873856.176970815804764         ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
+; SEARCH_PATH                         ; c:/dsd/dsd_git/dsd/dsd_leo/dsd/de1_soc ; --            ; --          ; --         ;
+; SEARCH_PATH                         ; c:/dsd/dsd_git/dsd                     ; --            ; --          ; --         ;
+; TIMING_ANALYZER_DO_REPORT_TIMING    ; On                                     ; Off           ; --          ; --         ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -98,11 +98,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:46     ; 1.0                     ; 5181 MB             ; 00:01:05                           ;
-; Fitter               ; 00:04:42     ; 1.1                     ; 7311 MB             ; 00:20:29                           ;
-; Assembler            ; 00:00:13     ; 1.0                     ; 5281 MB             ; 00:00:09                           ;
-; Timing Analyzer      ; 00:00:11     ; 3.0                     ; 5529 MB             ; 00:00:26                           ;
-; Total                ; 00:05:52     ; --                      ; --                  ; 00:22:09                           ;
+; Analysis & Synthesis ; 00:01:06     ; 1.0                     ; 5157 MB             ; 00:01:26                           ;
+; Fitter               ; 00:02:57     ; 1.2                     ; 7313 MB             ; 00:15:32                           ;
+; Assembler            ; 00:00:07     ; 1.0                     ; 5281 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:07     ; 3.2                     ; 5529 MB             ; 00:00:21                           ;
+; Total                ; 00:04:17     ; --                      ; --                  ; 00:17:25                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

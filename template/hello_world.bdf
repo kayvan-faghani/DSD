@@ -237,7 +237,7 @@ https://fpgasoftware.intel.com/eula.
 	(annotation_block (location)(rect 280 400 344 416))
 )
 (symbol
-	(rect 664 80 1160 224)
+	(rect 616 120 1112 264)
 	(text "first_nios2_system" (rect 192 -1 351 18)(font "Arial" (font_size 10)))
 	(text "inst" (rect 8 128 31 143)(font "Arial" ))
 	(port
@@ -275,31 +275,26 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (connector
-	(pt 536 232)
-	(pt 536 192)
-	(bus)
-)
-(connector
 	(pt 544 136)
-	(pt 544 152)
+	(pt 544 192)
 )
 (connector
-	(pt 544 152)
-	(pt 664 152)
+	(pt 544 192)
+	(pt 616 192)
 )
 (connector
-	(pt 664 152)
-	(pt 680 152)
+	(pt 616 192)
+	(pt 624 192)
 )
 (connector
-	(pt 536 192)
-	(pt 664 192)
+	(pt 536 232)
+	(pt 616 232)
 	(bus)
 )
 (connector
-	(pt 664 192)
-	(pt 680 192)
+	(pt 616 232)
+	(pt 624 232)
 	(bus)
 )
-(junction (pt 664 152))
-(junction (pt 664 192))
+(junction (pt 616 192))
+(junction (pt 616 232))

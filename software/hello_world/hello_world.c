@@ -13,13 +13,13 @@
 // #define N 52
 
 // Test case 2
-#define step 1/8.0
-#define N 2041
+// #define step 1/8.0
+// #define N 2041
 
 // #define N 1349
 //Test case 3
-// #define step 1/256.0
-// #define N 65281
+#define step 1/256.0
+#define N 65281
 
 // Test Case 4
 // #define N 2323
@@ -64,7 +64,7 @@ float calculateFunction(float x[], int M)
   float y = 0;
 	for (i=0; i<M; i++) {
     float a = x[i];
-    y += 0.5*a+pow(a,3)*cos((a-128.0f)/128.0f);
+    y += 0.5*a+a*a*a*cos((a-128.0f)/128.0f);
   }
   return y;
 }

@@ -237,8 +237,8 @@ https://fpgasoftware.intel.com/eula.
 	(annotation_block (location)(rect 280 400 344 416))
 )
 (symbol
-	(rect 672 80 1168 224)
-	(text "task1" (rect 234 -1 278 18)(font "Arial" (font_size 10)))
+	(rect 664 80 1160 224)
+	(text "first_nios2_system" (rect 192 -1 351 18)(font "Arial" (font_size 10)))
 	(text "inst" (rect 8 128 31 143)(font "Arial" ))
 	(port
 		(pt 0 72)
@@ -259,7 +259,7 @@ https://fpgasoftware.intel.com/eula.
 		(text "clk" (rect 229 67 246 82)(font "Arial" (color 0 0 0)))
 		(text "led_pio_external_connection" (rect 60 83 277 100)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "export" (rect 229 107 267 122)(font "Arial" (color 0 0 0)))
-		(text " task1 " (rect 471 128 513 143)(font "Arial" ))
+		(text " first_nios2_system " (rect 409 128 539 143)(font "Arial" ))
 		(line (pt 224 32)(pt 272 32))
 		(line (pt 272 32)(pt 272 128))
 		(line (pt 224 128)(pt 272 128))
@@ -285,10 +285,21 @@ https://fpgasoftware.intel.com/eula.
 )
 (connector
 	(pt 544 152)
-	(pt 672 152)
+	(pt 664 152)
+)
+(connector
+	(pt 664 152)
+	(pt 680 152)
 )
 (connector
 	(pt 536 192)
-	(pt 672 192)
+	(pt 664 192)
 	(bus)
 )
+(connector
+	(pt 664 192)
+	(pt 680 192)
+	(bus)
+)
+(junction (pt 664 152))
+(junction (pt 664 192))

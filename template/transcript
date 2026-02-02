@@ -1,0 +1,9 @@
+# Reading pref.tcl
+# do run_sim.tcl
+# ** Error: no files matched glob pattern "*.v"
+# Error in macro ./run_sim.tcl line 6
+# no files matched glob pattern "*.v"
+#     while executing
+# "glob *.v"
+#     invoked from within
+# "set all_v_files [glob *.v]"

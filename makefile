@@ -1,8 +1,8 @@
 NIOS2_SHELL := C:\intelFPGA_lite\23.1std\nios2eds\Nios II Command Shell.bat
 
-BSP_DIR  := software/hello_world_custom_instr_bsp
-SET_PATH := software/hello_world_custom_instr_bsp/settings.bsp
-APP_DIR  := software/hello_world_custom_instr
+BSP_DIR  := software/$(PROJ)_bsp
+SET_PATH := software/$(PROJ)_bsp/settings.bsp
+APP_DIR  := software/$(PROJ)
 
 .PHONY: all bsp hello_world download run
 

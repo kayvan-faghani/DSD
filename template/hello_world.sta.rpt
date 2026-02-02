@@ -1,5 +1,5 @@
 Timing Analyzer report for hello_world
-Thu Jan 29 17:40:22 2026
+Mon Feb  2 17:22:34 2026
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -99,20 +99,20 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 10          ;
 ;                            ;             ;
-; Average used               ; 3.23        ;
+; Average used               ; 3.20        ;
 ; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  29.6%      ;
-;     Processor 3            ;  28.0%      ;
-;     Processor 4            ;  27.4%      ;
-;     Processor 5            ;  23.1%      ;
-;     Processor 6            ;  23.1%      ;
-;     Processor 7            ;  23.1%      ;
-;     Processor 8            ;  23.0%      ;
-;     Processor 9            ;  23.0%      ;
-;     Processor 10           ;  23.0%      ;
+;     Processor 2            ;  28.3%      ;
+;     Processor 3            ;  27.9%      ;
+;     Processor 4            ;  27.5%      ;
+;     Processor 5            ;  22.7%      ;
+;     Processor 6            ;  22.7%      ;
+;     Processor 7            ;  22.7%      ;
+;     Processor 8            ;  22.7%      ;
+;     Processor 9            ;  22.6%      ;
+;     Processor 10           ;  22.6%      ;
 +----------------------------+-------------+
 
 
@@ -121,9 +121,9 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------------------------+--------+--------------------------+
 ; SDC File Path                                                                                  ; Status ; Read at                  ;
 +------------------------------------------------------------------------------------------------+--------+--------------------------+
-; hw_dev_tutorial.sdc                                                                            ; OK     ; Thu Jan 29 17:40:16 2026 ;
-; c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_reset_controller.sdc    ; OK     ; Thu Jan 29 17:40:16 2026 ;
-; c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_cpu.sdc ; OK     ; Thu Jan 29 17:40:16 2026 ;
+; hw_dev_tutorial.sdc                                                                            ; OK     ; Mon Feb  2 17:22:27 2026 ;
+; c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_reset_controller.sdc    ; OK     ; Mon Feb  2 17:22:27 2026 ;
+; c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_cpu.sdc ; OK     ; Mon Feb  2 17:22:27 2026 ;
 +------------------------------------------------------------------------------------------------+--------+--------------------------+
 
 
@@ -143,7 +143,7 @@ https://fpgasoftware.intel.com/eula.
 ; Fmax      ; Restricted Fmax ; Clock Name          ; Note ;
 +-----------+-----------------+---------------------+------+
 ; 18.73 MHz ; 18.73 MHz       ; altera_reserved_tck ;      ;
-; 82.99 MHz ; 82.99 MHz       ; sopc_clk            ;      ;
+; 73.9 MHz  ; 73.9 MHz        ; sopc_clk            ;      ;
 +-----------+-----------------+---------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -159,7 +159,7 @@ HTML report is unavailable in plain text report export.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; sopc_clk            ; 7.950  ; 0.000         ;
+; sopc_clk            ; 6.468  ; 0.000         ;
 ; altera_reserved_tck ; 23.300 ; 0.000         ;
 +---------------------+--------+---------------+
 
@@ -169,8 +169,8 @@ HTML report is unavailable in plain text report export.
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; sopc_clk            ; 0.299 ; 0.000         ;
-; altera_reserved_tck ; 0.334 ; 0.000         ;
+; altera_reserved_tck ; 0.278 ; 0.000         ;
+; sopc_clk            ; 0.295 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -179,8 +179,8 @@ HTML report is unavailable in plain text report export.
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; sopc_clk            ; 14.079 ; 0.000         ;
-; altera_reserved_tck ; 47.867 ; 0.000         ;
+; sopc_clk            ; 12.634 ; 0.000         ;
+; altera_reserved_tck ; 48.005 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -189,8 +189,8 @@ HTML report is unavailable in plain text report export.
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.878 ; 0.000         ;
-; sopc_clk            ; 0.912 ; 0.000         ;
+; sopc_clk            ; 0.867 ; 0.000         ;
+; altera_reserved_tck ; 0.990 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -200,7 +200,7 @@ HTML report is unavailable in plain text report export.
 ; Clock               ; Slack  ; End Point TNS      ;
 +---------------------+--------+--------------------+
 ; sopc_clk            ; 8.869  ; 0.000              ;
-; altera_reserved_tck ; 48.849 ; 0.000              ;
+; altera_reserved_tck ; 48.857 ; 0.000              ;
 +---------------------+--------+--------------------+
 
 
@@ -213,7 +213,7 @@ Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Number of Synchronizer Chains Found: 10
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 0.400
-Worst Case Available Settling Time: 18.371 ns
+Worst Case Available Settling Time: 18.384 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 79.4
@@ -228,7 +228,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; Fmax      ; Restricted Fmax ; Clock Name          ; Note ;
 +-----------+-----------------+---------------------+------+
 ; 18.83 MHz ; 18.83 MHz       ; altera_reserved_tck ;      ;
-; 86.97 MHz ; 86.97 MHz       ; sopc_clk            ;      ;
+; 76.52 MHz ; 76.52 MHz       ; sopc_clk            ;      ;
 +-----------+-----------------+---------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -238,7 +238,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; sopc_clk            ; 8.502  ; 0.000         ;
+; sopc_clk            ; 6.932  ; 0.000         ;
 ; altera_reserved_tck ; 23.440 ; 0.000         ;
 +---------------------+--------+---------------+
 
@@ -248,8 +248,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; sopc_clk            ; 0.283 ; 0.000         ;
-; altera_reserved_tck ; 0.315 ; 0.000         ;
+; sopc_clk            ; 0.256 ; 0.000         ;
+; altera_reserved_tck ; 0.284 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -258,8 +258,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; sopc_clk            ; 14.299 ; 0.000         ;
-; altera_reserved_tck ; 47.964 ; 0.000         ;
+; sopc_clk            ; 12.950 ; 0.000         ;
+; altera_reserved_tck ; 48.093 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -268,8 +268,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.811 ; 0.000         ;
-; sopc_clk            ; 0.858 ; 0.000         ;
+; sopc_clk            ; 0.741 ; 0.000         ;
+; altera_reserved_tck ; 0.915 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -278,8 +278,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+--------+-------------------+
 ; Clock               ; Slack  ; End Point TNS     ;
 +---------------------+--------+-------------------+
-; sopc_clk            ; 8.904  ; 0.000             ;
-; altera_reserved_tck ; 48.845 ; 0.000             ;
+; sopc_clk            ; 8.901  ; 0.000             ;
+; altera_reserved_tck ; 48.857 ; 0.000             ;
 +---------------------+--------+-------------------+
 
 
@@ -292,7 +292,7 @@ Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Number of Synchronizer Chains Found: 10
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 0.400
-Worst Case Available Settling Time: 18.396 ns
+Worst Case Available Settling Time: 18.401 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 5.2
@@ -306,7 +306,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; sopc_clk            ; 11.385 ; 0.000         ;
+; sopc_clk            ; 10.813 ; 0.000         ;
 ; altera_reserved_tck ; 25.357 ; 0.000         ;
 +---------------------+--------+---------------+
 
@@ -316,8 +316,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.133 ; 0.000         ;
-; sopc_clk            ; 0.164 ; 0.000         ;
+; altera_reserved_tck ; 0.156 ; 0.000         ;
+; sopc_clk            ; 0.171 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -326,8 +326,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; sopc_clk            ; 15.966 ; 0.000         ;
-; altera_reserved_tck ; 48.965 ; 0.000         ;
+; sopc_clk            ; 14.699 ; 0.000         ;
+; altera_reserved_tck ; 49.109 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -336,8 +336,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.461 ; 0.000         ;
-; sopc_clk            ; 0.510 ; 0.000         ;
+; altera_reserved_tck ; 0.491 ; 0.000         ;
+; sopc_clk            ; 0.517 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -346,8 +346,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+--------+--------------------+
 ; Clock               ; Slack  ; End Point TNS      ;
 +---------------------+--------+--------------------+
-; sopc_clk            ; 8.480  ; 0.000              ;
-; altera_reserved_tck ; 48.766 ; 0.000              ;
+; sopc_clk            ; 8.479  ; 0.000              ;
+; altera_reserved_tck ; 48.771 ; 0.000              ;
 +---------------------+--------+--------------------+
 
 
@@ -360,7 +360,7 @@ Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Number of Synchronizer Chains Found: 10
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 0.400
-Worst Case Available Settling Time: 18.955 ns
+Worst Case Available Settling Time: 18.986 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 79.4
@@ -374,7 +374,7 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; sopc_clk            ; 12.505 ; 0.000         ;
+; sopc_clk            ; 12.034 ; 0.000         ;
 ; altera_reserved_tck ; 25.535 ; 0.000         ;
 +---------------------+--------+---------------+
 
@@ -384,8 +384,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.107 ; 0.000         ;
-; sopc_clk            ; 0.155 ; 0.000         ;
+; altera_reserved_tck ; 0.127 ; 0.000         ;
+; sopc_clk            ; 0.150 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -394,8 +394,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; sopc_clk            ; 16.443 ; 0.000         ;
-; altera_reserved_tck ; 49.190 ; 0.000         ;
+; sopc_clk            ; 15.377 ; 0.000         ;
+; altera_reserved_tck ; 49.311 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -404,8 +404,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.403 ; 0.000         ;
-; sopc_clk            ; 0.462 ; 0.000         ;
+; altera_reserved_tck ; 0.430 ; 0.000         ;
+; sopc_clk            ; 0.447 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -414,8 +414,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+--------+-------------------+
 ; Clock               ; Slack  ; End Point TNS     ;
 +---------------------+--------+-------------------+
-; sopc_clk            ; 8.433  ; 0.000             ;
-; altera_reserved_tck ; 48.757 ; 0.000             ;
+; sopc_clk            ; 8.431  ; 0.000             ;
+; altera_reserved_tck ; 48.761 ; 0.000             ;
 +---------------------+--------+-------------------+
 
 
@@ -428,7 +428,7 @@ Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Number of Synchronizer Chains Found: 10
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 0.400
-Worst Case Available Settling Time: 19.040 ns
+Worst Case Available Settling Time: 19.060 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 5.2
@@ -442,9 +442,9 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +----------------------+--------+-------+----------+---------+---------------------+
 ; Clock                ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +----------------------+--------+-------+----------+---------+---------------------+
-; Worst-case Slack     ; 7.950  ; 0.107 ; 14.079   ; 0.403   ; 8.433               ;
-;  altera_reserved_tck ; 23.300 ; 0.107 ; 47.867   ; 0.403   ; 48.757              ;
-;  sopc_clk            ; 7.950  ; 0.155 ; 14.079   ; 0.462   ; 8.433               ;
+; Worst-case Slack     ; 6.468  ; 0.127 ; 12.634   ; 0.430   ; 8.431               ;
+;  altera_reserved_tck ; 23.300 ; 0.127 ; 48.005   ; 0.430   ; 48.761              ;
+;  sopc_clk            ; 6.468  ; 0.150 ; 12.634   ; 0.447   ; 8.431               ;
 ; Design-wide TNS      ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
 ;  altera_reserved_tck ; 0.000  ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
 ;  sopc_clk            ; 0.000  ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
@@ -759,10 +759,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+---------------------+------------+------------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths   ; FR Paths   ; RF Paths ; FF Paths ;
 +---------------------+---------------------+------------+------------+----------+----------+
-; altera_reserved_tck ; altera_reserved_tck ; 1991       ; 2          ; 44       ; 2        ;
+; altera_reserved_tck ; altera_reserved_tck ; 2026       ; 2          ; 44       ; 2        ;
 ; sopc_clk            ; altera_reserved_tck ; false path ; 0          ; 0        ; 0        ;
 ; altera_reserved_tck ; sopc_clk            ; false path ; false path ; 0        ; 0        ;
-; sopc_clk            ; sopc_clk            ; 212210     ; 0          ; 0        ; 0        ;
+; sopc_clk            ; sopc_clk            ; 277677     ; 0          ; 0        ; 0        ;
 +---------------------+---------------------+------------+------------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -772,10 +772,10 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------+---------------------+------------+------------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths   ; FR Paths   ; RF Paths ; FF Paths ;
 +---------------------+---------------------+------------+------------+----------+----------+
-; altera_reserved_tck ; altera_reserved_tck ; 1991       ; 2          ; 44       ; 2        ;
+; altera_reserved_tck ; altera_reserved_tck ; 2026       ; 2          ; 44       ; 2        ;
 ; sopc_clk            ; altera_reserved_tck ; false path ; 0          ; 0        ; 0        ;
 ; altera_reserved_tck ; sopc_clk            ; false path ; false path ; 0        ; 0        ;
-; sopc_clk            ; sopc_clk            ; 212210     ; 0          ; 0        ; 0        ;
+; sopc_clk            ; sopc_clk            ; 277677     ; 0          ; 0        ; 0        ;
 +---------------------+---------------------+------------+------------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -785,8 +785,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------+---------------------+----------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+----------+----------+----------+----------+
-; altera_reserved_tck ; altera_reserved_tck ; 99       ; 0        ; 2        ; 0        ;
-; sopc_clk            ; sopc_clk            ; 1846     ; 0        ; 0        ; 0        ;
+; altera_reserved_tck ; altera_reserved_tck ; 101      ; 0        ; 2        ; 0        ;
+; sopc_clk            ; sopc_clk            ; 2014     ; 0        ; 0        ; 0        ;
 +---------------------+---------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -796,8 +796,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------+---------------------+----------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+----------+----------+----------+----------+
-; altera_reserved_tck ; altera_reserved_tck ; 99       ; 0        ; 2        ; 0        ;
-; sopc_clk            ; sopc_clk            ; 1846     ; 0        ; 0        ; 0        ;
+; altera_reserved_tck ; altera_reserved_tck ; 101      ; 0        ; 2        ; 0        ;
+; sopc_clk            ; sopc_clk            ; 2014     ; 0        ; 0        ; 0        ;
 +---------------------+---------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -844,7 +844,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Thu Jan 29 17:40:15 2026
+    Info: Processing started: Mon Feb  2 17:22:26 2026
 Info: Command: quartus_sta hello_world -c hello_world
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -908,31 +908,31 @@ Info (332143): No user constrained clock uncertainty found in the design. Callin
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
-Info (332146): Worst-case setup slack is 7.950
+Info (332146): Worst-case setup slack is 6.468
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     7.950               0.000 sopc_clk 
+    Info (332119):     6.468               0.000 sopc_clk 
     Info (332119):    23.300               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.299
+Info (332146): Worst-case hold slack is 0.278
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.299               0.000 sopc_clk 
-    Info (332119):     0.334               0.000 altera_reserved_tck 
-Info (332146): Worst-case recovery slack is 14.079
+    Info (332119):     0.278               0.000 altera_reserved_tck 
+    Info (332119):     0.295               0.000 sopc_clk 
+Info (332146): Worst-case recovery slack is 12.634
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    14.079               0.000 sopc_clk 
-    Info (332119):    47.867               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.878
+    Info (332119):    12.634               0.000 sopc_clk 
+    Info (332119):    48.005               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.867
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.878               0.000 altera_reserved_tck 
-    Info (332119):     0.912               0.000 sopc_clk 
+    Info (332119):     0.867               0.000 sopc_clk 
+    Info (332119):     0.990               0.000 altera_reserved_tck 
 Info (332146): Worst-case minimum pulse width slack is 8.869
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     8.869               0.000 sopc_clk 
-    Info (332119):    48.849               0.000 altera_reserved_tck 
+    Info (332119):    48.857               0.000 altera_reserved_tck 
 Info (332114): Report Metastability: Found 10 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
@@ -940,20 +940,20 @@ Info (332114): Report Metastability: Found 10 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 10
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.400
-    Info (332114): Worst Case Available Settling Time: 18.371 ns
+    Info (332114): Worst Case Available Settling Time: 18.384 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 79.4
     Info (332114): Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
     Info (332114):   - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 17.8
-Info (332115): Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 7.950
+Info (332115): Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 6.468
     Info (332115): -to_clock [get_clocks {sopc_clk}]
     Info (332115): -setup
     Info (332115): -stdout
-Info (332115): Path #1: Setup slack is 7.950 
+Info (332115): Path #1: Setup slack is 6.468 
     Info (332115): ===================================================================
-    Info (332115): From Node    : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|ic_fill_line[1]
-    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_u2o1:auto_generated|ram_block1a191~porta_address_reg4
+    Info (332115): From Node    : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|d_address_tag_field[3]
+    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_u2o1:auto_generated|ram_block1a84~porta_re_reg
     Info (332115): Launch Clock : sopc_clk
     Info (332115): Latch Clock  : sopc_clk
     Info (332115): 
@@ -962,27 +962,33 @@ Info (332115): Path #1: Setup slack is 7.950
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      3.813      3.813  R        clock network delay
-    Info (332115):      3.813      0.000     uTco  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|ic_fill_line[1]
-    Info (332115):      3.813      0.000 FF  CELL  inst|cpu|cpu|ic_fill_line[1]|q
-    Info (332115):      5.899      2.086 FF    IC  inst|mm_interconnect_0|cmd_mux_003|src_data[42]|dataf
-    Info (332115):      5.970      0.071 FF  CELL  inst|mm_interconnect_0|cmd_mux_003|src_data[42]|combout
-    Info (332115):     14.733      8.763 FF    IC  inst|onchip_mem|the_altsyncram|auto_generated|ram_block1a191|portaaddr[4]
-    Info (332115):     15.264      0.531 FF  CELL  first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_u2o1:auto_generated|ram_block1a191~porta_address_reg4
+    Info (332115):      3.766      3.766  R        clock network delay
+    Info (332115):      3.766      0.000     uTco  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|d_address_tag_field[3]
+    Info (332115):      3.766      0.000 RR  CELL  inst|cpu|cpu|d_address_tag_field[3]|q
+    Info (332115):      4.726      0.960 RR    IC  inst|mm_interconnect_0|router|Equal1~1|datad
+    Info (332115):      5.028      0.302 RF  CELL  inst|mm_interconnect_0|router|Equal1~1|combout
+    Info (332115):      6.396      1.368 FF    IC  inst|jtag_uart|av_waitrequest~1|datab
+    Info (332115):      6.879      0.483 FF  CELL  inst|jtag_uart|av_waitrequest~1|combout
+    Info (332115):      7.181      0.302 FF    IC  inst|mm_interconnect_0|cmd_mux_003|src_valid~0|dataa
+    Info (332115):      7.664      0.483 FR  CELL  inst|mm_interconnect_0|cmd_mux_003|src_valid~0|combout
+    Info (332115):      9.218      1.554 RR    IC  inst|onchip_mem|wren~1|dataa
+    Info (332115):      9.701      0.483 RF  CELL  inst|onchip_mem|wren~1|combout
+    Info (332115):     16.233      6.532 FF    IC  inst|onchip_mem|the_altsyncram|auto_generated|ram_block1a84|portare
+    Info (332115):     16.695      0.462 FF  CELL  first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_u2o1:auto_generated|ram_block1a84~porta_re_reg
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):     20.000     20.000           latch edge time
-    Info (332115):     23.344      3.344  R        clock network delay
-    Info (332115):     23.384      0.040           clock pessimism removed
-    Info (332115):     23.214     -0.170           clock uncertainty
-    Info (332115):     23.214      0.000     uTsu  first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_u2o1:auto_generated|ram_block1a191~porta_address_reg4
+    Info (332115):     23.293      3.293  R        clock network delay
+    Info (332115):     23.333      0.040           clock pessimism removed
+    Info (332115):     23.163     -0.170           clock uncertainty
+    Info (332115):     23.163      0.000     uTsu  first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_u2o1:auto_generated|ram_block1a84~porta_re_reg
     Info (332115): 
-    Info (332115): Data Arrival Time  :    15.264
-    Info (332115): Data Required Time :    23.214
-    Info (332115): Slack              :     7.950 
+    Info (332115): Data Arrival Time  :    16.695
+    Info (332115): Data Required Time :    23.163
+    Info (332115): Slack              :     6.468 
     Info (332115): ===================================================================
     Info (332115): 
 Info (332115): Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 23.300
@@ -1022,92 +1028,55 @@ Info (332115): Path #1: Setup slack is 23.300
     Info (332115): Slack              :    23.300 
     Info (332115): ===================================================================
     Info (332115): 
-Info (332115): Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 0.299
-    Info (332115): -to_clock [get_clocks {sopc_clk}]
-    Info (332115): -hold
-    Info (332115): -stdout
-Info (332115): Path #1: Hold slack is 0.299 
-    Info (332115): ===================================================================
-    Info (332115): From Node    : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|F_pc[17]
-    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|D_pc[17]
-    Info (332115): Launch Clock : sopc_clk
-    Info (332115): Latch Clock  : sopc_clk
-    Info (332115): 
-    Info (332115): Data Arrival Path:
-    Info (332115): 
-    Info (332115): Total (ns)  Incr (ns)     Type  Element
-    Info (332115): ==========  ========= ==  ====  ===================================
-    Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      3.342      3.342  R        clock network delay
-    Info (332115):      3.342      0.000     uTco  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|F_pc[17]
-    Info (332115):      3.342      0.000 FF  CELL  inst|cpu|cpu|F_pc[17]|q
-    Info (332115):      3.625      0.283 FF    IC  inst|cpu|cpu|D_pc[17]~feeder|dataf
-    Info (332115):      3.670      0.045 FF  CELL  inst|cpu|cpu|D_pc[17]~feeder|combout
-    Info (332115):      3.670      0.000 FF    IC  inst|cpu|cpu|D_pc[17]|d
-    Info (332115):      3.726      0.056 FF  CELL  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|D_pc[17]
-    Info (332115): 
-    Info (332115): Data Required Path:
-    Info (332115): 
-    Info (332115): Total (ns)  Incr (ns)     Type  Element
-    Info (332115): ==========  ========= ==  ====  ===================================
-    Info (332115):      0.000      0.000           latch edge time
-    Info (332115):      3.822      3.822  R        clock network delay
-    Info (332115):      3.427     -0.395           clock pessimism removed
-    Info (332115):      3.427      0.000           clock uncertainty
-    Info (332115):      3.427      0.000      uTh  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|D_pc[17]
-    Info (332115): 
-    Info (332115): Data Arrival Time  :     3.726
-    Info (332115): Data Required Time :     3.427
-    Info (332115): Slack              :     0.299 
-    Info (332115): ===================================================================
-    Info (332115): 
-Info (332115): Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 0.334
+Info (332115): Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 0.278
     Info (332115): -to_clock [get_clocks {altera_reserved_tck}]
     Info (332115): -hold
     Info (332115): -stdout
-Info (332115): Path #1: Hold slack is 0.334 
+Info (332115): Path #1: Hold slack is 0.278 
     Info (332115): ===================================================================
-    Info (332115): From Node    : first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|state
-    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|state
-    Info (332115): Launch Clock : altera_reserved_tck
-    Info (332115): Latch Clock  : altera_reserved_tck
+    Info (332115): From Node    : first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate
+    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate
+    Info (332115): Launch Clock : altera_reserved_tck (INVERTED)
+    Info (332115): Latch Clock  : altera_reserved_tck (INVERTED)
     Info (332115): 
     Info (332115): Data Arrival Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
-    Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      2.233      2.233  R        clock network delay
-    Info (332115):      2.233      0.000     uTco  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|state
-    Info (332115):      2.233      0.000 FF  CELL  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|state|q
-    Info (332115):      2.546      0.313 FF    IC  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|state~1|datae
-    Info (332115):      2.684      0.138 FR  CELL  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|state~1|combout
-    Info (332115):      2.684      0.000 RR    IC  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|state|d
-    Info (332115):      2.739      0.055 RR  CELL  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|state
+    Info (332115):     50.000     50.000           launch edge time
+    Info (332115):     52.646      2.646  F        clock network delay
+    Info (332115):     52.646      0.000     uTco  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate
+    Info (332115):     52.646      0.000 FF  CELL  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate|q
+    Info (332115):     52.946      0.300 FF    IC  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate~0|dataf
+    Info (332115):     52.993      0.047 FF  CELL  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate~0|combout
+    Info (332115):     53.159      0.166 FF    IC  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate~feeder|dataf
+    Info (332115):     53.204      0.045 FF  CELL  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate~feeder|combout
+    Info (332115):     53.204      0.000 FF    IC  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate|d
+    Info (332115):     53.260      0.056 FF  CELL  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
-    Info (332115):      0.000      0.000           latch edge time
-    Info (332115):      2.565      2.565  R        clock network delay
-    Info (332115):      2.405     -0.160           clock pessimism removed
-    Info (332115):      2.405      0.000           clock uncertainty
-    Info (332115):      2.405      0.000      uTh  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|state
+    Info (332115):     50.000     50.000           latch edge time
+    Info (332115):     53.189      3.189  F        clock network delay
+    Info (332115):     52.982     -0.207           clock pessimism removed
+    Info (332115):     52.982      0.000           clock uncertainty
+    Info (332115):     52.982      0.000      uTh  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate
     Info (332115): 
-    Info (332115): Data Arrival Time  :     2.739
-    Info (332115): Data Required Time :     2.405
-    Info (332115): Slack              :     0.334 
+    Info (332115): Data Arrival Time  :    53.260
+    Info (332115): Data Required Time :    52.982
+    Info (332115): Slack              :     0.278 
     Info (332115): ===================================================================
     Info (332115): 
-Info (332115): Report Timing: Found 1 recovery paths (0 violated).  Worst case slack is 14.079
+Info (332115): Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 0.295
     Info (332115): -to_clock [get_clocks {sopc_clk}]
-    Info (332115): -recovery
+    Info (332115): -hold
     Info (332115): -stdout
-Info (332115): Path #1: Recovery slack is 14.079 
+Info (332115): Path #1: Hold slack is 0.295 
     Info (332115): ===================================================================
-    Info (332115): From Node    : first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
-    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|A_shift_rot_result[16]
+    Info (332115): From Node    : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_nios2_oci:the_first_nios2_system_cpu_cpu_nios2_oci|writedata[1]
+    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_nios2_oci:the_first_nios2_system_cpu_cpu_nios2_oci|first_nios2_system_cpu_cpu_nios2_oci_debug:the_first_nios2_system_cpu_cpu_nios2_oci_debug|monitor_error
     Info (332115): Launch Clock : sopc_clk
     Info (332115): Latch Clock  : sopc_clk
     Info (332115): 
@@ -1116,35 +1085,74 @@ Info (332115): Path #1: Recovery slack is 14.079
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      3.811      3.811  R        clock network delay
-    Info (332115):      3.811      0.000     uTco  first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
-    Info (332115):      3.811      0.000 FF  CELL  inst|rst_controller|r_sync_rst|q
-    Info (332115):      8.652      4.841 FF    IC  inst|cpu|cpu|A_shift_rot_result[16]|clrn
-    Info (332115):      9.120      0.468 FR  CELL  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|A_shift_rot_result[16]
+    Info (332115):      3.361      3.361  R        clock network delay
+    Info (332115):      3.361      0.000     uTco  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_nios2_oci:the_first_nios2_system_cpu_cpu_nios2_oci|writedata[1]
+    Info (332115):      3.361      0.000 FF  CELL  inst|cpu|cpu|the_first_nios2_system_cpu_cpu_nios2_oci|writedata[1]|q
+    Info (332115):      3.630      0.269 FF    IC  inst|cpu|cpu|the_first_nios2_system_cpu_cpu_nios2_oci|the_first_nios2_system_cpu_cpu_nios2_oci_debug|monitor_error~0|dataf
+    Info (332115):      3.675      0.045 FF  CELL  inst|cpu|cpu|the_first_nios2_system_cpu_cpu_nios2_oci|the_first_nios2_system_cpu_cpu_nios2_oci_debug|monitor_error~0|combout
+    Info (332115):      3.675      0.000 FF    IC  inst|cpu|cpu|the_first_nios2_system_cpu_cpu_nios2_oci|the_first_nios2_system_cpu_cpu_nios2_oci_debug|monitor_error|d
+    Info (332115):      3.732      0.057 FF  CELL  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_nios2_oci:the_first_nios2_system_cpu_cpu_nios2_oci|first_nios2_system_cpu_cpu_nios2_oci_debug:the_first_nios2_system_cpu_cpu_nios2_oci_debug|monitor_error
+    Info (332115): 
+    Info (332115): Data Required Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           latch edge time
+    Info (332115):      3.817      3.817  R        clock network delay
+    Info (332115):      3.437     -0.380           clock pessimism removed
+    Info (332115):      3.437      0.000           clock uncertainty
+    Info (332115):      3.437      0.000      uTh  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_nios2_oci:the_first_nios2_system_cpu_cpu_nios2_oci|first_nios2_system_cpu_cpu_nios2_oci_debug:the_first_nios2_system_cpu_cpu_nios2_oci_debug|monitor_error
+    Info (332115): 
+    Info (332115): Data Arrival Time  :     3.732
+    Info (332115): Data Required Time :     3.437
+    Info (332115): Slack              :     0.295 
+    Info (332115): ===================================================================
+    Info (332115): 
+Info (332115): Report Timing: Found 1 recovery paths (0 violated).  Worst case slack is 12.634
+    Info (332115): -to_clock [get_clocks {sopc_clk}]
+    Info (332115): -recovery
+    Info (332115): -stdout
+Info (332115): Path #1: Recovery slack is 12.634 
+    Info (332115): ===================================================================
+    Info (332115): From Node    : first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
+    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|M_iw[14]
+    Info (332115): Launch Clock : sopc_clk
+    Info (332115): Latch Clock  : sopc_clk
+    Info (332115): 
+    Info (332115): Data Arrival Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           launch edge time
+    Info (332115):      3.762      3.762  R        clock network delay
+    Info (332115):      3.762      0.000     uTco  first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
+    Info (332115):      3.762      0.000 FF  CELL  inst|rst_controller|r_sync_rst|q
+    Info (332115):     10.059      6.297 FF    IC  inst|cpu|cpu|M_iw[14]|clrn
+    Info (332115):     10.535      0.476 FR  CELL  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|M_iw[14]
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):     20.000     20.000           latch edge time
-    Info (332115):     23.329      3.329  R        clock network delay
-    Info (332115):     23.369      0.040           clock pessimism removed
-    Info (332115):     23.199     -0.170           clock uncertainty
-    Info (332115):     23.199      0.000     uTsu  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|A_shift_rot_result[16]
+    Info (332115):     23.299      3.299  R        clock network delay
+    Info (332115):     23.339      0.040           clock pessimism removed
+    Info (332115):     23.169     -0.170           clock uncertainty
+    Info (332115):     23.169      0.000     uTsu  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|M_iw[14]
     Info (332115): 
-    Info (332115): Data Arrival Time  :     9.120
-    Info (332115): Data Required Time :    23.199
-    Info (332115): Slack              :    14.079 
+    Info (332115): Data Arrival Time  :    10.535
+    Info (332115): Data Required Time :    23.169
+    Info (332115): Slack              :    12.634 
     Info (332115): ===================================================================
     Info (332115): 
-Info (332115): Report Timing: Found 1 recovery paths (0 violated).  Worst case slack is 47.867
+Info (332115): Report Timing: Found 1 recovery paths (0 violated).  Worst case slack is 48.005
     Info (332115): -to_clock [get_clocks {altera_reserved_tck}]
     Info (332115): -recovery
     Info (332115): -stdout
-Info (332115): Path #1: Recovery slack is 47.867 
+Info (332115): Path #1: Recovery slack is 48.005 
     Info (332115): ===================================================================
     Info (332115): From Node    : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg
-    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate
+    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo
     Info (332115): Launch Clock : altera_reserved_tck
     Info (332115): Latch Clock  : altera_reserved_tck (INVERTED)
     Info (332115): 
@@ -1153,35 +1161,72 @@ Info (332115): Path #1: Recovery slack is 47.867
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      1.992      1.992  R        clock network delay
-    Info (332115):      1.992      0.000     uTco  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg
-    Info (332115):      1.992      0.000 FF  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|clr_reg|q
-    Info (332115):      4.074      2.082 FF    IC  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate|clrn
-    Info (332115):      4.542      0.468 FR  CELL  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate
+    Info (332115):      2.319      2.319  R        clock network delay
+    Info (332115):      2.319      0.000     uTco  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg
+    Info (332115):      2.319      0.000 FF  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|clr_reg|q
+    Info (332115):      3.799      1.480 FF    IC  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo|clrn
+    Info (332115):      4.267      0.468 FR  CELL  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):     50.000     50.000           latch edge time
-    Info (332115):     52.676      2.676  F        clock network delay
-    Info (332115):     52.719      0.043           clock pessimism removed
-    Info (332115):     52.409     -0.310           clock uncertainty
-    Info (332115):     52.409      0.000     uTsu  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate
+    Info (332115):     52.533      2.533  F        clock network delay
+    Info (332115):     52.582      0.049           clock pessimism removed
+    Info (332115):     52.272     -0.310           clock uncertainty
+    Info (332115):     52.272      0.000     uTsu  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo
     Info (332115): 
-    Info (332115): Data Arrival Time  :     4.542
-    Info (332115): Data Required Time :    52.409
-    Info (332115): Slack              :    47.867 
+    Info (332115): Data Arrival Time  :     4.267
+    Info (332115): Data Required Time :    52.272
+    Info (332115): Slack              :    48.005 
     Info (332115): ===================================================================
     Info (332115): 
-Info (332115): Report Timing: Found 1 removal paths (0 violated).  Worst case slack is 0.878
+Info (332115): Report Timing: Found 1 removal paths (0 violated).  Worst case slack is 0.867
+    Info (332115): -to_clock [get_clocks {sopc_clk}]
+    Info (332115): -removal
+    Info (332115): -stdout
+Info (332115): Path #1: Removal slack is 0.867 
+    Info (332115): ===================================================================
+    Info (332115): From Node    : first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
+    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|ic_fill_ap_offset[2]
+    Info (332115): Launch Clock : sopc_clk
+    Info (332115): Latch Clock  : sopc_clk
+    Info (332115): 
+    Info (332115): Data Arrival Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           launch edge time
+    Info (332115):      3.310      3.310  R        clock network delay
+    Info (332115):      3.310      0.000     uTco  first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
+    Info (332115):      3.310      0.000 RR  CELL  inst|rst_controller|r_sync_rst|q
+    Info (332115):      4.163      0.853 RR    IC  inst|cpu|cpu|ic_fill_ap_offset[2]|clrn
+    Info (332115):      4.594      0.431 RF  CELL  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|ic_fill_ap_offset[2]
+    Info (332115): 
+    Info (332115): Data Required Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           latch edge time
+    Info (332115):      3.767      3.767  R        clock network delay
+    Info (332115):      3.727     -0.040           clock pessimism removed
+    Info (332115):      3.727      0.000           clock uncertainty
+    Info (332115):      3.727      0.000      uTh  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|ic_fill_ap_offset[2]
+    Info (332115): 
+    Info (332115): Data Arrival Time  :     4.594
+    Info (332115): Data Required Time :     3.727
+    Info (332115): Slack              :     0.867 
+    Info (332115): ===================================================================
+    Info (332115): 
+Info (332115): Report Timing: Found 1 removal paths (0 violated).  Worst case slack is 0.990
     Info (332115): -to_clock [get_clocks {altera_reserved_tck}]
     Info (332115): -removal
     Info (332115): -stdout
-Info (332115): Path #1: Removal slack is 0.878 
+Info (332115): Path #1: Removal slack is 0.990 
     Info (332115): ===================================================================
-    Info (332115): From Node    : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|virtual_ir_scan_reg
-    Info (332115): To Node      : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[2]
+    Info (332115): From Node    : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg
+    Info (332115): To Node      : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|splitter_nodes_receive_1[3]
     Info (332115): Launch Clock : altera_reserved_tck
     Info (332115): Latch Clock  : altera_reserved_tck
     Info (332115): 
@@ -1190,62 +1235,25 @@ Info (332115): Path #1: Removal slack is 0.878
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      1.882      1.882  R        clock network delay
-    Info (332115):      1.882      0.000     uTco  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|virtual_ir_scan_reg
-    Info (332115):      1.882      0.000 FF  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|virtual_ir_scan_reg|q
-    Info (332115):      2.402      0.520 FF    IC  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[2]|clrn
-    Info (332115):      2.822      0.420 FF  CELL  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[2]
+    Info (332115):      2.026      2.026  R        clock network delay
+    Info (332115):      2.026      0.000     uTco  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg
+    Info (332115):      2.026      0.000 RR  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|clr_reg|q
+    Info (332115):      2.814      0.788 RR    IC  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1[3]|clrn
+    Info (332115):      3.240      0.426 RF  CELL  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|splitter_nodes_receive_1[3]
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           latch edge time
-    Info (332115):      1.987      1.987  R        clock network delay
-    Info (332115):      1.944     -0.043           clock pessimism removed
-    Info (332115):      1.944      0.000           clock uncertainty
-    Info (332115):      1.944      0.000      uTh  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[2]
+    Info (332115):      2.293      2.293  R        clock network delay
+    Info (332115):      2.250     -0.043           clock pessimism removed
+    Info (332115):      2.250      0.000           clock uncertainty
+    Info (332115):      2.250      0.000      uTh  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|splitter_nodes_receive_1[3]
     Info (332115): 
-    Info (332115): Data Arrival Time  :     2.822
-    Info (332115): Data Required Time :     1.944
-    Info (332115): Slack              :     0.878 
-    Info (332115): ===================================================================
-    Info (332115): 
-Info (332115): Report Timing: Found 1 removal paths (0 violated).  Worst case slack is 0.912
-    Info (332115): -to_clock [get_clocks {sopc_clk}]
-    Info (332115): -removal
-    Info (332115): -stdout
-Info (332115): Path #1: Removal slack is 0.912 
-    Info (332115): ===================================================================
-    Info (332115): From Node    : first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
-    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_sys_clk_timer:sys_clk_timer|period_l_register[11]
-    Info (332115): Launch Clock : sopc_clk
-    Info (332115): Latch Clock  : sopc_clk
-    Info (332115): 
-    Info (332115): Data Arrival Path:
-    Info (332115): 
-    Info (332115): Total (ns)  Incr (ns)     Type  Element
-    Info (332115): ==========  ========= ==  ====  ===================================
-    Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      3.357      3.357  R        clock network delay
-    Info (332115):      3.357      0.000     uTco  first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
-    Info (332115):      3.357      0.000 FF  CELL  inst|rst_controller|r_sync_rst|q
-    Info (332115):      3.950      0.593 FF    IC  inst|sys_clk_timer|period_l_register[11]|clrn
-    Info (332115):      4.362      0.412 FR  CELL  first_nios2_system:inst|first_nios2_system_sys_clk_timer:sys_clk_timer|period_l_register[11]
-    Info (332115): 
-    Info (332115): Data Required Path:
-    Info (332115): 
-    Info (332115): Total (ns)  Incr (ns)     Type  Element
-    Info (332115): ==========  ========= ==  ====  ===================================
-    Info (332115):      0.000      0.000           latch edge time
-    Info (332115):      3.829      3.829  R        clock network delay
-    Info (332115):      3.450     -0.379           clock pessimism removed
-    Info (332115):      3.450      0.000           clock uncertainty
-    Info (332115):      3.450      0.000      uTh  first_nios2_system:inst|first_nios2_system_sys_clk_timer:sys_clk_timer|period_l_register[11]
-    Info (332115): 
-    Info (332115): Data Arrival Time  :     4.362
-    Info (332115): Data Required Time :     3.450
-    Info (332115): Slack              :     0.912 
+    Info (332115): Data Arrival Time  :     3.240
+    Info (332115): Data Required Time :     2.250
+    Info (332115): Slack              :     0.990 
     Info (332115): ===================================================================
     Info (332115): 
 Info: Analyzing Slow 1100mV 0C Model
@@ -1254,31 +1262,31 @@ Info (334004): Delay annotation completed successfully
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): From: inst|cpu|cpu|the_first_nios2_system_cpu_cpu_nios2_oci|the_first_nios2_system_cpu_cpu_nios2_ocimem|first_nios2_system_cpu_cpu_ociram_sp_ram|the_altsyncram|auto_generated|ram_block1a8|clk0  to: first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_nios2_oci:the_first_nios2_system_cpu_cpu_nios2_oci|first_nios2_system_cpu_cpu_nios2_ocimem:the_first_nios2_system_cpu_cpu_nios2_ocimem|first_nios2_system_cpu_cpu_ociram_sp_ram_module:first_nios2_system_cpu_cpu_ociram_sp_ram|altsyncram:the_altsyncram|altsyncram_qid1:auto_generated|ram_block1a8~CLOCK1_ENABLE1_0
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 8.502
+Info (332146): Worst-case setup slack is 6.932
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     8.502               0.000 sopc_clk 
+    Info (332119):     6.932               0.000 sopc_clk 
     Info (332119):    23.440               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.283
+Info (332146): Worst-case hold slack is 0.256
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.283               0.000 sopc_clk 
-    Info (332119):     0.315               0.000 altera_reserved_tck 
-Info (332146): Worst-case recovery slack is 14.299
+    Info (332119):     0.256               0.000 sopc_clk 
+    Info (332119):     0.284               0.000 altera_reserved_tck 
+Info (332146): Worst-case recovery slack is 12.950
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    14.299               0.000 sopc_clk 
-    Info (332119):    47.964               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.811
+    Info (332119):    12.950               0.000 sopc_clk 
+    Info (332119):    48.093               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.741
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.811               0.000 altera_reserved_tck 
-    Info (332119):     0.858               0.000 sopc_clk 
-Info (332146): Worst-case minimum pulse width slack is 8.904
+    Info (332119):     0.741               0.000 sopc_clk 
+    Info (332119):     0.915               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is 8.901
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     8.904               0.000 sopc_clk 
-    Info (332119):    48.845               0.000 altera_reserved_tck 
+    Info (332119):     8.901               0.000 sopc_clk 
+    Info (332119):    48.857               0.000 altera_reserved_tck 
 Info (332114): Report Metastability: Found 10 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
@@ -1286,20 +1294,20 @@ Info (332114): Report Metastability: Found 10 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 10
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.400
-    Info (332114): Worst Case Available Settling Time: 18.396 ns
+    Info (332114): Worst Case Available Settling Time: 18.401 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 5.2
     Info (332114): Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
     Info (332114):   - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 17.8
-Info (332115): Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 8.502
+Info (332115): Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 6.932
     Info (332115): -to_clock [get_clocks {sopc_clk}]
     Info (332115): -setup
     Info (332115): -stdout
-Info (332115): Path #1: Setup slack is 8.502 
+Info (332115): Path #1: Setup slack is 6.932 
     Info (332115): ===================================================================
-    Info (332115): From Node    : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|ic_fill_line[1]
-    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_u2o1:auto_generated|ram_block1a191~porta_address_reg4
+    Info (332115): From Node    : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|d_address_tag_field[3]
+    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_u2o1:auto_generated|ram_block1a84~porta_re_reg
     Info (332115): Launch Clock : sopc_clk
     Info (332115): Latch Clock  : sopc_clk
     Info (332115): 
@@ -1308,27 +1316,33 @@ Info (332115): Path #1: Setup slack is 8.502
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      3.855      3.855  R        clock network delay
-    Info (332115):      3.855      0.000     uTco  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|ic_fill_line[1]
-    Info (332115):      3.855      0.000 FF  CELL  inst|cpu|cpu|ic_fill_line[1]|q
-    Info (332115):      5.822      1.967 FF    IC  inst|mm_interconnect_0|cmd_mux_003|src_data[42]|dataf
-    Info (332115):      5.898      0.076 FF  CELL  inst|mm_interconnect_0|cmd_mux_003|src_data[42]|combout
-    Info (332115):     14.224      8.326 FF    IC  inst|onchip_mem|the_altsyncram|auto_generated|ram_block1a191|portaaddr[4]
-    Info (332115):     14.786      0.562 FF  CELL  first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_u2o1:auto_generated|ram_block1a191~porta_address_reg4
+    Info (332115):      3.799      3.799  R        clock network delay
+    Info (332115):      3.799      0.000     uTco  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|d_address_tag_field[3]
+    Info (332115):      3.799      0.000 RR  CELL  inst|cpu|cpu|d_address_tag_field[3]|q
+    Info (332115):      4.687      0.888 RR    IC  inst|mm_interconnect_0|router|Equal1~1|datad
+    Info (332115):      5.013      0.326 RF  CELL  inst|mm_interconnect_0|router|Equal1~1|combout
+    Info (332115):      6.309      1.296 FF    IC  inst|jtag_uart|av_waitrequest~1|datab
+    Info (332115):      6.832      0.523 FF  CELL  inst|jtag_uart|av_waitrequest~1|combout
+    Info (332115):      7.104      0.272 FF    IC  inst|mm_interconnect_0|cmd_mux_003|src_valid~0|dataa
+    Info (332115):      7.631      0.527 FR  CELL  inst|mm_interconnect_0|cmd_mux_003|src_valid~0|combout
+    Info (332115):      9.091      1.460 RR    IC  inst|onchip_mem|wren~1|dataa
+    Info (332115):      9.612      0.521 RF  CELL  inst|onchip_mem|wren~1|combout
+    Info (332115):     15.834      6.222 FF    IC  inst|onchip_mem|the_altsyncram|auto_generated|ram_block1a84|portare
+    Info (332115):     16.304      0.470 FF  CELL  first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_u2o1:auto_generated|ram_block1a84~porta_re_reg
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):     20.000     20.000           latch edge time
-    Info (332115):     23.423      3.423  R        clock network delay
-    Info (332115):     23.458      0.035           clock pessimism removed
-    Info (332115):     23.288     -0.170           clock uncertainty
-    Info (332115):     23.288      0.000     uTsu  first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_u2o1:auto_generated|ram_block1a191~porta_address_reg4
+    Info (332115):     23.371      3.371  R        clock network delay
+    Info (332115):     23.406      0.035           clock pessimism removed
+    Info (332115):     23.236     -0.170           clock uncertainty
+    Info (332115):     23.236      0.000     uTsu  first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_u2o1:auto_generated|ram_block1a84~porta_re_reg
     Info (332115): 
-    Info (332115): Data Arrival Time  :    14.786
-    Info (332115): Data Required Time :    23.288
-    Info (332115): Slack              :     8.502 
+    Info (332115): Data Arrival Time  :    16.304
+    Info (332115): Data Required Time :    23.236
+    Info (332115): Slack              :     6.932 
     Info (332115): ===================================================================
     Info (332115): 
 Info (332115): Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 23.440
@@ -1368,14 +1382,14 @@ Info (332115): Path #1: Setup slack is 23.440
     Info (332115): Slack              :    23.440 
     Info (332115): ===================================================================
     Info (332115): 
-Info (332115): Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 0.283
+Info (332115): Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 0.256
     Info (332115): -to_clock [get_clocks {sopc_clk}]
     Info (332115): -hold
     Info (332115): -stdout
-Info (332115): Path #1: Hold slack is 0.283 
+Info (332115): Path #1: Hold slack is 0.256 
     Info (332115): ===================================================================
-    Info (332115): From Node    : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|F_pc[17]
-    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|D_pc[17]
+    Info (332115): From Node    : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|E_iw[5]
+    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|M_ctrl_ld_cache
     Info (332115): Launch Clock : sopc_clk
     Info (332115): Latch Clock  : sopc_clk
     Info (332115): 
@@ -1384,13 +1398,13 @@ Info (332115): Path #1: Hold slack is 0.283
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      3.392      3.392  R        clock network delay
-    Info (332115):      3.392      0.000     uTco  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|F_pc[17]
-    Info (332115):      3.392      0.000 FF  CELL  inst|cpu|cpu|F_pc[17]|q
-    Info (332115):      3.650      0.258 FF    IC  inst|cpu|cpu|D_pc[17]~feeder|dataf
-    Info (332115):      3.698      0.048 FF  CELL  inst|cpu|cpu|D_pc[17]~feeder|combout
-    Info (332115):      3.698      0.000 FF    IC  inst|cpu|cpu|D_pc[17]|d
-    Info (332115):      3.756      0.058 FF  CELL  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|D_pc[17]
+    Info (332115):      3.332      3.332  R        clock network delay
+    Info (332115):      3.332      0.000     uTco  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|E_iw[5]
+    Info (332115):      3.332      0.000 RR  CELL  inst|cpu|cpu|E_iw[5]|q
+    Info (332115):      3.968      0.636 RR    IC  inst|cpu|cpu|M_ctrl_ld_cache_nxt~0|dataf
+    Info (332115):      4.027      0.059 RF  CELL  inst|cpu|cpu|M_ctrl_ld_cache_nxt~0|combout
+    Info (332115):      4.027      0.000 FF    IC  inst|cpu|cpu|M_ctrl_ld_cache|d
+    Info (332115):      4.085      0.058 FF  CELL  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|M_ctrl_ld_cache
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
@@ -1398,62 +1412,64 @@ Info (332115): Path #1: Hold slack is 0.283
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           latch edge time
     Info (332115):      3.864      3.864  R        clock network delay
-    Info (332115):      3.473     -0.391           clock pessimism removed
-    Info (332115):      3.473      0.000           clock uncertainty
-    Info (332115):      3.473      0.000      uTh  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|D_pc[17]
+    Info (332115):      3.829     -0.035           clock pessimism removed
+    Info (332115):      3.829      0.000           clock uncertainty
+    Info (332115):      3.829      0.000      uTh  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|M_ctrl_ld_cache
     Info (332115): 
-    Info (332115): Data Arrival Time  :     3.756
-    Info (332115): Data Required Time :     3.473
-    Info (332115): Slack              :     0.283 
+    Info (332115): Data Arrival Time  :     4.085
+    Info (332115): Data Required Time :     3.829
+    Info (332115): Slack              :     0.256 
     Info (332115): ===================================================================
     Info (332115): 
-Info (332115): Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 0.315
+Info (332115): Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 0.284
     Info (332115): -to_clock [get_clocks {altera_reserved_tck}]
     Info (332115): -hold
     Info (332115): -stdout
-Info (332115): Path #1: Hold slack is 0.315 
+Info (332115): Path #1: Hold slack is 0.284 
     Info (332115): ===================================================================
-    Info (332115): From Node    : first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|state
-    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|state
-    Info (332115): Launch Clock : altera_reserved_tck
-    Info (332115): Latch Clock  : altera_reserved_tck
+    Info (332115): From Node    : first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate
+    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate
+    Info (332115): Launch Clock : altera_reserved_tck (INVERTED)
+    Info (332115): Latch Clock  : altera_reserved_tck (INVERTED)
     Info (332115): 
     Info (332115): Data Arrival Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
-    Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      2.165      2.165  R        clock network delay
-    Info (332115):      2.165      0.000     uTco  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|state
-    Info (332115):      2.165      0.000 FF  CELL  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|state|q
-    Info (332115):      2.455      0.290 FF    IC  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|state~1|datae
-    Info (332115):      2.594      0.139 FR  CELL  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|state~1|combout
-    Info (332115):      2.594      0.000 RR    IC  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|state|d
-    Info (332115):      2.651      0.057 RR  CELL  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|state
+    Info (332115):     50.000     50.000           launch edge time
+    Info (332115):     52.588      2.588  F        clock network delay
+    Info (332115):     52.588      0.000     uTco  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate
+    Info (332115):     52.588      0.000 FF  CELL  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate|q
+    Info (332115):     52.862      0.274 FF    IC  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate~0|dataf
+    Info (332115):     52.911      0.049 FF  CELL  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate~0|combout
+    Info (332115):     53.052      0.141 FF    IC  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate~feeder|dataf
+    Info (332115):     53.100      0.048 FF  CELL  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate~feeder|combout
+    Info (332115):     53.100      0.000 FF    IC  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate|d
+    Info (332115):     53.158      0.058 FF  CELL  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
-    Info (332115):      0.000      0.000           latch edge time
-    Info (332115):      2.484      2.484  R        clock network delay
-    Info (332115):      2.336     -0.148           clock pessimism removed
-    Info (332115):      2.336      0.000           clock uncertainty
-    Info (332115):      2.336      0.000      uTh  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|state
+    Info (332115):     50.000     50.000           latch edge time
+    Info (332115):     53.074      3.074  F        clock network delay
+    Info (332115):     52.874     -0.200           clock pessimism removed
+    Info (332115):     52.874      0.000           clock uncertainty
+    Info (332115):     52.874      0.000      uTh  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|jupdate
     Info (332115): 
-    Info (332115): Data Arrival Time  :     2.651
-    Info (332115): Data Required Time :     2.336
-    Info (332115): Slack              :     0.315 
+    Info (332115): Data Arrival Time  :    53.158
+    Info (332115): Data Required Time :    52.874
+    Info (332115): Slack              :     0.284 
     Info (332115): ===================================================================
     Info (332115): 
-Info (332115): Report Timing: Found 1 recovery paths (0 violated).  Worst case slack is 14.299
+Info (332115): Report Timing: Found 1 recovery paths (0 violated).  Worst case slack is 12.950
     Info (332115): -to_clock [get_clocks {sopc_clk}]
     Info (332115): -recovery
     Info (332115): -stdout
-Info (332115): Path #1: Recovery slack is 14.299 
+Info (332115): Path #1: Recovery slack is 12.950 
     Info (332115): ===================================================================
     Info (332115): From Node    : first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
-    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|A_shift_rot_result[16]
+    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|M_iw[14]
     Info (332115): Launch Clock : sopc_clk
     Info (332115): Latch Clock  : sopc_clk
     Info (332115): 
@@ -1462,32 +1478,32 @@ Info (332115): Path #1: Recovery slack is 14.299
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      3.852      3.852  R        clock network delay
-    Info (332115):      3.852      0.000     uTco  first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
-    Info (332115):      3.852      0.000 FF  CELL  inst|rst_controller|r_sync_rst|q
-    Info (332115):      8.487      4.635 FF    IC  inst|cpu|cpu|A_shift_rot_result[16]|clrn
-    Info (332115):      8.946      0.459 FR  CELL  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|A_shift_rot_result[16]
+    Info (332115):      3.793      3.793  R        clock network delay
+    Info (332115):      3.793      0.000     uTco  first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
+    Info (332115):      3.793      0.000 FF  CELL  inst|rst_controller|r_sync_rst|q
+    Info (332115):      9.786      5.993 FF    IC  inst|cpu|cpu|M_iw[14]|clrn
+    Info (332115):     10.253      0.467 FR  CELL  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|M_iw[14]
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):     20.000     20.000           latch edge time
-    Info (332115):     23.380      3.380  R        clock network delay
-    Info (332115):     23.415      0.035           clock pessimism removed
-    Info (332115):     23.245     -0.170           clock uncertainty
-    Info (332115):     23.245      0.000     uTsu  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|A_shift_rot_result[16]
+    Info (332115):     23.338      3.338  R        clock network delay
+    Info (332115):     23.373      0.035           clock pessimism removed
+    Info (332115):     23.203     -0.170           clock uncertainty
+    Info (332115):     23.203      0.000     uTsu  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|M_iw[14]
     Info (332115): 
-    Info (332115): Data Arrival Time  :     8.946
-    Info (332115): Data Required Time :    23.245
-    Info (332115): Slack              :    14.299 
+    Info (332115): Data Arrival Time  :    10.253
+    Info (332115): Data Required Time :    23.203
+    Info (332115): Slack              :    12.950 
     Info (332115): ===================================================================
     Info (332115): 
-Info (332115): Report Timing: Found 1 recovery paths (0 violated).  Worst case slack is 47.964
+Info (332115): Report Timing: Found 1 recovery paths (0 violated).  Worst case slack is 48.093
     Info (332115): -to_clock [get_clocks {altera_reserved_tck}]
     Info (332115): -recovery
     Info (332115): -stdout
-Info (332115): Path #1: Recovery slack is 47.964 
+Info (332115): Path #1: Recovery slack is 48.093 
     Info (332115): ===================================================================
     Info (332115): From Node    : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg
     Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo
@@ -1499,35 +1515,72 @@ Info (332115): Path #1: Recovery slack is 47.964
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      1.941      1.941  R        clock network delay
-    Info (332115):      1.941      0.000     uTco  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg
-    Info (332115):      1.941      0.000 FF  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|clr_reg|q
-    Info (332115):      3.920      1.979 FF    IC  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo|clrn
-    Info (332115):      4.379      0.459 FR  CELL  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo
+    Info (332115):      2.236      2.236  R        clock network delay
+    Info (332115):      2.236      0.000     uTco  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg
+    Info (332115):      2.236      0.000 FF  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|clr_reg|q
+    Info (332115):      3.656      1.420 FF    IC  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo|clrn
+    Info (332115):      4.115      0.459 FR  CELL  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):     50.000     50.000           latch edge time
-    Info (332115):     52.613      2.613  F        clock network delay
-    Info (332115):     52.653      0.040           clock pessimism removed
-    Info (332115):     52.343     -0.310           clock uncertainty
-    Info (332115):     52.343      0.000     uTsu  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo
+    Info (332115):     52.472      2.472  F        clock network delay
+    Info (332115):     52.518      0.046           clock pessimism removed
+    Info (332115):     52.208     -0.310           clock uncertainty
+    Info (332115):     52.208      0.000     uTsu  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo
     Info (332115): 
-    Info (332115): Data Arrival Time  :     4.379
-    Info (332115): Data Required Time :    52.343
-    Info (332115): Slack              :    47.964 
+    Info (332115): Data Arrival Time  :     4.115
+    Info (332115): Data Required Time :    52.208
+    Info (332115): Slack              :    48.093 
     Info (332115): ===================================================================
     Info (332115): 
-Info (332115): Report Timing: Found 1 removal paths (0 violated).  Worst case slack is 0.811
+Info (332115): Report Timing: Found 1 removal paths (0 violated).  Worst case slack is 0.741
+    Info (332115): -to_clock [get_clocks {sopc_clk}]
+    Info (332115): -removal
+    Info (332115): -stdout
+Info (332115): Path #1: Removal slack is 0.741 
+    Info (332115): ===================================================================
+    Info (332115): From Node    : first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
+    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_mult_cell:the_first_nios2_system_cpu_cpu_mult_cell|altera_mult_add:the_altmult_add_p2|altera_mult_add_iau2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_multiplier_function:multiplier_block|ama_register_function:multiplier_register_block_0|data_out_wire[0]
+    Info (332115): Launch Clock : sopc_clk
+    Info (332115): Latch Clock  : sopc_clk
+    Info (332115): 
+    Info (332115): Data Arrival Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           launch edge time
+    Info (332115):      3.345      3.345  R        clock network delay
+    Info (332115):      3.345      0.000     uTco  first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
+    Info (332115):      3.345      0.000 RR  CELL  inst|rst_controller|r_sync_rst|q
+    Info (332115):      4.639      1.294 RR    IC  inst|cpu|cpu|the_first_nios2_system_cpu_cpu_mult_cell|the_altmult_add_p2|auto_generated|altera_mult_add_rtl1|multiplier_block|Mult0~mac|aclr[1]
+    Info (332115):      4.925      0.286 RR  CELL  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_mult_cell:the_first_nios2_system_cpu_cpu_mult_cell|altera_mult_add:the_altmult_add_p2|altera_mult_add_iau2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_multiplier_function:multiplier_block|ama_register_function:multiplier_register_block_0|data_out_wire[0]
+    Info (332115): 
+    Info (332115): Data Required Path:
+    Info (332115): 
+    Info (332115): Total (ns)  Incr (ns)     Type  Element
+    Info (332115): ==========  ========= ==  ====  ===================================
+    Info (332115):      0.000      0.000           latch edge time
+    Info (332115):      4.219      4.219  R        clock network delay
+    Info (332115):      4.184     -0.035           clock pessimism removed
+    Info (332115):      4.184      0.000           clock uncertainty
+    Info (332115):      4.184      0.000      uTh  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_mult_cell:the_first_nios2_system_cpu_cpu_mult_cell|altera_mult_add:the_altmult_add_p2|altera_mult_add_iau2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_multiplier_function:multiplier_block|ama_register_function:multiplier_register_block_0|data_out_wire[0]
+    Info (332115): 
+    Info (332115): Data Arrival Time  :     4.925
+    Info (332115): Data Required Time :     4.184
+    Info (332115): Slack              :     0.741 
+    Info (332115): ===================================================================
+    Info (332115): 
+Info (332115): Report Timing: Found 1 removal paths (0 violated).  Worst case slack is 0.915
     Info (332115): -to_clock [get_clocks {altera_reserved_tck}]
     Info (332115): -removal
     Info (332115): -stdout
-Info (332115): Path #1: Removal slack is 0.811 
+Info (332115): Path #1: Removal slack is 0.915 
     Info (332115): ===================================================================
-    Info (332115): From Node    : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|virtual_ir_scan_reg
-    Info (332115): To Node      : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[2]
+    Info (332115): From Node    : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg
+    Info (332115): To Node      : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|splitter_nodes_receive_1[3]
     Info (332115): Launch Clock : altera_reserved_tck
     Info (332115): Latch Clock  : altera_reserved_tck
     Info (332115): 
@@ -1536,62 +1589,25 @@ Info (332115): Path #1: Removal slack is 0.811
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      1.819      1.819  R        clock network delay
-    Info (332115):      1.819      0.000     uTco  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|virtual_ir_scan_reg
-    Info (332115):      1.819      0.000 FF  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|virtual_ir_scan_reg|q
-    Info (332115):      2.309      0.490 FF    IC  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[2]|clrn
-    Info (332115):      2.706      0.397 FF  CELL  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[2]
+    Info (332115):      1.955      1.955  R        clock network delay
+    Info (332115):      1.955      0.000     uTco  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg
+    Info (332115):      1.955      0.000 RR  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|clr_reg|q
+    Info (332115):      2.671      0.716 RR    IC  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1[3]|clrn
+    Info (332115):      3.084      0.413 RF  CELL  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|splitter_nodes_receive_1[3]
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           latch edge time
-    Info (332115):      1.935      1.935  R        clock network delay
-    Info (332115):      1.895     -0.040           clock pessimism removed
-    Info (332115):      1.895      0.000           clock uncertainty
-    Info (332115):      1.895      0.000      uTh  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[2]
+    Info (332115):      2.209      2.209  R        clock network delay
+    Info (332115):      2.169     -0.040           clock pessimism removed
+    Info (332115):      2.169      0.000           clock uncertainty
+    Info (332115):      2.169      0.000      uTh  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|splitter_nodes_receive_1[3]
     Info (332115): 
-    Info (332115): Data Arrival Time  :     2.706
-    Info (332115): Data Required Time :     1.895
-    Info (332115): Slack              :     0.811 
-    Info (332115): ===================================================================
-    Info (332115): 
-Info (332115): Report Timing: Found 1 removal paths (0 violated).  Worst case slack is 0.858
-    Info (332115): -to_clock [get_clocks {sopc_clk}]
-    Info (332115): -removal
-    Info (332115): -stdout
-Info (332115): Path #1: Removal slack is 0.858 
-    Info (332115): ===================================================================
-    Info (332115): From Node    : first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
-    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_sys_clk_timer:sys_clk_timer|period_l_register[11]
-    Info (332115): Launch Clock : sopc_clk
-    Info (332115): Latch Clock  : sopc_clk
-    Info (332115): 
-    Info (332115): Data Arrival Path:
-    Info (332115): 
-    Info (332115): Total (ns)  Incr (ns)     Type  Element
-    Info (332115): ==========  ========= ==  ====  ===================================
-    Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      3.401      3.401  R        clock network delay
-    Info (332115):      3.401      0.000     uTco  first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
-    Info (332115):      3.401      0.000 FF  CELL  inst|rst_controller|r_sync_rst|q
-    Info (332115):      3.954      0.553 FF    IC  inst|sys_clk_timer|period_l_register[11]|clrn
-    Info (332115):      4.354      0.400 FR  CELL  first_nios2_system:inst|first_nios2_system_sys_clk_timer:sys_clk_timer|period_l_register[11]
-    Info (332115): 
-    Info (332115): Data Required Path:
-    Info (332115): 
-    Info (332115): Total (ns)  Incr (ns)     Type  Element
-    Info (332115): ==========  ========= ==  ====  ===================================
-    Info (332115):      0.000      0.000           latch edge time
-    Info (332115):      3.873      3.873  R        clock network delay
-    Info (332115):      3.496     -0.377           clock pessimism removed
-    Info (332115):      3.496      0.000           clock uncertainty
-    Info (332115):      3.496      0.000      uTh  first_nios2_system:inst|first_nios2_system_sys_clk_timer:sys_clk_timer|period_l_register[11]
-    Info (332115): 
-    Info (332115): Data Arrival Time  :     4.354
-    Info (332115): Data Required Time :     3.496
-    Info (332115): Slack              :     0.858 
+    Info (332115): Data Arrival Time  :     3.084
+    Info (332115): Data Required Time :     2.169
+    Info (332115): Slack              :     0.915 
     Info (332115): ===================================================================
     Info (332115): 
 Info: Analyzing Fast 1100mV 85C Model
@@ -1600,31 +1616,31 @@ Info (334004): Delay annotation completed successfully
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): From: inst|cpu|cpu|the_first_nios2_system_cpu_cpu_nios2_oci|the_first_nios2_system_cpu_cpu_nios2_ocimem|first_nios2_system_cpu_cpu_ociram_sp_ram|the_altsyncram|auto_generated|ram_block1a8|clk0  to: first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_nios2_oci:the_first_nios2_system_cpu_cpu_nios2_oci|first_nios2_system_cpu_cpu_nios2_ocimem:the_first_nios2_system_cpu_cpu_nios2_ocimem|first_nios2_system_cpu_cpu_ociram_sp_ram_module:first_nios2_system_cpu_cpu_ociram_sp_ram|altsyncram:the_altsyncram|altsyncram_qid1:auto_generated|ram_block1a8~CLOCK1_ENABLE1_0
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 11.385
+Info (332146): Worst-case setup slack is 10.813
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    11.385               0.000 sopc_clk 
+    Info (332119):    10.813               0.000 sopc_clk 
     Info (332119):    25.357               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.133
+Info (332146): Worst-case hold slack is 0.156
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.133               0.000 altera_reserved_tck 
-    Info (332119):     0.164               0.000 sopc_clk 
-Info (332146): Worst-case recovery slack is 15.966
+    Info (332119):     0.156               0.000 altera_reserved_tck 
+    Info (332119):     0.171               0.000 sopc_clk 
+Info (332146): Worst-case recovery slack is 14.699
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    15.966               0.000 sopc_clk 
-    Info (332119):    48.965               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.461
+    Info (332119):    14.699               0.000 sopc_clk 
+    Info (332119):    49.109               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.491
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.461               0.000 altera_reserved_tck 
-    Info (332119):     0.510               0.000 sopc_clk 
-Info (332146): Worst-case minimum pulse width slack is 8.480
+    Info (332119):     0.491               0.000 altera_reserved_tck 
+    Info (332119):     0.517               0.000 sopc_clk 
+Info (332146): Worst-case minimum pulse width slack is 8.479
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     8.480               0.000 sopc_clk 
-    Info (332119):    48.766               0.000 altera_reserved_tck 
+    Info (332119):     8.479               0.000 sopc_clk 
+    Info (332119):    48.771               0.000 altera_reserved_tck 
 Info (332114): Report Metastability: Found 10 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
@@ -1632,20 +1648,20 @@ Info (332114): Report Metastability: Found 10 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 10
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.400
-    Info (332114): Worst Case Available Settling Time: 18.955 ns
+    Info (332114): Worst Case Available Settling Time: 18.986 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 79.4
     Info (332114): Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
     Info (332114):   - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 17.8
-Info (332115): Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 11.385
+Info (332115): Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 10.813
     Info (332115): -to_clock [get_clocks {sopc_clk}]
     Info (332115): -setup
     Info (332115): -stdout
-Info (332115): Path #1: Setup slack is 11.385 
+Info (332115): Path #1: Setup slack is 10.813 
     Info (332115): ===================================================================
-    Info (332115): From Node    : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|ic_fill_line[1]
-    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_u2o1:auto_generated|ram_block1a191~porta_address_reg4
+    Info (332115): From Node    : first_nios2_system:inst|first_nios2_system_mm_interconnect_0:mm_interconnect_0|first_nios2_system_mm_interconnect_0_cmd_mux_002:cmd_mux_003|saved_grant[0]~DUPLICATE
+    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_u2o1:auto_generated|ram_block1a217~porta_address_reg9
     Info (332115): Launch Clock : sopc_clk
     Info (332115): Latch Clock  : sopc_clk
     Info (332115): 
@@ -1654,27 +1670,27 @@ Info (332115): Path #1: Setup slack is 11.385
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      2.018      2.018  R        clock network delay
-    Info (332115):      2.018      0.000     uTco  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|ic_fill_line[1]
-    Info (332115):      2.018      0.000 FF  CELL  inst|cpu|cpu|ic_fill_line[1]|q
-    Info (332115):      3.530      1.512 FF    IC  inst|mm_interconnect_0|cmd_mux_003|src_data[42]|dataf
-    Info (332115):      3.569      0.039 FF  CELL  inst|mm_interconnect_0|cmd_mux_003|src_data[42]|combout
-    Info (332115):      9.994      6.425 FF    IC  inst|onchip_mem|the_altsyncram|auto_generated|ram_block1a191|portaaddr[4]
-    Info (332115):     10.282      0.288 FF  CELL  first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_u2o1:auto_generated|ram_block1a191~porta_address_reg4
+    Info (332115):      1.995      1.995  R        clock network delay
+    Info (332115):      1.995      0.000     uTco  first_nios2_system:inst|first_nios2_system_mm_interconnect_0:mm_interconnect_0|first_nios2_system_mm_interconnect_0_cmd_mux_002:cmd_mux_003|saved_grant[0]~DUPLICATE
+    Info (332115):      1.995      0.000 FF  CELL  inst|mm_interconnect_0|cmd_mux_003|saved_grant[0]~DUPLICATE|q
+    Info (332115):      3.339      1.344 FF    IC  inst|mm_interconnect_0|cmd_mux_003|src_data[47]|dataa
+    Info (332115):      3.551      0.212 FF  CELL  inst|mm_interconnect_0|cmd_mux_003|src_data[47]|combout
+    Info (332115):     10.643      7.092 FF    IC  inst|onchip_mem|the_altsyncram|auto_generated|ram_block1a217|portaaddr[9]
+    Info (332115):     10.848      0.205 FF  CELL  first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_u2o1:auto_generated|ram_block1a217~porta_address_reg9
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):     20.000     20.000           latch edge time
-    Info (332115):     21.795      1.795  R        clock network delay
-    Info (332115):     21.837      0.042           clock pessimism removed
-    Info (332115):     21.667     -0.170           clock uncertainty
-    Info (332115):     21.667      0.000     uTsu  first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_u2o1:auto_generated|ram_block1a191~porta_address_reg4
+    Info (332115):     21.789      1.789  R        clock network delay
+    Info (332115):     21.831      0.042           clock pessimism removed
+    Info (332115):     21.661     -0.170           clock uncertainty
+    Info (332115):     21.661      0.000     uTsu  first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_u2o1:auto_generated|ram_block1a217~porta_address_reg9
     Info (332115): 
-    Info (332115): Data Arrival Time  :    10.282
-    Info (332115): Data Required Time :    21.667
-    Info (332115): Slack              :    11.385 
+    Info (332115): Data Arrival Time  :    10.848
+    Info (332115): Data Required Time :    21.661
+    Info (332115): Slack              :    10.813 
     Info (332115): ===================================================================
     Info (332115): 
 Info (332115): Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 25.357
@@ -1714,14 +1730,14 @@ Info (332115): Path #1: Setup slack is 25.357
     Info (332115): Slack              :    25.357 
     Info (332115): ===================================================================
     Info (332115): 
-Info (332115): Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 0.133
+Info (332115): Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 0.156
     Info (332115): -to_clock [get_clocks {altera_reserved_tck}]
     Info (332115): -hold
     Info (332115): -stdout
-Info (332115): Path #1: Hold slack is 0.133 
+Info (332115): Path #1: Hold slack is 0.156 
     Info (332115): ===================================================================
-    Info (332115): From Node    : first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|state
-    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|state
+    Info (332115): From Node    : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_nios2_oci:the_first_nios2_system_cpu_cpu_nios2_oci|first_nios2_system_cpu_cpu_debug_slave_wrapper:the_first_nios2_system_cpu_cpu_debug_slave_wrapper|first_nios2_system_cpu_cpu_debug_slave_tck:the_first_nios2_system_cpu_cpu_debug_slave_tck|sr[35]
+    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_nios2_oci:the_first_nios2_system_cpu_cpu_nios2_oci|first_nios2_system_cpu_cpu_debug_slave_wrapper:the_first_nios2_system_cpu_cpu_debug_slave_wrapper|first_nios2_system_cpu_cpu_debug_slave_tck:the_first_nios2_system_cpu_cpu_debug_slave_tck|sr[35]
     Info (332115): Launch Clock : altera_reserved_tck
     Info (332115): Latch Clock  : altera_reserved_tck
     Info (332115): 
@@ -1730,37 +1746,37 @@ Info (332115): Path #1: Hold slack is 0.133
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      1.116      1.116  R        clock network delay
-    Info (332115):      1.116      0.000     uTco  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|state
-    Info (332115):      1.116      0.000 RR  CELL  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|state|q
-    Info (332115):      1.291      0.175 RR    IC  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|state~1|datae
-    Info (332115):      1.367      0.076 RR  CELL  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|state~1|combout
-    Info (332115):      1.367      0.000 RR    IC  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|state|d
-    Info (332115):      1.392      0.025 RR  CELL  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|state
+    Info (332115):      1.115      1.115  R        clock network delay
+    Info (332115):      1.115      0.000     uTco  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_nios2_oci:the_first_nios2_system_cpu_cpu_nios2_oci|first_nios2_system_cpu_cpu_debug_slave_wrapper:the_first_nios2_system_cpu_cpu_debug_slave_wrapper|first_nios2_system_cpu_cpu_debug_slave_tck:the_first_nios2_system_cpu_cpu_debug_slave_tck|sr[35]
+    Info (332115):      1.115      0.000 RR  CELL  inst|cpu|cpu|the_first_nios2_system_cpu_cpu_nios2_oci|the_first_nios2_system_cpu_cpu_debug_slave_wrapper|the_first_nios2_system_cpu_cpu_debug_slave_tck|sr[35]|q
+    Info (332115):      1.364      0.249 RR    IC  inst|cpu|cpu|the_first_nios2_system_cpu_cpu_nios2_oci|the_first_nios2_system_cpu_cpu_debug_slave_wrapper|the_first_nios2_system_cpu_cpu_debug_slave_tck|sr~75|dataf
+    Info (332115):      1.390      0.026 RR  CELL  inst|cpu|cpu|the_first_nios2_system_cpu_cpu_nios2_oci|the_first_nios2_system_cpu_cpu_debug_slave_wrapper|the_first_nios2_system_cpu_cpu_debug_slave_tck|sr~75|combout
+    Info (332115):      1.390      0.000 RR    IC  inst|cpu|cpu|the_first_nios2_system_cpu_cpu_nios2_oci|the_first_nios2_system_cpu_cpu_debug_slave_wrapper|the_first_nios2_system_cpu_cpu_debug_slave_tck|sr[35]|d
+    Info (332115):      1.413      0.023 RR  CELL  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_nios2_oci:the_first_nios2_system_cpu_cpu_nios2_oci|first_nios2_system_cpu_cpu_debug_slave_wrapper:the_first_nios2_system_cpu_cpu_debug_slave_wrapper|first_nios2_system_cpu_cpu_debug_slave_tck:the_first_nios2_system_cpu_cpu_debug_slave_tck|sr[35]
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           latch edge time
-    Info (332115):      1.343      1.343  R        clock network delay
-    Info (332115):      1.259     -0.084           clock pessimism removed
-    Info (332115):      1.259      0.000           clock uncertainty
-    Info (332115):      1.259      0.000      uTh  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|state
+    Info (332115):      1.344      1.344  R        clock network delay
+    Info (332115):      1.257     -0.087           clock pessimism removed
+    Info (332115):      1.257      0.000           clock uncertainty
+    Info (332115):      1.257      0.000      uTh  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_nios2_oci:the_first_nios2_system_cpu_cpu_nios2_oci|first_nios2_system_cpu_cpu_debug_slave_wrapper:the_first_nios2_system_cpu_cpu_debug_slave_wrapper|first_nios2_system_cpu_cpu_debug_slave_tck:the_first_nios2_system_cpu_cpu_debug_slave_tck|sr[35]
     Info (332115): 
-    Info (332115): Data Arrival Time  :     1.392
-    Info (332115): Data Required Time :     1.259
-    Info (332115): Slack              :     0.133 
+    Info (332115): Data Arrival Time  :     1.413
+    Info (332115): Data Required Time :     1.257
+    Info (332115): Slack              :     0.156 
     Info (332115): ===================================================================
     Info (332115): 
-Info (332115): Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 0.164
+Info (332115): Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 0.171
     Info (332115): -to_clock [get_clocks {sopc_clk}]
     Info (332115): -hold
     Info (332115): -stdout
-Info (332115): Path #1: Hold slack is 0.164 
+Info (332115): Path #1: Hold slack is 0.171 
     Info (332115): ===================================================================
-    Info (332115): From Node    : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|E_dst_regnum[2]
-    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|M_dst_regnum[2]
+    Info (332115): From Node    : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_nios2_oci:the_first_nios2_system_cpu_cpu_nios2_oci|writedata[1]
+    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_nios2_oci:the_first_nios2_system_cpu_cpu_nios2_oci|first_nios2_system_cpu_cpu_nios2_oci_debug:the_first_nios2_system_cpu_cpu_nios2_oci_debug|monitor_error
     Info (332115): Launch Clock : sopc_clk
     Info (332115): Latch Clock  : sopc_clk
     Info (332115): 
@@ -1769,37 +1785,37 @@ Info (332115): Path #1: Hold slack is 0.164
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      1.753      1.753  R        clock network delay
-    Info (332115):      1.753      0.000     uTco  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|E_dst_regnum[2]
-    Info (332115):      1.753      0.000 RR  CELL  inst|cpu|cpu|E_dst_regnum[2]|q
-    Info (332115):      1.906      0.153 RR    IC  inst|cpu|cpu|M_dst_regnum[2]~feeder|dataa
-    Info (332115):      2.078      0.172 RR  CELL  inst|cpu|cpu|M_dst_regnum[2]~feeder|combout
-    Info (332115):      2.078      0.000 RR    IC  inst|cpu|cpu|M_dst_regnum[2]|d
-    Info (332115):      2.103      0.025 RR  CELL  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|M_dst_regnum[2]
+    Info (332115):      1.759      1.759  R        clock network delay
+    Info (332115):      1.759      0.000     uTco  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_nios2_oci:the_first_nios2_system_cpu_cpu_nios2_oci|writedata[1]
+    Info (332115):      1.759      0.000 RR  CELL  inst|cpu|cpu|the_first_nios2_system_cpu_cpu_nios2_oci|writedata[1]|q
+    Info (332115):      1.913      0.154 RR    IC  inst|cpu|cpu|the_first_nios2_system_cpu_cpu_nios2_oci|the_first_nios2_system_cpu_cpu_nios2_oci_debug|monitor_error~0|dataf
+    Info (332115):      1.938      0.025 RR  CELL  inst|cpu|cpu|the_first_nios2_system_cpu_cpu_nios2_oci|the_first_nios2_system_cpu_cpu_nios2_oci_debug|monitor_error~0|combout
+    Info (332115):      1.938      0.000 RR    IC  inst|cpu|cpu|the_first_nios2_system_cpu_cpu_nios2_oci|the_first_nios2_system_cpu_cpu_nios2_oci_debug|monitor_error|d
+    Info (332115):      1.963      0.025 RR  CELL  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_nios2_oci:the_first_nios2_system_cpu_cpu_nios2_oci|first_nios2_system_cpu_cpu_nios2_oci_debug:the_first_nios2_system_cpu_cpu_nios2_oci_debug|monitor_error
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           latch edge time
-    Info (332115):      1.981      1.981  R        clock network delay
-    Info (332115):      1.939     -0.042           clock pessimism removed
-    Info (332115):      1.939      0.000           clock uncertainty
-    Info (332115):      1.939      0.000      uTh  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|M_dst_regnum[2]
+    Info (332115):      2.013      2.013  R        clock network delay
+    Info (332115):      1.792     -0.221           clock pessimism removed
+    Info (332115):      1.792      0.000           clock uncertainty
+    Info (332115):      1.792      0.000      uTh  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_nios2_oci:the_first_nios2_system_cpu_cpu_nios2_oci|first_nios2_system_cpu_cpu_nios2_oci_debug:the_first_nios2_system_cpu_cpu_nios2_oci_debug|monitor_error
     Info (332115): 
-    Info (332115): Data Arrival Time  :     2.103
-    Info (332115): Data Required Time :     1.939
-    Info (332115): Slack              :     0.164 
+    Info (332115): Data Arrival Time  :     1.963
+    Info (332115): Data Required Time :     1.792
+    Info (332115): Slack              :     0.171 
     Info (332115): ===================================================================
     Info (332115): 
-Info (332115): Report Timing: Found 1 recovery paths (0 violated).  Worst case slack is 15.966
+Info (332115): Report Timing: Found 1 recovery paths (0 violated).  Worst case slack is 14.699
     Info (332115): -to_clock [get_clocks {sopc_clk}]
     Info (332115): -recovery
     Info (332115): -stdout
-Info (332115): Path #1: Recovery slack is 15.966 
+Info (332115): Path #1: Recovery slack is 14.699 
     Info (332115): ===================================================================
     Info (332115): From Node    : first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
-    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|A_shift_rot_result[16]
+    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|M_iw[14]
     Info (332115): Launch Clock : sopc_clk
     Info (332115): Latch Clock  : sopc_clk
     Info (332115): 
@@ -1808,32 +1824,32 @@ Info (332115): Path #1: Recovery slack is 15.966
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      2.009      2.009  R        clock network delay
-    Info (332115):      2.009      0.000     uTco  first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
-    Info (332115):      2.009      0.000 FF  CELL  inst|rst_controller|r_sync_rst|q
-    Info (332115):      5.422      3.413 FF    IC  inst|cpu|cpu|A_shift_rot_result[16]|clrn
-    Info (332115):      5.653      0.231 FR  CELL  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|A_shift_rot_result[16]
+    Info (332115):      1.982      1.982  R        clock network delay
+    Info (332115):      1.982      0.000     uTco  first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
+    Info (332115):      1.982      0.000 FF  CELL  inst|rst_controller|r_sync_rst|q
+    Info (332115):      6.665      4.683 FF    IC  inst|cpu|cpu|M_iw[14]|clrn
+    Info (332115):      6.898      0.233 FR  CELL  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|M_iw[14]
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):     20.000     20.000           latch edge time
-    Info (332115):     21.747      1.747  R        clock network delay
-    Info (332115):     21.789      0.042           clock pessimism removed
-    Info (332115):     21.619     -0.170           clock uncertainty
-    Info (332115):     21.619      0.000     uTsu  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|A_shift_rot_result[16]
+    Info (332115):     21.725      1.725  R        clock network delay
+    Info (332115):     21.767      0.042           clock pessimism removed
+    Info (332115):     21.597     -0.170           clock uncertainty
+    Info (332115):     21.597      0.000     uTsu  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|M_iw[14]
     Info (332115): 
-    Info (332115): Data Arrival Time  :     5.653
-    Info (332115): Data Required Time :    21.619
-    Info (332115): Slack              :    15.966 
+    Info (332115): Data Arrival Time  :     6.898
+    Info (332115): Data Required Time :    21.597
+    Info (332115): Slack              :    14.699 
     Info (332115): ===================================================================
     Info (332115): 
-Info (332115): Report Timing: Found 1 recovery paths (0 violated).  Worst case slack is 48.965
+Info (332115): Report Timing: Found 1 recovery paths (0 violated).  Worst case slack is 49.109
     Info (332115): -to_clock [get_clocks {altera_reserved_tck}]
     Info (332115): -recovery
     Info (332115): -stdout
-Info (332115): Path #1: Recovery slack is 48.965 
+Info (332115): Path #1: Recovery slack is 49.109 
     Info (332115): ===================================================================
     Info (332115): From Node    : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg
     Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo
@@ -1845,35 +1861,35 @@ Info (332115): Path #1: Recovery slack is 48.965
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      0.975      0.975  R        clock network delay
-    Info (332115):      0.975      0.000     uTco  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg
-    Info (332115):      0.975      0.000 FF  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|clr_reg|q
-    Info (332115):      2.442      1.467 FF    IC  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo|clrn
-    Info (332115):      2.673      0.231 FR  CELL  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo
+    Info (332115):      1.179      1.179  R        clock network delay
+    Info (332115):      1.179      0.000     uTco  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg
+    Info (332115):      1.179      0.000 FF  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|clr_reg|q
+    Info (332115):      2.186      1.007 FF    IC  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo|clrn
+    Info (332115):      2.417      0.231 FR  CELL  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):     50.000     50.000           latch edge time
-    Info (332115):     51.930      1.930  F        clock network delay
-    Info (332115):     51.948      0.018           clock pessimism removed
-    Info (332115):     51.638     -0.310           clock uncertainty
-    Info (332115):     51.638      0.000     uTsu  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo
+    Info (332115):     51.815      1.815  F        clock network delay
+    Info (332115):     51.836      0.021           clock pessimism removed
+    Info (332115):     51.526     -0.310           clock uncertainty
+    Info (332115):     51.526      0.000     uTsu  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo
     Info (332115): 
-    Info (332115): Data Arrival Time  :     2.673
-    Info (332115): Data Required Time :    51.638
-    Info (332115): Slack              :    48.965 
+    Info (332115): Data Arrival Time  :     2.417
+    Info (332115): Data Required Time :    51.526
+    Info (332115): Slack              :    49.109 
     Info (332115): ===================================================================
     Info (332115): 
-Info (332115): Report Timing: Found 1 removal paths (0 violated).  Worst case slack is 0.461
+Info (332115): Report Timing: Found 1 removal paths (0 violated).  Worst case slack is 0.491
     Info (332115): -to_clock [get_clocks {altera_reserved_tck}]
     Info (332115): -removal
     Info (332115): -stdout
-Info (332115): Path #1: Removal slack is 0.461 
+Info (332115): Path #1: Removal slack is 0.491 
     Info (332115): ===================================================================
-    Info (332115): From Node    : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|virtual_ir_scan_reg
-    Info (332115): To Node      : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[2]
+    Info (332115): From Node    : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg
+    Info (332115): To Node      : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|splitter_nodes_receive_1[3]
     Info (332115): Launch Clock : altera_reserved_tck
     Info (332115): Latch Clock  : altera_reserved_tck
     Info (332115): 
@@ -1882,35 +1898,35 @@ Info (332115): Path #1: Removal slack is 0.461
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      0.892      0.892  R        clock network delay
-    Info (332115):      0.892      0.000     uTco  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|virtual_ir_scan_reg
-    Info (332115):      0.892      0.000 FF  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|virtual_ir_scan_reg|q
-    Info (332115):      1.213      0.321 FF    IC  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[2]|clrn
-    Info (332115):      1.416      0.203 FF  CELL  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[2]
+    Info (332115):      0.976      0.976  R        clock network delay
+    Info (332115):      0.976      0.000     uTco  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg
+    Info (332115):      0.976      0.000 RR  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|clr_reg|q
+    Info (332115):      1.425      0.449 RR    IC  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1[3]|clrn
+    Info (332115):      1.631      0.206 RF  CELL  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|splitter_nodes_receive_1[3]
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           latch edge time
-    Info (332115):      0.973      0.973  R        clock network delay
-    Info (332115):      0.955     -0.018           clock pessimism removed
-    Info (332115):      0.955      0.000           clock uncertainty
-    Info (332115):      0.955      0.000      uTh  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[2]
+    Info (332115):      1.158      1.158  R        clock network delay
+    Info (332115):      1.140     -0.018           clock pessimism removed
+    Info (332115):      1.140      0.000           clock uncertainty
+    Info (332115):      1.140      0.000      uTh  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|splitter_nodes_receive_1[3]
     Info (332115): 
-    Info (332115): Data Arrival Time  :     1.416
-    Info (332115): Data Required Time :     0.955
-    Info (332115): Slack              :     0.461 
+    Info (332115): Data Arrival Time  :     1.631
+    Info (332115): Data Required Time :     1.140
+    Info (332115): Slack              :     0.491 
     Info (332115): ===================================================================
     Info (332115): 
-Info (332115): Report Timing: Found 1 removal paths (0 violated).  Worst case slack is 0.510
+Info (332115): Report Timing: Found 1 removal paths (0 violated).  Worst case slack is 0.517
     Info (332115): -to_clock [get_clocks {sopc_clk}]
     Info (332115): -removal
     Info (332115): -stdout
-Info (332115): Path #1: Removal slack is 0.510 
+Info (332115): Path #1: Removal slack is 0.517 
     Info (332115): ===================================================================
     Info (332115): From Node    : first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
-    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:sys_clk_timer_s1_translator|av_readdata_pre[14]
+    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|ic_fill_ap_offset[0]
     Info (332115): Launch Clock : sopc_clk
     Info (332115): Latch Clock  : sopc_clk
     Info (332115): 
@@ -1919,56 +1935,56 @@ Info (332115): Path #1: Removal slack is 0.510
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      1.755      1.755  R        clock network delay
-    Info (332115):      1.755      0.000     uTco  first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
-    Info (332115):      1.755      0.000 RR  CELL  inst|rst_controller|r_sync_rst|q
-    Info (332115):      2.092      0.337 RR    IC  inst|mm_interconnect_0|sys_clk_timer_s1_translator|av_readdata_pre[14]|clrn
-    Info (332115):      2.302      0.210 RF  CELL  first_nios2_system:inst|first_nios2_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:sys_clk_timer_s1_translator|av_readdata_pre[14]
+    Info (332115):      1.729      1.729  R        clock network delay
+    Info (332115):      1.729      0.000     uTco  first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
+    Info (332115):      1.729      0.000 RR  CELL  inst|rst_controller|r_sync_rst|q
+    Info (332115):      2.254      0.525 RR    IC  inst|cpu|cpu|ic_fill_ap_offset[0]|clrn
+    Info (332115):      2.464      0.210 RF  CELL  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|ic_fill_ap_offset[0]
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           latch edge time
-    Info (332115):      2.011      2.011  R        clock network delay
-    Info (332115):      1.792     -0.219           clock pessimism removed
-    Info (332115):      1.792      0.000           clock uncertainty
-    Info (332115):      1.792      0.000      uTh  first_nios2_system:inst|first_nios2_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:sys_clk_timer_s1_translator|av_readdata_pre[14]
+    Info (332115):      1.989      1.989  R        clock network delay
+    Info (332115):      1.947     -0.042           clock pessimism removed
+    Info (332115):      1.947      0.000           clock uncertainty
+    Info (332115):      1.947      0.000      uTh  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|ic_fill_ap_offset[0]
     Info (332115): 
-    Info (332115): Data Arrival Time  :     2.302
-    Info (332115): Data Required Time :     1.792
-    Info (332115): Slack              :     0.510 
+    Info (332115): Data Arrival Time  :     2.464
+    Info (332115): Data Required Time :     1.947
+    Info (332115): Slack              :     0.517 
     Info (332115): ===================================================================
     Info (332115): 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): From: inst|cpu|cpu|the_first_nios2_system_cpu_cpu_nios2_oci|the_first_nios2_system_cpu_cpu_nios2_ocimem|first_nios2_system_cpu_cpu_ociram_sp_ram|the_altsyncram|auto_generated|ram_block1a8|clk0  to: first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_nios2_oci:the_first_nios2_system_cpu_cpu_nios2_oci|first_nios2_system_cpu_cpu_nios2_ocimem:the_first_nios2_system_cpu_cpu_nios2_ocimem|first_nios2_system_cpu_cpu_ociram_sp_ram_module:first_nios2_system_cpu_cpu_ociram_sp_ram|altsyncram:the_altsyncram|altsyncram_qid1:auto_generated|ram_block1a8~CLOCK1_ENABLE1_0
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 12.505
+Info (332146): Worst-case setup slack is 12.034
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    12.505               0.000 sopc_clk 
+    Info (332119):    12.034               0.000 sopc_clk 
     Info (332119):    25.535               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.107
+Info (332146): Worst-case hold slack is 0.127
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.107               0.000 altera_reserved_tck 
-    Info (332119):     0.155               0.000 sopc_clk 
-Info (332146): Worst-case recovery slack is 16.443
+    Info (332119):     0.127               0.000 altera_reserved_tck 
+    Info (332119):     0.150               0.000 sopc_clk 
+Info (332146): Worst-case recovery slack is 15.377
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    16.443               0.000 sopc_clk 
-    Info (332119):    49.190               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.403
+    Info (332119):    15.377               0.000 sopc_clk 
+    Info (332119):    49.311               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.430
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.403               0.000 altera_reserved_tck 
-    Info (332119):     0.462               0.000 sopc_clk 
-Info (332146): Worst-case minimum pulse width slack is 8.433
+    Info (332119):     0.430               0.000 altera_reserved_tck 
+    Info (332119):     0.447               0.000 sopc_clk 
+Info (332146): Worst-case minimum pulse width slack is 8.431
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     8.433               0.000 sopc_clk 
-    Info (332119):    48.757               0.000 altera_reserved_tck 
+    Info (332119):     8.431               0.000 sopc_clk 
+    Info (332119):    48.761               0.000 altera_reserved_tck 
 Info (332114): Report Metastability: Found 10 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
@@ -1976,20 +1992,20 @@ Info (332114): Report Metastability: Found 10 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 10
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.400
-    Info (332114): Worst Case Available Settling Time: 19.040 ns
+    Info (332114): Worst Case Available Settling Time: 19.060 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 5.2
     Info (332114): Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
     Info (332114):   - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 17.8
-Info (332115): Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 12.505
+Info (332115): Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 12.034
     Info (332115): -to_clock [get_clocks {sopc_clk}]
     Info (332115): -setup
     Info (332115): -stdout
-Info (332115): Path #1: Setup slack is 12.505 
+Info (332115): Path #1: Setup slack is 12.034 
     Info (332115): ===================================================================
-    Info (332115): From Node    : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|ic_fill_line[1]
-    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_u2o1:auto_generated|ram_block1a191~porta_address_reg4
+    Info (332115): From Node    : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|d_address_tag_field[3]
+    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_u2o1:auto_generated|ram_block1a84~porta_re_reg
     Info (332115): Launch Clock : sopc_clk
     Info (332115): Latch Clock  : sopc_clk
     Info (332115): 
@@ -1998,27 +2014,33 @@ Info (332115): Path #1: Setup slack is 12.505
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      1.949      1.949  R        clock network delay
-    Info (332115):      1.949      0.000     uTco  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|ic_fill_line[1]
-    Info (332115):      1.949      0.000 FF  CELL  inst|cpu|cpu|ic_fill_line[1]|q
-    Info (332115):      3.250      1.301 FF    IC  inst|mm_interconnect_0|cmd_mux_003|src_data[42]|dataf
-    Info (332115):      3.289      0.039 FF  CELL  inst|mm_interconnect_0|cmd_mux_003|src_data[42]|combout
-    Info (332115):      8.826      5.537 FF    IC  inst|onchip_mem|the_altsyncram|auto_generated|ram_block1a191|portaaddr[4]
-    Info (332115):      9.114      0.288 FF  CELL  first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_u2o1:auto_generated|ram_block1a191~porta_address_reg4
+    Info (332115):      1.916      1.916  R        clock network delay
+    Info (332115):      1.916      0.000     uTco  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|d_address_tag_field[3]
+    Info (332115):      1.916      0.000 RR  CELL  inst|cpu|cpu|d_address_tag_field[3]|q
+    Info (332115):      2.466      0.550 RR    IC  inst|mm_interconnect_0|router|Equal1~1|datad
+    Info (332115):      2.612      0.146 RF  CELL  inst|mm_interconnect_0|router|Equal1~1|combout
+    Info (332115):      3.440      0.828 FF    IC  inst|jtag_uart|av_waitrequest~1|datab
+    Info (332115):      3.664      0.224 FF  CELL  inst|jtag_uart|av_waitrequest~1|combout
+    Info (332115):      3.825      0.161 FF    IC  inst|mm_interconnect_0|cmd_mux_003|src_valid~0|dataa
+    Info (332115):      4.041      0.216 FR  CELL  inst|mm_interconnect_0|cmd_mux_003|src_valid~0|combout
+    Info (332115):      4.929      0.888 RR    IC  inst|onchip_mem|wren~1|dataa
+    Info (332115):      5.149      0.220 RF  CELL  inst|onchip_mem|wren~1|combout
+    Info (332115):      9.301      4.152 FF    IC  inst|onchip_mem|the_altsyncram|auto_generated|ram_block1a84|portare
+    Info (332115):      9.550      0.249 FF  CELL  first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_u2o1:auto_generated|ram_block1a84~porta_re_reg
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):     20.000     20.000           latch edge time
-    Info (332115):     21.746      1.746  R        clock network delay
-    Info (332115):     21.789      0.043           clock pessimism removed
-    Info (332115):     21.619     -0.170           clock uncertainty
-    Info (332115):     21.619      0.000     uTsu  first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_u2o1:auto_generated|ram_block1a191~porta_address_reg4
+    Info (332115):     21.711      1.711  R        clock network delay
+    Info (332115):     21.754      0.043           clock pessimism removed
+    Info (332115):     21.584     -0.170           clock uncertainty
+    Info (332115):     21.584      0.000     uTsu  first_nios2_system:inst|first_nios2_system_onchip_mem:onchip_mem|altsyncram:the_altsyncram|altsyncram_u2o1:auto_generated|ram_block1a84~porta_re_reg
     Info (332115): 
-    Info (332115): Data Arrival Time  :     9.114
-    Info (332115): Data Required Time :    21.619
-    Info (332115): Slack              :    12.505 
+    Info (332115): Data Arrival Time  :     9.550
+    Info (332115): Data Required Time :    21.584
+    Info (332115): Slack              :    12.034 
     Info (332115): ===================================================================
     Info (332115): 
 Info (332115): Report Timing: Found 1 setup paths (0 violated).  Worst case slack is 25.535
@@ -2058,14 +2080,14 @@ Info (332115): Path #1: Setup slack is 25.535
     Info (332115): Slack              :    25.535 
     Info (332115): ===================================================================
     Info (332115): 
-Info (332115): Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 0.107
+Info (332115): Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 0.127
     Info (332115): -to_clock [get_clocks {altera_reserved_tck}]
     Info (332115): -hold
     Info (332115): -stdout
-Info (332115): Path #1: Hold slack is 0.107 
+Info (332115): Path #1: Hold slack is 0.127 
     Info (332115): ===================================================================
-    Info (332115): From Node    : first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|state
-    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|state
+    Info (332115): From Node    : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_nios2_oci:the_first_nios2_system_cpu_cpu_nios2_oci|first_nios2_system_cpu_cpu_debug_slave_wrapper:the_first_nios2_system_cpu_cpu_debug_slave_wrapper|first_nios2_system_cpu_cpu_debug_slave_tck:the_first_nios2_system_cpu_cpu_debug_slave_tck|sr[35]
+    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_nios2_oci:the_first_nios2_system_cpu_cpu_nios2_oci|first_nios2_system_cpu_cpu_debug_slave_wrapper:the_first_nios2_system_cpu_cpu_debug_slave_wrapper|first_nios2_system_cpu_cpu_debug_slave_tck:the_first_nios2_system_cpu_cpu_debug_slave_tck|sr[35]
     Info (332115): Launch Clock : altera_reserved_tck
     Info (332115): Latch Clock  : altera_reserved_tck
     Info (332115): 
@@ -2074,37 +2096,37 @@ Info (332115): Path #1: Hold slack is 0.107
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      1.014      1.014  R        clock network delay
-    Info (332115):      1.014      0.000     uTco  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|state
-    Info (332115):      1.014      0.000 RR  CELL  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|state|q
-    Info (332115):      1.167      0.153 RR    IC  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|state~1|datae
-    Info (332115):      1.239      0.072 RR  CELL  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|state~1|combout
-    Info (332115):      1.239      0.000 RR    IC  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|state|d
-    Info (332115):      1.262      0.023 RR  CELL  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|state
+    Info (332115):      1.017      1.017  R        clock network delay
+    Info (332115):      1.017      0.000     uTco  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_nios2_oci:the_first_nios2_system_cpu_cpu_nios2_oci|first_nios2_system_cpu_cpu_debug_slave_wrapper:the_first_nios2_system_cpu_cpu_debug_slave_wrapper|first_nios2_system_cpu_cpu_debug_slave_tck:the_first_nios2_system_cpu_cpu_debug_slave_tck|sr[35]
+    Info (332115):      1.017      0.000 RR  CELL  inst|cpu|cpu|the_first_nios2_system_cpu_cpu_nios2_oci|the_first_nios2_system_cpu_cpu_debug_slave_wrapper|the_first_nios2_system_cpu_cpu_debug_slave_tck|sr[35]|q
+    Info (332115):      1.235      0.218 RR    IC  inst|cpu|cpu|the_first_nios2_system_cpu_cpu_nios2_oci|the_first_nios2_system_cpu_cpu_debug_slave_wrapper|the_first_nios2_system_cpu_cpu_debug_slave_tck|sr~75|dataf
+    Info (332115):      1.262      0.027 RR  CELL  inst|cpu|cpu|the_first_nios2_system_cpu_cpu_nios2_oci|the_first_nios2_system_cpu_cpu_debug_slave_wrapper|the_first_nios2_system_cpu_cpu_debug_slave_tck|sr~75|combout
+    Info (332115):      1.262      0.000 RR    IC  inst|cpu|cpu|the_first_nios2_system_cpu_cpu_nios2_oci|the_first_nios2_system_cpu_cpu_debug_slave_wrapper|the_first_nios2_system_cpu_cpu_debug_slave_tck|sr[35]|d
+    Info (332115):      1.284      0.022 RR  CELL  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_nios2_oci:the_first_nios2_system_cpu_cpu_nios2_oci|first_nios2_system_cpu_cpu_debug_slave_wrapper:the_first_nios2_system_cpu_cpu_debug_slave_wrapper|first_nios2_system_cpu_cpu_debug_slave_tck:the_first_nios2_system_cpu_cpu_debug_slave_tck|sr[35]
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           latch edge time
-    Info (332115):      1.230      1.230  R        clock network delay
-    Info (332115):      1.155     -0.075           clock pessimism removed
-    Info (332115):      1.155      0.000           clock uncertainty
-    Info (332115):      1.155      0.000      uTh  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|state
+    Info (332115):      1.235      1.235  R        clock network delay
+    Info (332115):      1.157     -0.078           clock pessimism removed
+    Info (332115):      1.157      0.000           clock uncertainty
+    Info (332115):      1.157      0.000      uTh  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_nios2_oci:the_first_nios2_system_cpu_cpu_nios2_oci|first_nios2_system_cpu_cpu_debug_slave_wrapper:the_first_nios2_system_cpu_cpu_debug_slave_wrapper|first_nios2_system_cpu_cpu_debug_slave_tck:the_first_nios2_system_cpu_cpu_debug_slave_tck|sr[35]
     Info (332115): 
-    Info (332115): Data Arrival Time  :     1.262
-    Info (332115): Data Required Time :     1.155
-    Info (332115): Slack              :     0.107 
+    Info (332115): Data Arrival Time  :     1.284
+    Info (332115): Data Required Time :     1.157
+    Info (332115): Slack              :     0.127 
     Info (332115): ===================================================================
     Info (332115): 
-Info (332115): Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 0.155
+Info (332115): Report Timing: Found 1 hold paths (0 violated).  Worst case slack is 0.150
     Info (332115): -to_clock [get_clocks {sopc_clk}]
     Info (332115): -hold
     Info (332115): -stdout
-Info (332115): Path #1: Hold slack is 0.155 
+Info (332115): Path #1: Hold slack is 0.150 
     Info (332115): ===================================================================
-    Info (332115): From Node    : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|E_dst_regnum[2]
-    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|M_dst_regnum[2]
+    Info (332115): From Node    : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|d_readdata_d1[27]
+    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|A_slow_inst_result[11]
     Info (332115): Launch Clock : sopc_clk
     Info (332115): Latch Clock  : sopc_clk
     Info (332115): 
@@ -2114,36 +2136,36 @@ Info (332115): Path #1: Hold slack is 0.155
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           launch edge time
     Info (332115):      1.688      1.688  R        clock network delay
-    Info (332115):      1.688      0.000     uTco  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|E_dst_regnum[2]
-    Info (332115):      1.688      0.000 RR  CELL  inst|cpu|cpu|E_dst_regnum[2]|q
-    Info (332115):      1.825      0.137 RR    IC  inst|cpu|cpu|M_dst_regnum[2]~feeder|dataa
-    Info (332115):      1.999      0.174 RR  CELL  inst|cpu|cpu|M_dst_regnum[2]~feeder|combout
-    Info (332115):      1.999      0.000 RR    IC  inst|cpu|cpu|M_dst_regnum[2]|d
-    Info (332115):      2.023      0.024 RR  CELL  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|M_dst_regnum[2]
+    Info (332115):      1.688      0.000     uTco  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|d_readdata_d1[27]
+    Info (332115):      1.688      0.000 RR  CELL  inst|cpu|cpu|d_readdata_d1[27]|q
+    Info (332115):      1.965      0.277 RR    IC  inst|cpu|cpu|the_nios2_rtl|A_slow_ld_byte1_data_aligned_nxt~2|dataf
+    Info (332115):      1.992      0.027 RR  CELL  inst|cpu|cpu|the_nios2_rtl|A_slow_ld_byte1_data_aligned_nxt~2|combout
+    Info (332115):      1.992      0.000 RR    IC  inst|cpu|cpu|A_slow_inst_result[11]|d
+    Info (332115):      2.015      0.023 RR  CELL  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|A_slow_inst_result[11]
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           latch edge time
-    Info (332115):      1.911      1.911  R        clock network delay
-    Info (332115):      1.868     -0.043           clock pessimism removed
-    Info (332115):      1.868      0.000           clock uncertainty
-    Info (332115):      1.868      0.000      uTh  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|M_dst_regnum[2]
+    Info (332115):      1.908      1.908  R        clock network delay
+    Info (332115):      1.865     -0.043           clock pessimism removed
+    Info (332115):      1.865      0.000           clock uncertainty
+    Info (332115):      1.865      0.000      uTh  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|A_slow_inst_result[11]
     Info (332115): 
-    Info (332115): Data Arrival Time  :     2.023
-    Info (332115): Data Required Time :     1.868
-    Info (332115): Slack              :     0.155 
+    Info (332115): Data Arrival Time  :     2.015
+    Info (332115): Data Required Time :     1.865
+    Info (332115): Slack              :     0.150 
     Info (332115): ===================================================================
     Info (332115): 
-Info (332115): Report Timing: Found 1 recovery paths (0 violated).  Worst case slack is 16.443
+Info (332115): Report Timing: Found 1 recovery paths (0 violated).  Worst case slack is 15.377
     Info (332115): -to_clock [get_clocks {sopc_clk}]
     Info (332115): -recovery
     Info (332115): -stdout
-Info (332115): Path #1: Recovery slack is 16.443 
+Info (332115): Path #1: Recovery slack is 15.377 
     Info (332115): ===================================================================
     Info (332115): From Node    : first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
-    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|A_shift_rot_result[16]
+    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|M_iw[14]
     Info (332115): Launch Clock : sopc_clk
     Info (332115): Latch Clock  : sopc_clk
     Info (332115): 
@@ -2152,32 +2174,32 @@ Info (332115): Path #1: Recovery slack is 16.443
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      1.940      1.940  R        clock network delay
-    Info (332115):      1.940      0.000     uTco  first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
-    Info (332115):      1.940      0.000 FF  CELL  inst|rst_controller|r_sync_rst|q
-    Info (332115):      4.897      2.957 FF    IC  inst|cpu|cpu|A_shift_rot_result[16]|clrn
-    Info (332115):      5.113      0.216 FR  CELL  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|A_shift_rot_result[16]
+    Info (332115):      1.911      1.911  R        clock network delay
+    Info (332115):      1.911      0.000     uTco  first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
+    Info (332115):      1.911      0.000 FF  CELL  inst|rst_controller|r_sync_rst|q
+    Info (332115):      5.939      4.028 FF    IC  inst|cpu|cpu|M_iw[14]|clrn
+    Info (332115):      6.157      0.218 FR  CELL  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|M_iw[14]
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):     20.000     20.000           latch edge time
-    Info (332115):     21.683      1.683  R        clock network delay
-    Info (332115):     21.726      0.043           clock pessimism removed
-    Info (332115):     21.556     -0.170           clock uncertainty
-    Info (332115):     21.556      0.000     uTsu  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|A_shift_rot_result[16]
+    Info (332115):     21.661      1.661  R        clock network delay
+    Info (332115):     21.704      0.043           clock pessimism removed
+    Info (332115):     21.534     -0.170           clock uncertainty
+    Info (332115):     21.534      0.000     uTsu  first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|M_iw[14]
     Info (332115): 
-    Info (332115): Data Arrival Time  :     5.113
-    Info (332115): Data Required Time :    21.556
-    Info (332115): Slack              :    16.443 
+    Info (332115): Data Arrival Time  :     6.157
+    Info (332115): Data Required Time :    21.534
+    Info (332115): Slack              :    15.377 
     Info (332115): ===================================================================
     Info (332115): 
-Info (332115): Report Timing: Found 1 recovery paths (0 violated).  Worst case slack is 49.190
+Info (332115): Report Timing: Found 1 recovery paths (0 violated).  Worst case slack is 49.311
     Info (332115): -to_clock [get_clocks {altera_reserved_tck}]
     Info (332115): -recovery
     Info (332115): -stdout
-Info (332115): Path #1: Recovery slack is 49.190 
+Info (332115): Path #1: Recovery slack is 49.311 
     Info (332115): ===================================================================
     Info (332115): From Node    : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg
     Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo
@@ -2189,35 +2211,35 @@ Info (332115): Path #1: Recovery slack is 49.190
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      0.901      0.901  R        clock network delay
-    Info (332115):      0.901      0.000     uTco  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg
-    Info (332115):      0.901      0.000 FF  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|clr_reg|q
-    Info (332115):      2.172      1.271 FF    IC  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo|clrn
-    Info (332115):      2.388      0.216 FR  CELL  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo
+    Info (332115):      1.080      1.080  R        clock network delay
+    Info (332115):      1.080      0.000     uTco  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg
+    Info (332115):      1.080      0.000 FF  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|clr_reg|q
+    Info (332115):      1.958      0.878 FF    IC  inst|jtag_uart|first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo|clrn
+    Info (332115):      2.174      0.216 FR  CELL  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):     50.000     50.000           latch edge time
-    Info (332115):     51.871      1.871  F        clock network delay
-    Info (332115):     51.888      0.017           clock pessimism removed
-    Info (332115):     51.578     -0.310           clock uncertainty
-    Info (332115):     51.578      0.000     uTsu  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo
+    Info (332115):     51.774      1.774  F        clock network delay
+    Info (332115):     51.795      0.021           clock pessimism removed
+    Info (332115):     51.485     -0.310           clock uncertainty
+    Info (332115):     51.485      0.000     uTsu  first_nios2_system:inst|first_nios2_system_jtag_uart:jtag_uart|alt_jtag_atlantic:first_nios2_system_jtag_uart_alt_jtag_atlantic|adapted_tdo
     Info (332115): 
-    Info (332115): Data Arrival Time  :     2.388
-    Info (332115): Data Required Time :    51.578
-    Info (332115): Slack              :    49.190 
+    Info (332115): Data Arrival Time  :     2.174
+    Info (332115): Data Required Time :    51.485
+    Info (332115): Slack              :    49.311 
     Info (332115): ===================================================================
     Info (332115): 
-Info (332115): Report Timing: Found 1 removal paths (0 violated).  Worst case slack is 0.403
+Info (332115): Report Timing: Found 1 removal paths (0 violated).  Worst case slack is 0.430
     Info (332115): -to_clock [get_clocks {altera_reserved_tck}]
     Info (332115): -removal
     Info (332115): -stdout
-Info (332115): Path #1: Removal slack is 0.403 
+Info (332115): Path #1: Removal slack is 0.430 
     Info (332115): ===================================================================
-    Info (332115): From Node    : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|virtual_ir_scan_reg
-    Info (332115): To Node      : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[2]
+    Info (332115): From Node    : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg
+    Info (332115): To Node      : sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|splitter_nodes_receive_1[3]
     Info (332115): Launch Clock : altera_reserved_tck
     Info (332115): Latch Clock  : altera_reserved_tck
     Info (332115): 
@@ -2226,35 +2248,35 @@ Info (332115): Path #1: Removal slack is 0.403
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      0.810      0.810  R        clock network delay
-    Info (332115):      0.810      0.000     uTco  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|virtual_ir_scan_reg
-    Info (332115):      0.810      0.000 FF  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|virtual_ir_scan_reg|q
-    Info (332115):      1.098      0.288 FF    IC  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[2]|clrn
-    Info (332115):      1.284      0.186 FF  CELL  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[2]
+    Info (332115):      0.886      0.886  R        clock network delay
+    Info (332115):      0.886      0.000     uTco  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg
+    Info (332115):      0.886      0.000 RR  CELL  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|\jtag_hub_gen:real_sld_jtag_hub|clr_reg|q
+    Info (332115):      1.279      0.393 RR    IC  auto_hub|\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|splitter_nodes_receive_1[3]|clrn
+    Info (332115):      1.472      0.193 RF  CELL  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|splitter_nodes_receive_1[3]
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           latch edge time
-    Info (332115):      0.899      0.899  R        clock network delay
-    Info (332115):      0.881     -0.018           clock pessimism removed
-    Info (332115):      0.881      0.000           clock uncertainty
-    Info (332115):      0.881      0.000      uTh  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[2]
+    Info (332115):      1.060      1.060  R        clock network delay
+    Info (332115):      1.042     -0.018           clock pessimism removed
+    Info (332115):      1.042      0.000           clock uncertainty
+    Info (332115):      1.042      0.000      uTh  sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|splitter_nodes_receive_1[3]
     Info (332115): 
-    Info (332115): Data Arrival Time  :     1.284
-    Info (332115): Data Required Time :     0.881
-    Info (332115): Slack              :     0.403 
+    Info (332115): Data Arrival Time  :     1.472
+    Info (332115): Data Required Time :     1.042
+    Info (332115): Slack              :     0.430 
     Info (332115): ===================================================================
     Info (332115): 
-Info (332115): Report Timing: Found 1 removal paths (0 violated).  Worst case slack is 0.462
+Info (332115): Report Timing: Found 1 removal paths (0 violated).  Worst case slack is 0.447
     Info (332115): -to_clock [get_clocks {sopc_clk}]
     Info (332115): -removal
     Info (332115): -stdout
-Info (332115): Path #1: Removal slack is 0.462 
+Info (332115): Path #1: Removal slack is 0.447 
     Info (332115): ===================================================================
     Info (332115): From Node    : first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
-    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_sys_clk_timer:sys_clk_timer|readdata[9]
+    Info (332115): To Node      : first_nios2_system:inst|first_nios2_system_led_pio:led_pio|data_out[5]
     Info (332115): Launch Clock : sopc_clk
     Info (332115): Latch Clock  : sopc_clk
     Info (332115): 
@@ -2263,33 +2285,33 @@ Info (332115): Path #1: Removal slack is 0.462
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           launch edge time
-    Info (332115):      1.689      1.689  R        clock network delay
-    Info (332115):      1.689      0.000     uTco  first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
-    Info (332115):      1.689      0.000 RR  CELL  inst|rst_controller|r_sync_rst|q
-    Info (332115):      1.988      0.299 RR    IC  inst|sys_clk_timer|readdata[9]|clrn
-    Info (332115):      2.184      0.196 RF  CELL  first_nios2_system:inst|first_nios2_system_sys_clk_timer:sys_clk_timer|readdata[9]
+    Info (332115):      1.662      1.662  R        clock network delay
+    Info (332115):      1.662      0.000     uTco  first_nios2_system:inst|altera_reset_controller:rst_controller|r_sync_rst
+    Info (332115):      1.662      0.000 RR  CELL  inst|rst_controller|r_sync_rst|q
+    Info (332115):      2.164      0.502 RR    IC  inst|led_pio|data_out[5]|clrn
+    Info (332115):      2.360      0.196 RF  CELL  first_nios2_system:inst|first_nios2_system_led_pio:led_pio|data_out[5]
     Info (332115): 
     Info (332115): Data Required Path:
     Info (332115): 
     Info (332115): Total (ns)  Incr (ns)     Type  Element
     Info (332115): ==========  ========= ==  ====  ===================================
     Info (332115):      0.000      0.000           latch edge time
-    Info (332115):      1.943      1.943  R        clock network delay
-    Info (332115):      1.722     -0.221           clock pessimism removed
-    Info (332115):      1.722      0.000           clock uncertainty
-    Info (332115):      1.722      0.000      uTh  first_nios2_system:inst|first_nios2_system_sys_clk_timer:sys_clk_timer|readdata[9]
+    Info (332115):      1.956      1.956  R        clock network delay
+    Info (332115):      1.913     -0.043           clock pessimism removed
+    Info (332115):      1.913      0.000           clock uncertainty
+    Info (332115):      1.913      0.000      uTh  first_nios2_system:inst|first_nios2_system_led_pio:led_pio|data_out[5]
     Info (332115): 
-    Info (332115): Data Arrival Time  :     2.184
-    Info (332115): Data Required Time :     1.722
-    Info (332115): Slack              :     0.462 
+    Info (332115): Data Arrival Time  :     2.360
+    Info (332115): Data Required Time :     1.913
+    Info (332115): Slack              :     0.447 
     Info (332115): ===================================================================
     Info (332115): 
 Info (332101): Design is fully constrained for setup requirements
 Info (332101): Design is fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 5529 megabytes
-    Info: Processing ended: Thu Jan 29 17:40:22 2026
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Peak virtual memory: 5535 megabytes
+    Info: Processing ended: Mon Feb  2 17:22:34 2026
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:22
 
 

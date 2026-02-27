@@ -2,9 +2,9 @@
  * system.h - SOPC Builder system and BSP software package information
  *
  * Machine generated for CPU 'cpu' in SOPC Builder design 'first_nios2_system'
- * SOPC Builder design path: C:/DSD/DSD_git/DSD/DSD_Leo/DSD/de1_soc/first_nios2_system.sopcinfo
+ * SOPC Builder design path: C:/DSD/DSD_git/DSD/template/first_nios2_system.sopcinfo
  *
- * Generated: Mon Feb 02 20:17:47 GMT 2026
+ * Generated: Fri Feb 13 07:05:37 GMT 2026
  */
 
 /*
@@ -141,8 +141,11 @@
  *
  */
 
-#define ALT_CI_MUL_TOP_0(A,B) __builtin_custom_inii(ALT_CI_MUL_TOP_0_N,(A),(B))
-#define ALT_CI_MUL_TOP_0_N 0x0
+#define ALT_CI_FP_ADD_0(n,A,B) __builtin_custom_inii(ALT_CI_FP_ADD_0_N+(n&ALT_CI_FP_ADD_0_N_MASK),(A),(B))
+#define ALT_CI_FP_ADD_0_N 0x0
+#define ALT_CI_FP_ADD_0_N_MASK ((1<<1)-1)
+#define ALT_CI_FP_MUL_0(A,B) __builtin_custom_inii(ALT_CI_FP_MUL_0_N,(A),(B))
+#define ALT_CI_FP_MUL_0_N 0x2
 
 
 /*
@@ -156,7 +159,8 @@
 #define __ALTERA_AVALON_SYSID_QSYS
 #define __ALTERA_AVALON_TIMER
 #define __ALTERA_NIOS2_GEN2
-#define __MUL_TOP
+#define __FP_ADD
+#define __FP_MUL
 
 
 /*
@@ -321,7 +325,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1770052344
+#define SYSID_TIMESTAMP 1770966017
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */

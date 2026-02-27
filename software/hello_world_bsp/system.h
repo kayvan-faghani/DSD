@@ -1,10 +1,10 @@
 /*
  * system.h - SOPC Builder system and BSP software package information
  *
- * Machine generated for CPU 'cpu' in SOPC Builder design 'task1'
- * SOPC Builder design path: C:/DSD/DSD_Task_1/task1.sopcinfo
+ * Machine generated for CPU 'cpu' in SOPC Builder design 'first_nios2_system'
+ * SOPC Builder design path: C:/DSD/DSD_git/DSD/template/first_nios2_system.sopcinfo
  *
- * Generated: Mon Feb 02 20:28:12 GMT 2026
+ * Generated: Thu Feb 12 22:19:24 GMT 2026
  */
 
 /*
@@ -79,8 +79,8 @@
 #define ALT_CPU_FLUSHDA_SUPPORTED
 #define ALT_CPU_FREQ 50000000
 #define ALT_CPU_HARDWARE_DIVIDE_PRESENT 0
-#define ALT_CPU_HARDWARE_MULTIPLY_PRESENT 0
-#define ALT_CPU_HARDWARE_MULX_PRESENT 0
+#define ALT_CPU_HARDWARE_MULTIPLY_PRESENT 1
+#define ALT_CPU_HARDWARE_MULX_PRESENT 1
 #define ALT_CPU_HAS_DEBUG_CORE 1
 #define ALT_CPU_HAS_DEBUG_STUB
 #define ALT_CPU_HAS_EXTRA_EXCEPTION_INFO
@@ -119,8 +119,8 @@
 #define NIOS2_FLASH_ACCELERATOR_LINE_SIZE 0
 #define NIOS2_FLUSHDA_SUPPORTED
 #define NIOS2_HARDWARE_DIVIDE_PRESENT 0
-#define NIOS2_HARDWARE_MULTIPLY_PRESENT 0
-#define NIOS2_HARDWARE_MULX_PRESENT 0
+#define NIOS2_HARDWARE_MULTIPLY_PRESENT 1
+#define NIOS2_HARDWARE_MULX_PRESENT 1
 #define NIOS2_HAS_DEBUG_CORE 1
 #define NIOS2_HAS_DEBUG_STUB
 #define NIOS2_HAS_EXTRA_EXCEPTION_INFO
@@ -137,6 +137,18 @@
 
 
 /*
+ * Custom instruction macros
+ *
+ */
+
+#define ALT_CI_FP_ADD_0(n,A,B) __builtin_custom_inii(ALT_CI_FP_ADD_0_N+(n&ALT_CI_FP_ADD_0_N_MASK),(A),(B))
+#define ALT_CI_FP_ADD_0_N 0x2
+#define ALT_CI_FP_ADD_0_N_MASK ((1<<1)-1)
+#define ALT_CI_FP_MUL_0(A,B) __builtin_custom_inii(ALT_CI_FP_MUL_0_N,(A),(B))
+#define ALT_CI_FP_MUL_0_N 0x0
+
+
+/*
  * Define for each module class mastered by the CPU
  *
  */
@@ -147,6 +159,8 @@
 #define __ALTERA_AVALON_SYSID_QSYS
 #define __ALTERA_AVALON_TIMER
 #define __ALTERA_NIOS2_GEN2
+#define __FP_ADD
+#define __FP_MUL
 
 
 /*
@@ -182,7 +196,7 @@
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
 #define ALT_STDOUT_TYPE "altera_avalon_jtag_uart"
-#define ALT_SYSTEM_NAME "task1"
+#define ALT_SYSTEM_NAME "first_nios2_system"
 #define ALT_SYS_CLK_TICKS_PER_SEC SYS_CLK_TIMER_TICKS_PER_SEC
 #define ALT_TIMESTAMP_CLK_TIMER_DEVICE_TYPE NONE_TIMER_DEVICE_TYPE
 
@@ -255,7 +269,7 @@
 #define ONCHIP_MEM_CONTENTS_INFO ""
 #define ONCHIP_MEM_DUAL_PORT 0
 #define ONCHIP_MEM_GUI_RAM_BLOCK_TYPE "AUTO"
-#define ONCHIP_MEM_INIT_CONTENTS_FILE "task1_onchip_mem"
+#define ONCHIP_MEM_INIT_CONTENTS_FILE "first_nios2_system_onchip_mem"
 #define ONCHIP_MEM_INIT_MEM_CONTENT 1
 #define ONCHIP_MEM_INSTANCE_ID "NONE"
 #define ONCHIP_MEM_IRQ -1
@@ -266,8 +280,8 @@
 #define ONCHIP_MEM_READ_DURING_WRITE_MODE "DONT_CARE"
 #define ONCHIP_MEM_SINGLE_CLOCK_OP 0
 #define ONCHIP_MEM_SIZE_MULTIPLE 1
-#define ONCHIP_MEM_SIZE_VALUE 300000
-#define ONCHIP_MEM_SPAN 300000
+#define ONCHIP_MEM_SIZE_VALUE 389120
+#define ONCHIP_MEM_SPAN 389120
 #define ONCHIP_MEM_TYPE "altera_avalon_onchip_memory2"
 #define ONCHIP_MEM_WRITABLE 1
 
@@ -311,7 +325,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1768854688
+#define SYSID_TIMESTAMP 1770931774
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */

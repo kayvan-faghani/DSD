@@ -3,14 +3,15 @@ NIOS2_SHELL := C:\intelFPGA_lite\23.1std\nios2eds\Nios II Command Shell.bat
 BSP_DIR  := software/$(PROJ)_bsp
 SET_PATH := software/$(PROJ)_bsp/settings.bsp
 APP_DIR  := software/$(PROJ)
+SOPC_FILE := C:/DSD/DSD_git/DSD/template/first_nios2_system.sopcinfo
 
 .PHONY: all bsp hello_world download run
 
 all: bsp hello_world download terminal
 
 bsp:
+	"$(NIOS2_SHELL)" nios2-bsp hal "$(BSP_DIR)" "$(SOPC_FILE)"
 	"$(NIOS2_SHELL)" nios2-bsp-generate-files.exe --bsp-dir "$(BSP_DIR)" --settings "$(SET_PATH)"
-# 	"$(NIOS2_SHELL)" make -C "$(BSP_DIR)" all
 
 hello_world:
 	"$(NIOS2_SHELL)" make -C "$(APP_DIR)" all

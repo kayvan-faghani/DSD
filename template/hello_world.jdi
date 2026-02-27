@@ -1,11 +1,11 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="61696a3f4a6c6f372299"/>
+    <hash md5_digest_80b="c8f7e56bd3b31c3ff792"/>
   </project>
   <file_info>
-    <file device="5CSEMA5F31C6" path="hello_world_time_limited.sof" usercode="0xFFFFFFFF"/>
+    <file device="5CSEMA5F31C6" path="hello_world.sof" usercode="0xFFFFFFFF"/>
   </file_info>
-  <hub_info hub_ir_width="5" ir_width="2" node_addr_width="2" node_count="3"/>
+  <hub_info hub_ir_width="5" ir_width="2" node_addr_width="2" node_count="2"/>
   <node_info>
     <node hpath="first_nios2_system:inst|first_nios2_system_cpu:cpu|first_nios2_system_cpu_cpu:cpu|first_nios2_system_cpu_cpu_nios2_oci:the_first_nios2_system_cpu_cpu_nios2_oci|first_nios2_system_cpu_cpu_debug_slave_wrapper:the_first_nios2_system_cpu_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:first_nios2_system_cpu_cpu_debug_slave_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst" instance_id="0" mfg_id="70" node_id="34" sld_node_info="0x19104600" version="3">
       <parameters>
@@ -135,12 +135,11 @@
         <port name="jtag.bp.inst_jtag_uart_first_nios2_system_jtag_uart_alt_jtag_atlantic_ir_out_0_"/>
       </outputs>
     </node>
-    <node hpath="pzdyqx:nabboc" instance_id="0" mfg_id="110" node_id="1" sld_node_info="0x86E00" version="0"/>
   </node_info>
   <sld_infos>
     <sld_info hpath="first_nios2_system:inst" name="inst">
       <assignment_values>
-        <assignment_value text="QSYS_NAME first_nios2_system HAS_SOPCINFO 1 GENERATION_ID 1770052695"/>
+        <assignment_value text="QSYS_NAME first_nios2_system HAS_SOPCINFO 1 GENERATION_ID 1770966017"/>
       </assignment_values>
       <parameters/>
     </sld_info>

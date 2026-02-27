@@ -1,0 +1,21 @@
+module fp_add
+    (
+        input clk,
+        input areset,
+        input [31:0]  a,
+        input [31:0]  b,
+		  input opSel,
+        output [31:0]  result
+    );
+
+    work work
+    (
+        .clk(clk),
+        .areset(areset),
+        .a(a),
+        .b(b),
+		  .opSel(opSel),
+        .q(result)
+    );
+		
+endmodule // fp_add

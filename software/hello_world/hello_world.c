@@ -7,6 +7,7 @@
   #include <stdio.h>
   #include <unistd.h>
   #include <math.h>
+  #include "custom_instr.h"
 
   // Test case 1
   // #define step 5
@@ -69,6 +70,28 @@
     return y;
   }
 
+  float calculateFunctionTask6(float x[], int M)
+  {
+    int i;
+    float a_left;
+    float a_right;
+    float a_2;
+    float cos_f;
+    float a_cos;
+    float y = 0;
+    for (i=0; i<M; i++) {
+      float a = x[i];
+      a_left = cust_fp_mul(0.5,a);
+      a_2 = cust_fp_mul(a,a);
+      cos_f = cos((a-128.0f)/128.0f);
+      a_cos = cust_fp_mul(a, cos_f);
+      a_right = cust_fp_mul(a_2,a_cos);
+      y += cust_fp_add_sub(1,a_left,a_right);
+    }
+    return y;
+  }
+
+
   float averageTime(int runs, float (*fptr)(float[],int),float x[], float* y)
   {
     clock_t total = 0;
@@ -96,13 +119,12 @@
     generateVector(x);
 
     // The following is used for timing
-    // averageTime(1,&calculateFunction,x,&y);
-    clock_t exec_t1 = 0;
-    clock_t exec_t2 = 0;
-    exec_t1 = times(NULL); // get system time before starting the process
-    y = calculateFunction(x,N);
-    exec_t2 = times(NULL); // get system time after starting the process
-    printf("Ticks: %d\n",exec_t2-exec_t1);
-    y = y/1024.0;
-    printf("Result: %d \n",(int) y);
+    averageTime(1,&calculateFunctionTask6,x,&y);
+    // clock_t exec_t1 = 0;
+    // clock_t exec_t2 = 0;
+    // exec_t1 = times(NULL); // get system time before starting the process
+    // y = calculateFunction(x,N);
+    // exec_t2 = times(NULL); // get system time after starting the process
+    // printf("Ticks: %d\n",exec_t2-exec_t1);
+    printf("Result: %f \n",y);
   } 

@@ -1,0 +1,568 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 win64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do hello_world_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work rtl_work 
+# Copying c:/intelfpga_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+c:/dsd/dsd_git/dsd {c:/dsd/dsd_git/dsd/mul.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:40:56 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+c:/dsd/dsd_git/dsd" c:/dsd/dsd_git/dsd/mul.v 
+# -- Compiling module mul
+# 
+# Top level modules:
+# 	mul
+# End time: 12:40:56 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+c:/dsd/dsd_git/dsd {c:/dsd/dsd_git/dsd/mul_top.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:40:56 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+c:/dsd/dsd_git/dsd" c:/dsd/dsd_git/dsd/mul_top.v 
+# -- Compiling module mul_top
+# 
+# Top level modules:
+# 	mul_top
+# End time: 12:40:56 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/DSD/DSD_git/DSD/template/db {C:/DSD/DSD_git/DSD/template/db/altera_mult_add_20u2.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:40:56 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/DSD/DSD_git/DSD/template/db" C:/DSD/DSD_git/DSD/template/db/altera_mult_add_20u2.v 
+# -- Compiling module altera_mult_add_20u2
+# 
+# Top level modules:
+# 	altera_mult_add_20u2
+# End time: 12:40:56 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/DSD/DSD_git/DSD/template/db {C:/DSD/DSD_git/DSD/template/db/altera_mult_add_iau2.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:40:56 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/DSD/DSD_git/DSD/template/db" C:/DSD/DSD_git/DSD/template/db/altera_mult_add_iau2.v 
+# -- Compiling module altera_mult_add_iau2
+# 
+# Top level modules:
+# 	altera_mult_add_iau2
+# End time: 12:40:56 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/DSD/DSD_git/DSD/template/db {C:/DSD/DSD_git/DSD/template/db/altera_mult_add_hau2.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:40:56 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/DSD/DSD_git/DSD/template/db" C:/DSD/DSD_git/DSD/template/db/altera_mult_add_hau2.v 
+# -- Compiling module altera_mult_add_hau2
+# 
+# Top level modules:
+# 	altera_mult_add_hau2
+# End time: 12:40:56 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/DSD/DSD_git/DSD/template/db {C:/DSD/DSD_git/DSD/template/db/altera_mult_add_1lu2.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:40:56 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/DSD/DSD_git/DSD/template/db" C:/DSD/DSD_git/DSD/template/db/altera_mult_add_1lu2.v 
+# -- Compiling module altera_mult_add_1lu2
+# 
+# Top level modules:
+# 	altera_mult_add_1lu2
+# End time: 12:40:56 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/DSD/DSD_git/DSD/template/db {C:/DSD/DSD_git/DSD/template/db/mult_b8n.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:40:56 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/DSD/DSD_git/DSD/template/db" C:/DSD/DSD_git/DSD/template/db/mult_b8n.v 
+# -- Compiling module mult_b8n
+# 
+# Top level modules:
+# 	mult_b8n
+# End time: 12:40:56 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlib first_nios2_system
+# vmap first_nios2_system first_nios2_system
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap first_nios2_system first_nios2_system 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/first_nios2_system.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:40:56 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/first_nios2_system.v 
+# -- Compiling module first_nios2_system
+# 
+# Top level modules:
+# 	first_nios2_system
+# End time: 12:40:56 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_customins_master_translator.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:40:56 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_customins_master_translator.v 
+# -- Compiling module altera_customins_master_translator
+# 
+# Top level modules:
+# 	altera_customins_master_translator
+# End time: 12:40:56 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_reset_controller.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:40:56 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_reset_controller.v 
+# -- Compiling module altera_reset_controller
+# 
+# Top level modules:
+# 	altera_reset_controller
+# End time: 12:40:57 on Feb 12,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_reset_synchronizer.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:40:57 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_reset_synchronizer.v 
+# -- Compiling module altera_reset_synchronizer
+# 
+# Top level modules:
+# 	altera_reset_synchronizer
+# End time: 12:40:57 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:40:57 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu.v 
+# -- Compiling module first_nios2_system_cpu
+# 
+# Top level modules:
+# 	first_nios2_system_cpu
+# End time: 12:40:57 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_cpu.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:40:57 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_cpu.v 
+# -- Compiling module first_nios2_system_cpu_cpu_ic_data_module
+# -- Compiling module first_nios2_system_cpu_cpu_ic_tag_module
+# -- Compiling module first_nios2_system_cpu_cpu_bht_module
+# -- Compiling module first_nios2_system_cpu_cpu_register_bank_a_module
+# -- Compiling module first_nios2_system_cpu_cpu_register_bank_b_module
+# -- Compiling module first_nios2_system_cpu_cpu_dc_tag_module
+# -- Compiling module first_nios2_system_cpu_cpu_dc_data_module
+# -- Compiling module first_nios2_system_cpu_cpu_dc_victim_module
+# -- Compiling module first_nios2_system_cpu_cpu_nios2_oci_debug
+# -- Compiling module first_nios2_system_cpu_cpu_nios2_oci_break
+# -- Compiling module first_nios2_system_cpu_cpu_nios2_oci_xbrk
+# -- Compiling module first_nios2_system_cpu_cpu_nios2_oci_dbrk
+# -- Compiling module first_nios2_system_cpu_cpu_nios2_oci_itrace
+# -- Compiling module first_nios2_system_cpu_cpu_nios2_oci_td_mode
+# -- Compiling module first_nios2_system_cpu_cpu_nios2_oci_dtrace
+# -- Compiling module first_nios2_system_cpu_cpu_nios2_oci_compute_input_tm_cnt
+# -- Compiling module first_nios2_system_cpu_cpu_nios2_oci_fifo_wrptr_inc
+# -- Compiling module first_nios2_system_cpu_cpu_nios2_oci_fifo_cnt_inc
+# -- Compiling module first_nios2_system_cpu_cpu_nios2_oci_fifo
+# -- Compiling module first_nios2_system_cpu_cpu_nios2_oci_pib
+# -- Compiling module first_nios2_system_cpu_cpu_nios2_oci_im
+# -- Compiling module first_nios2_system_cpu_cpu_nios2_performance_monitors
+# -- Compiling module first_nios2_system_cpu_cpu_nios2_avalon_reg
+# -- Compiling module first_nios2_system_cpu_cpu_ociram_sp_ram_module
+# -- Compiling module first_nios2_system_cpu_cpu_nios2_ocimem
+# -- Compiling module first_nios2_system_cpu_cpu_nios2_oci
+# -- Compiling module first_nios2_system_cpu_cpu
+# 
+# Top level modules:
+# 	first_nios2_system_cpu_cpu_nios2_performance_monitors
+# 	first_nios2_system_cpu_cpu
+# End time: 12:40:57 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_cpu_debug_slave_sysclk.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:40:57 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_cpu_debug_slave_sysclk.v 
+# -- Compiling module first_nios2_system_cpu_cpu_debug_slave_sysclk
+# 
+# Top level modules:
+# 	first_nios2_system_cpu_cpu_debug_slave_sysclk
+# End time: 12:40:57 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_cpu_debug_slave_tck.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:40:57 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_cpu_debug_slave_tck.v 
+# -- Compiling module first_nios2_system_cpu_cpu_debug_slave_tck
+# 
+# Top level modules:
+# 	first_nios2_system_cpu_cpu_debug_slave_tck
+# End time: 12:40:57 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_cpu_debug_slave_wrapper.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:40:57 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_cpu_debug_slave_wrapper.v 
+# -- Compiling module first_nios2_system_cpu_cpu_debug_slave_wrapper
+# 
+# Top level modules:
+# 	first_nios2_system_cpu_cpu_debug_slave_wrapper
+# End time: 12:40:57 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_cpu_mult_cell.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:40:57 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_cpu_mult_cell.v 
+# -- Compiling module first_nios2_system_cpu_cpu_mult_cell
+# 
+# Top level modules:
+# 	first_nios2_system_cpu_cpu_mult_cell
+# End time: 12:40:58 on Feb 12,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_cpu_test_bench.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:40:58 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_cpu_test_bench.v 
+# -- Compiling module first_nios2_system_cpu_cpu_test_bench
+# 
+# Top level modules:
+# 	first_nios2_system_cpu_cpu_test_bench
+# End time: 12:40:58 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_jtag_uart.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:40:58 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_jtag_uart.v 
+# -- Compiling module first_nios2_system_jtag_uart_sim_scfifo_w
+# -- Compiling module first_nios2_system_jtag_uart_scfifo_w
+# -- Compiling module first_nios2_system_jtag_uart_sim_scfifo_r
+# -- Compiling module first_nios2_system_jtag_uart_scfifo_r
+# -- Compiling module first_nios2_system_jtag_uart
+# 
+# Top level modules:
+# 	first_nios2_system_jtag_uart
+# End time: 12:40:58 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_led_pio.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:40:58 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_led_pio.v 
+# -- Compiling module first_nios2_system_led_pio
+# 
+# Top level modules:
+# 	first_nios2_system_led_pio
+# End time: 12:40:58 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:40:58 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0.v 
+# -- Compiling module first_nios2_system_mm_interconnect_0
+# 
+# Top level modules:
+# 	first_nios2_system_mm_interconnect_0
+# End time: 12:40:58 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_avalon_st_adapter.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:40:58 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_avalon_st_adapter.v 
+# -- Compiling module first_nios2_system_mm_interconnect_0_avalon_st_adapter
+# 
+# Top level modules:
+# 	first_nios2_system_mm_interconnect_0_avalon_st_adapter
+# End time: 12:40:59 on Feb 12,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_onchip_mem.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:00 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_onchip_mem.v 
+# -- Compiling module first_nios2_system_onchip_mem
+# 
+# Top level modules:
+# 	first_nios2_system_onchip_mem
+# End time: 12:41:00 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_sys_clk_timer.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:00 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_sys_clk_timer.v 
+# -- Compiling module first_nios2_system_sys_clk_timer
+# 
+# Top level modules:
+# 	first_nios2_system_sys_clk_timer
+# End time: 12:41:00 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_sysid.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:00 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_sysid.v 
+# -- Compiling module first_nios2_system_sysid
+# 
+# Top level modules:
+# 	first_nios2_system_sysid
+# End time: 12:41:01 on Feb 12,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/mul_top.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:01 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/mul_top.v 
+# -- Compiling module mul_top
+# 
+# Top level modules:
+# 	mul_top
+# End time: 12:41:01 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_avalon_sc_fifo.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:01 on Feb 12,2026
+# vlog -reportprogress 300 -vlog01compat -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_avalon_sc_fifo.v 
+# -- Compiling module altera_avalon_sc_fifo
+# 
+# Top level modules:
+# 	altera_avalon_sc_fifo
+# End time: 12:41:01 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_customins_slave_translator.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:01 on Feb 12,2026
+# vlog -reportprogress 300 -sv -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_customins_slave_translator.sv 
+# -- Compiling module altera_customins_slave_translator
+# 
+# Top level modules:
+# 	altera_customins_slave_translator
+# End time: 12:41:01 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_merlin_arbitrator.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:01 on Feb 12,2026
+# vlog -reportprogress 300 -sv -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_merlin_arbitrator.sv 
+# -- Compiling module altera_merlin_arbitrator
+# -- Compiling module altera_merlin_arb_adder
+# 
+# Top level modules:
+# 	altera_merlin_arbitrator
+# End time: 12:41:02 on Feb 12,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_merlin_burst_uncompressor.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:02 on Feb 12,2026
+# vlog -reportprogress 300 -sv -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_merlin_burst_uncompressor.sv 
+# -- Compiling module altera_merlin_burst_uncompressor
+# 
+# Top level modules:
+# 	altera_merlin_burst_uncompressor
+# End time: 12:41:02 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_merlin_master_agent.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:02 on Feb 12,2026
+# vlog -reportprogress 300 -sv -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_merlin_master_agent.sv 
+# -- Compiling module altera_merlin_master_agent
+# 
+# Top level modules:
+# 	altera_merlin_master_agent
+# End time: 12:41:02 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_merlin_master_translator.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:02 on Feb 12,2026
+# vlog -reportprogress 300 -sv -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_merlin_master_translator.sv 
+# -- Compiling module altera_merlin_master_translator
+# 
+# Top level modules:
+# 	altera_merlin_master_translator
+# End time: 12:41:02 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_merlin_slave_agent.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:02 on Feb 12,2026
+# vlog -reportprogress 300 -sv -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_merlin_slave_agent.sv 
+# -- Compiling module altera_merlin_slave_agent
+# 
+# Top level modules:
+# 	altera_merlin_slave_agent
+# End time: 12:41:03 on Feb 12,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_merlin_slave_translator.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:03 on Feb 12,2026
+# vlog -reportprogress 300 -sv -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_merlin_slave_translator.sv 
+# -- Compiling module altera_merlin_slave_translator
+# 
+# Top level modules:
+# 	altera_merlin_slave_translator
+# End time: 12:41:03 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_merlin_traffic_limiter.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:03 on Feb 12,2026
+# vlog -reportprogress 300 -sv -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_merlin_traffic_limiter.sv 
+# -- Compiling module altera_merlin_traffic_limiter
+# 
+# Top level modules:
+# 	altera_merlin_traffic_limiter
+# End time: 12:41:03 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_custom_instruction_master_comb_xconnect.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:03 on Feb 12,2026
+# vlog -reportprogress 300 -sv -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_custom_instruction_master_comb_xconnect.sv 
+# -- Compiling module first_nios2_system_cpu_custom_instruction_master_comb_xconnect
+# 
+# Top level modules:
+# 	first_nios2_system_cpu_custom_instruction_master_comb_xconnect
+# End time: 12:41:03 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_irq_mapper.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:03 on Feb 12,2026
+# vlog -reportprogress 300 -sv -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_irq_mapper.sv 
+# -- Compiling module first_nios2_system_irq_mapper
+# 
+# Top level modules:
+# 	first_nios2_system_irq_mapper
+# End time: 12:41:04 on Feb 12,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:04 on Feb 12,2026
+# vlog -reportprogress 300 -sv -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv 
+# -- Compiling module first_nios2_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0
+# 
+# Top level modules:
+# 	first_nios2_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0
+# End time: 12:41:04 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_cmd_demux.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:04 on Feb 12,2026
+# vlog -reportprogress 300 -sv -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_cmd_demux.sv 
+# -- Compiling module first_nios2_system_mm_interconnect_0_cmd_demux
+# 
+# Top level modules:
+# 	first_nios2_system_mm_interconnect_0_cmd_demux
+# End time: 12:41:04 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_cmd_demux_001.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:04 on Feb 12,2026
+# vlog -reportprogress 300 -sv -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_cmd_demux_001.sv 
+# -- Compiling module first_nios2_system_mm_interconnect_0_cmd_demux_001
+# 
+# Top level modules:
+# 	first_nios2_system_mm_interconnect_0_cmd_demux_001
+# End time: 12:41:04 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_cmd_mux.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:04 on Feb 12,2026
+# vlog -reportprogress 300 -sv -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_cmd_mux.sv 
+# -- Compiling module first_nios2_system_mm_interconnect_0_cmd_mux
+# 
+# Top level modules:
+# 	first_nios2_system_mm_interconnect_0_cmd_mux
+# End time: 12:41:04 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_cmd_mux_002.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:04 on Feb 12,2026
+# vlog -reportprogress 300 -sv -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_cmd_mux_002.sv 
+# -- Compiling module first_nios2_system_mm_interconnect_0_cmd_mux_002
+# 
+# Top level modules:
+# 	first_nios2_system_mm_interconnect_0_cmd_mux_002
+# End time: 12:41:05 on Feb 12,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_router.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:05 on Feb 12,2026
+# vlog -reportprogress 300 -sv -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_router.sv 
+# -- Compiling module first_nios2_system_mm_interconnect_0_router_default_decode
+# -- Compiling module first_nios2_system_mm_interconnect_0_router
+# 
+# Top level modules:
+# 	first_nios2_system_mm_interconnect_0_router
+# End time: 12:41:05 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_router_001.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:05 on Feb 12,2026
+# vlog -reportprogress 300 -sv -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_router_001.sv 
+# -- Compiling module first_nios2_system_mm_interconnect_0_router_001_default_decode
+# -- Compiling module first_nios2_system_mm_interconnect_0_router_001
+# 
+# Top level modules:
+# 	first_nios2_system_mm_interconnect_0_router_001
+# End time: 12:41:05 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_router_002.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:05 on Feb 12,2026
+# vlog -reportprogress 300 -sv -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_router_002.sv 
+# -- Compiling module first_nios2_system_mm_interconnect_0_router_002_default_decode
+# -- Compiling module first_nios2_system_mm_interconnect_0_router_002
+# 
+# Top level modules:
+# 	first_nios2_system_mm_interconnect_0_router_002
+# End time: 12:41:05 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_router_004.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:05 on Feb 12,2026
+# vlog -reportprogress 300 -sv -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_router_004.sv 
+# -- Compiling module first_nios2_system_mm_interconnect_0_router_004_default_decode
+# -- Compiling module first_nios2_system_mm_interconnect_0_router_004
+# 
+# Top level modules:
+# 	first_nios2_system_mm_interconnect_0_router_004
+# End time: 12:41:06 on Feb 12,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_rsp_demux.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:06 on Feb 12,2026
+# vlog -reportprogress 300 -sv -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_rsp_demux.sv 
+# -- Compiling module first_nios2_system_mm_interconnect_0_rsp_demux
+# 
+# Top level modules:
+# 	first_nios2_system_mm_interconnect_0_rsp_demux
+# End time: 12:41:06 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_rsp_demux_002.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:06 on Feb 12,2026
+# vlog -reportprogress 300 -sv -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_rsp_demux_002.sv 
+# -- Compiling module first_nios2_system_mm_interconnect_0_rsp_demux_002
+# 
+# Top level modules:
+# 	first_nios2_system_mm_interconnect_0_rsp_demux_002
+# End time: 12:41:06 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_rsp_mux.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:06 on Feb 12,2026
+# vlog -reportprogress 300 -sv -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_rsp_mux.sv 
+# -- Compiling module first_nios2_system_mm_interconnect_0_rsp_mux
+# 
+# Top level modules:
+# 	first_nios2_system_mm_interconnect_0_rsp_mux
+# End time: 12:41:06 on Feb 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_rsp_mux_001.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:41:06 on Feb 12,2026
+# vlog -reportprogress 300 -sv -work first_nios2_system "+incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules" c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_rsp_mux_001.sv 
+# -- Compiling module first_nios2_system_mm_interconnect_0_rsp_mux_001
+# 
+# Top level modules:
+# 	first_nios2_system_mm_interconnect_0_rsp_mux_001
+# End time: 12:41:07 on Feb 12,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 

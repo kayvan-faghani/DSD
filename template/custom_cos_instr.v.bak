@@ -1,0 +1,27 @@
+module custom_cos_instr (
+    input clk,
+    input clk_en,
+    input [31:0] dataa,   // Input: Float angle in Radians
+    output [31:0] result  // Output: Float Cosine value
+);
+
+    wire [7:0] lut_addr = dataa[7:0]; 
+
+    // 2. ROM Declaration (Infers M10K blocks)
+    reg [31:0] cos_rom [255:0];
+
+    initial begin
+        $readmemh("cos_lut.hex", cos_rom);
+    end
+
+    // 3. Synchronous Read
+    reg [31:0] rom_out;
+    always @(posedge clk) begin
+        if (clk_en) begin
+            rom_out <= cos_rom[lut_addr];
+        end
+    end
+
+    assign result = rom_out;
+
+endmodule

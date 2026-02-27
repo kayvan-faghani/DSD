@@ -101,7 +101,7 @@ ACDS_VERSION := 23.1
 # BUILD_NUMBER: 991
 
 SETTINGS_FILE := settings.bsp
-SOPC_FILE := C:/DSD/DSD_git/DSD/DSD_Leo/DSD/de1_soc/first_nios2_system.sopcinfo
+SOPC_FILE := C:/DSD/DSD_git/DSD/template/first_nios2_system.sopcinfo
 
 #-------------------------------------------------------------------------------
 #                             TOOL & COMMAND DEFINITIONS

@@ -1,0 +1,19 @@
+module fp_mul
+    (
+        input clk,
+        input areset,
+        input [31:0]  a,
+        input [31:0]  b,
+        output [31:0]  result
+    );
+
+    mul mul
+    (
+        .clk(clk),
+        .areset(areset),
+        .a(a),
+        .b(b),
+        .q(result)
+    );
+		
+endmodule // fp_mul

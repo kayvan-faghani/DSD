@@ -84,9 +84,13 @@ ACDS_VERSION := 23.1
 # used to generate this makefile. 
 # BUILD_NUMBER: 991
 
+# Quartus Generated JDI File. Required for resolving node instance ID's with 
+# design component names. 
+JDI_FILE := C:/DSD/DSD_git/DSD/template/hello_world.jdi
+
 # Qsys--generated SOPCINFO file. Required for resolving node instance ID's with 
 # design component names. 
-SOPCINFO_FILE := C:/DSD/DSD_Task_1/task1.sopcinfo
+SOPCINFO_FILE := C:/DSD/DSD_git/DSD/template/first_nios2_system.sopcinfo
 
 # Big-Endian operation. 
 # setting BIG_ENDIAN is false
@@ -123,12 +127,12 @@ ALT_CFLAGS += -mno-hw-div
 ALT_CFLAGS += -mno-hw-div
 
 # Hardware Multiplier present. 
-# setting HARDWARE_MULTIPLY is false
-ALT_CFLAGS += -mno-hw-mul
+# setting HARDWARE_MULTIPLY is true
+ALT_CFLAGS += -mhw-mul
 
 # Hardware Mulx present. 
-# setting HARDWARE_MULX is false
-ALT_CFLAGS += -mno-hw-mulx
+# setting HARDWARE_MULX is true
+ALT_CFLAGS += -mhw-mulx
 
 # Debug Core present. 
 # setting HAS_DEBUG_CORE is true
@@ -140,8 +144,8 @@ QSYS := 1
 ELF_PATCH_FLAG += --qsys true
 
 # Design Name 
-# setting SOPC_NAME is task1
-SOPC_NAME := task1
+# setting SOPC_NAME is first_nios2_system
+SOPC_NAME := first_nios2_system
 
 # SopcBuilder Simulation Enabled 
 # setting SOPC_SIMULATION_ENABLED is false
@@ -158,9 +162,9 @@ SOPC_SYSID_FLAG += --sidp=0x101030
 ELF_PATCH_FLAG  += --sidp 0x101030
 
 # The SOPC Timestamp 
-# setting SOPC_TIMESTAMP is 1768854688
-SOPC_SYSID_FLAG += --timestamp=1768854688
-ELF_PATCH_FLAG  += --timestamp 1768854688
+# setting SOPC_TIMESTAMP is 1770931774
+SOPC_SYSID_FLAG += --timestamp=1770931774
+ELF_PATCH_FLAG  += --timestamp 1770931774
 
 # Enable JTAG UART driver to recover when host is inactive causing buffer to 
 # full without returning error. Printf will not fail with this recovery. none 

@@ -1,10 +1,10 @@
 /*
  * linker.h - Linker script mapping information
  *
- * Machine generated for CPU 'cpu' in SOPC Builder design 'task1'
- * SOPC Builder design path: C:/DSD/DSD_Task_1/task1.sopcinfo
+ * Machine generated for CPU 'cpu' in SOPC Builder design 'first_nios2_system'
+ * SOPC Builder design path: C:/DSD/DSD_git/DSD/template/first_nios2_system.sopcinfo
  *
- * Generated: Mon Feb 02 20:28:12 GMT 2026
+ * Generated: Thu Feb 12 22:19:24 GMT 2026
  */
 
 /*
@@ -66,7 +66,7 @@
  */
 
 #define ONCHIP_MEM_REGION_BASE 0x80020
-#define ONCHIP_MEM_REGION_SPAN 299968
+#define ONCHIP_MEM_REGION_SPAN 389088
 #define RESET_REGION_BASE 0x80000
 #define RESET_REGION_SPAN 32
 

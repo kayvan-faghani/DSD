@@ -47,6 +47,7 @@ module first_nios2_system_cpu_cpu_test_bench (
                                                 W_estatus_reg,
                                                 W_exception_reg,
                                                 W_iw,
+                                                W_iw_custom_n,
                                                 W_iw_op,
                                                 W_iw_opx,
                                                 W_pcb,
@@ -108,6 +109,7 @@ module first_nios2_system_cpu_cpu_test_bench (
   input   [ 31: 0] W_estatus_reg;
   input   [ 31: 0] W_exception_reg;
   input   [ 31: 0] W_iw;
+  input   [  7: 0] W_iw_custom_n;
   input   [  5: 0] W_iw_op;
   input   [  5: 0] W_iw_opx;
   input   [ 20: 0] W_pcb;
@@ -221,6 +223,8 @@ wire             W_op_flushd;
 wire             W_op_flushda;
 wire             W_op_flushi;
 wire             W_op_flushp;
+wire             W_op_fp_add_0;
+wire             W_op_fp_mul_0;
 wire             W_op_hbreak;
 wire             W_op_initd;
 wire             W_op_initda;
@@ -240,7 +244,6 @@ wire             W_op_ldl;
 wire             W_op_ldw;
 wire             W_op_ldwio;
 wire             W_op_mul;
-wire             W_op_mul_top_0;
 wire             W_op_muli;
 wire             W_op_mulxss;
 wire             W_op_mulxsu;
@@ -446,7 +449,8 @@ wire             test_has_ended;
   assign W_op_intr = (W_iw_opx == 61) & W_is_opx_inst;
   assign W_op_crst = (W_iw_opx == 62) & W_is_opx_inst;
   assign W_op_opx_rsv63 = (W_iw_opx == 63) & W_is_opx_inst;
-  assign W_op_mul_top_0 = W_op_custom & 1'b1;
+  assign W_op_fp_add_0 = W_op_custom & ({W_iw_custom_n[1] , 1'b0} == 2'h0);
+  assign W_op_fp_mul_0 = W_op_custom & ({W_iw_custom_n[1 : 0]} == 2'h2);
   assign W_is_opx_inst = W_iw_op == 58;
   always @(posedge clk or negedge reset_n)
     begin

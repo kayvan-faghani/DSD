@@ -3988,6 +3988,7 @@ wire             A_op_cmpltu;
 wire             A_op_cmpltui;
 wire             A_op_cmpne;
 wire             A_op_cmpnei;
+wire             A_op_cordic_0;
 wire             A_op_crst;
 wire             A_op_custom;
 wire             A_op_div;
@@ -4288,6 +4289,7 @@ wire             D_op_cmpltu;
 wire             D_op_cmpltui;
 wire             D_op_cmpne;
 wire             D_op_cmpnei;
+wire             D_op_cordic_0;
 wire             D_op_crst;
 wire             D_op_custom;
 wire             D_op_div;
@@ -4683,6 +4685,7 @@ wire             E_op_cmpltu;
 wire             E_op_cmpltui;
 wire             E_op_cmpne;
 wire             E_op_cmpnei;
+wire             E_op_cordic_0;
 wire             E_op_crst;
 wire             E_op_custom;
 wire             E_op_div;
@@ -4910,6 +4913,7 @@ wire             F_op_cmpltu;
 wire             F_op_cmpltui;
 wire             F_op_cmpne;
 wire             F_op_cmpnei;
+wire             F_op_cordic_0;
 wire             F_op_crst;
 wire             F_op_custom;
 wire             F_op_div;
@@ -5354,6 +5358,7 @@ wire             M_op_cmpltu;
 wire             M_op_cmpltui;
 wire             M_op_cmpne;
 wire             M_op_cmpnei;
+wire             M_op_cordic_0;
 wire             M_op_crst;
 wire             M_op_custom;
 wire             M_op_div;
@@ -5791,6 +5796,7 @@ wire             W_op_cmpltu;
 wire             W_op_cmpltui;
 wire             W_op_cmpne;
 wire             W_op_cmpnei;
+wire             W_op_cordic_0;
 wire             W_op_crst;
 wire             W_op_custom;
 wire             W_op_div;
@@ -6297,6 +6303,7 @@ reg              wait_for_one_post_bret_inst;
   assign F_op_intr = (F_iw_opx == 61) & F_is_opx_inst;
   assign F_op_crst = (F_iw_opx == 62) & F_is_opx_inst;
   assign F_op_opx_rsv63 = (F_iw_opx == 63) & F_is_opx_inst;
+  assign F_op_cordic_0 = F_op_custom & ({F_iw_custom_n[1 : 0]} == 2'h3);
   assign F_op_fp_add_0 = F_op_custom & ({F_iw_custom_n[1] , 1'b0} == 2'h0);
   assign F_op_fp_mul_0 = F_op_custom & ({F_iw_custom_n[1 : 0]} == 2'h2);
   assign F_is_opx_inst = F_iw_op == 58;
@@ -6427,6 +6434,7 @@ reg              wait_for_one_post_bret_inst;
   assign D_op_intr = (D_iw_opx == 61) & D_is_opx_inst;
   assign D_op_crst = (D_iw_opx == 62) & D_is_opx_inst;
   assign D_op_opx_rsv63 = (D_iw_opx == 63) & D_is_opx_inst;
+  assign D_op_cordic_0 = D_op_custom & ({D_iw_custom_n[1 : 0]} == 2'h3);
   assign D_op_fp_add_0 = D_op_custom & ({D_iw_custom_n[1] , 1'b0} == 2'h0);
   assign D_op_fp_mul_0 = D_op_custom & ({D_iw_custom_n[1 : 0]} == 2'h2);
   assign D_is_opx_inst = D_iw_op == 58;
@@ -6557,6 +6565,7 @@ reg              wait_for_one_post_bret_inst;
   assign E_op_intr = (E_iw_opx == 61) & E_is_opx_inst;
   assign E_op_crst = (E_iw_opx == 62) & E_is_opx_inst;
   assign E_op_opx_rsv63 = (E_iw_opx == 63) & E_is_opx_inst;
+  assign E_op_cordic_0 = E_op_custom & ({E_iw_custom_n[1 : 0]} == 2'h3);
   assign E_op_fp_add_0 = E_op_custom & ({E_iw_custom_n[1] , 1'b0} == 2'h0);
   assign E_op_fp_mul_0 = E_op_custom & ({E_iw_custom_n[1 : 0]} == 2'h2);
   assign E_is_opx_inst = E_iw_op == 58;
@@ -6687,6 +6696,7 @@ reg              wait_for_one_post_bret_inst;
   assign M_op_intr = (M_iw_opx == 61) & M_is_opx_inst;
   assign M_op_crst = (M_iw_opx == 62) & M_is_opx_inst;
   assign M_op_opx_rsv63 = (M_iw_opx == 63) & M_is_opx_inst;
+  assign M_op_cordic_0 = M_op_custom & ({M_iw_custom_n[1 : 0]} == 2'h3);
   assign M_op_fp_add_0 = M_op_custom & ({M_iw_custom_n[1] , 1'b0} == 2'h0);
   assign M_op_fp_mul_0 = M_op_custom & ({M_iw_custom_n[1 : 0]} == 2'h2);
   assign M_is_opx_inst = M_iw_op == 58;
@@ -6817,6 +6827,7 @@ reg              wait_for_one_post_bret_inst;
   assign A_op_intr = (A_iw_opx == 61) & A_is_opx_inst;
   assign A_op_crst = (A_iw_opx == 62) & A_is_opx_inst;
   assign A_op_opx_rsv63 = (A_iw_opx == 63) & A_is_opx_inst;
+  assign A_op_cordic_0 = A_op_custom & ({A_iw_custom_n[1 : 0]} == 2'h3);
   assign A_op_fp_add_0 = A_op_custom & ({A_iw_custom_n[1] , 1'b0} == 2'h0);
   assign A_op_fp_mul_0 = A_op_custom & ({A_iw_custom_n[1 : 0]} == 2'h2);
   assign A_is_opx_inst = A_iw_op == 58;
@@ -6947,6 +6958,7 @@ reg              wait_for_one_post_bret_inst;
   assign W_op_intr = (W_iw_opx == 61) & W_is_opx_inst;
   assign W_op_crst = (W_iw_opx == 62) & W_is_opx_inst;
   assign W_op_opx_rsv63 = (W_iw_opx == 63) & W_is_opx_inst;
+  assign W_op_cordic_0 = W_op_custom & ({W_iw_custom_n[1 : 0]} == 2'h3);
   assign W_op_fp_add_0 = W_op_custom & ({W_iw_custom_n[1] , 1'b0} == 2'h0);
   assign W_op_fp_mul_0 = W_op_custom & ({W_iw_custom_n[1 : 0]} == 2'h2);
   assign W_is_opx_inst = W_iw_op == 58;
@@ -10558,7 +10570,7 @@ first_nios2_system_cpu_cpu_dc_victim_module first_nios2_system_cpu_cpu_dc_victim
     end
 
 
-  assign D_ctrl_custom_multi = D_op_fp_add_0|D_op_fp_mul_0;
+  assign D_ctrl_custom_multi = D_op_cordic_0|D_op_fp_add_0|D_op_fp_mul_0;
   assign E_ctrl_custom_multi_nxt = D_ctrl_custom_multi;
   always @(posedge clk or negedge reset_n)
     begin
@@ -14368,6 +14380,7 @@ first_nios2_system_cpu_cpu_dc_victim_module first_nios2_system_cpu_cpu_dc_victim
     D_op_opx_rsv42|
     D_op_opx_rsv43|
     D_op_rdctl|
+    D_op_cordic_0|
     D_op_fp_add_0|
     D_op_fp_mul_0|
     D_op_muli|
@@ -14696,6 +14709,7 @@ first_nios2_system_cpu_cpu_dc_victim_module first_nios2_system_cpu_cpu_dc_victim
     (F_op_sub)? 64'h2020202020737562 :
     (F_op_srai)? 64'h2020202073726169 :
     (F_op_sra)? 64'h2020202020737261 :
+    (F_op_cordic_0)? 64'h636f726469635f30 :
     (F_op_fp_add_0)? 64'h66705f6164645f30 :
     (F_op_fp_mul_0)? 64'h66705f6d756c5f30 :
     64'h2020202020424144;
@@ -14785,6 +14799,7 @@ first_nios2_system_cpu_cpu_dc_victim_module first_nios2_system_cpu_cpu_dc_victim
     (D_op_sub)? 64'h2020202020737562 :
     (D_op_srai)? 64'h2020202073726169 :
     (D_op_sra)? 64'h2020202020737261 :
+    (D_op_cordic_0)? 64'h636f726469635f30 :
     (D_op_fp_add_0)? 64'h66705f6164645f30 :
     (D_op_fp_mul_0)? 64'h66705f6d756c5f30 :
     64'h2020202020424144;
@@ -14874,6 +14889,7 @@ first_nios2_system_cpu_cpu_dc_victim_module first_nios2_system_cpu_cpu_dc_victim
     (E_op_sub)? 64'h2020202020737562 :
     (E_op_srai)? 64'h2020202073726169 :
     (E_op_sra)? 64'h2020202020737261 :
+    (E_op_cordic_0)? 64'h636f726469635f30 :
     (E_op_fp_add_0)? 64'h66705f6164645f30 :
     (E_op_fp_mul_0)? 64'h66705f6d756c5f30 :
     64'h2020202020424144;
@@ -14963,6 +14979,7 @@ first_nios2_system_cpu_cpu_dc_victim_module first_nios2_system_cpu_cpu_dc_victim
     (M_op_sub)? 64'h2020202020737562 :
     (M_op_srai)? 64'h2020202073726169 :
     (M_op_sra)? 64'h2020202020737261 :
+    (M_op_cordic_0)? 64'h636f726469635f30 :
     (M_op_fp_add_0)? 64'h66705f6164645f30 :
     (M_op_fp_mul_0)? 64'h66705f6d756c5f30 :
     64'h2020202020424144;
@@ -15052,6 +15069,7 @@ first_nios2_system_cpu_cpu_dc_victim_module first_nios2_system_cpu_cpu_dc_victim
     (A_op_sub)? 64'h2020202020737562 :
     (A_op_srai)? 64'h2020202073726169 :
     (A_op_sra)? 64'h2020202020737261 :
+    (A_op_cordic_0)? 64'h636f726469635f30 :
     (A_op_fp_add_0)? 64'h66705f6164645f30 :
     (A_op_fp_mul_0)? 64'h66705f6d756c5f30 :
     64'h2020202020424144;
@@ -15141,6 +15159,7 @@ first_nios2_system_cpu_cpu_dc_victim_module first_nios2_system_cpu_cpu_dc_victim
     (W_op_sub)? 64'h2020202020737562 :
     (W_op_srai)? 64'h2020202073726169 :
     (W_op_sra)? 64'h2020202020737261 :
+    (W_op_cordic_0)? 64'h636f726469635f30 :
     (W_op_fp_add_0)? 64'h66705f6164645f30 :
     (W_op_fp_mul_0)? 64'h66705f6d756c5f30 :
     64'h2020202020424144;

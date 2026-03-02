@@ -28,6 +28,10 @@ static inline float cust_fp_mul(float a, float b) {
     return __builtin_custom_fnff(ALT_CI_FP_MUL_0_N, a, b);
 }
 
+static inline float cust_cos(float a) {
+    return __builtin_custom_fnff(ALT_CI_CORDIC_0_N, a, a);
+}
+
 float cos_lut_q1[LUT_SIZE + 1];
 float x_vec[65281]; 
 
@@ -189,6 +193,25 @@ float calculateFunctionTask6_Taylor(float x[], int M, int c) {
     return y;
 }
 
+float calculateFunctionTask6Cordic(float x[], int M) {
+    int i; float y = 0;
+    clock_t t1, t2, total_cos = 0;
+    for (i = 0; i < M; i++) {
+        float a = x[i];
+        float a_left = cust_fp_mul(0.5f, a);
+        float a_2 = cust_fp_mul(a, a);
+        t1 = times(NULL); 
+        float cos_f = cust_cos((a - 128.0f) / 128.0f);
+        t2 = times(NULL);
+        total_cos += (t2 - t1);
+        float a_cos = cust_fp_mul(a, cos_f);
+        float a_right = cust_fp_mul(a_2, a_cos);
+        y += cust_fp_add_sub(1, a_left, a_right);
+    }
+    printf("[Cordic]     Total Cos Ticks: %ld | Avg: %f\n", (long)total_cos, (float)total_cos/M);
+    return y;
+}
+
 void generateVector(float x[], int n, float step) {
     x[0] = 0;
     for (int i = 1; i < n; i++) x[i] = x[i-1] + step;
@@ -235,6 +258,11 @@ int main() {
         //   printf("Taylor Result: %f Terms: %d | Total Ticks: %ld\n", r5, c, (long)(end-start));
         //   // printf("Absolute Difference (Std vs Taylor): %f\n", fabsf(r3 - r5));
         // }
+        start = times(NULL);
+        float r6 = calculateFunctionTask6Cordic(x_vec, tests[i].n_val);
+        end = times(NULL);
+        printf("Cordic Result:  %f | Total Ticks: %ld\n", r6, (long)(end-start));
+        printf("Absolute Difference (Std vs Cordic): %f\n", fabsf(r3 - r6));
     }
     return 0;
 }

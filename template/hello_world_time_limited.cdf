@@ -5,8 +5,8 @@ JedecChain;
 
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
-	P ActionCode(Ign)
-		Device PartName(5CSEMA5) MfrSpec(OpMask(0));
+	P ActionCode(Cfg)
+		Device PartName(5CSEMA5F31) Path("C:/DSD/DSD_git/DSD/template/") File("hello_world.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

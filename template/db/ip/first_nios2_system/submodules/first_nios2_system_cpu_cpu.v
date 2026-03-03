@@ -3900,7 +3900,7 @@ wire             A_exc_unimp_inst_pri15_nxt;
 wire             A_exc_wr_ea_ba;
 wire             A_exc_wr_sstatus;
 wire    [ 31: 0] A_fwd_reg_data;
-wire    [ 63: 0] A_inst;
+wire    [ 79: 0] A_inst;
 reg     [ 31: 0] A_inst_result;
 wire    [ 31: 0] A_inst_result_aligned;
 wire             A_is_opx_inst;
@@ -4000,6 +4000,7 @@ wire             A_op_flushi;
 wire             A_op_flushp;
 wire             A_op_fp_add_0;
 wire             A_op_fp_mul_0;
+wire             A_op_func_fsm_0;
 wire             A_op_hbreak;
 wire             A_op_initd;
 wire             A_op_initda;
@@ -4120,7 +4121,7 @@ wire             A_up_ex_mon_state_latest;
 wire             A_valid;
 reg              A_valid_from_M /* synthesis ALTERA_IP_DEBUG_VISIBLE = 1 */;
 wire             A_valid_st_writes_mem;
-wire    [ 71: 0] A_vinst;
+wire    [ 79: 0] A_vinst;
 wire    [ 31: 0] A_wr_data_filtered;
 wire    [ 31: 0] A_wr_data_unfiltered;
 wire             A_wr_dst_reg;
@@ -4232,7 +4233,7 @@ reg              D_ic_fill_starting_d1;
 wire             D_ic_want_fill;
 wire             D_ic_want_fill_unfiltered;
 wire             D_ic_want_fill_unfiltered_is_x;
-wire    [ 63: 0] D_inst;
+wire    [ 79: 0] D_inst;
 wire             D_is_opx_inst;
 reg              D_issue;
 wire             D_issue_rdprs;
@@ -4301,6 +4302,7 @@ wire             D_op_flushi;
 wire             D_op_flushp;
 wire             D_op_fp_add_0;
 wire             D_op_fp_mul_0;
+wire             D_op_func_fsm_0;
 wire             D_op_hbreak;
 wire             D_op_initd;
 wire             D_op_initda;
@@ -4424,7 +4426,7 @@ wire             D_src2_imm5_sel;
 wire    [ 31: 0] D_src2_reg;
 wire             D_stall;
 wire             D_valid;
-wire    [ 71: 0] D_vinst;
+wire    [ 79: 0] D_vinst;
 wire             D_wr_dst_reg;
 wire             E_add_br_to_taken_history_filtered;
 wire             E_add_br_to_taken_history_unfiltered;
@@ -4617,7 +4619,7 @@ wire             E_exc_unimp_inst_pri15;
 reg     [ 18: 0] E_extra_pc;
 wire    [ 20: 0] E_extra_pcb;
 wire    [ 31: 0] E_fwd_reg_data;
-wire    [ 63: 0] E_inst;
+wire    [ 79: 0] E_inst;
 wire             E_is_opx_inst;
 reg     [ 31: 0] E_iw;
 wire    [  4: 0] E_iw_a;
@@ -4697,6 +4699,7 @@ wire             E_op_flushi;
 wire             E_op_flushp;
 wire             E_op_fp_add_0;
 wire             E_op_fp_mul_0;
+wire             E_op_func_fsm_0;
 wire             E_op_hbreak;
 wire             E_op_initd;
 wire             E_op_initda;
@@ -4828,7 +4831,7 @@ wire             E_up_ex_mon_state_latest;
 wire             E_valid;
 reg              E_valid_from_D;
 reg              E_valid_jmp_indirect;
-wire    [ 71: 0] E_vinst;
+wire    [ 79: 0] E_vinst;
 wire             E_wr_dst_reg;
 reg              E_wr_dst_reg_from_D;
 wire    [  1: 0] F_bht_data;
@@ -4858,7 +4861,7 @@ wire    [ 17: 0] F_ic_tag_rd;
 wire    [  5: 0] F_ic_tag_rd_addr_nxt;
 wire             F_ic_valid;
 wire    [  7: 0] F_ic_valid_bits;
-wire    [ 63: 0] F_inst;
+wire    [ 79: 0] F_inst;
 wire             F_is_opx_inst;
 wire             F_issue;
 wire    [ 31: 0] F_iw;
@@ -4925,6 +4928,7 @@ wire             F_op_flushi;
 wire             F_op_flushp;
 wire             F_op_fp_add_0;
 wire             F_op_fp_mul_0;
+wire             F_op_func_fsm_0;
 wire             F_op_hbreak;
 wire             F_op_initd;
 wire             F_op_initda;
@@ -5027,7 +5031,7 @@ wire    [  4: 0] F_rf_rd_addr_b;
 wire             F_sel_instruction_master;
 wire             F_sel_itcm;
 wire             F_stall;
-wire    [ 71: 0] F_vinst;
+wire    [ 79: 0] F_vinst;
 wire             M_A_dc_tag_line_addr_match;
 wire             M_A_dc_tag_ram_addr_match;
 wire             M_W_dc_tag_ram_addr_match;
@@ -5286,7 +5290,7 @@ wire             M_exc_unimp_inst_pri15_nxt;
 wire    [ 31: 0] M_fwd_reg_data;
 wire             M_hbreak_req;
 wire             M_ignore_exc;
-wire    [ 63: 0] M_inst;
+wire    [ 79: 0] M_inst;
 wire    [ 31: 0] M_inst_result;
 wire             M_is_opx_inst;
 reg     [ 31: 0] M_iw;
@@ -5370,6 +5374,7 @@ wire             M_op_flushi;
 wire             M_op_flushp;
 wire             M_op_fp_add_0;
 wire             M_op_fp_mul_0;
+wire             M_op_func_fsm_0;
 wire             M_op_hbreak;
 wire             M_op_initd;
 wire             M_op_initda;
@@ -5507,7 +5512,7 @@ wire             M_up_ex_mon_state_latest;
 wire             M_valid;
 reg              M_valid_from_E;
 wire             M_valid_ignoring_refetch;
-wire    [ 71: 0] M_vinst;
+wire    [ 79: 0] M_vinst;
 wire             M_wr_dst_reg;
 reg              M_wr_dst_reg_from_E;
 wire    [ 31: 0] W_badaddr_reg;
@@ -5733,7 +5738,7 @@ wire             W_ienable_reg_irq16_nxt;
 wire             W_ienable_reg_irq16_wr_en;
 wire             W_ienable_reg_irq1_nxt;
 wire             W_ienable_reg_irq1_wr_en;
-wire    [ 63: 0] W_inst;
+wire    [ 79: 0] W_inst;
 wire    [ 31: 0] W_ipending_reg;
 reg              W_ipending_reg_irq1;
 reg              W_ipending_reg_irq16;
@@ -5808,6 +5813,7 @@ wire             W_op_flushi;
 wire             W_op_flushp;
 wire             W_op_fp_add_0;
 wire             W_op_fp_mul_0;
+wire             W_op_func_fsm_0;
 wire             W_op_hbreak;
 wire             W_op_initd;
 wire             W_op_initda;
@@ -5909,7 +5915,7 @@ wire             W_status_reg_prs;
 reg              W_up_ex_mon_state;
 reg              W_valid;
 reg              W_valid_from_M;
-wire    [ 71: 0] W_vinst;
+wire    [ 79: 0] W_vinst;
 reg     [ 31: 0] W_wr_data;
 reg              W_wr_dst_reg;
 wire             av_addr_accepted;
@@ -6303,9 +6309,10 @@ reg              wait_for_one_post_bret_inst;
   assign F_op_intr = (F_iw_opx == 61) & F_is_opx_inst;
   assign F_op_crst = (F_iw_opx == 62) & F_is_opx_inst;
   assign F_op_opx_rsv63 = (F_iw_opx == 63) & F_is_opx_inst;
-  assign F_op_cordic_0 = F_op_custom & ({F_iw_custom_n[1 : 0]} == 2'h3);
-  assign F_op_fp_add_0 = F_op_custom & ({F_iw_custom_n[1] , 1'b0} == 2'h0);
-  assign F_op_fp_mul_0 = F_op_custom & ({F_iw_custom_n[1 : 0]} == 2'h2);
+  assign F_op_cordic_0 = F_op_custom & ({F_iw_custom_n[2 : 0]} == 3'h3);
+  assign F_op_fp_add_0 = F_op_custom & ({F_iw_custom_n[2 : 1] , 1'b0} == 3'h0);
+  assign F_op_fp_mul_0 = F_op_custom & ({F_iw_custom_n[2 : 0]} == 3'h2);
+  assign F_op_func_fsm_0 = F_op_custom & ({F_iw_custom_n[2 : 0]} == 3'h4);
   assign F_is_opx_inst = F_iw_op == 58;
   assign D_op_call = D_iw_op == 0;
   assign D_op_jmpi = D_iw_op == 1;
@@ -6434,9 +6441,10 @@ reg              wait_for_one_post_bret_inst;
   assign D_op_intr = (D_iw_opx == 61) & D_is_opx_inst;
   assign D_op_crst = (D_iw_opx == 62) & D_is_opx_inst;
   assign D_op_opx_rsv63 = (D_iw_opx == 63) & D_is_opx_inst;
-  assign D_op_cordic_0 = D_op_custom & ({D_iw_custom_n[1 : 0]} == 2'h3);
-  assign D_op_fp_add_0 = D_op_custom & ({D_iw_custom_n[1] , 1'b0} == 2'h0);
-  assign D_op_fp_mul_0 = D_op_custom & ({D_iw_custom_n[1 : 0]} == 2'h2);
+  assign D_op_cordic_0 = D_op_custom & ({D_iw_custom_n[2 : 0]} == 3'h3);
+  assign D_op_fp_add_0 = D_op_custom & ({D_iw_custom_n[2 : 1] , 1'b0} == 3'h0);
+  assign D_op_fp_mul_0 = D_op_custom & ({D_iw_custom_n[2 : 0]} == 3'h2);
+  assign D_op_func_fsm_0 = D_op_custom & ({D_iw_custom_n[2 : 0]} == 3'h4);
   assign D_is_opx_inst = D_iw_op == 58;
   assign E_op_call = E_iw_op == 0;
   assign E_op_jmpi = E_iw_op == 1;
@@ -6565,9 +6573,10 @@ reg              wait_for_one_post_bret_inst;
   assign E_op_intr = (E_iw_opx == 61) & E_is_opx_inst;
   assign E_op_crst = (E_iw_opx == 62) & E_is_opx_inst;
   assign E_op_opx_rsv63 = (E_iw_opx == 63) & E_is_opx_inst;
-  assign E_op_cordic_0 = E_op_custom & ({E_iw_custom_n[1 : 0]} == 2'h3);
-  assign E_op_fp_add_0 = E_op_custom & ({E_iw_custom_n[1] , 1'b0} == 2'h0);
-  assign E_op_fp_mul_0 = E_op_custom & ({E_iw_custom_n[1 : 0]} == 2'h2);
+  assign E_op_cordic_0 = E_op_custom & ({E_iw_custom_n[2 : 0]} == 3'h3);
+  assign E_op_fp_add_0 = E_op_custom & ({E_iw_custom_n[2 : 1] , 1'b0} == 3'h0);
+  assign E_op_fp_mul_0 = E_op_custom & ({E_iw_custom_n[2 : 0]} == 3'h2);
+  assign E_op_func_fsm_0 = E_op_custom & ({E_iw_custom_n[2 : 0]} == 3'h4);
   assign E_is_opx_inst = E_iw_op == 58;
   assign M_op_call = M_iw_op == 0;
   assign M_op_jmpi = M_iw_op == 1;
@@ -6696,9 +6705,10 @@ reg              wait_for_one_post_bret_inst;
   assign M_op_intr = (M_iw_opx == 61) & M_is_opx_inst;
   assign M_op_crst = (M_iw_opx == 62) & M_is_opx_inst;
   assign M_op_opx_rsv63 = (M_iw_opx == 63) & M_is_opx_inst;
-  assign M_op_cordic_0 = M_op_custom & ({M_iw_custom_n[1 : 0]} == 2'h3);
-  assign M_op_fp_add_0 = M_op_custom & ({M_iw_custom_n[1] , 1'b0} == 2'h0);
-  assign M_op_fp_mul_0 = M_op_custom & ({M_iw_custom_n[1 : 0]} == 2'h2);
+  assign M_op_cordic_0 = M_op_custom & ({M_iw_custom_n[2 : 0]} == 3'h3);
+  assign M_op_fp_add_0 = M_op_custom & ({M_iw_custom_n[2 : 1] , 1'b0} == 3'h0);
+  assign M_op_fp_mul_0 = M_op_custom & ({M_iw_custom_n[2 : 0]} == 3'h2);
+  assign M_op_func_fsm_0 = M_op_custom & ({M_iw_custom_n[2 : 0]} == 3'h4);
   assign M_is_opx_inst = M_iw_op == 58;
   assign A_op_call = A_iw_op == 0;
   assign A_op_jmpi = A_iw_op == 1;
@@ -6827,9 +6837,10 @@ reg              wait_for_one_post_bret_inst;
   assign A_op_intr = (A_iw_opx == 61) & A_is_opx_inst;
   assign A_op_crst = (A_iw_opx == 62) & A_is_opx_inst;
   assign A_op_opx_rsv63 = (A_iw_opx == 63) & A_is_opx_inst;
-  assign A_op_cordic_0 = A_op_custom & ({A_iw_custom_n[1 : 0]} == 2'h3);
-  assign A_op_fp_add_0 = A_op_custom & ({A_iw_custom_n[1] , 1'b0} == 2'h0);
-  assign A_op_fp_mul_0 = A_op_custom & ({A_iw_custom_n[1 : 0]} == 2'h2);
+  assign A_op_cordic_0 = A_op_custom & ({A_iw_custom_n[2 : 0]} == 3'h3);
+  assign A_op_fp_add_0 = A_op_custom & ({A_iw_custom_n[2 : 1] , 1'b0} == 3'h0);
+  assign A_op_fp_mul_0 = A_op_custom & ({A_iw_custom_n[2 : 0]} == 3'h2);
+  assign A_op_func_fsm_0 = A_op_custom & ({A_iw_custom_n[2 : 0]} == 3'h4);
   assign A_is_opx_inst = A_iw_op == 58;
   assign W_op_call = W_iw_op == 0;
   assign W_op_jmpi = W_iw_op == 1;
@@ -6958,9 +6969,10 @@ reg              wait_for_one_post_bret_inst;
   assign W_op_intr = (W_iw_opx == 61) & W_is_opx_inst;
   assign W_op_crst = (W_iw_opx == 62) & W_is_opx_inst;
   assign W_op_opx_rsv63 = (W_iw_opx == 63) & W_is_opx_inst;
-  assign W_op_cordic_0 = W_op_custom & ({W_iw_custom_n[1 : 0]} == 2'h3);
-  assign W_op_fp_add_0 = W_op_custom & ({W_iw_custom_n[1] , 1'b0} == 2'h0);
-  assign W_op_fp_mul_0 = W_op_custom & ({W_iw_custom_n[1 : 0]} == 2'h2);
+  assign W_op_cordic_0 = W_op_custom & ({W_iw_custom_n[2 : 0]} == 3'h3);
+  assign W_op_fp_add_0 = W_op_custom & ({W_iw_custom_n[2 : 1] , 1'b0} == 3'h0);
+  assign W_op_fp_mul_0 = W_op_custom & ({W_iw_custom_n[2 : 0]} == 3'h2);
+  assign W_op_func_fsm_0 = W_op_custom & ({W_iw_custom_n[2 : 0]} == 3'h4);
   assign W_is_opx_inst = W_iw_op == 58;
   assign F_pc_nxt = (A_pipe_flush)? A_pipe_flush_waddr :
     (M_pipe_flush)? M_pipe_flush_waddr :
@@ -10570,7 +10582,7 @@ first_nios2_system_cpu_cpu_dc_victim_module first_nios2_system_cpu_cpu_dc_victim
     end
 
 
-  assign D_ctrl_custom_multi = D_op_cordic_0|D_op_fp_add_0|D_op_fp_mul_0;
+  assign D_ctrl_custom_multi = D_op_cordic_0|D_op_fp_add_0|D_op_fp_mul_0|D_op_func_fsm_0;
   assign E_ctrl_custom_multi_nxt = D_ctrl_custom_multi;
   always @(posedge clk or negedge reset_n)
     begin
@@ -14383,6 +14395,7 @@ first_nios2_system_cpu_cpu_dc_victim_module first_nios2_system_cpu_cpu_dc_victim
     D_op_cordic_0|
     D_op_fp_add_0|
     D_op_fp_mul_0|
+    D_op_func_fsm_0|
     D_op_muli|
     D_op_mul|
     D_op_opx_rsv47|
@@ -14624,552 +14637,558 @@ first_nios2_system_cpu_cpu_dc_victim_module first_nios2_system_cpu_cpu_dc_victim
 
 //synthesis translate_off
 //////////////// SIMULATION-ONLY CONTENTS
-  assign F_inst = (F_op_call)? 64'h2020202063616c6c :
-    (F_op_jmpi)? 64'h202020206a6d7069 :
-    (F_op_ldbu)? 64'h202020206c646275 :
-    (F_op_addi)? 64'h2020202061646469 :
-    (F_op_stb)? 64'h2020202020737462 :
-    (F_op_br)? 64'h2020202020206272 :
-    (F_op_ldb)? 64'h20202020206c6462 :
-    (F_op_cmpgei)? 64'h2020636d70676569 :
-    (F_op_ldhu)? 64'h202020206c646875 :
-    (F_op_andi)? 64'h20202020616e6469 :
-    (F_op_sth)? 64'h2020202020737468 :
-    (F_op_bge)? 64'h2020202020626765 :
-    (F_op_ldh)? 64'h20202020206c6468 :
-    (F_op_cmplti)? 64'h2020636d706c7469 :
-    (F_op_initda)? 64'h2020696e69746461 :
-    (F_op_ori)? 64'h20202020206f7269 :
-    (F_op_stw)? 64'h2020202020737477 :
-    (F_op_blt)? 64'h2020202020626c74 :
-    (F_op_ldw)? 64'h20202020206c6477 :
-    (F_op_cmpnei)? 64'h2020636d706e6569 :
-    (F_op_flushda)? 64'h20666c7573686461 :
-    (F_op_xori)? 64'h20202020786f7269 :
-    (F_op_bne)? 64'h2020202020626e65 :
-    (F_op_cmpeqi)? 64'h2020636d70657169 :
-    (F_op_ldbuio)? 64'h20206c646275696f :
-    (F_op_muli)? 64'h202020206d756c69 :
-    (F_op_stbio)? 64'h202020737462696f :
-    (F_op_beq)? 64'h2020202020626571 :
-    (F_op_ldbio)? 64'h2020206c6462696f :
-    (F_op_cmpgeui)? 64'h20636d7067657569 :
-    (F_op_ldhuio)? 64'h20206c646875696f :
-    (F_op_andhi)? 64'h202020616e646869 :
-    (F_op_sthio)? 64'h202020737468696f :
-    (F_op_bgeu)? 64'h2020202062676575 :
-    (F_op_ldhio)? 64'h2020206c6468696f :
-    (F_op_cmpltui)? 64'h20636d706c747569 :
-    (F_op_custom)? 64'h2020637573746f6d :
-    (F_op_initd)? 64'h202020696e697464 :
-    (F_op_orhi)? 64'h202020206f726869 :
-    (F_op_stwio)? 64'h202020737477696f :
-    (F_op_bltu)? 64'h20202020626c7475 :
-    (F_op_ldwio)? 64'h2020206c6477696f :
-    (F_op_flushd)? 64'h2020666c75736864 :
-    (F_op_xorhi)? 64'h202020786f726869 :
-    (F_op_eret)? 64'h2020202065726574 :
-    (F_op_roli)? 64'h20202020726f6c69 :
-    (F_op_rol)? 64'h2020202020726f6c :
-    (F_op_flushp)? 64'h2020666c75736870 :
-    (F_op_ret)? 64'h2020202020726574 :
-    (F_op_nor)? 64'h20202020206e6f72 :
-    (F_op_mulxuu)? 64'h20206d756c787575 :
-    (F_op_cmpge)? 64'h202020636d706765 :
-    (F_op_bret)? 64'h2020202062726574 :
-    (F_op_ror)? 64'h2020202020726f72 :
-    (F_op_flushi)? 64'h2020666c75736869 :
-    (F_op_jmp)? 64'h20202020206a6d70 :
-    (F_op_and)? 64'h2020202020616e64 :
-    (F_op_cmplt)? 64'h202020636d706c74 :
-    (F_op_slli)? 64'h20202020736c6c69 :
-    (F_op_sll)? 64'h2020202020736c6c :
-    (F_op_or)? 64'h2020202020206f72 :
-    (F_op_mulxsu)? 64'h20206d756c787375 :
-    (F_op_cmpne)? 64'h202020636d706e65 :
-    (F_op_srli)? 64'h2020202073726c69 :
-    (F_op_srl)? 64'h202020202073726c :
-    (F_op_nextpc)? 64'h20206e6578747063 :
-    (F_op_callr)? 64'h20202063616c6c72 :
-    (F_op_xor)? 64'h2020202020786f72 :
-    (F_op_mulxss)? 64'h20206d756c787373 :
-    (F_op_cmpeq)? 64'h202020636d706571 :
-    (F_op_divu)? 64'h2020202064697675 :
-    (F_op_div)? 64'h2020202020646976 :
-    (F_op_rdctl)? 64'h202020726463746c :
-    (F_op_mul)? 64'h20202020206d756c :
-    (F_op_cmpgeu)? 64'h2020636d70676575 :
-    (F_op_initi)? 64'h202020696e697469 :
-    (F_op_trap)? 64'h2020202074726170 :
-    (F_op_wrctl)? 64'h202020777263746c :
-    (F_op_cmpltu)? 64'h2020636d706c7475 :
-    (F_op_add)? 64'h2020202020616464 :
-    (F_op_break)? 64'h202020627265616b :
-    (F_op_sync)? 64'h2020202073796e63 :
-    (F_op_sub)? 64'h2020202020737562 :
-    (F_op_srai)? 64'h2020202073726169 :
-    (F_op_sra)? 64'h2020202020737261 :
-    (F_op_cordic_0)? 64'h636f726469635f30 :
-    (F_op_fp_add_0)? 64'h66705f6164645f30 :
-    (F_op_fp_mul_0)? 64'h66705f6d756c5f30 :
-    64'h2020202020424144;
+  assign F_inst = (F_op_call)? 80'h20202020202063616c6c :
+    (F_op_jmpi)? 80'h2020202020206a6d7069 :
+    (F_op_ldbu)? 80'h2020202020206c646275 :
+    (F_op_addi)? 80'h20202020202061646469 :
+    (F_op_stb)? 80'h20202020202020737462 :
+    (F_op_br)? 80'h20202020202020206272 :
+    (F_op_ldb)? 80'h202020202020206c6462 :
+    (F_op_cmpgei)? 80'h20202020636d70676569 :
+    (F_op_ldhu)? 80'h2020202020206c646875 :
+    (F_op_andi)? 80'h202020202020616e6469 :
+    (F_op_sth)? 80'h20202020202020737468 :
+    (F_op_bge)? 80'h20202020202020626765 :
+    (F_op_ldh)? 80'h202020202020206c6468 :
+    (F_op_cmplti)? 80'h20202020636d706c7469 :
+    (F_op_initda)? 80'h20202020696e69746461 :
+    (F_op_ori)? 80'h202020202020206f7269 :
+    (F_op_stw)? 80'h20202020202020737477 :
+    (F_op_blt)? 80'h20202020202020626c74 :
+    (F_op_ldw)? 80'h202020202020206c6477 :
+    (F_op_cmpnei)? 80'h20202020636d706e6569 :
+    (F_op_flushda)? 80'h202020666c7573686461 :
+    (F_op_xori)? 80'h202020202020786f7269 :
+    (F_op_bne)? 80'h20202020202020626e65 :
+    (F_op_cmpeqi)? 80'h20202020636d70657169 :
+    (F_op_ldbuio)? 80'h202020206c646275696f :
+    (F_op_muli)? 80'h2020202020206d756c69 :
+    (F_op_stbio)? 80'h2020202020737462696f :
+    (F_op_beq)? 80'h20202020202020626571 :
+    (F_op_ldbio)? 80'h20202020206c6462696f :
+    (F_op_cmpgeui)? 80'h202020636d7067657569 :
+    (F_op_ldhuio)? 80'h202020206c646875696f :
+    (F_op_andhi)? 80'h2020202020616e646869 :
+    (F_op_sthio)? 80'h2020202020737468696f :
+    (F_op_bgeu)? 80'h20202020202062676575 :
+    (F_op_ldhio)? 80'h20202020206c6468696f :
+    (F_op_cmpltui)? 80'h202020636d706c747569 :
+    (F_op_custom)? 80'h20202020637573746f6d :
+    (F_op_initd)? 80'h2020202020696e697464 :
+    (F_op_orhi)? 80'h2020202020206f726869 :
+    (F_op_stwio)? 80'h2020202020737477696f :
+    (F_op_bltu)? 80'h202020202020626c7475 :
+    (F_op_ldwio)? 80'h20202020206c6477696f :
+    (F_op_flushd)? 80'h20202020666c75736864 :
+    (F_op_xorhi)? 80'h2020202020786f726869 :
+    (F_op_eret)? 80'h20202020202065726574 :
+    (F_op_roli)? 80'h202020202020726f6c69 :
+    (F_op_rol)? 80'h20202020202020726f6c :
+    (F_op_flushp)? 80'h20202020666c75736870 :
+    (F_op_ret)? 80'h20202020202020726574 :
+    (F_op_nor)? 80'h202020202020206e6f72 :
+    (F_op_mulxuu)? 80'h202020206d756c787575 :
+    (F_op_cmpge)? 80'h2020202020636d706765 :
+    (F_op_bret)? 80'h20202020202062726574 :
+    (F_op_ror)? 80'h20202020202020726f72 :
+    (F_op_flushi)? 80'h20202020666c75736869 :
+    (F_op_jmp)? 80'h202020202020206a6d70 :
+    (F_op_and)? 80'h20202020202020616e64 :
+    (F_op_cmplt)? 80'h2020202020636d706c74 :
+    (F_op_slli)? 80'h202020202020736c6c69 :
+    (F_op_sll)? 80'h20202020202020736c6c :
+    (F_op_or)? 80'h20202020202020206f72 :
+    (F_op_mulxsu)? 80'h202020206d756c787375 :
+    (F_op_cmpne)? 80'h2020202020636d706e65 :
+    (F_op_srli)? 80'h20202020202073726c69 :
+    (F_op_srl)? 80'h2020202020202073726c :
+    (F_op_nextpc)? 80'h202020206e6578747063 :
+    (F_op_callr)? 80'h202020202063616c6c72 :
+    (F_op_xor)? 80'h20202020202020786f72 :
+    (F_op_mulxss)? 80'h202020206d756c787373 :
+    (F_op_cmpeq)? 80'h2020202020636d706571 :
+    (F_op_divu)? 80'h20202020202064697675 :
+    (F_op_div)? 80'h20202020202020646976 :
+    (F_op_rdctl)? 80'h2020202020726463746c :
+    (F_op_mul)? 80'h202020202020206d756c :
+    (F_op_cmpgeu)? 80'h20202020636d70676575 :
+    (F_op_initi)? 80'h2020202020696e697469 :
+    (F_op_trap)? 80'h20202020202074726170 :
+    (F_op_wrctl)? 80'h2020202020777263746c :
+    (F_op_cmpltu)? 80'h20202020636d706c7475 :
+    (F_op_add)? 80'h20202020202020616464 :
+    (F_op_break)? 80'h2020202020627265616b :
+    (F_op_sync)? 80'h20202020202073796e63 :
+    (F_op_sub)? 80'h20202020202020737562 :
+    (F_op_srai)? 80'h20202020202073726169 :
+    (F_op_sra)? 80'h20202020202020737261 :
+    (F_op_cordic_0)? 80'h2020636f726469635f30 :
+    (F_op_fp_add_0)? 80'h202066705f6164645f30 :
+    (F_op_fp_mul_0)? 80'h202066705f6d756c5f30 :
+    (F_op_func_fsm_0)? 80'h66756e635f66736d5f30 :
+    80'h20202020202020424144;
 
-  assign D_inst = (D_op_call)? 64'h2020202063616c6c :
-    (D_op_jmpi)? 64'h202020206a6d7069 :
-    (D_op_ldbu)? 64'h202020206c646275 :
-    (D_op_addi)? 64'h2020202061646469 :
-    (D_op_stb)? 64'h2020202020737462 :
-    (D_op_br)? 64'h2020202020206272 :
-    (D_op_ldb)? 64'h20202020206c6462 :
-    (D_op_cmpgei)? 64'h2020636d70676569 :
-    (D_op_ldhu)? 64'h202020206c646875 :
-    (D_op_andi)? 64'h20202020616e6469 :
-    (D_op_sth)? 64'h2020202020737468 :
-    (D_op_bge)? 64'h2020202020626765 :
-    (D_op_ldh)? 64'h20202020206c6468 :
-    (D_op_cmplti)? 64'h2020636d706c7469 :
-    (D_op_initda)? 64'h2020696e69746461 :
-    (D_op_ori)? 64'h20202020206f7269 :
-    (D_op_stw)? 64'h2020202020737477 :
-    (D_op_blt)? 64'h2020202020626c74 :
-    (D_op_ldw)? 64'h20202020206c6477 :
-    (D_op_cmpnei)? 64'h2020636d706e6569 :
-    (D_op_flushda)? 64'h20666c7573686461 :
-    (D_op_xori)? 64'h20202020786f7269 :
-    (D_op_bne)? 64'h2020202020626e65 :
-    (D_op_cmpeqi)? 64'h2020636d70657169 :
-    (D_op_ldbuio)? 64'h20206c646275696f :
-    (D_op_muli)? 64'h202020206d756c69 :
-    (D_op_stbio)? 64'h202020737462696f :
-    (D_op_beq)? 64'h2020202020626571 :
-    (D_op_ldbio)? 64'h2020206c6462696f :
-    (D_op_cmpgeui)? 64'h20636d7067657569 :
-    (D_op_ldhuio)? 64'h20206c646875696f :
-    (D_op_andhi)? 64'h202020616e646869 :
-    (D_op_sthio)? 64'h202020737468696f :
-    (D_op_bgeu)? 64'h2020202062676575 :
-    (D_op_ldhio)? 64'h2020206c6468696f :
-    (D_op_cmpltui)? 64'h20636d706c747569 :
-    (D_op_custom)? 64'h2020637573746f6d :
-    (D_op_initd)? 64'h202020696e697464 :
-    (D_op_orhi)? 64'h202020206f726869 :
-    (D_op_stwio)? 64'h202020737477696f :
-    (D_op_bltu)? 64'h20202020626c7475 :
-    (D_op_ldwio)? 64'h2020206c6477696f :
-    (D_op_flushd)? 64'h2020666c75736864 :
-    (D_op_xorhi)? 64'h202020786f726869 :
-    (D_op_eret)? 64'h2020202065726574 :
-    (D_op_roli)? 64'h20202020726f6c69 :
-    (D_op_rol)? 64'h2020202020726f6c :
-    (D_op_flushp)? 64'h2020666c75736870 :
-    (D_op_ret)? 64'h2020202020726574 :
-    (D_op_nor)? 64'h20202020206e6f72 :
-    (D_op_mulxuu)? 64'h20206d756c787575 :
-    (D_op_cmpge)? 64'h202020636d706765 :
-    (D_op_bret)? 64'h2020202062726574 :
-    (D_op_ror)? 64'h2020202020726f72 :
-    (D_op_flushi)? 64'h2020666c75736869 :
-    (D_op_jmp)? 64'h20202020206a6d70 :
-    (D_op_and)? 64'h2020202020616e64 :
-    (D_op_cmplt)? 64'h202020636d706c74 :
-    (D_op_slli)? 64'h20202020736c6c69 :
-    (D_op_sll)? 64'h2020202020736c6c :
-    (D_op_or)? 64'h2020202020206f72 :
-    (D_op_mulxsu)? 64'h20206d756c787375 :
-    (D_op_cmpne)? 64'h202020636d706e65 :
-    (D_op_srli)? 64'h2020202073726c69 :
-    (D_op_srl)? 64'h202020202073726c :
-    (D_op_nextpc)? 64'h20206e6578747063 :
-    (D_op_callr)? 64'h20202063616c6c72 :
-    (D_op_xor)? 64'h2020202020786f72 :
-    (D_op_mulxss)? 64'h20206d756c787373 :
-    (D_op_cmpeq)? 64'h202020636d706571 :
-    (D_op_divu)? 64'h2020202064697675 :
-    (D_op_div)? 64'h2020202020646976 :
-    (D_op_rdctl)? 64'h202020726463746c :
-    (D_op_mul)? 64'h20202020206d756c :
-    (D_op_cmpgeu)? 64'h2020636d70676575 :
-    (D_op_initi)? 64'h202020696e697469 :
-    (D_op_trap)? 64'h2020202074726170 :
-    (D_op_wrctl)? 64'h202020777263746c :
-    (D_op_cmpltu)? 64'h2020636d706c7475 :
-    (D_op_add)? 64'h2020202020616464 :
-    (D_op_break)? 64'h202020627265616b :
-    (D_op_sync)? 64'h2020202073796e63 :
-    (D_op_sub)? 64'h2020202020737562 :
-    (D_op_srai)? 64'h2020202073726169 :
-    (D_op_sra)? 64'h2020202020737261 :
-    (D_op_cordic_0)? 64'h636f726469635f30 :
-    (D_op_fp_add_0)? 64'h66705f6164645f30 :
-    (D_op_fp_mul_0)? 64'h66705f6d756c5f30 :
-    64'h2020202020424144;
+  assign D_inst = (D_op_call)? 80'h20202020202063616c6c :
+    (D_op_jmpi)? 80'h2020202020206a6d7069 :
+    (D_op_ldbu)? 80'h2020202020206c646275 :
+    (D_op_addi)? 80'h20202020202061646469 :
+    (D_op_stb)? 80'h20202020202020737462 :
+    (D_op_br)? 80'h20202020202020206272 :
+    (D_op_ldb)? 80'h202020202020206c6462 :
+    (D_op_cmpgei)? 80'h20202020636d70676569 :
+    (D_op_ldhu)? 80'h2020202020206c646875 :
+    (D_op_andi)? 80'h202020202020616e6469 :
+    (D_op_sth)? 80'h20202020202020737468 :
+    (D_op_bge)? 80'h20202020202020626765 :
+    (D_op_ldh)? 80'h202020202020206c6468 :
+    (D_op_cmplti)? 80'h20202020636d706c7469 :
+    (D_op_initda)? 80'h20202020696e69746461 :
+    (D_op_ori)? 80'h202020202020206f7269 :
+    (D_op_stw)? 80'h20202020202020737477 :
+    (D_op_blt)? 80'h20202020202020626c74 :
+    (D_op_ldw)? 80'h202020202020206c6477 :
+    (D_op_cmpnei)? 80'h20202020636d706e6569 :
+    (D_op_flushda)? 80'h202020666c7573686461 :
+    (D_op_xori)? 80'h202020202020786f7269 :
+    (D_op_bne)? 80'h20202020202020626e65 :
+    (D_op_cmpeqi)? 80'h20202020636d70657169 :
+    (D_op_ldbuio)? 80'h202020206c646275696f :
+    (D_op_muli)? 80'h2020202020206d756c69 :
+    (D_op_stbio)? 80'h2020202020737462696f :
+    (D_op_beq)? 80'h20202020202020626571 :
+    (D_op_ldbio)? 80'h20202020206c6462696f :
+    (D_op_cmpgeui)? 80'h202020636d7067657569 :
+    (D_op_ldhuio)? 80'h202020206c646875696f :
+    (D_op_andhi)? 80'h2020202020616e646869 :
+    (D_op_sthio)? 80'h2020202020737468696f :
+    (D_op_bgeu)? 80'h20202020202062676575 :
+    (D_op_ldhio)? 80'h20202020206c6468696f :
+    (D_op_cmpltui)? 80'h202020636d706c747569 :
+    (D_op_custom)? 80'h20202020637573746f6d :
+    (D_op_initd)? 80'h2020202020696e697464 :
+    (D_op_orhi)? 80'h2020202020206f726869 :
+    (D_op_stwio)? 80'h2020202020737477696f :
+    (D_op_bltu)? 80'h202020202020626c7475 :
+    (D_op_ldwio)? 80'h20202020206c6477696f :
+    (D_op_flushd)? 80'h20202020666c75736864 :
+    (D_op_xorhi)? 80'h2020202020786f726869 :
+    (D_op_eret)? 80'h20202020202065726574 :
+    (D_op_roli)? 80'h202020202020726f6c69 :
+    (D_op_rol)? 80'h20202020202020726f6c :
+    (D_op_flushp)? 80'h20202020666c75736870 :
+    (D_op_ret)? 80'h20202020202020726574 :
+    (D_op_nor)? 80'h202020202020206e6f72 :
+    (D_op_mulxuu)? 80'h202020206d756c787575 :
+    (D_op_cmpge)? 80'h2020202020636d706765 :
+    (D_op_bret)? 80'h20202020202062726574 :
+    (D_op_ror)? 80'h20202020202020726f72 :
+    (D_op_flushi)? 80'h20202020666c75736869 :
+    (D_op_jmp)? 80'h202020202020206a6d70 :
+    (D_op_and)? 80'h20202020202020616e64 :
+    (D_op_cmplt)? 80'h2020202020636d706c74 :
+    (D_op_slli)? 80'h202020202020736c6c69 :
+    (D_op_sll)? 80'h20202020202020736c6c :
+    (D_op_or)? 80'h20202020202020206f72 :
+    (D_op_mulxsu)? 80'h202020206d756c787375 :
+    (D_op_cmpne)? 80'h2020202020636d706e65 :
+    (D_op_srli)? 80'h20202020202073726c69 :
+    (D_op_srl)? 80'h2020202020202073726c :
+    (D_op_nextpc)? 80'h202020206e6578747063 :
+    (D_op_callr)? 80'h202020202063616c6c72 :
+    (D_op_xor)? 80'h20202020202020786f72 :
+    (D_op_mulxss)? 80'h202020206d756c787373 :
+    (D_op_cmpeq)? 80'h2020202020636d706571 :
+    (D_op_divu)? 80'h20202020202064697675 :
+    (D_op_div)? 80'h20202020202020646976 :
+    (D_op_rdctl)? 80'h2020202020726463746c :
+    (D_op_mul)? 80'h202020202020206d756c :
+    (D_op_cmpgeu)? 80'h20202020636d70676575 :
+    (D_op_initi)? 80'h2020202020696e697469 :
+    (D_op_trap)? 80'h20202020202074726170 :
+    (D_op_wrctl)? 80'h2020202020777263746c :
+    (D_op_cmpltu)? 80'h20202020636d706c7475 :
+    (D_op_add)? 80'h20202020202020616464 :
+    (D_op_break)? 80'h2020202020627265616b :
+    (D_op_sync)? 80'h20202020202073796e63 :
+    (D_op_sub)? 80'h20202020202020737562 :
+    (D_op_srai)? 80'h20202020202073726169 :
+    (D_op_sra)? 80'h20202020202020737261 :
+    (D_op_cordic_0)? 80'h2020636f726469635f30 :
+    (D_op_fp_add_0)? 80'h202066705f6164645f30 :
+    (D_op_fp_mul_0)? 80'h202066705f6d756c5f30 :
+    (D_op_func_fsm_0)? 80'h66756e635f66736d5f30 :
+    80'h20202020202020424144;
 
-  assign E_inst = (E_op_call)? 64'h2020202063616c6c :
-    (E_op_jmpi)? 64'h202020206a6d7069 :
-    (E_op_ldbu)? 64'h202020206c646275 :
-    (E_op_addi)? 64'h2020202061646469 :
-    (E_op_stb)? 64'h2020202020737462 :
-    (E_op_br)? 64'h2020202020206272 :
-    (E_op_ldb)? 64'h20202020206c6462 :
-    (E_op_cmpgei)? 64'h2020636d70676569 :
-    (E_op_ldhu)? 64'h202020206c646875 :
-    (E_op_andi)? 64'h20202020616e6469 :
-    (E_op_sth)? 64'h2020202020737468 :
-    (E_op_bge)? 64'h2020202020626765 :
-    (E_op_ldh)? 64'h20202020206c6468 :
-    (E_op_cmplti)? 64'h2020636d706c7469 :
-    (E_op_initda)? 64'h2020696e69746461 :
-    (E_op_ori)? 64'h20202020206f7269 :
-    (E_op_stw)? 64'h2020202020737477 :
-    (E_op_blt)? 64'h2020202020626c74 :
-    (E_op_ldw)? 64'h20202020206c6477 :
-    (E_op_cmpnei)? 64'h2020636d706e6569 :
-    (E_op_flushda)? 64'h20666c7573686461 :
-    (E_op_xori)? 64'h20202020786f7269 :
-    (E_op_bne)? 64'h2020202020626e65 :
-    (E_op_cmpeqi)? 64'h2020636d70657169 :
-    (E_op_ldbuio)? 64'h20206c646275696f :
-    (E_op_muli)? 64'h202020206d756c69 :
-    (E_op_stbio)? 64'h202020737462696f :
-    (E_op_beq)? 64'h2020202020626571 :
-    (E_op_ldbio)? 64'h2020206c6462696f :
-    (E_op_cmpgeui)? 64'h20636d7067657569 :
-    (E_op_ldhuio)? 64'h20206c646875696f :
-    (E_op_andhi)? 64'h202020616e646869 :
-    (E_op_sthio)? 64'h202020737468696f :
-    (E_op_bgeu)? 64'h2020202062676575 :
-    (E_op_ldhio)? 64'h2020206c6468696f :
-    (E_op_cmpltui)? 64'h20636d706c747569 :
-    (E_op_custom)? 64'h2020637573746f6d :
-    (E_op_initd)? 64'h202020696e697464 :
-    (E_op_orhi)? 64'h202020206f726869 :
-    (E_op_stwio)? 64'h202020737477696f :
-    (E_op_bltu)? 64'h20202020626c7475 :
-    (E_op_ldwio)? 64'h2020206c6477696f :
-    (E_op_flushd)? 64'h2020666c75736864 :
-    (E_op_xorhi)? 64'h202020786f726869 :
-    (E_op_eret)? 64'h2020202065726574 :
-    (E_op_roli)? 64'h20202020726f6c69 :
-    (E_op_rol)? 64'h2020202020726f6c :
-    (E_op_flushp)? 64'h2020666c75736870 :
-    (E_op_ret)? 64'h2020202020726574 :
-    (E_op_nor)? 64'h20202020206e6f72 :
-    (E_op_mulxuu)? 64'h20206d756c787575 :
-    (E_op_cmpge)? 64'h202020636d706765 :
-    (E_op_bret)? 64'h2020202062726574 :
-    (E_op_ror)? 64'h2020202020726f72 :
-    (E_op_flushi)? 64'h2020666c75736869 :
-    (E_op_jmp)? 64'h20202020206a6d70 :
-    (E_op_and)? 64'h2020202020616e64 :
-    (E_op_cmplt)? 64'h202020636d706c74 :
-    (E_op_slli)? 64'h20202020736c6c69 :
-    (E_op_sll)? 64'h2020202020736c6c :
-    (E_op_or)? 64'h2020202020206f72 :
-    (E_op_mulxsu)? 64'h20206d756c787375 :
-    (E_op_cmpne)? 64'h202020636d706e65 :
-    (E_op_srli)? 64'h2020202073726c69 :
-    (E_op_srl)? 64'h202020202073726c :
-    (E_op_nextpc)? 64'h20206e6578747063 :
-    (E_op_callr)? 64'h20202063616c6c72 :
-    (E_op_xor)? 64'h2020202020786f72 :
-    (E_op_mulxss)? 64'h20206d756c787373 :
-    (E_op_cmpeq)? 64'h202020636d706571 :
-    (E_op_divu)? 64'h2020202064697675 :
-    (E_op_div)? 64'h2020202020646976 :
-    (E_op_rdctl)? 64'h202020726463746c :
-    (E_op_mul)? 64'h20202020206d756c :
-    (E_op_cmpgeu)? 64'h2020636d70676575 :
-    (E_op_initi)? 64'h202020696e697469 :
-    (E_op_trap)? 64'h2020202074726170 :
-    (E_op_wrctl)? 64'h202020777263746c :
-    (E_op_cmpltu)? 64'h2020636d706c7475 :
-    (E_op_add)? 64'h2020202020616464 :
-    (E_op_break)? 64'h202020627265616b :
-    (E_op_sync)? 64'h2020202073796e63 :
-    (E_op_sub)? 64'h2020202020737562 :
-    (E_op_srai)? 64'h2020202073726169 :
-    (E_op_sra)? 64'h2020202020737261 :
-    (E_op_cordic_0)? 64'h636f726469635f30 :
-    (E_op_fp_add_0)? 64'h66705f6164645f30 :
-    (E_op_fp_mul_0)? 64'h66705f6d756c5f30 :
-    64'h2020202020424144;
+  assign E_inst = (E_op_call)? 80'h20202020202063616c6c :
+    (E_op_jmpi)? 80'h2020202020206a6d7069 :
+    (E_op_ldbu)? 80'h2020202020206c646275 :
+    (E_op_addi)? 80'h20202020202061646469 :
+    (E_op_stb)? 80'h20202020202020737462 :
+    (E_op_br)? 80'h20202020202020206272 :
+    (E_op_ldb)? 80'h202020202020206c6462 :
+    (E_op_cmpgei)? 80'h20202020636d70676569 :
+    (E_op_ldhu)? 80'h2020202020206c646875 :
+    (E_op_andi)? 80'h202020202020616e6469 :
+    (E_op_sth)? 80'h20202020202020737468 :
+    (E_op_bge)? 80'h20202020202020626765 :
+    (E_op_ldh)? 80'h202020202020206c6468 :
+    (E_op_cmplti)? 80'h20202020636d706c7469 :
+    (E_op_initda)? 80'h20202020696e69746461 :
+    (E_op_ori)? 80'h202020202020206f7269 :
+    (E_op_stw)? 80'h20202020202020737477 :
+    (E_op_blt)? 80'h20202020202020626c74 :
+    (E_op_ldw)? 80'h202020202020206c6477 :
+    (E_op_cmpnei)? 80'h20202020636d706e6569 :
+    (E_op_flushda)? 80'h202020666c7573686461 :
+    (E_op_xori)? 80'h202020202020786f7269 :
+    (E_op_bne)? 80'h20202020202020626e65 :
+    (E_op_cmpeqi)? 80'h20202020636d70657169 :
+    (E_op_ldbuio)? 80'h202020206c646275696f :
+    (E_op_muli)? 80'h2020202020206d756c69 :
+    (E_op_stbio)? 80'h2020202020737462696f :
+    (E_op_beq)? 80'h20202020202020626571 :
+    (E_op_ldbio)? 80'h20202020206c6462696f :
+    (E_op_cmpgeui)? 80'h202020636d7067657569 :
+    (E_op_ldhuio)? 80'h202020206c646875696f :
+    (E_op_andhi)? 80'h2020202020616e646869 :
+    (E_op_sthio)? 80'h2020202020737468696f :
+    (E_op_bgeu)? 80'h20202020202062676575 :
+    (E_op_ldhio)? 80'h20202020206c6468696f :
+    (E_op_cmpltui)? 80'h202020636d706c747569 :
+    (E_op_custom)? 80'h20202020637573746f6d :
+    (E_op_initd)? 80'h2020202020696e697464 :
+    (E_op_orhi)? 80'h2020202020206f726869 :
+    (E_op_stwio)? 80'h2020202020737477696f :
+    (E_op_bltu)? 80'h202020202020626c7475 :
+    (E_op_ldwio)? 80'h20202020206c6477696f :
+    (E_op_flushd)? 80'h20202020666c75736864 :
+    (E_op_xorhi)? 80'h2020202020786f726869 :
+    (E_op_eret)? 80'h20202020202065726574 :
+    (E_op_roli)? 80'h202020202020726f6c69 :
+    (E_op_rol)? 80'h20202020202020726f6c :
+    (E_op_flushp)? 80'h20202020666c75736870 :
+    (E_op_ret)? 80'h20202020202020726574 :
+    (E_op_nor)? 80'h202020202020206e6f72 :
+    (E_op_mulxuu)? 80'h202020206d756c787575 :
+    (E_op_cmpge)? 80'h2020202020636d706765 :
+    (E_op_bret)? 80'h20202020202062726574 :
+    (E_op_ror)? 80'h20202020202020726f72 :
+    (E_op_flushi)? 80'h20202020666c75736869 :
+    (E_op_jmp)? 80'h202020202020206a6d70 :
+    (E_op_and)? 80'h20202020202020616e64 :
+    (E_op_cmplt)? 80'h2020202020636d706c74 :
+    (E_op_slli)? 80'h202020202020736c6c69 :
+    (E_op_sll)? 80'h20202020202020736c6c :
+    (E_op_or)? 80'h20202020202020206f72 :
+    (E_op_mulxsu)? 80'h202020206d756c787375 :
+    (E_op_cmpne)? 80'h2020202020636d706e65 :
+    (E_op_srli)? 80'h20202020202073726c69 :
+    (E_op_srl)? 80'h2020202020202073726c :
+    (E_op_nextpc)? 80'h202020206e6578747063 :
+    (E_op_callr)? 80'h202020202063616c6c72 :
+    (E_op_xor)? 80'h20202020202020786f72 :
+    (E_op_mulxss)? 80'h202020206d756c787373 :
+    (E_op_cmpeq)? 80'h2020202020636d706571 :
+    (E_op_divu)? 80'h20202020202064697675 :
+    (E_op_div)? 80'h20202020202020646976 :
+    (E_op_rdctl)? 80'h2020202020726463746c :
+    (E_op_mul)? 80'h202020202020206d756c :
+    (E_op_cmpgeu)? 80'h20202020636d70676575 :
+    (E_op_initi)? 80'h2020202020696e697469 :
+    (E_op_trap)? 80'h20202020202074726170 :
+    (E_op_wrctl)? 80'h2020202020777263746c :
+    (E_op_cmpltu)? 80'h20202020636d706c7475 :
+    (E_op_add)? 80'h20202020202020616464 :
+    (E_op_break)? 80'h2020202020627265616b :
+    (E_op_sync)? 80'h20202020202073796e63 :
+    (E_op_sub)? 80'h20202020202020737562 :
+    (E_op_srai)? 80'h20202020202073726169 :
+    (E_op_sra)? 80'h20202020202020737261 :
+    (E_op_cordic_0)? 80'h2020636f726469635f30 :
+    (E_op_fp_add_0)? 80'h202066705f6164645f30 :
+    (E_op_fp_mul_0)? 80'h202066705f6d756c5f30 :
+    (E_op_func_fsm_0)? 80'h66756e635f66736d5f30 :
+    80'h20202020202020424144;
 
-  assign M_inst = (M_op_call)? 64'h2020202063616c6c :
-    (M_op_jmpi)? 64'h202020206a6d7069 :
-    (M_op_ldbu)? 64'h202020206c646275 :
-    (M_op_addi)? 64'h2020202061646469 :
-    (M_op_stb)? 64'h2020202020737462 :
-    (M_op_br)? 64'h2020202020206272 :
-    (M_op_ldb)? 64'h20202020206c6462 :
-    (M_op_cmpgei)? 64'h2020636d70676569 :
-    (M_op_ldhu)? 64'h202020206c646875 :
-    (M_op_andi)? 64'h20202020616e6469 :
-    (M_op_sth)? 64'h2020202020737468 :
-    (M_op_bge)? 64'h2020202020626765 :
-    (M_op_ldh)? 64'h20202020206c6468 :
-    (M_op_cmplti)? 64'h2020636d706c7469 :
-    (M_op_initda)? 64'h2020696e69746461 :
-    (M_op_ori)? 64'h20202020206f7269 :
-    (M_op_stw)? 64'h2020202020737477 :
-    (M_op_blt)? 64'h2020202020626c74 :
-    (M_op_ldw)? 64'h20202020206c6477 :
-    (M_op_cmpnei)? 64'h2020636d706e6569 :
-    (M_op_flushda)? 64'h20666c7573686461 :
-    (M_op_xori)? 64'h20202020786f7269 :
-    (M_op_bne)? 64'h2020202020626e65 :
-    (M_op_cmpeqi)? 64'h2020636d70657169 :
-    (M_op_ldbuio)? 64'h20206c646275696f :
-    (M_op_muli)? 64'h202020206d756c69 :
-    (M_op_stbio)? 64'h202020737462696f :
-    (M_op_beq)? 64'h2020202020626571 :
-    (M_op_ldbio)? 64'h2020206c6462696f :
-    (M_op_cmpgeui)? 64'h20636d7067657569 :
-    (M_op_ldhuio)? 64'h20206c646875696f :
-    (M_op_andhi)? 64'h202020616e646869 :
-    (M_op_sthio)? 64'h202020737468696f :
-    (M_op_bgeu)? 64'h2020202062676575 :
-    (M_op_ldhio)? 64'h2020206c6468696f :
-    (M_op_cmpltui)? 64'h20636d706c747569 :
-    (M_op_custom)? 64'h2020637573746f6d :
-    (M_op_initd)? 64'h202020696e697464 :
-    (M_op_orhi)? 64'h202020206f726869 :
-    (M_op_stwio)? 64'h202020737477696f :
-    (M_op_bltu)? 64'h20202020626c7475 :
-    (M_op_ldwio)? 64'h2020206c6477696f :
-    (M_op_flushd)? 64'h2020666c75736864 :
-    (M_op_xorhi)? 64'h202020786f726869 :
-    (M_op_eret)? 64'h2020202065726574 :
-    (M_op_roli)? 64'h20202020726f6c69 :
-    (M_op_rol)? 64'h2020202020726f6c :
-    (M_op_flushp)? 64'h2020666c75736870 :
-    (M_op_ret)? 64'h2020202020726574 :
-    (M_op_nor)? 64'h20202020206e6f72 :
-    (M_op_mulxuu)? 64'h20206d756c787575 :
-    (M_op_cmpge)? 64'h202020636d706765 :
-    (M_op_bret)? 64'h2020202062726574 :
-    (M_op_ror)? 64'h2020202020726f72 :
-    (M_op_flushi)? 64'h2020666c75736869 :
-    (M_op_jmp)? 64'h20202020206a6d70 :
-    (M_op_and)? 64'h2020202020616e64 :
-    (M_op_cmplt)? 64'h202020636d706c74 :
-    (M_op_slli)? 64'h20202020736c6c69 :
-    (M_op_sll)? 64'h2020202020736c6c :
-    (M_op_or)? 64'h2020202020206f72 :
-    (M_op_mulxsu)? 64'h20206d756c787375 :
-    (M_op_cmpne)? 64'h202020636d706e65 :
-    (M_op_srli)? 64'h2020202073726c69 :
-    (M_op_srl)? 64'h202020202073726c :
-    (M_op_nextpc)? 64'h20206e6578747063 :
-    (M_op_callr)? 64'h20202063616c6c72 :
-    (M_op_xor)? 64'h2020202020786f72 :
-    (M_op_mulxss)? 64'h20206d756c787373 :
-    (M_op_cmpeq)? 64'h202020636d706571 :
-    (M_op_divu)? 64'h2020202064697675 :
-    (M_op_div)? 64'h2020202020646976 :
-    (M_op_rdctl)? 64'h202020726463746c :
-    (M_op_mul)? 64'h20202020206d756c :
-    (M_op_cmpgeu)? 64'h2020636d70676575 :
-    (M_op_initi)? 64'h202020696e697469 :
-    (M_op_trap)? 64'h2020202074726170 :
-    (M_op_wrctl)? 64'h202020777263746c :
-    (M_op_cmpltu)? 64'h2020636d706c7475 :
-    (M_op_add)? 64'h2020202020616464 :
-    (M_op_break)? 64'h202020627265616b :
-    (M_op_sync)? 64'h2020202073796e63 :
-    (M_op_sub)? 64'h2020202020737562 :
-    (M_op_srai)? 64'h2020202073726169 :
-    (M_op_sra)? 64'h2020202020737261 :
-    (M_op_cordic_0)? 64'h636f726469635f30 :
-    (M_op_fp_add_0)? 64'h66705f6164645f30 :
-    (M_op_fp_mul_0)? 64'h66705f6d756c5f30 :
-    64'h2020202020424144;
+  assign M_inst = (M_op_call)? 80'h20202020202063616c6c :
+    (M_op_jmpi)? 80'h2020202020206a6d7069 :
+    (M_op_ldbu)? 80'h2020202020206c646275 :
+    (M_op_addi)? 80'h20202020202061646469 :
+    (M_op_stb)? 80'h20202020202020737462 :
+    (M_op_br)? 80'h20202020202020206272 :
+    (M_op_ldb)? 80'h202020202020206c6462 :
+    (M_op_cmpgei)? 80'h20202020636d70676569 :
+    (M_op_ldhu)? 80'h2020202020206c646875 :
+    (M_op_andi)? 80'h202020202020616e6469 :
+    (M_op_sth)? 80'h20202020202020737468 :
+    (M_op_bge)? 80'h20202020202020626765 :
+    (M_op_ldh)? 80'h202020202020206c6468 :
+    (M_op_cmplti)? 80'h20202020636d706c7469 :
+    (M_op_initda)? 80'h20202020696e69746461 :
+    (M_op_ori)? 80'h202020202020206f7269 :
+    (M_op_stw)? 80'h20202020202020737477 :
+    (M_op_blt)? 80'h20202020202020626c74 :
+    (M_op_ldw)? 80'h202020202020206c6477 :
+    (M_op_cmpnei)? 80'h20202020636d706e6569 :
+    (M_op_flushda)? 80'h202020666c7573686461 :
+    (M_op_xori)? 80'h202020202020786f7269 :
+    (M_op_bne)? 80'h20202020202020626e65 :
+    (M_op_cmpeqi)? 80'h20202020636d70657169 :
+    (M_op_ldbuio)? 80'h202020206c646275696f :
+    (M_op_muli)? 80'h2020202020206d756c69 :
+    (M_op_stbio)? 80'h2020202020737462696f :
+    (M_op_beq)? 80'h20202020202020626571 :
+    (M_op_ldbio)? 80'h20202020206c6462696f :
+    (M_op_cmpgeui)? 80'h202020636d7067657569 :
+    (M_op_ldhuio)? 80'h202020206c646875696f :
+    (M_op_andhi)? 80'h2020202020616e646869 :
+    (M_op_sthio)? 80'h2020202020737468696f :
+    (M_op_bgeu)? 80'h20202020202062676575 :
+    (M_op_ldhio)? 80'h20202020206c6468696f :
+    (M_op_cmpltui)? 80'h202020636d706c747569 :
+    (M_op_custom)? 80'h20202020637573746f6d :
+    (M_op_initd)? 80'h2020202020696e697464 :
+    (M_op_orhi)? 80'h2020202020206f726869 :
+    (M_op_stwio)? 80'h2020202020737477696f :
+    (M_op_bltu)? 80'h202020202020626c7475 :
+    (M_op_ldwio)? 80'h20202020206c6477696f :
+    (M_op_flushd)? 80'h20202020666c75736864 :
+    (M_op_xorhi)? 80'h2020202020786f726869 :
+    (M_op_eret)? 80'h20202020202065726574 :
+    (M_op_roli)? 80'h202020202020726f6c69 :
+    (M_op_rol)? 80'h20202020202020726f6c :
+    (M_op_flushp)? 80'h20202020666c75736870 :
+    (M_op_ret)? 80'h20202020202020726574 :
+    (M_op_nor)? 80'h202020202020206e6f72 :
+    (M_op_mulxuu)? 80'h202020206d756c787575 :
+    (M_op_cmpge)? 80'h2020202020636d706765 :
+    (M_op_bret)? 80'h20202020202062726574 :
+    (M_op_ror)? 80'h20202020202020726f72 :
+    (M_op_flushi)? 80'h20202020666c75736869 :
+    (M_op_jmp)? 80'h202020202020206a6d70 :
+    (M_op_and)? 80'h20202020202020616e64 :
+    (M_op_cmplt)? 80'h2020202020636d706c74 :
+    (M_op_slli)? 80'h202020202020736c6c69 :
+    (M_op_sll)? 80'h20202020202020736c6c :
+    (M_op_or)? 80'h20202020202020206f72 :
+    (M_op_mulxsu)? 80'h202020206d756c787375 :
+    (M_op_cmpne)? 80'h2020202020636d706e65 :
+    (M_op_srli)? 80'h20202020202073726c69 :
+    (M_op_srl)? 80'h2020202020202073726c :
+    (M_op_nextpc)? 80'h202020206e6578747063 :
+    (M_op_callr)? 80'h202020202063616c6c72 :
+    (M_op_xor)? 80'h20202020202020786f72 :
+    (M_op_mulxss)? 80'h202020206d756c787373 :
+    (M_op_cmpeq)? 80'h2020202020636d706571 :
+    (M_op_divu)? 80'h20202020202064697675 :
+    (M_op_div)? 80'h20202020202020646976 :
+    (M_op_rdctl)? 80'h2020202020726463746c :
+    (M_op_mul)? 80'h202020202020206d756c :
+    (M_op_cmpgeu)? 80'h20202020636d70676575 :
+    (M_op_initi)? 80'h2020202020696e697469 :
+    (M_op_trap)? 80'h20202020202074726170 :
+    (M_op_wrctl)? 80'h2020202020777263746c :
+    (M_op_cmpltu)? 80'h20202020636d706c7475 :
+    (M_op_add)? 80'h20202020202020616464 :
+    (M_op_break)? 80'h2020202020627265616b :
+    (M_op_sync)? 80'h20202020202073796e63 :
+    (M_op_sub)? 80'h20202020202020737562 :
+    (M_op_srai)? 80'h20202020202073726169 :
+    (M_op_sra)? 80'h20202020202020737261 :
+    (M_op_cordic_0)? 80'h2020636f726469635f30 :
+    (M_op_fp_add_0)? 80'h202066705f6164645f30 :
+    (M_op_fp_mul_0)? 80'h202066705f6d756c5f30 :
+    (M_op_func_fsm_0)? 80'h66756e635f66736d5f30 :
+    80'h20202020202020424144;
 
-  assign A_inst = (A_op_call)? 64'h2020202063616c6c :
-    (A_op_jmpi)? 64'h202020206a6d7069 :
-    (A_op_ldbu)? 64'h202020206c646275 :
-    (A_op_addi)? 64'h2020202061646469 :
-    (A_op_stb)? 64'h2020202020737462 :
-    (A_op_br)? 64'h2020202020206272 :
-    (A_op_ldb)? 64'h20202020206c6462 :
-    (A_op_cmpgei)? 64'h2020636d70676569 :
-    (A_op_ldhu)? 64'h202020206c646875 :
-    (A_op_andi)? 64'h20202020616e6469 :
-    (A_op_sth)? 64'h2020202020737468 :
-    (A_op_bge)? 64'h2020202020626765 :
-    (A_op_ldh)? 64'h20202020206c6468 :
-    (A_op_cmplti)? 64'h2020636d706c7469 :
-    (A_op_initda)? 64'h2020696e69746461 :
-    (A_op_ori)? 64'h20202020206f7269 :
-    (A_op_stw)? 64'h2020202020737477 :
-    (A_op_blt)? 64'h2020202020626c74 :
-    (A_op_ldw)? 64'h20202020206c6477 :
-    (A_op_cmpnei)? 64'h2020636d706e6569 :
-    (A_op_flushda)? 64'h20666c7573686461 :
-    (A_op_xori)? 64'h20202020786f7269 :
-    (A_op_bne)? 64'h2020202020626e65 :
-    (A_op_cmpeqi)? 64'h2020636d70657169 :
-    (A_op_ldbuio)? 64'h20206c646275696f :
-    (A_op_muli)? 64'h202020206d756c69 :
-    (A_op_stbio)? 64'h202020737462696f :
-    (A_op_beq)? 64'h2020202020626571 :
-    (A_op_ldbio)? 64'h2020206c6462696f :
-    (A_op_cmpgeui)? 64'h20636d7067657569 :
-    (A_op_ldhuio)? 64'h20206c646875696f :
-    (A_op_andhi)? 64'h202020616e646869 :
-    (A_op_sthio)? 64'h202020737468696f :
-    (A_op_bgeu)? 64'h2020202062676575 :
-    (A_op_ldhio)? 64'h2020206c6468696f :
-    (A_op_cmpltui)? 64'h20636d706c747569 :
-    (A_op_custom)? 64'h2020637573746f6d :
-    (A_op_initd)? 64'h202020696e697464 :
-    (A_op_orhi)? 64'h202020206f726869 :
-    (A_op_stwio)? 64'h202020737477696f :
-    (A_op_bltu)? 64'h20202020626c7475 :
-    (A_op_ldwio)? 64'h2020206c6477696f :
-    (A_op_flushd)? 64'h2020666c75736864 :
-    (A_op_xorhi)? 64'h202020786f726869 :
-    (A_op_eret)? 64'h2020202065726574 :
-    (A_op_roli)? 64'h20202020726f6c69 :
-    (A_op_rol)? 64'h2020202020726f6c :
-    (A_op_flushp)? 64'h2020666c75736870 :
-    (A_op_ret)? 64'h2020202020726574 :
-    (A_op_nor)? 64'h20202020206e6f72 :
-    (A_op_mulxuu)? 64'h20206d756c787575 :
-    (A_op_cmpge)? 64'h202020636d706765 :
-    (A_op_bret)? 64'h2020202062726574 :
-    (A_op_ror)? 64'h2020202020726f72 :
-    (A_op_flushi)? 64'h2020666c75736869 :
-    (A_op_jmp)? 64'h20202020206a6d70 :
-    (A_op_and)? 64'h2020202020616e64 :
-    (A_op_cmplt)? 64'h202020636d706c74 :
-    (A_op_slli)? 64'h20202020736c6c69 :
-    (A_op_sll)? 64'h2020202020736c6c :
-    (A_op_or)? 64'h2020202020206f72 :
-    (A_op_mulxsu)? 64'h20206d756c787375 :
-    (A_op_cmpne)? 64'h202020636d706e65 :
-    (A_op_srli)? 64'h2020202073726c69 :
-    (A_op_srl)? 64'h202020202073726c :
-    (A_op_nextpc)? 64'h20206e6578747063 :
-    (A_op_callr)? 64'h20202063616c6c72 :
-    (A_op_xor)? 64'h2020202020786f72 :
-    (A_op_mulxss)? 64'h20206d756c787373 :
-    (A_op_cmpeq)? 64'h202020636d706571 :
-    (A_op_divu)? 64'h2020202064697675 :
-    (A_op_div)? 64'h2020202020646976 :
-    (A_op_rdctl)? 64'h202020726463746c :
-    (A_op_mul)? 64'h20202020206d756c :
-    (A_op_cmpgeu)? 64'h2020636d70676575 :
-    (A_op_initi)? 64'h202020696e697469 :
-    (A_op_trap)? 64'h2020202074726170 :
-    (A_op_wrctl)? 64'h202020777263746c :
-    (A_op_cmpltu)? 64'h2020636d706c7475 :
-    (A_op_add)? 64'h2020202020616464 :
-    (A_op_break)? 64'h202020627265616b :
-    (A_op_sync)? 64'h2020202073796e63 :
-    (A_op_sub)? 64'h2020202020737562 :
-    (A_op_srai)? 64'h2020202073726169 :
-    (A_op_sra)? 64'h2020202020737261 :
-    (A_op_cordic_0)? 64'h636f726469635f30 :
-    (A_op_fp_add_0)? 64'h66705f6164645f30 :
-    (A_op_fp_mul_0)? 64'h66705f6d756c5f30 :
-    64'h2020202020424144;
+  assign A_inst = (A_op_call)? 80'h20202020202063616c6c :
+    (A_op_jmpi)? 80'h2020202020206a6d7069 :
+    (A_op_ldbu)? 80'h2020202020206c646275 :
+    (A_op_addi)? 80'h20202020202061646469 :
+    (A_op_stb)? 80'h20202020202020737462 :
+    (A_op_br)? 80'h20202020202020206272 :
+    (A_op_ldb)? 80'h202020202020206c6462 :
+    (A_op_cmpgei)? 80'h20202020636d70676569 :
+    (A_op_ldhu)? 80'h2020202020206c646875 :
+    (A_op_andi)? 80'h202020202020616e6469 :
+    (A_op_sth)? 80'h20202020202020737468 :
+    (A_op_bge)? 80'h20202020202020626765 :
+    (A_op_ldh)? 80'h202020202020206c6468 :
+    (A_op_cmplti)? 80'h20202020636d706c7469 :
+    (A_op_initda)? 80'h20202020696e69746461 :
+    (A_op_ori)? 80'h202020202020206f7269 :
+    (A_op_stw)? 80'h20202020202020737477 :
+    (A_op_blt)? 80'h20202020202020626c74 :
+    (A_op_ldw)? 80'h202020202020206c6477 :
+    (A_op_cmpnei)? 80'h20202020636d706e6569 :
+    (A_op_flushda)? 80'h202020666c7573686461 :
+    (A_op_xori)? 80'h202020202020786f7269 :
+    (A_op_bne)? 80'h20202020202020626e65 :
+    (A_op_cmpeqi)? 80'h20202020636d70657169 :
+    (A_op_ldbuio)? 80'h202020206c646275696f :
+    (A_op_muli)? 80'h2020202020206d756c69 :
+    (A_op_stbio)? 80'h2020202020737462696f :
+    (A_op_beq)? 80'h20202020202020626571 :
+    (A_op_ldbio)? 80'h20202020206c6462696f :
+    (A_op_cmpgeui)? 80'h202020636d7067657569 :
+    (A_op_ldhuio)? 80'h202020206c646875696f :
+    (A_op_andhi)? 80'h2020202020616e646869 :
+    (A_op_sthio)? 80'h2020202020737468696f :
+    (A_op_bgeu)? 80'h20202020202062676575 :
+    (A_op_ldhio)? 80'h20202020206c6468696f :
+    (A_op_cmpltui)? 80'h202020636d706c747569 :
+    (A_op_custom)? 80'h20202020637573746f6d :
+    (A_op_initd)? 80'h2020202020696e697464 :
+    (A_op_orhi)? 80'h2020202020206f726869 :
+    (A_op_stwio)? 80'h2020202020737477696f :
+    (A_op_bltu)? 80'h202020202020626c7475 :
+    (A_op_ldwio)? 80'h20202020206c6477696f :
+    (A_op_flushd)? 80'h20202020666c75736864 :
+    (A_op_xorhi)? 80'h2020202020786f726869 :
+    (A_op_eret)? 80'h20202020202065726574 :
+    (A_op_roli)? 80'h202020202020726f6c69 :
+    (A_op_rol)? 80'h20202020202020726f6c :
+    (A_op_flushp)? 80'h20202020666c75736870 :
+    (A_op_ret)? 80'h20202020202020726574 :
+    (A_op_nor)? 80'h202020202020206e6f72 :
+    (A_op_mulxuu)? 80'h202020206d756c787575 :
+    (A_op_cmpge)? 80'h2020202020636d706765 :
+    (A_op_bret)? 80'h20202020202062726574 :
+    (A_op_ror)? 80'h20202020202020726f72 :
+    (A_op_flushi)? 80'h20202020666c75736869 :
+    (A_op_jmp)? 80'h202020202020206a6d70 :
+    (A_op_and)? 80'h20202020202020616e64 :
+    (A_op_cmplt)? 80'h2020202020636d706c74 :
+    (A_op_slli)? 80'h202020202020736c6c69 :
+    (A_op_sll)? 80'h20202020202020736c6c :
+    (A_op_or)? 80'h20202020202020206f72 :
+    (A_op_mulxsu)? 80'h202020206d756c787375 :
+    (A_op_cmpne)? 80'h2020202020636d706e65 :
+    (A_op_srli)? 80'h20202020202073726c69 :
+    (A_op_srl)? 80'h2020202020202073726c :
+    (A_op_nextpc)? 80'h202020206e6578747063 :
+    (A_op_callr)? 80'h202020202063616c6c72 :
+    (A_op_xor)? 80'h20202020202020786f72 :
+    (A_op_mulxss)? 80'h202020206d756c787373 :
+    (A_op_cmpeq)? 80'h2020202020636d706571 :
+    (A_op_divu)? 80'h20202020202064697675 :
+    (A_op_div)? 80'h20202020202020646976 :
+    (A_op_rdctl)? 80'h2020202020726463746c :
+    (A_op_mul)? 80'h202020202020206d756c :
+    (A_op_cmpgeu)? 80'h20202020636d70676575 :
+    (A_op_initi)? 80'h2020202020696e697469 :
+    (A_op_trap)? 80'h20202020202074726170 :
+    (A_op_wrctl)? 80'h2020202020777263746c :
+    (A_op_cmpltu)? 80'h20202020636d706c7475 :
+    (A_op_add)? 80'h20202020202020616464 :
+    (A_op_break)? 80'h2020202020627265616b :
+    (A_op_sync)? 80'h20202020202073796e63 :
+    (A_op_sub)? 80'h20202020202020737562 :
+    (A_op_srai)? 80'h20202020202073726169 :
+    (A_op_sra)? 80'h20202020202020737261 :
+    (A_op_cordic_0)? 80'h2020636f726469635f30 :
+    (A_op_fp_add_0)? 80'h202066705f6164645f30 :
+    (A_op_fp_mul_0)? 80'h202066705f6d756c5f30 :
+    (A_op_func_fsm_0)? 80'h66756e635f66736d5f30 :
+    80'h20202020202020424144;
 
-  assign W_inst = (W_op_call)? 64'h2020202063616c6c :
-    (W_op_jmpi)? 64'h202020206a6d7069 :
-    (W_op_ldbu)? 64'h202020206c646275 :
-    (W_op_addi)? 64'h2020202061646469 :
-    (W_op_stb)? 64'h2020202020737462 :
-    (W_op_br)? 64'h2020202020206272 :
-    (W_op_ldb)? 64'h20202020206c6462 :
-    (W_op_cmpgei)? 64'h2020636d70676569 :
-    (W_op_ldhu)? 64'h202020206c646875 :
-    (W_op_andi)? 64'h20202020616e6469 :
-    (W_op_sth)? 64'h2020202020737468 :
-    (W_op_bge)? 64'h2020202020626765 :
-    (W_op_ldh)? 64'h20202020206c6468 :
-    (W_op_cmplti)? 64'h2020636d706c7469 :
-    (W_op_initda)? 64'h2020696e69746461 :
-    (W_op_ori)? 64'h20202020206f7269 :
-    (W_op_stw)? 64'h2020202020737477 :
-    (W_op_blt)? 64'h2020202020626c74 :
-    (W_op_ldw)? 64'h20202020206c6477 :
-    (W_op_cmpnei)? 64'h2020636d706e6569 :
-    (W_op_flushda)? 64'h20666c7573686461 :
-    (W_op_xori)? 64'h20202020786f7269 :
-    (W_op_bne)? 64'h2020202020626e65 :
-    (W_op_cmpeqi)? 64'h2020636d70657169 :
-    (W_op_ldbuio)? 64'h20206c646275696f :
-    (W_op_muli)? 64'h202020206d756c69 :
-    (W_op_stbio)? 64'h202020737462696f :
-    (W_op_beq)? 64'h2020202020626571 :
-    (W_op_ldbio)? 64'h2020206c6462696f :
-    (W_op_cmpgeui)? 64'h20636d7067657569 :
-    (W_op_ldhuio)? 64'h20206c646875696f :
-    (W_op_andhi)? 64'h202020616e646869 :
-    (W_op_sthio)? 64'h202020737468696f :
-    (W_op_bgeu)? 64'h2020202062676575 :
-    (W_op_ldhio)? 64'h2020206c6468696f :
-    (W_op_cmpltui)? 64'h20636d706c747569 :
-    (W_op_custom)? 64'h2020637573746f6d :
-    (W_op_initd)? 64'h202020696e697464 :
-    (W_op_orhi)? 64'h202020206f726869 :
-    (W_op_stwio)? 64'h202020737477696f :
-    (W_op_bltu)? 64'h20202020626c7475 :
-    (W_op_ldwio)? 64'h2020206c6477696f :
-    (W_op_flushd)? 64'h2020666c75736864 :
-    (W_op_xorhi)? 64'h202020786f726869 :
-    (W_op_eret)? 64'h2020202065726574 :
-    (W_op_roli)? 64'h20202020726f6c69 :
-    (W_op_rol)? 64'h2020202020726f6c :
-    (W_op_flushp)? 64'h2020666c75736870 :
-    (W_op_ret)? 64'h2020202020726574 :
-    (W_op_nor)? 64'h20202020206e6f72 :
-    (W_op_mulxuu)? 64'h20206d756c787575 :
-    (W_op_cmpge)? 64'h202020636d706765 :
-    (W_op_bret)? 64'h2020202062726574 :
-    (W_op_ror)? 64'h2020202020726f72 :
-    (W_op_flushi)? 64'h2020666c75736869 :
-    (W_op_jmp)? 64'h20202020206a6d70 :
-    (W_op_and)? 64'h2020202020616e64 :
-    (W_op_cmplt)? 64'h202020636d706c74 :
-    (W_op_slli)? 64'h20202020736c6c69 :
-    (W_op_sll)? 64'h2020202020736c6c :
-    (W_op_or)? 64'h2020202020206f72 :
-    (W_op_mulxsu)? 64'h20206d756c787375 :
-    (W_op_cmpne)? 64'h202020636d706e65 :
-    (W_op_srli)? 64'h2020202073726c69 :
-    (W_op_srl)? 64'h202020202073726c :
-    (W_op_nextpc)? 64'h20206e6578747063 :
-    (W_op_callr)? 64'h20202063616c6c72 :
-    (W_op_xor)? 64'h2020202020786f72 :
-    (W_op_mulxss)? 64'h20206d756c787373 :
-    (W_op_cmpeq)? 64'h202020636d706571 :
-    (W_op_divu)? 64'h2020202064697675 :
-    (W_op_div)? 64'h2020202020646976 :
-    (W_op_rdctl)? 64'h202020726463746c :
-    (W_op_mul)? 64'h20202020206d756c :
-    (W_op_cmpgeu)? 64'h2020636d70676575 :
-    (W_op_initi)? 64'h202020696e697469 :
-    (W_op_trap)? 64'h2020202074726170 :
-    (W_op_wrctl)? 64'h202020777263746c :
-    (W_op_cmpltu)? 64'h2020636d706c7475 :
-    (W_op_add)? 64'h2020202020616464 :
-    (W_op_break)? 64'h202020627265616b :
-    (W_op_sync)? 64'h2020202073796e63 :
-    (W_op_sub)? 64'h2020202020737562 :
-    (W_op_srai)? 64'h2020202073726169 :
-    (W_op_sra)? 64'h2020202020737261 :
-    (W_op_cordic_0)? 64'h636f726469635f30 :
-    (W_op_fp_add_0)? 64'h66705f6164645f30 :
-    (W_op_fp_mul_0)? 64'h66705f6d756c5f30 :
-    64'h2020202020424144;
+  assign W_inst = (W_op_call)? 80'h20202020202063616c6c :
+    (W_op_jmpi)? 80'h2020202020206a6d7069 :
+    (W_op_ldbu)? 80'h2020202020206c646275 :
+    (W_op_addi)? 80'h20202020202061646469 :
+    (W_op_stb)? 80'h20202020202020737462 :
+    (W_op_br)? 80'h20202020202020206272 :
+    (W_op_ldb)? 80'h202020202020206c6462 :
+    (W_op_cmpgei)? 80'h20202020636d70676569 :
+    (W_op_ldhu)? 80'h2020202020206c646875 :
+    (W_op_andi)? 80'h202020202020616e6469 :
+    (W_op_sth)? 80'h20202020202020737468 :
+    (W_op_bge)? 80'h20202020202020626765 :
+    (W_op_ldh)? 80'h202020202020206c6468 :
+    (W_op_cmplti)? 80'h20202020636d706c7469 :
+    (W_op_initda)? 80'h20202020696e69746461 :
+    (W_op_ori)? 80'h202020202020206f7269 :
+    (W_op_stw)? 80'h20202020202020737477 :
+    (W_op_blt)? 80'h20202020202020626c74 :
+    (W_op_ldw)? 80'h202020202020206c6477 :
+    (W_op_cmpnei)? 80'h20202020636d706e6569 :
+    (W_op_flushda)? 80'h202020666c7573686461 :
+    (W_op_xori)? 80'h202020202020786f7269 :
+    (W_op_bne)? 80'h20202020202020626e65 :
+    (W_op_cmpeqi)? 80'h20202020636d70657169 :
+    (W_op_ldbuio)? 80'h202020206c646275696f :
+    (W_op_muli)? 80'h2020202020206d756c69 :
+    (W_op_stbio)? 80'h2020202020737462696f :
+    (W_op_beq)? 80'h20202020202020626571 :
+    (W_op_ldbio)? 80'h20202020206c6462696f :
+    (W_op_cmpgeui)? 80'h202020636d7067657569 :
+    (W_op_ldhuio)? 80'h202020206c646875696f :
+    (W_op_andhi)? 80'h2020202020616e646869 :
+    (W_op_sthio)? 80'h2020202020737468696f :
+    (W_op_bgeu)? 80'h20202020202062676575 :
+    (W_op_ldhio)? 80'h20202020206c6468696f :
+    (W_op_cmpltui)? 80'h202020636d706c747569 :
+    (W_op_custom)? 80'h20202020637573746f6d :
+    (W_op_initd)? 80'h2020202020696e697464 :
+    (W_op_orhi)? 80'h2020202020206f726869 :
+    (W_op_stwio)? 80'h2020202020737477696f :
+    (W_op_bltu)? 80'h202020202020626c7475 :
+    (W_op_ldwio)? 80'h20202020206c6477696f :
+    (W_op_flushd)? 80'h20202020666c75736864 :
+    (W_op_xorhi)? 80'h2020202020786f726869 :
+    (W_op_eret)? 80'h20202020202065726574 :
+    (W_op_roli)? 80'h202020202020726f6c69 :
+    (W_op_rol)? 80'h20202020202020726f6c :
+    (W_op_flushp)? 80'h20202020666c75736870 :
+    (W_op_ret)? 80'h20202020202020726574 :
+    (W_op_nor)? 80'h202020202020206e6f72 :
+    (W_op_mulxuu)? 80'h202020206d756c787575 :
+    (W_op_cmpge)? 80'h2020202020636d706765 :
+    (W_op_bret)? 80'h20202020202062726574 :
+    (W_op_ror)? 80'h20202020202020726f72 :
+    (W_op_flushi)? 80'h20202020666c75736869 :
+    (W_op_jmp)? 80'h202020202020206a6d70 :
+    (W_op_and)? 80'h20202020202020616e64 :
+    (W_op_cmplt)? 80'h2020202020636d706c74 :
+    (W_op_slli)? 80'h202020202020736c6c69 :
+    (W_op_sll)? 80'h20202020202020736c6c :
+    (W_op_or)? 80'h20202020202020206f72 :
+    (W_op_mulxsu)? 80'h202020206d756c787375 :
+    (W_op_cmpne)? 80'h2020202020636d706e65 :
+    (W_op_srli)? 80'h20202020202073726c69 :
+    (W_op_srl)? 80'h2020202020202073726c :
+    (W_op_nextpc)? 80'h202020206e6578747063 :
+    (W_op_callr)? 80'h202020202063616c6c72 :
+    (W_op_xor)? 80'h20202020202020786f72 :
+    (W_op_mulxss)? 80'h202020206d756c787373 :
+    (W_op_cmpeq)? 80'h2020202020636d706571 :
+    (W_op_divu)? 80'h20202020202064697675 :
+    (W_op_div)? 80'h20202020202020646976 :
+    (W_op_rdctl)? 80'h2020202020726463746c :
+    (W_op_mul)? 80'h202020202020206d756c :
+    (W_op_cmpgeu)? 80'h20202020636d70676575 :
+    (W_op_initi)? 80'h2020202020696e697469 :
+    (W_op_trap)? 80'h20202020202074726170 :
+    (W_op_wrctl)? 80'h2020202020777263746c :
+    (W_op_cmpltu)? 80'h20202020636d706c7475 :
+    (W_op_add)? 80'h20202020202020616464 :
+    (W_op_break)? 80'h2020202020627265616b :
+    (W_op_sync)? 80'h20202020202073796e63 :
+    (W_op_sub)? 80'h20202020202020737562 :
+    (W_op_srai)? 80'h20202020202073726169 :
+    (W_op_sra)? 80'h20202020202020737261 :
+    (W_op_cordic_0)? 80'h2020636f726469635f30 :
+    (W_op_fp_add_0)? 80'h202066705f6164645f30 :
+    (W_op_fp_mul_0)? 80'h202066705f6d756c5f30 :
+    (W_op_func_fsm_0)? 80'h66756e635f66736d5f30 :
+    80'h20202020202020424144;
 
-  assign F_vinst = F_iw_valid ? F_inst : {9{8'h2d}};
-  assign D_vinst = D_issue ? D_inst : {9{8'h2d}};
-  assign E_vinst = E_valid ? E_inst : {9{8'h2d}};
-  assign M_vinst = M_valid ? M_inst : {9{8'h2d}};
-  assign A_vinst = A_valid ? A_inst : {9{8'h2d}};
-  assign W_vinst = W_valid ? W_inst : {9{8'h2d}};
+  assign F_vinst = F_iw_valid ? F_inst : {10{8'h2d}};
+  assign D_vinst = D_issue ? D_inst : {10{8'h2d}};
+  assign E_vinst = E_valid ? E_inst : {10{8'h2d}};
+  assign M_vinst = M_valid ? M_inst : {10{8'h2d}};
+  assign A_vinst = A_valid ? A_inst : {10{8'h2d}};
+  assign W_vinst = W_valid ? W_inst : {10{8'h2d}};
   //Clearing 'X' data bits
   assign D_ic_want_fill_unfiltered_is_x = ^(D_ic_want_fill_unfiltered) === 1'bx;
 

@@ -118,10 +118,30 @@ set_global_assignment -name SEARCH_PATH "c:/dsd/dsd_git/dsd_task_6"
 set_global_assignment -name SEARCH_PATH "c:/dsd/dsd_git/dsd/dsd_leo/dsd/de1_soc"
 set_global_assignment -name SEARCH_PATH "c:/dsd/dsd_git/dsd"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH tb_cordic_top -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH fun_fsm -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME tb_cordic -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb_cordic
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_cordic -section_id tb_cordic
+set_global_assignment -name EDA_TEST_BENCH_NAME tb_cordic_top -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb_cordic_top
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_cordic_top -section_id tb_cordic_top
+set_global_assignment -name EDA_TEST_BENCH_FILE ../tb_cordic.sv -section_id tb_cordic
+set_global_assignment -name EDA_TEST_BENCH_FILE tb_cordic_top.sv -section_id tb_cordic_top
+set_global_assignment -name EDA_TEST_BENCH_NAME fun_fsm -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id fun_fsm
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME fun_fsm -section_id fun_fsm
+set_global_assignment -name EDA_TEST_BENCH_FILE func_fsm_tb.sv -section_id fun_fsm
+set_global_assignment -name VERILOG_FILE fp_mul_final.v -library fp_mul_final
+set_global_assignment -name SOURCE_FILE fp_mul_final.cmp
+set_global_assignment -name VERILOG_FILE fp_mul.v
+set_global_assignment -name VERILOG_FILE fp_add.v
+set_global_assignment -name SYSTEMVERILOG_FILE defs.sv
+set_global_assignment -name VERILOG_FILE fp_addsub_final.v -library fp_addsub_final
+set_global_assignment -name QIP_FILE fp_addsub_final.qip
+set_global_assignment -name SOURCE_FILE fp_addsub_final.cmp
+set_global_assignment -name QIP_FILE fp_mul_final.qip
+set_global_assignment -name SYSTEMVERILOG_FILE func_fsm_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE func_fsm.sv
 set_global_assignment -name SYSTEMVERILOG_FILE tb_cordic_top.sv
 set_global_assignment -name SYSTEMVERILOG_FILE fl32_to_fixed.sv
 set_global_assignment -name SYSTEMVERILOG_FILE fixed_to_fl32.sv
@@ -140,14 +160,5 @@ set_global_assignment -name BDF_FILE hello_world.bdf
 set_global_assignment -name SOURCE_FILE db/hello_world.cmp.rdb
 set_global_assignment -name TCL_SCRIPT_FILE ../launch_modelsim.tcl
 set_global_assignment -name TCL_SCRIPT_FILE ../run_sim.tcl
-set_global_assignment -name QIP_FILE fp_addsub_final.qip
-set_global_assignment -name SIP_FILE fp_addsub_final.sip
-set_global_assignment -name QIP_FILE fp_mul_final.qip
-set_global_assignment -name SIP_FILE fp_mul_final.sip
 set_global_assignment -name VERILOG_FILE custom_cos_instr.v
-set_global_assignment -name EDA_TEST_BENCH_FILE ../tb_cordic.sv -section_id tb_cordic
-set_global_assignment -name EDA_TEST_BENCH_NAME tb_cordic_top -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb_cordic_top
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_cordic_top -section_id tb_cordic_top
-set_global_assignment -name EDA_TEST_BENCH_FILE tb_cordic_top.sv -section_id tb_cordic_top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

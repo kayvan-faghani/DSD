@@ -1,0 +1,97 @@
+transcript on
+if ![file isdirectory hello_world_iputf_libs] {
+	file mkdir hello_world_iputf_libs
+}
+
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+###### Libraries for IPUTF cores 
+###### End libraries for IPUTF cores 
+###### MIF file copy and HDL compilation commands for IPUTF cores 
+
+
+vlog "C:/DSD/DSD_git/DSD/template/fp_addsub_final_sim/fp_addsub_final.vo"
+vlog "C:/DSD/DSD_git/DSD/template/fp_mul_final_sim/fp_mul_final.vo"      
+
+vlog -vlog01compat -work work +incdir+C:/DSD/DSD_git/DSD/template {C:/DSD/DSD_git/DSD/template/fp_addsub_final.vo}
+vlog -vlog01compat -work work +incdir+C:/DSD/DSD_git/DSD/template {C:/DSD/DSD_git/DSD/template/fp_mul_final.vo}
+vlog -vlog01compat -work work +incdir+C:/DSD/DSD_git/DSD {C:/DSD/DSD_git/DSD/fp_add.v}
+vlog -vlog01compat -work work +incdir+C:/DSD/DSD_git/DSD/template/db {C:/DSD/DSD_git/DSD/template/db/altera_mult_add_20u2.v}
+vlog -vlog01compat -work work +incdir+C:/DSD/DSD_git/DSD/template/db {C:/DSD/DSD_git/DSD/template/db/altera_mult_add_iau2.v}
+vlog -vlog01compat -work work +incdir+C:/DSD/DSD_git/DSD/template/db {C:/DSD/DSD_git/DSD/template/db/altera_mult_add_hau2.v}
+vlog -vlog01compat -work work +incdir+C:/DSD/DSD_git/DSD/template/db {C:/DSD/DSD_git/DSD/template/db/altera_mult_add_1lu2.v}
+vlog -vlog01compat -work work +incdir+C:/DSD/DSD_git/DSD/template {C:/DSD/DSD_git/DSD/template/custom_cos_instr.v}
+vlib first_nios2_system
+vmap first_nios2_system first_nios2_system
+vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/first_nios2_system.v}
+vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_customins_master_translator.v}
+vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_reset_controller.v}
+vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_reset_synchronizer.v}
+vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu.v}
+vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_cpu.v}
+vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_cpu_debug_slave_sysclk.v}
+vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_cpu_debug_slave_tck.v}
+vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_cpu_debug_slave_wrapper.v}
+vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_cpu_mult_cell.v}
+vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_cpu_test_bench.v}
+vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_jtag_uart.v}
+vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_led_pio.v}
+vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0.v}
+vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_avalon_st_adapter.v}
+vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_onchip_mem.v}
+vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_sys_clk_timer.v}
+vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_sysid.v}
+vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/fp_add.v}
+vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/fp_mul.v}
+vlog -sv -work work +incdir+C:/DSD/DSD_git/DSD/template {C:/DSD/DSD_git/DSD/template/defs.sv}
+vlog -sv -work work +incdir+C:/DSD/DSD_git/DSD/template {C:/DSD/DSD_git/DSD/template/fl32_to_fixed.sv}
+vlog -sv -work work +incdir+C:/DSD/DSD_git/DSD/template {C:/DSD/DSD_git/DSD/template/fixed_to_fl32.sv}
+vlog -sv -work work +incdir+C:/DSD/DSD_git/DSD/template {C:/DSD/DSD_git/DSD/template/cordic.sv}
+vlog -vlog01compat -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_avalon_sc_fifo.v}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_customins_slave_translator.sv}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_merlin_arbitrator.sv}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_merlin_burst_uncompressor.sv}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_merlin_master_agent.sv}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_merlin_master_translator.sv}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_merlin_slave_agent.sv}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_merlin_slave_translator.sv}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/altera_merlin_traffic_limiter.sv}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/cordic_top.sv}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_cpu_custom_instruction_master_multi_xconnect.sv}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_irq_mapper.sv}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_cmd_demux.sv}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_cmd_demux_001.sv}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_cmd_mux.sv}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_cmd_mux_002.sv}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_router.sv}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_router_001.sv}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_router_002.sv}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_router_004.sv}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_rsp_demux.sv}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_rsp_demux_002.sv}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_rsp_mux.sv}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_rsp_mux_001.sv}
+vlib fp_addsub_final
+vmap fp_addsub_final fp_addsub_final
+vcom -93 -work fp_addsub_final {C:/DSD/DSD_git/DSD/template/fp_addsub_final/dspba_library_package.vhd}
+vlib fp_mul_final
+vmap fp_mul_final fp_mul_final
+vcom -93 -work fp_mul_final {C:/DSD/DSD_git/DSD/template/fp_mul_final/dspba_library_package.vhd}
+vcom -93 -work fp_addsub_final {C:/DSD/DSD_git/DSD/template/fp_addsub_final/dspba_library.vhd}
+vcom -93 -work fp_addsub_final {C:/DSD/DSD_git/DSD/template/fp_addsub_final/fp_addsub_final_0002.vhd}
+vcom -93 -work fp_mul_final {C:/DSD/DSD_git/DSD/template/fp_mul_final/dspba_library.vhd}
+vcom -93 -work fp_mul_final {C:/DSD/DSD_git/DSD/template/fp_mul_final/fp_mul_final_0002.vhd}
+
+vlog -sv -work work +incdir+C:/DSD/DSD_git/DSD/template {C:/DSD/DSD_git/DSD/template/tb_cordic_top.sv}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -L first_nios2_system -L fp_addsub_final -L fp_mul_final -voptargs="+acc"  tb_cordic_top
+
+add wave *
+view structure
+view signals
+run -all

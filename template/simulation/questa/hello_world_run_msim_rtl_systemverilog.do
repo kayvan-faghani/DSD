@@ -1,21 +1,9 @@
 transcript on
-if ![file isdirectory hello_world_iputf_libs] {
-	file mkdir hello_world_iputf_libs
-}
-
 if {[file exists rtl_work]} {
 	vdel -lib rtl_work -all
 }
 vlib rtl_work
 vmap work rtl_work
-
-###### Libraries for IPUTF cores 
-###### End libraries for IPUTF cores 
-###### MIF file copy and HDL compilation commands for IPUTF cores 
-
-
-vlog "C:/DSD/DSD_git/DSD/template/fp_addsub_final_sim/fp_addsub_final.vo"
-vlog "C:/DSD/DSD_git/DSD/template/fp_mul_final_sim/fp_mul_final.vo"      
 
 vlog -vlog01compat -work work +incdir+C:/DSD/DSD_git/DSD/template {C:/DSD/DSD_git/DSD/template/fp_addsub_final.vo}
 vlog -vlog01compat -work work +incdir+C:/DSD/DSD_git/DSD/template {C:/DSD/DSD_git/DSD/template/fp_mul_final.vo}
@@ -76,6 +64,7 @@ vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/firs
 vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_rsp_demux_002.sv}
 vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_rsp_mux.sv}
 vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/first_nios2_system_mm_interconnect_0_rsp_mux_001.sv}
+vlog -sv -work first_nios2_system +incdir+c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules {c:/dsd/dsd_git/dsd/template/db/ip/first_nios2_system/submodules/func_fsm.sv}
 vlib fp_addsub_final
 vmap fp_addsub_final fp_addsub_final
 vcom -93 -work fp_addsub_final {C:/DSD/DSD_git/DSD/template/fp_addsub_final/dspba_library_package.vhd}
@@ -87,9 +76,9 @@ vcom -93 -work fp_addsub_final {C:/DSD/DSD_git/DSD/template/fp_addsub_final/fp_a
 vcom -93 -work fp_mul_final {C:/DSD/DSD_git/DSD/template/fp_mul_final/dspba_library.vhd}
 vcom -93 -work fp_mul_final {C:/DSD/DSD_git/DSD/template/fp_mul_final/fp_mul_final_0002.vhd}
 
-vlog -sv -work work +incdir+C:/DSD/DSD_git/DSD/template {C:/DSD/DSD_git/DSD/template/tb_cordic_top.sv}
+vlog -sv -work work +incdir+C:/DSD/DSD_git/DSD/template {C:/DSD/DSD_git/DSD/template/func_fsm_tb.sv}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -L first_nios2_system -L fp_addsub_final -L fp_mul_final -voptargs="+acc"  tb_cordic_top
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -L first_nios2_system -L fp_addsub_final -L fp_mul_final -voptargs="+acc"  fun_fsm
 
 add wave *
 view structure

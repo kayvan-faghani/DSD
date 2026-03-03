@@ -14,10 +14,6 @@
 # //  18 U.S.C. Section 1905.
 # //
 # do hello_world_run_msim_rtl_systemverilog.do
-# if ![file isdirectory hello_world_iputf_libs] {
-# 	file mkdir hello_world_iputf_libs
-# }
-# 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
@@ -28,42 +24,16 @@
 # Copying c:/intelfpga_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-###### Libraries for IPUTF cores 
-###### End libraries for IPUTF cores 
-###### MIF file copy and HDL compilation commands for IPUTF cores 
-# 
-# 
-# vlog "C:/DSD/DSD_git/DSD/template/fp_addsub_final_sim/fp_addsub_final.vo"
-# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:38:29 on Mar 02,2026
-# vlog -reportprogress 300 C:/DSD/DSD_git/DSD/template/fp_addsub_final_sim/fp_addsub_final.vo 
-# -- Compiling module fp_addsub_final
-# 
-# Top level modules:
-# 	fp_addsub_final
-# End time: 14:38:29 on Mar 02,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog "C:/DSD/DSD_git/DSD/template/fp_mul_final_sim/fp_mul_final.vo"      
-# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:38:29 on Mar 02,2026
-# vlog -reportprogress 300 C:/DSD/DSD_git/DSD/template/fp_mul_final_sim/fp_mul_final.vo 
-# -- Compiling module fp_mul_final
-# 
-# Top level modules:
-# 	fp_mul_final
-# End time: 14:38:29 on Mar 02,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
 # vlog -vlog01compat -work work +incdir+C:/DSD/DSD_git/DSD/template {C:/DSD/DSD_git/DSD/template/fp_addsub_final.vo}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 14:38:29 on Mar 02,2026
+# Start time: 13:06:26 on Mar 03,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/DSD/DSD_git/DSD/template" C:/DSD/DSD_git/DSD/template/fp_addsub_final.vo 
 # ** Error: (vlog-7) Failed to open design unit file "C:/DSD/DSD_git/DSD/template/fp_addsub_final.vo" in read mode.
 # No such file or directory. (errno = ENOENT)
-# End time: 14:38:29 on Mar 02,2026, Elapsed time: 0:00:00
+# End time: 13:06:26 on Mar 03,2026, Elapsed time: 0:00:00
 # Errors: 1, Warnings: 0
 # ** Error: c:/intelfpga_lite/23.1std/questa_fse/win64/vlog failed.
-# Error in macro ./hello_world_run_msim_rtl_systemverilog.do line 20
+# Error in macro ./hello_world_run_msim_rtl_systemverilog.do line 8
 # c:/intelfpga_lite/23.1std/questa_fse/win64/vlog failed.
 #     while executing
 # "vlog -vlog01compat -work work +incdir+C:/DSD/DSD_git/DSD/template {C:/DSD/DSD_git/DSD/template/fp_addsub_final.vo}"

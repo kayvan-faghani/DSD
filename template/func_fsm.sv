@@ -30,7 +30,7 @@ module func_fsm(
 
     logic [31:0] a_add;
     logic [31:0] b_add;
-    logic opsel_add, en_add;
+    logic en_add;
     logic [31:0] result_add;
 
 	logic [31:0] angle_in;
@@ -39,7 +39,6 @@ module func_fsm(
     always_comb begin
         a_add = 0;
         b_add = 0;
-        opsel_add = 0;
         en_add = 0;
 
 
@@ -53,8 +52,7 @@ module func_fsm(
             SQUARE_SUBTRACT: 
             begin
                 a_add = x;
-                b_add = angle_norm;
-                opsel_add = 0;
+                b_add = {~(angle_norm[31]),angle_norm[30:0]};
                 en_add = 1;
 
                 a_mul = x;
@@ -78,7 +76,6 @@ module func_fsm(
             begin
                 a_add = half;
                 b_add = rhs;
-                opsel_add = 1;
                 en_add = 1;
                 if (counter == 0) next_state = MUL_TWO;
             end
@@ -95,7 +92,7 @@ module func_fsm(
     always_ff @(posedge clk) begin
         if (reset || !clk_en) begin
             current_state <= SQUARE_SUBTRACT;
-            counter <= 4;
+            counter <= 3;
             angle_sum <= 0;
             x_squared <= 0;
             cos <= 0;
@@ -125,7 +122,7 @@ module func_fsm(
                 end
                 MUL_ONE:
                     if (counter == 0) begin
-                        counter <= 4;
+                        counter <= 3;
                         rhs <= result_mul;
                     end
                 ADD:
@@ -135,11 +132,11 @@ module func_fsm(
                     end
                 MUL_TWO: 
                     if (counter == 0) begin
-                        counter <= 4;
+                        counter <= 3;
                         y <= result_mul;
                     end
                 default: 
-                    counter <= 4;
+                    counter <= 3;
             endcase
         end
     end
@@ -155,7 +152,6 @@ module func_fsm(
         .areset(0),
         .a(a_add),
         .b(b_add),
-        .opSel(opsel_add),
         .en(en_add),
         .result(result_add)
     );

@@ -1,4 +1,4 @@
-module fp_add
+module fp_addsub
     (
         input clk,
         input areset,

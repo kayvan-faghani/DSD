@@ -1,5 +1,5 @@
 Flow report for hello_world
-Tue Mar  3 17:20:58 2026
+Tue Mar  3 19:46:43 2026
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Tue Mar  3 17:20:58 2026          ;
+; Flow Status                     ; Successful - Tue Mar  3 19:46:43 2026          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; hello_world                                    ;
 ; Top-level Entity Name           ; hello_world                                    ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CSEMA5F31C6                                   ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 3,900 / 32,070 ( 12 % )                        ;
-; Total registers                 ; 3463                                           ;
+; Logic utilization (in ALMs)     ; 3,909 / 32,070 ( 12 % )                        ;
+; Total registers                 ; 3429                                           ;
 ; Total pins                      ; 47 / 457 ( 10 % )                              ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 3,159,680 / 4,065,280 ( 78 % )                 ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/03/2026 17:15:25 ;
+; Start date & time ; 03/03/2026 19:41:18 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; hello_world         ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 273771395523107.177255812401328        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 273771395523107.177256687724176        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; fun_fsm                           ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_cordic                         ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_cordic_top                     ;
@@ -107,6 +107,8 @@ https://fpgasoftware.intel.com/eula.
 ; MISC_FILE                            ; fp_mul_final.cmp                       ; --            ; --          ; --                                ;
 ; MISC_FILE                            ; ../../DSD_Task_6/mul.cmp               ; --            ; --          ; --                                ;
 ; MISC_FILE                            ; ../../DSD_Task_6/work.cmp              ; --            ; --          ; --                                ;
+; MISC_FILE                            ; fp_add_final.cmp                       ; --            ; --          ; --                                ;
+; MISC_FILE                            ; fp_add_final_sim/fp_add_final.vo       ; --            ; --          ; --                                ;
 ; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
 ; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; --          ; Top                               ;
@@ -117,6 +119,8 @@ https://fpgasoftware.intel.com/eula.
 ; SEARCH_PATH                          ; c:/dsd/dsd_git/dsd_task_6              ; --            ; --          ; --                                ;
 ; SEARCH_PATH                          ; c:/dsd/dsd_git/dsd/dsd_leo/dsd/de1_soc ; --            ; --          ; --                                ;
 ; SEARCH_PATH                          ; c:/dsd/dsd_git/dsd                     ; --            ; --          ; --                                ;
+; SPD_FILE                             ; fp_add_final.spd                       ; --            ; --          ; --                                ;
+; SYNTHESIS_ONLY_QIP                   ; On                                     ; --            ; --          ; --                                ;
 ; SYNTHESIS_ONLY_QIP                   ; On                                     ; --            ; --          ; --                                ;
 ; SYNTHESIS_ONLY_QIP                   ; On                                     ; --            ; --          ; --                                ;
 ; SYNTHESIS_ONLY_QIP                   ; On                                     ; --            ; --          ; --                                ;
@@ -130,12 +134,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:31     ; 1.0                     ; 5266 MB             ; 00:01:17                           ;
-; Fitter               ; 00:03:28     ; 1.2                     ; 7363 MB             ; 00:18:18                           ;
-; Assembler            ; 00:00:14     ; 1.0                     ; 5328 MB             ; 00:00:07                           ;
-; Timing Analyzer      ; 00:00:10     ; 3.7                     ; 5591 MB             ; 00:00:32                           ;
+; Analysis & Synthesis ; 00:00:55     ; 1.0                     ; 5266 MB             ; 00:01:16                           ;
+; Fitter               ; 00:04:03     ; 1.2                     ; 7363 MB             ; 00:23:06                           ;
+; Assembler            ; 00:00:07     ; 1.0                     ; 5328 MB             ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:10     ; 3.8                     ; 5591 MB             ; 00:00:32                           ;
 ; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4888 MB             ; 00:00:02                           ;
-; Total                ; 00:05:26     ; --                      ; --                  ; 00:20:16                           ;
+; Total                ; 00:05:18     ; --                      ; --                  ; 00:25:03                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

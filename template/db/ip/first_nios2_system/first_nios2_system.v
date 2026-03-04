@@ -240,7 +240,7 @@ module first_nios2_system (
 		.A_ci_multi_writerc                  (cpu_custom_instruction_master_multi_writerc)        //                          .multi_writerc
 	);
 
-	fp_add fp_add_0 (
+	fp_addsub fp_add_0 (
 		.areset (cpu_custom_instruction_master_multi_slave_translator1_ci_master_reset),  // nios_custom_instruction_slave_1.reset
 		.a      (cpu_custom_instruction_master_multi_slave_translator1_ci_master_dataa),  //                                .dataa
 		.b      (cpu_custom_instruction_master_multi_slave_translator1_ci_master_datab),  //                                .datab
@@ -609,7 +609,7 @@ module first_nios2_system (
 	altera_customins_slave_translator #(
 		.N_WIDTH          (8),
 		.USE_DONE         (0),
-		.NUM_FIXED_CYCLES (23)
+		.NUM_FIXED_CYCLES (21)
 	) cpu_custom_instruction_master_multi_slave_translator3 (
 		.ci_slave_dataa      (cpu_custom_instruction_master_multi_xconnect_ci_master3_dataa),          //  ci_slave.dataa
 		.ci_slave_datab      (cpu_custom_instruction_master_multi_xconnect_ci_master3_datab),          //          .datab

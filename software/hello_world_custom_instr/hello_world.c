@@ -224,7 +224,7 @@ float calculateFunctionTask7Full(float x[], int M) {
     clock_t t1, t2, total_cos = 0;
     for (i = 0; i < M; i++) {
         float a = x[i];
-        y += cust_function(x[i]);
+        y = cust_fp_add_sub(1,y,cust_function(a));
     }
     return y;
 }
@@ -263,11 +263,11 @@ int main() {
         end = times(NULL);
         printf("Cosf Result: %f | Total Ticks: %ld\n", r3, (long)(end-start));
 
-        start = times(NULL);
-        float r4 = calculateFunctionTask6_LUT(x_vec, tests[i].n_val);
-        end = times(NULL);
-        printf("LUT Result:  %f | Total Ticks: %ld\n", r4, (long)(end-start));
-        printf("Absolute Difference (Std vs LUT): %f\n", fabsf(r3 - r4));
+        // start = times(NULL);
+        // float r4 = calculateFunctionTask6_LUT(x_vec, tests[i].n_val);
+        // end = times(NULL);
+        // printf("LUT Result:  %f | Total Ticks: %ld\n", r4, (long)(end-start));
+        // printf("Absolute Difference (Std vs LUT): %f\n", fabsf(r3 - r4));
         // // for (int c = 1; c < 12; c++) {
         // //   start = times(NULL);
         // //   float r5 = calculateFunctionTask6_Taylor(x_vec, tests[i].n_val, c);
@@ -279,14 +279,12 @@ int main() {
         float r6 = calculateFunctionTask7Cordic(x_vec, tests[i].n_val);
         end = times(NULL);
         printf("Cordic Result:  %f | Total Ticks: %ld\n", r6, (long)(end-start));
-        // printf("Absolute Difference (Std vs Cordic): %f\n", fabsf(r3 - r6));
-        // for (int j = 0; j < 3; j++) {
+        printf("Absolute Difference (Std vs Cordic): %f\n", fabsf(r3 - r6));
         start = times(NULL);
         float r7 = calculateFunctionTask7Full(x_vec, tests[i].n_val);
         end = times(NULL);
         printf("Cordic Full Result:  %f | Total Ticks: %ld\n", r7, (long)(end-start));
-        printf("Absolute Difference (Cordic vs Cordic Full): %f\n", fabsf(r6 - r7));
-        // }
+        printf("Absolute Difference (Std vs Cordic Full): %f\n", fabsf(r3 - r7));
     }
     // }
 

@@ -4,7 +4,7 @@ module fp_add
         input areset,
         input [31:0]  a,
         input [31:0]  b,
-		  input en,
+		input en,
         output [31:0]  result
     );
 
@@ -14,7 +14,7 @@ module fp_add
         .areset(areset),
         .a(a),
         .b(b),
-		  .en(en),
+		.en(en),
         .q(result)
     );
 		

@@ -7,7 +7,12 @@ obj/alt_sys_init.o: alt_sys_init.c system.h linker.h \
  HAL/inc/priv/alt_no_error.h HAL/inc/os/alt_flag.h \
  drivers/inc/altera_avalon_jtag_uart_fd.h HAL/inc/sys/alt_dev.h \
  HAL/inc/sys/alt_llist.h HAL/inc/priv/alt_dev_llist.h \
- drivers/inc/altera_avalon_sysid_qsys.h drivers/inc/altera_avalon_timer.h
+ drivers/inc/altera_avalon_sysid_qsys.h drivers/inc/altera_avalon_timer.h \
+ drivers/inc/altera_msgdma.h drivers/inc/altera_msgdma_csr_regs.h \
+ HAL/inc/io.h HAL/inc/alt_types.h \
+ drivers/inc/altera_msgdma_descriptor_regs.h \
+ drivers/inc/altera_msgdma_response_regs.h \
+ drivers/inc/altera_msgdma_prefetcher_regs.h
 system.h:
 linker.h:
 HAL/inc/sys/alt_irq.h:
@@ -31,3 +36,10 @@ HAL/inc/sys/alt_llist.h:
 HAL/inc/priv/alt_dev_llist.h:
 drivers/inc/altera_avalon_sysid_qsys.h:
 drivers/inc/altera_avalon_timer.h:
+drivers/inc/altera_msgdma.h:
+drivers/inc/altera_msgdma_csr_regs.h:
+HAL/inc/io.h:
+HAL/inc/alt_types.h:
+drivers/inc/altera_msgdma_descriptor_regs.h:
+drivers/inc/altera_msgdma_response_regs.h:
+drivers/inc/altera_msgdma_prefetcher_regs.h:

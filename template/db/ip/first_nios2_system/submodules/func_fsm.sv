@@ -92,7 +92,7 @@ module func_fsm(
     always_ff @(posedge clk) begin
         if (reset || !clk_en) begin
             current_state <= SQUARE_SUBTRACT;
-            counter <= 3;
+            counter <= 2;
             angle_sum <= 0;
             x_squared <= 0;
             cos <= 0;
@@ -108,7 +108,7 @@ module func_fsm(
                 SQUARE_SUBTRACT: 
                 begin
                     if (counter == 0) begin
-                        counter <= 3;
+                        counter <= 2;
                         angle_sum <= result_add;
                         x_squared <= result_mul;
                     end
@@ -116,27 +116,27 @@ module func_fsm(
                 COS:
                 begin
                     if (counter == 0) begin
-                        counter <= 3;
+                        counter <= 2;
                         cos <= cos_out;
                     end
                 end
                 MUL_ONE:
                     if (counter == 0) begin
-                        counter <= 3;
+                        counter <= 2;
                         rhs <= result_mul;
                     end
                 ADD:
                     if (counter == 0) begin
-                        counter <= 3;
+                        counter <= 2;
                         sum <= result_add;
                     end
                 MUL_TWO: 
                     if (counter == 0) begin
-                        counter <= 3;
+                        counter <= 2;
                         y <= result_mul;
                     end
                 default: 
-                    counter <= 3;
+                    counter <= 2;
             endcase
         end
     end

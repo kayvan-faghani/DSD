@@ -5,35 +5,42 @@
 #include <system.h>
 #include <stdio.h>
 #include <math.h>
+#include <stdint.h>
+#include <string.h>
+#include "io.h"
+#include "sys/alt_cache.h"
+#include "altera_msgdma.h"
+#include "altera_msgdma_descriptor_regs.h"
+#include "altera_msgdma_csr_regs.h"
 
 #define LUT_SIZE 1024
 #define PI       3.14159265f
 #define PI_2     1.57079632f 
 #define TWO_PI   6.28318530f
 
+#define WRAPPER_BASE      PIPELINED_FSM_0_BASE
+#define REG_DONE_OFFSET   0
+#define REG_RESULT_OFFSET 4
+#define DATA_BUFFER_BASE  (ONCHIP_MEM_BASE + 0x10000)
+
 static inline float cust_fp_add_sub(int n, float a, float b) {
-    // We must use constants here so the compiler can generate the instruction
     switch(n & ALT_CI_FP_ADD_0_N_MASK) {
-        case 0: // Subtraction (if 0 is sub in your hardware)
-            return __builtin_custom_fnff(ALT_CI_FP_ADD_0_N + 0, a, b);
-        case 1: // Addition (if 1 is add in your hardware)
-            default:
-            return __builtin_custom_fnff(ALT_CI_FP_ADD_0_N + 1, a, b);
+        case 0: return __builtin_custom_fnff(ALT_CI_FP_ADD_0_N + 0, a, b);
+        case 1: default: return __builtin_custom_fnff(ALT_CI_FP_ADD_0_N + 1, a, b);
     }
 }
-
 static inline float cust_fp_mul(float a, float b) {
-    // Multiplication usually doesn't have multiple 'n' modes, 
-    // but we use the constant ID directly.
     return __builtin_custom_fnff(ALT_CI_FP_MUL_0_N, a, b);
 }
-
 static inline float cust_cos(float a) {
     return __builtin_custom_fnff(ALT_CI_CORDIC_0_N, a, a);
 }
-
 static inline float cust_function(float a) {
     return __builtin_custom_fnff(ALT_CI_FUNC_FSM_0_N, a, a);
+}
+
+static inline float bits2f(uint32_t b) {
+    float f; memcpy(&f, &b, 4); return f;
 }
 
 float cos_lut_q1[LUT_SIZE + 1];
@@ -41,14 +48,13 @@ float x_vec[65281];
 
 typedef struct {
     char* name;
-    int n_val;
+    int   n_val;
     float step_val;
 } TestCase;
 
 void init_cos_lut() {
-    for (int i = 0; i <= LUT_SIZE; i++) {
+    for (int i = 0; i <= LUT_SIZE; i++)
         cos_lut_q1[i] = cosf((PI_2 * i) / LUT_SIZE);
-    }
 }
 
 float lookup_cos(float angle) {
@@ -70,13 +76,18 @@ float lookup_cos(float angle) {
     }
 }
 
-// 1. Pure Software (No Custom Floating Point Instr)
+void generateVector(float x[], int n, float step) {
+    x[0] = 0;
+    for (int i = 1; i < n; i++) x[i] = x[i-1] + step;
+}
+
+// 1. Pure Software
 float calculateSoftwareFunctionTask6(float x[], int M) {
     int i; float y = 0;
     clock_t t1, t2, total_cos = 0;
     for (i = 0; i < M; i++) {
         float a = x[i];
-        t1 = times(NULL); 
+        t1 = times(NULL);
         float cos_f = cos((a - 128.0f) / 128.0f);
         t2 = times(NULL);
         total_cos += (t2 - t1);
@@ -86,19 +97,19 @@ float calculateSoftwareFunctionTask6(float x[], int M) {
     return y;
 }
 
-// 2. Standard cos (with Custom FP Hardware)
+// 2. Standard cos (Custom FP)
 float calculateFunctionTask6(float x[], int M) {
     int i; float y = 0;
     clock_t t1, t2, total_cos = 0;
     for (i = 0; i < M; i++) {
         float a = x[i];
         float a_left = cust_fp_mul(0.5f, a);
-        float a_2 = cust_fp_mul(a, a);
-        t1 = times(NULL); 
+        float a_2    = cust_fp_mul(a, a);
+        t1 = times(NULL);
         float cos_f = cos((a - 128.0f) / 128.0f);
         t2 = times(NULL);
         total_cos += (t2 - t1);
-        float a_cos = cust_fp_mul(a, cos_f);
+        float a_cos   = cust_fp_mul(a, cos_f);
         float a_right = cust_fp_mul(a_2, a_cos);
         y += cust_fp_add_sub(1, a_left, a_right);
     }
@@ -106,19 +117,19 @@ float calculateFunctionTask6(float x[], int M) {
     return y;
 }
 
-// 3. Standard cosf (with Custom FP Hardware)
+// 3. cosf (Custom FP)
 float calculateFunctionTask6Cosf(float x[], int M) {
     int i; float y = 0;
     clock_t t1, t2, total_cos = 0;
     for (i = 0; i < M; i++) {
         float a = x[i];
         float a_left = cust_fp_mul(0.5f, a);
-        float a_2 = cust_fp_mul(a, a);
-        t1 = times(NULL); 
+        float a_2    = cust_fp_mul(a, a);
+        t1 = times(NULL);
         float cos_f = cosf((a - 128.0f) / 128.0f);
         t2 = times(NULL);
         total_cos += (t2 - t1);
-        float a_cos = cust_fp_mul(a, cos_f);
+        float a_cos   = cust_fp_mul(a, cos_f);
         float a_right = cust_fp_mul(a_2, a_cos);
         y += cust_fp_add_sub(1, a_left, a_right);
     }
@@ -126,167 +137,129 @@ float calculateFunctionTask6Cosf(float x[], int M) {
     return y;
 }
 
-// 4. LUT Version (with Custom FP Hardware)
-float calculateFunctionTask6_LUT(float x[], int M) {
-    int i; float y = 0;
-    clock_t t1, t2, total_cos = 0;
-    for (i = 0; i < M; i++) {
-        float a = x[i];
-        float a_left = cust_fp_mul(0.5f, a);
-        float a_2 = cust_fp_mul(a, a);
-        float angle = (a - 128.0f) / 128.0f; 
-        t1 = times(NULL);
-        float cos_f = lookup_cos(angle);
-        t2 = times(NULL);
-        total_cos += (t2 - t1);
-        float a_cos = cust_fp_mul(a, cos_f);
-        float a_right = cust_fp_mul(a_2, a_cos);
-        float current_val = cust_fp_add_sub(1, a_left, a_right);
-        y = cust_fp_add_sub(1, y, current_val);
-    }
-    printf("[LUT]      Total Cos Ticks: %ld | Avg: %f\n", (long)total_cos, (float)total_cos/M);
-    return y;
-}
-
-// Taylor series approximation for cos(x)
-// For |x| <= 1, x^8/8! is ~0.00002, so x^6 is usually sufficient for float precision.
-float taylor_cos(float x, int terms) {
-    float x2 = cust_fp_mul(x, x);
-    float sum = 1.0f; 
-    float term = 1.0f;
-    
-    for (int n = 1; n < terms; n++) {
-        // Calculate denominator: (2n-1) * 2n
-        float divisor = (float)((2 * n - 1) * (2 * n));
-        
-        // term = term * (-x^2 / divisor)
-        // Note: Using standard '/' for division unless you have a custom DIV instruction
-        float next_mult = -(x2 / divisor); 
-        term = cust_fp_mul(term, next_mult);
-        
-        // sum = sum + term (n=1 for add)
-        sum = cust_fp_add_sub(1, sum, term); 
-    }
-    return sum;
-}
-
-// 5. Taylor Series Version (with Custom FP Hardware)
-float calculateFunctionTask6_Taylor(float x[], int M, int c) {
-    int i; float y = 0;
-    clock_t t1, t2, total_cos = 0;
-    for (i = 0; i < M; i++) {
-        float a = x[i];
-        // float a_left = cust_fp_mul(0.5f, a);
-        float a_2 = cust_fp_mul(a, a);
-        
-        // Input to cos is roughly between -1.0 and 1.0
-        float angle = (a - 128.0f) / 128.0f; 
-        
-        t1 = times(NULL);
-        float cos_f = taylor_cos(angle,c);
-        t2 = times(NULL);
-        
-        total_cos += (t2 - t1);
-        
-        // float a_cos = cust_fp_mul(a, cos_f);
-        float a_right = cust_fp_mul(a_2, cos_f);
-        float brackets = cust_fp_add_sub(1, 0.5, a_right);
-        float current_val = cust_fp_mul(a,brackets);
-        y = cust_fp_add_sub(1, y, current_val);
-    }
-    printf("[Taylor]    Total Cos Ticks: %ld | Avg: %f\n", (long)total_cos, (float)total_cos/M);
-    return y;
-}
-
+// 4. CORDIC Custom Instruction
 float calculateFunctionTask7Cordic(float x[], int M) {
     int i; float y = 0;
     clock_t t1, t2, total_cos = 0;
     for (i = 0; i < M; i++) {
-        float a = x[i];
-        // float a_left = cust_fp_mul(0.5f, a);
+        float a   = x[i];
         float a_2 = cust_fp_mul(a, a);
-        t1 = times(NULL); 
-        float cos_f = cust_cos(cust_fp_add_sub(0,a,128.0f) / 128.0f);
+        t1 = times(NULL);
+        float cos_f = cust_cos(cust_fp_add_sub(0, a, 128.0f) / 128.0f);
         t2 = times(NULL);
         total_cos += (t2 - t1);
-
-        float a_right = cust_fp_mul(a_2, cos_f);
+        float a_right  = cust_fp_mul(a_2, cos_f);
         float brackets = cust_fp_add_sub(1, 0.5f, a_right);
-        float current_val = cust_fp_mul(a,brackets);
-        y = cust_fp_add_sub(1,y,current_val);
+        float curr     = cust_fp_mul(a, brackets);
+        y = cust_fp_add_sub(1, y, curr);
     }
-    printf("[Cordic]     Total Cos Ticks: %ld | Avg: %f\n", (long)total_cos, (float)total_cos/M);
+    printf("[Cordic]   Total Cos Ticks: %ld | Avg: %f\n", (long)total_cos, (float)total_cos/M);
     return y;
 }
 
+// 5. Full Custom Instruction (Task 7)
 float calculateFunctionTask7Full(float x[], int M) {
-    int i; float y = 0;
-    clock_t t1, t2, total_cos = 0;
-    for (i = 0; i < M; i++) {
-        float a = x[i];
-        y = cust_fp_add_sub(1,y,cust_function(a));
-    }
+    float y = 0;
+    for (int i = 0; i < M; i++)
+        y = cust_fp_add_sub(1, y, cust_function(x[i]));
     return y;
 }
 
-void generateVector(float x[], int n, float step) {
-    x[0] = 0;
-    for (int i = 1; i < n; i++) x[i] = x[i-1] + step;
+// 6. Task 8 — SGDMA + Pipelined Hardware Accelerator
+float calculateFunctionTask8SGDMA(float x[], int M) {
+    alt_msgdma_dev *dma = alt_msgdma_open(MSGDMA_0_CSR_NAME);
+    if (!dma) { printf("  [ERROR] Could not open SGDMA\n"); return -1.0f; }
+
+    // IOWR_ALTERA_MSGDMA_CSR_STATUS(MSGDMA_0_CSR_BASE, 0xFFFFFFFF);
+    
+    // Flush cache for x directly — no copy needed
+    alt_dcache_flush(x, M * sizeof(float));
+
+    alt_msgdma_standard_descriptor desc;
+    alt_msgdma_construct_standard_mm_to_st_descriptor(
+        dma, &desc,
+        (uint32_t*)x,          // ← pass x directly
+        M * sizeof(float),
+        ALTERA_MSGDMA_DESCRIPTOR_CONTROL_GENERATE_EOP_MASK
+    );
+    alt_msgdma_standard_descriptor_sync_transfer(dma, &desc);
+
+    // printf("[SGDMA]    CSR: 0x%08X\n",
+    //        (unsigned int)IORD_ALTERA_MSGDMA_CSR_STATUS(MSGDMA_0_CSR_BASE));
+
+    uint32_t timeout = 0;
+    while (!(IORD_32DIRECT(WRAPPER_BASE, REG_DONE_OFFSET) & 0x1)) {
+        // if (timeout++ > 5000000) {
+        //     printf("[SGDMA]    TIMEOUT\n");
+        //     return -1.0f;
+        // }
+    }
+
+    uint32_t raw = IORD_32DIRECT(WRAPPER_BASE, REG_RESULT_OFFSET);
+    uint32_t fx = IORD_32DIRECT(WRAPPER_BASE, 8);
+    printf("[SGDMA]    raw=0x%08X last_fx=0x%f\n", (unsigned int)raw, (float)fx);
+    return bits2f(raw);
 }
 
 int main() {
     init_cos_lut();
+
     TestCase tests[] = {
-        {"Small", 52, 5.0f},
-        {"Medium", 2041, 1.0f/8.0f},
-        {"Large", 65281, 1.0f/256.0f}
+        {"Small",  52,    5.0f},
+        {"Medium", 2041,  1.0f/8.0f},
+        {"Large",  65281, 1.0f/256.0f}
     };
-    // for (int j = 0; j < 6; j++) {
+
     for (int i = 0; i < 3; i++) {
         printf("\n=== %s (N=%d) ===\n", tests[i].name, tests[i].n_val);
         generateVector(x_vec, tests[i].n_val, tests[i].step_val);
 
         clock_t start, end;
-        
-        start = times(NULL);
-        float r1 = calculateSoftwareFunctionTask6(x_vec, tests[i].n_val);
-        end = times(NULL);
-        printf("Soft Result: %f | Total Ticks: %ld\n", r1, (long)(end-start));
 
-        start = times(NULL);
-        float r2 = calculateFunctionTask6(x_vec, tests[i].n_val);
-        end = times(NULL);
-        printf("Std Result:  %f | Total Ticks: %ld\n", r2, (long)(end-start));
+        // start = times(NULL);
+        // float r1 = calculateSoftwareFunctionTask6(x_vec, tests[i].n_val);
+        // end = times(NULL);
+        // printf("Soft Result:        %f | Total Ticks: %ld\n", r1, (long)(end-start));
+
+        // start = times(NULL);
+        // float r2 = calculateFunctionTask6(x_vec, tests[i].n_val);
+        // end = times(NULL);
+        // printf("Std Result:         %f | Total Ticks: %ld\n", r2, (long)(end-start));
 
         start = times(NULL);
         float r3 = calculateFunctionTask6Cosf(x_vec, tests[i].n_val);
         end = times(NULL);
-        printf("Cosf Result: %f | Total Ticks: %ld\n", r3, (long)(end-start));
+        printf("Cosf Result:        %f | Total Ticks: %ld\n", r3, (long)(end-start));
 
         // start = times(NULL);
-        // float r4 = calculateFunctionTask6_LUT(x_vec, tests[i].n_val);
+        // float r6 = calculateFunctionTask7Cordic(x_vec, tests[i].n_val);
         // end = times(NULL);
-        // printf("LUT Result:  %f | Total Ticks: %ld\n", r4, (long)(end-start));
-        // printf("Absolute Difference (Std vs LUT): %f\n", fabsf(r3 - r4));
-        // // for (int c = 1; c < 12; c++) {
-        // //   start = times(NULL);
-        // //   float r5 = calculateFunctionTask6_Taylor(x_vec, tests[i].n_val, c);
-        // //   end = times(NULL);
-        // //   printf("Taylor Result: %f Terms: %d | Total Ticks: %ld\n", r5, c, (long)(end-start));
-        // //   // printf("Absolute Difference (Std vs Taylor): %f\n", fabsf(r3 - r5));
-        // // }
+        // printf("Cordic Result:      %f | Total Ticks: %ld\n", r6, (long)(end-start));
+        // printf("Diff (Cosf vs Cordic):       %f\n", fabsf(r3 - r6));
+
+        // start = times(NULL);
+        // float r7 = calculateFunctionTask7Full(x_vec, tests[i].n_val);
+        // end = times(NULL);
+        // printf("Cordic Full Result: %f | Total Ticks: %ld\n", r7, (long)(end-start));
+        // printf("Diff (Cosf vs Cordic Full):  %f\n", fabsf(r3 - r7));
+
+        // Task 8 — skip Large (65281 elements may exceed on-chip buffer)
+        // if (tests[i].n_val <= 2041) {
         start = times(NULL);
-        float r6 = calculateFunctionTask7Cordic(x_vec, tests[i].n_val);
+        float r8 = calculateFunctionTask8SGDMA(x_vec, tests[i].n_val);
         end = times(NULL);
-        printf("Cordic Result:  %f | Total Ticks: %ld\n", r6, (long)(end-start));
-        printf("Absolute Difference (Std vs Cordic): %f\n", fabsf(r3 - r6));
-        start = times(NULL);
-        float r7 = calculateFunctionTask7Full(x_vec, tests[i].n_val);
-        end = times(NULL);
-        printf("Cordic Full Result:  %f | Total Ticks: %ld\n", r7, (long)(end-start));
-        printf("Absolute Difference (Std vs Cordic Full): %f\n", fabsf(r3 - r7));
+        if (r8 != -1.0f) {
+            printf("SGDMA Result:       %f | Total Ticks: %ld\n", r8, (long)(end-start));
+            printf("Diff (Cosf vs SGDMA):        %f\n", fabsf(r3 - r8));
+            int pass = fabsf(r3 - r8) / fabsf(r3) < 0.02f;
+            printf("SGDMA: %s\n", pass ? "PASS" : "FAIL");
+        } else {
+            printf("SGDMA Result:       TIMEOUT/ERROR\n");
+        }
+        // } else {
+        //     printf("SGDMA Result:       SKIPPED (N too large for on-chip buffer)\n");
+        // }
     }
-    // }
 
     return 0;
 }

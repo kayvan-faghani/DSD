@@ -1,0 +1,63 @@
+`timescale 1ns/1ps
+
+module func_fsm_tb();
+
+    // Clock and Reset logic
+    logic clk;
+    logic reset;
+    logic [31:0] x;
+    logic [31:0] y;
+
+    // Instantiate UUT
+    func_fsm uut (
+        .clk(clk),
+        .reset(reset),
+        .x(x),
+        .y(y)
+    );
+
+    // Clock Generation: 100 MHz (10ns period)
+    initial clk = 0;
+    always #5 clk = ~clk;
+
+    // Test sequence
+    initial begin
+        // 1. Initial Reset
+        reset = 1;
+        x = 0;
+        #25;
+        reset = 0;
+
+        // 2. Test Case: x = 130.0 (32'h43020000)
+        // Let's see how the math flows:
+        // angle_norm is 128.0 (32'h43000000)
+        // Step 1: x - 128 = 2.0
+        // Step 2: 2.0 / 128 = 0.015625 (This is the angle for CORDIC)
+        @(posedge clk);
+        x = 32'h43020000; 
+        $display("[%0t] Starting test with x = 130.0", $time);
+
+        // 3. Monitor the FSM cycles
+        // We wait for the FSM to return to the first state after completion
+        wait(uut.current_state == uut.MUL_TWO);
+        wait(uut.counter == 0);
+        
+        #20;
+        $display("[%0t] Result y = %h", $time, y);
+        
+        // 4. Test Case: x = 129.0 (32'h43010000)
+        @(posedge clk);
+        x = 32'h43010000;
+        
+        repeat(50) @(posedge clk);
+        
+        $display("[%0t] Simulation Finished", $time);
+        $stop;
+    end
+
+    // Helper: Monitor State Changes in console
+    always @(uut.current_state) begin
+        $display("[%0t] State changed to: %s", $time, uut.current_state.name());
+    end
+
+endmodule

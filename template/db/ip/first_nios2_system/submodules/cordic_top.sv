@@ -2,6 +2,8 @@
 
 module cordic_top(
     input           clk,
+    input           clk_en,
+    input           reset,
     input   [31:0]  angle_in,
     output  [31:0]  cos_out
 );
@@ -15,6 +17,8 @@ module cordic_top(
 
     cordic cordic_inst(
         .clk(clk),
+        .clk_en(clk_en),
+        .reset(reset),
         .angle_in(fixed_angle_in),
         .cos_out(fixed_cos_out)
     );

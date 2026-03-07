@@ -1,0 +1,87 @@
+`include "defs.sv"
+
+module func_top(
+    input  logic        clk,
+    input  logic        clk_en,
+    input  logic        reset,
+    input  logic        last, 
+    input  logic [31:0] x,
+    output logic [31:0] y,
+    output logic        done
+);
+    logic [31:0] fx;
+
+    pipelined_fsm pipelined_fsm (
+        .clk    (clk),
+        .clk_en (clk_en),
+        .reset  (reset),
+        .x      (x),
+        .y      (fx)
+    );
+
+    typedef enum {CALCULATING=0,FINISHED} state;
+    state current_state, next_state;
+    logic [31:0] acc_1, acc_2;
+    logic [31:0] result_add_1, result_add_2, result_add_3;
+    logic acc_mux;
+    logic [4:0] counter;
+
+    assign next_state = (last || current_state == FINISHED) ? FINISHED : CALCULATING;
+
+    always_ff @(posedge clk) begin
+        if (reset || !clk_en) begin
+            acc_mux <= 1'b0;
+            acc_1 <= 32'b0;
+            acc_2 <= 32'b0;
+            done <= 1'b0;
+            counter <= `CORDIC_STAGES + 4;
+            current_state <= CALCULATING;
+        end
+        else if (clk_en) begin
+            current_state <= next_state;
+            
+            acc_mux <= !acc_mux;
+            acc_1 <= result_add_1;
+            acc_2 <= result_add_2;
+
+            if (current_state == FINISHED) begin
+                if (counter > 0 )
+                    counter <= counter - 1;
+                else
+                    done <= 1'b1;
+            end
+
+            
+        end
+    end
+
+    fp_add fp_add_1 (
+        .clk(clk),
+        .areset(0),
+        .a(acc_mux ? 32'b0 : fx),
+        .b(acc_1),
+        .en(clk_en),
+        .result(result_add_1)
+    );
+
+    fp_add fp_add_2 (
+        .clk(clk),
+        .areset(0),
+        .a(acc_mux ? fx :  32'b0 ),
+        .b(acc_2),
+        .en(clk_en),
+        .result(result_add_2)
+    );
+    
+    fp_add fp_add_3 (
+        .clk(clk),
+        .areset(0),
+        .a(result_add_1),
+        .b(result_add_2),
+        .en(current_state == FINISHED),
+        .result(result_add_3)
+    );
+
+    assign y = (done) ? result_add_3 : 32'b0;
+
+endmodule

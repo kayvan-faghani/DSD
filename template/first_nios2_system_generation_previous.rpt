@@ -1,0 +1,192 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\DSD\DSD_git\DSD\DSD_Leo\DSD\de1_soc\first_nios2_system.qsys --block-symbol-file --output-directory=C:\DSD\DSD_git\DSD\template --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading de1_soc/first_nios2_system.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 23.1]
+Progress: Parameterizing module clk_0
+Progress: Adding cordic_0 [cordic 1.0]
+Progress: Parameterizing module cordic_0
+Progress: Adding cpu [altera_nios2_gen2 23.1]
+Progress: Parameterizing module cpu
+Progress: Adding fp_add_0 [fp_add 1.0]
+Progress: Parameterizing module fp_add_0
+Progress: Adding fp_mul_0 [fp_mul 1.0]
+Progress: Parameterizing module fp_mul_0
+Progress: Adding func_fsm_0 [func_fsm 1.0]
+Progress: Parameterizing module func_fsm_0
+Progress: Adding jtag_uart [altera_avalon_jtag_uart 23.1]
+Progress: Parameterizing module jtag_uart
+Progress: Adding led_pio [altera_avalon_pio 23.1]
+Progress: Parameterizing module led_pio
+Progress: Adding msgdma_0 [altera_msgdma 23.1]
+Progress: Parameterizing module msgdma_0
+Progress: Adding onchip_mem [altera_avalon_onchip_memory2 23.1]
+Progress: Parameterizing module onchip_mem
+Progress: Adding pipelined_fsm_0 [pipelined_fsm 1.0]
+Progress: Parameterizing module pipelined_fsm_0
+Progress: Adding sys_clk_timer [altera_avalon_timer 23.1]
+Progress: Parameterizing module sys_clk_timer
+Progress: Adding sysid [altera_avalon_sysid_qsys 23.1]
+Progress: Parameterizing module sysid
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: first_nios2_system.cpu: Nios II cores are not recommended for new projects and are subject to removal in a future release. Nios V cores are the recommended replacement as applicable.
+Info: first_nios2_system.jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: first_nios2_system.sysid: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: first_nios2_system.sysid: Time stamp will be automatically updated when this component is generated.
+Info: first_nios2_system.msgdma_0.st_source/pipelined_fsm_0.avalon_streaming_sink: The source has a empty signal of 2 bits, but the sink does not. Avalon-ST Adapter will be inserted.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\DSD\DSD_git\DSD\DSD_Leo\DSD\de1_soc\first_nios2_system.qsys --synthesis=VERILOG --output-directory=C:\DSD\DSD_git\DSD\template\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading de1_soc/first_nios2_system.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 23.1]
+Progress: Parameterizing module clk_0
+Progress: Adding cordic_0 [cordic 1.0]
+Progress: Parameterizing module cordic_0
+Progress: Adding cpu [altera_nios2_gen2 23.1]
+Progress: Parameterizing module cpu
+Progress: Adding fp_add_0 [fp_add 1.0]
+Progress: Parameterizing module fp_add_0
+Progress: Adding fp_mul_0 [fp_mul 1.0]
+Progress: Parameterizing module fp_mul_0
+Progress: Adding func_fsm_0 [func_fsm 1.0]
+Progress: Parameterizing module func_fsm_0
+Progress: Adding jtag_uart [altera_avalon_jtag_uart 23.1]
+Progress: Parameterizing module jtag_uart
+Progress: Adding led_pio [altera_avalon_pio 23.1]
+Progress: Parameterizing module led_pio
+Progress: Adding msgdma_0 [altera_msgdma 23.1]
+Progress: Parameterizing module msgdma_0
+Progress: Adding onchip_mem [altera_avalon_onchip_memory2 23.1]
+Progress: Parameterizing module onchip_mem
+Progress: Adding pipelined_fsm_0 [pipelined_fsm 1.0]
+Progress: Parameterizing module pipelined_fsm_0
+Progress: Adding sys_clk_timer [altera_avalon_timer 23.1]
+Progress: Parameterizing module sys_clk_timer
+Progress: Adding sysid [altera_avalon_sysid_qsys 23.1]
+Progress: Parameterizing module sysid
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: first_nios2_system.cpu: Nios II cores are not recommended for new projects and are subject to removal in a future release. Nios V cores are the recommended replacement as applicable.
+Info: first_nios2_system.jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: first_nios2_system.sysid: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: first_nios2_system.sysid: Time stamp will be automatically updated when this component is generated.
+Info: first_nios2_system.msgdma_0.st_source/pipelined_fsm_0.avalon_streaming_sink: The source has a empty signal of 2 bits, but the sink does not. Avalon-ST Adapter will be inserted.
+Info: first_nios2_system: Generating first_nios2_system "first_nios2_system" for QUARTUS_SYNTH
+Info: avalon_st_adapter: Inserting data_format_adapter: data_format_adapter_0
+Warning: avalon_st_adapter.data_format_adapter_0: The symbols per beat on input interface(4) and the output interface(4) match,  but the input interface is using the empty signal, while the output interface is not using the empty signal.  Empty signal data may be lost between the input and the output interface (across this adapter).
+Warning: first_nios2_system: "No matching role found for cpu_custom_instruction_master_translator:ci_slave:ci_slave_result (result)"
+Warning: first_nios2_system: "No matching role found for cpu_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_ipending (ipending)"
+Warning: first_nios2_system: "No matching role found for cpu_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_estatus (estatus)"
+Warning: first_nios2_system: "No matching role found for cpu_custom_instruction_master_multi_slave_translator0:ci_master:ci_master_clken (clk_en)"
+Warning: first_nios2_system: "No matching role found for cpu_custom_instruction_master_multi_slave_translator0:ci_master:ci_master_reset (reset)"
+Info: cordic_0: "first_nios2_system" instantiated cordic "cordic_0"
+Info: cpu: "first_nios2_system" instantiated altera_nios2_gen2 "cpu"
+Info: fp_add_0: "first_nios2_system" instantiated fp_add "fp_add_0"
+Info: fp_mul_0: "first_nios2_system" instantiated fp_mul "fp_mul_0"
+Info: func_fsm_0: "first_nios2_system" instantiated func_fsm "func_fsm_0"
+Info: jtag_uart: Starting RTL generation for module 'first_nios2_system_jtag_uart'
+Info: jtag_uart:   Generation command is [exec C:/intelfpga_lite/23.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/23.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=first_nios2_system_jtag_uart --dir=C:/Users/kayfa/AppData/Local/Temp/alt0518_3015565161155377560.dir/0053_jtag_uart_gen/ --quartus_dir=C:/intelfpga_lite/23.1std/quartus --verilog --config=C:/Users/kayfa/AppData/Local/Temp/alt0518_3015565161155377560.dir/0053_jtag_uart_gen//first_nios2_system_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart: Done RTL generation for module 'first_nios2_system_jtag_uart'
+Info: jtag_uart: "first_nios2_system" instantiated altera_avalon_jtag_uart "jtag_uart"
+Info: led_pio: Starting RTL generation for module 'first_nios2_system_led_pio'
+Info: led_pio:   Generation command is [exec C:/intelfpga_lite/23.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/23.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=first_nios2_system_led_pio --dir=C:/Users/kayfa/AppData/Local/Temp/alt0518_3015565161155377560.dir/0054_led_pio_gen/ --quartus_dir=C:/intelfpga_lite/23.1std/quartus --verilog --config=C:/Users/kayfa/AppData/Local/Temp/alt0518_3015565161155377560.dir/0054_led_pio_gen//first_nios2_system_led_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: led_pio: Done RTL generation for module 'first_nios2_system_led_pio'
+Info: led_pio: "first_nios2_system" instantiated altera_avalon_pio "led_pio"
+Info: msgdma_0: "first_nios2_system" instantiated altera_msgdma "msgdma_0"
+Info: onchip_mem: Starting RTL generation for module 'first_nios2_system_onchip_mem'
+Info: onchip_mem:   Generation command is [exec C:/intelfpga_lite/23.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/23.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=first_nios2_system_onchip_mem --dir=C:/Users/kayfa/AppData/Local/Temp/alt0518_3015565161155377560.dir/0055_onchip_mem_gen/ --quartus_dir=C:/intelfpga_lite/23.1std/quartus --verilog --config=C:/Users/kayfa/AppData/Local/Temp/alt0518_3015565161155377560.dir/0055_onchip_mem_gen//first_nios2_system_onchip_mem_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_mem: Done RTL generation for module 'first_nios2_system_onchip_mem'
+Info: onchip_mem: "first_nios2_system" instantiated altera_avalon_onchip_memory2 "onchip_mem"
+Info: pipelined_fsm_0: "first_nios2_system" instantiated pipelined_fsm "pipelined_fsm_0"
+Info: sys_clk_timer: Starting RTL generation for module 'first_nios2_system_sys_clk_timer'
+Info: sys_clk_timer:   Generation command is [exec C:/intelFPGA_lite/23.1std/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/23.1std/quartus/bin64//perl/lib -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/23.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=first_nios2_system_sys_clk_timer --dir=C:/Users/kayfa/AppData/Local/Temp/alt0518_3015565161155377560.dir/0057_sys_clk_timer_gen/ --quartus_dir=C:/intelfpga_lite/23.1std/quartus --verilog --config=C:/Users/kayfa/AppData/Local/Temp/alt0518_3015565161155377560.dir/0057_sys_clk_timer_gen//first_nios2_system_sys_clk_timer_component_configuration.pl  --do_build_sim=0  ]
+Info: sys_clk_timer: Done RTL generation for module 'first_nios2_system_sys_clk_timer'
+Info: sys_clk_timer: "first_nios2_system" instantiated altera_avalon_timer "sys_clk_timer"
+Info: sysid: "first_nios2_system" instantiated altera_avalon_sysid_qsys "sysid"
+Info: cpu_custom_instruction_master_translator: "first_nios2_system" instantiated altera_customins_master_translator "cpu_custom_instruction_master_translator"
+Info: cpu_custom_instruction_master_multi_xconnect: "first_nios2_system" instantiated altera_customins_xconnect "cpu_custom_instruction_master_multi_xconnect"
+Info: cpu_custom_instruction_master_multi_slave_translator0: "first_nios2_system" instantiated altera_customins_slave_translator "cpu_custom_instruction_master_multi_slave_translator0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "first_nios2_system" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "first_nios2_system" instantiated altera_irq_mapper "irq_mapper"
+Info: avalon_st_adapter: "first_nios2_system" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: rst_controller: "first_nios2_system" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'first_nios2_system_cpu_cpu'
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/23.1std/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/23.1std/quartus/bin64//perl/lib -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/23.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/23.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/23.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=first_nios2_system_cpu_cpu --dir=C:/Users/kayfa/AppData/Local/Temp/alt0518_3015565161155377560.dir/0064_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/23.1std/quartus/bin64/ --verilog --config=C:/Users/kayfa/AppData/Local/Temp/alt0518_3015565161155377560.dir/0064_cpu_gen//first_nios2_system_cpu_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2026.03.06 15:22:59 (*) Starting Nios II generation
+Info: cpu: # 2026.03.06 15:22:59 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2026.03.06 15:22:59 (*)   Creating all objects for CPU
+Info: cpu: # 2026.03.06 15:22:59 (*)     Testbench
+Info: cpu: # 2026.03.06 15:22:59 (*)     Instruction decoding
+Info: cpu: # 2026.03.06 15:22:59 (*)       Instruction fields
+Info: cpu: # 2026.03.06 15:22:59 (*)       Instruction decodes
+Info: cpu: # 2026.03.06 15:22:59 (*)       Signals for RTL simulation waveforms
+Info: cpu: # 2026.03.06 15:22:59 (*)       Instruction controls
+Info: cpu: # 2026.03.06 15:22:59 (*)     Pipeline frontend
+Info: cpu: # 2026.03.06 15:22:59 (*)     Pipeline backend
+Info: cpu: # 2026.03.06 15:23:00 (*)   Generating RTL from CPU objects
+Info: cpu: # 2026.03.06 15:23:00 (*)   Creating plain-text RTL
+Info: cpu: # 2026.03.06 15:23:01 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'first_nios2_system_cpu_cpu'
+Info: cpu: "cpu" instantiated altera_nios2_gen2_unit "cpu"
+Info: dispatcher_internal: "msgdma_0" instantiated modular_sgdma_dispatcher "dispatcher_internal"
+Info: read_mstr_internal: "msgdma_0" instantiated dma_read_master "read_mstr_internal"
+Info: cpu_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "cpu_data_master_translator"
+Info: jtag_uart_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_avalon_jtag_slave_translator"
+Info: cpu_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "cpu_data_master_agent"
+Info: jtag_uart_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_avalon_jtag_slave_agent"
+Info: jtag_uart_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_avalon_jtag_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: router_007: "mm_interconnect_0" instantiated altera_merlin_router "router_007"
+Info: router_008: "mm_interconnect_0" instantiated altera_merlin_router "router_008"
+Info: router_009: "mm_interconnect_0" instantiated altera_merlin_router "router_009"
+Info: cpu_data_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "cpu_data_master_limiter"
+Info: Reusing file C:/DSD/DSD_git/DSD/template/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: onchip_mem_s1_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "onchip_mem_s1_burst_adapter"
+Info: Reusing file C:/DSD/DSD_git/DSD/template/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_002"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_004: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_004"
+Info: Reusing file C:/DSD/DSD_git/DSD/template/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: cmd_mux_006: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_006"
+Info: Reusing file C:/DSD/DSD_git/DSD/template/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux_004: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_004"
+Info: rsp_demux_006: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_006"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/DSD/DSD_git/DSD/template/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file C:/DSD/DSD_git/DSD/template/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_002"
+Info: Reusing file C:/DSD/DSD_git/DSD/template/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: msgdma_0_descriptor_slave_cmd_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "msgdma_0_descriptor_slave_cmd_width_adapter"
+Info: Reusing file C:/DSD/DSD_git/DSD/template/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file C:/DSD/DSD_git/DSD/template/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: avalon_st_adapter_005: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_005"
+Info: data_format_adapter_0: "avalon_st_adapter" instantiated data_format_adapter "data_format_adapter_0"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: error_adapter_0: "avalon_st_adapter_005" instantiated error_adapter "error_adapter_0"
+Info: first_nios2_system: Done "first_nios2_system" with 54 modules, 91 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

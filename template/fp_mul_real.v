@@ -1,4 +1,4 @@
-module fp_mul
+module fp_mul_real
     (
         input clk,
         input areset,
@@ -8,7 +8,7 @@ module fp_mul
         output [31:0]  result
     );
 
-    fp_mul_final fp_mul_final
+    fp_mul_actual fp_mul_actual
     (
         .clk(clk),
         .areset(areset),

@@ -197,7 +197,8 @@ float calculateFunctionTask8SGDMA(float x[], int M) {
 
     uint32_t raw = IORD_32DIRECT(WRAPPER_BASE, REG_RESULT_OFFSET);
     uint32_t fx = IORD_32DIRECT(WRAPPER_BASE, 8);
-    printf("[SGDMA]    raw=0x%08X last_fx=0x%f\n", (unsigned int)raw, (float)fx);
+    uint32_t word_count = IORD_32DIRECT(WRAPPER_BASE, 12);
+    printf("[SGDMA]    raw=0x%08X last_fx=0x%f word_count=%ld\n", (unsigned int)raw, (float)fx, (uint32_t)word_count);
     return bits2f(raw);
 }
 
@@ -205,12 +206,13 @@ int main() {
     init_cos_lut();
 
     TestCase tests[] = {
+        {"Tiny",   10,    1.0f},
         {"Small",  52,    5.0f},
         {"Medium", 2041,  1.0f/8.0f},
         {"Large",  65281, 1.0f/256.0f}
     };
 
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 4; i++) {
         printf("\n=== %s (N=%d) ===\n", tests[i].name, tests[i].n_val);
         generateVector(x_vec, tests[i].n_val, tests[i].step_val);
 

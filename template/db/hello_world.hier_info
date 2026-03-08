@@ -69571,9 +69571,41 @@ reset => y_final.OUTPUTSELECT
 reset => y_final.OUTPUTSELECT
 reset => y_final.OUTPUTSELECT
 reset => y_final.OUTPUTSELECT
-reset => sticky_done.OUTPUTSELECT
+reset => last_done.OUTPUTSELECT
 reset => clk_en.OUTPUTSELECT
 reset => func_top_reset.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
+reset => word_count.OUTPUTSELECT
 reset => drain_counter.OUTPUTSELECT
 reset => drain_counter.OUTPUTSELECT
 reset => drain_counter.OUTPUTSELECT
@@ -69581,71 +69613,40 @@ reset => drain_counter.OUTPUTSELECT
 reset => drain_counter.OUTPUTSELECT
 reset => drain_counter.OUTPUTSELECT
 reset => ast_valid_reg.OUTPUTSELECT
-reset => last_fx[26].ENA
-reset => last_fx[25].ENA
-reset => last_fx[24].ENA
-reset => last_fx[23].ENA
-reset => last_fx[22].ENA
-reset => last_fx[21].ENA
-reset => last_fx[20].ENA
-reset => last_fx[19].ENA
-reset => last_fx[18].ENA
-reset => last_fx[17].ENA
-reset => last_fx[16].ENA
-reset => last_fx[15].ENA
-reset => last_fx[14].ENA
-reset => last_fx[13].ENA
-reset => last_fx[12].ENA
-reset => last_fx[11].ENA
-reset => last_fx[10].ENA
-reset => last_fx[9].ENA
-reset => last_fx[8].ENA
-reset => last_fx[7].ENA
-reset => last_fx[6].ENA
-reset => last_fx[5].ENA
-reset => last_fx[4].ENA
-reset => last_fx[3].ENA
-reset => last_fx[2].ENA
-reset => last_fx[1].ENA
-reset => last_fx[0].ENA
-reset => last_fx[27].ENA
-reset => last_fx[28].ENA
-reset => last_fx[29].ENA
-reset => last_fx[30].ENA
-reset => last_fx[31].ENA
-reset => last_word[0].ENA
-reset => last_word[1].ENA
-reset => last_word[2].ENA
-reset => last_word[3].ENA
-reset => last_word[4].ENA
-reset => last_word[5].ENA
-reset => last_word[6].ENA
-reset => last_word[7].ENA
-reset => last_word[8].ENA
-reset => last_word[9].ENA
-reset => last_word[10].ENA
-reset => last_word[11].ENA
-reset => last_word[12].ENA
-reset => last_word[13].ENA
-reset => last_word[14].ENA
-reset => last_word[15].ENA
-reset => last_word[16].ENA
-reset => last_word[17].ENA
-reset => last_word[18].ENA
-reset => last_word[19].ENA
-reset => last_word[20].ENA
-reset => last_word[21].ENA
-reset => last_word[22].ENA
-reset => last_word[23].ENA
-reset => last_word[24].ENA
-reset => last_word[25].ENA
-reset => last_word[26].ENA
-reset => last_word[27].ENA
-reset => last_word[28].ENA
-reset => last_word[29].ENA
-reset => last_word[30].ENA
-reset => last_word[31].ENA
+reset => done_prev.ENA
 ast_valid => func_top_reset.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
+ast_valid => word_count.OUTPUTSELECT
 ast_valid => drain_counter.OUTPUTSELECT
 ast_valid => drain_counter.OUTPUTSELECT
 ast_valid => drain_counter.OUTPUTSELECT
@@ -69687,7 +69688,45 @@ ast_data[29] => ast_data_swapped_reg.DATAA
 ast_data[30] => ast_data_swapped_reg.DATAA
 ast_data[31] => ast_data_swapped_reg.DATAA
 ast_startofpacket => func_top_reset.OUTPUTSELECT
-ast_startofpacket => sticky_done.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => word_count.OUTPUTSELECT
+ast_startofpacket => drain_counter.OUTPUTSELECT
+ast_startofpacket => drain_counter.OUTPUTSELECT
+ast_startofpacket => drain_counter.OUTPUTSELECT
+ast_startofpacket => drain_counter.OUTPUTSELECT
+ast_startofpacket => drain_counter.OUTPUTSELECT
+ast_startofpacket => drain_counter.OUTPUTSELECT
+ast_startofpacket => last_done.OUTPUTSELECT
 ast_startofpacket => y_final.OUTPUTSELECT
 ast_startofpacket => y_final.OUTPUTSELECT
 ast_startofpacket => y_final.OUTPUTSELECT
@@ -69720,6 +69759,7 @@ ast_startofpacket => y_final.OUTPUTSELECT
 ast_startofpacket => y_final.OUTPUTSELECT
 ast_startofpacket => y_final.OUTPUTSELECT
 ast_startofpacket => y_final.OUTPUTSELECT
+ast_startofpacket => clk_en.OUTPUTSELECT
 ast_endofpacket => ast_endofpacket_reg.DATAA
 ast_ready <= <VCC>
 avs_address[0] => Mux0.IN2
@@ -69857,7 +69897,7 @@ avs_readdata[31] <= avs_readdata.DB_MAX_OUTPUT_PORT_TYPE
 
 |hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top
 clk => clk.IN6
-clk_en => clk_en.IN6
+clk_en => clk_en.IN1
 reset => reset.IN6
 last => next_state.IN1
 valid_in => valid_in.IN1
@@ -69957,12 +69997,44 @@ fx_out[28] <= pipelined_fsm:pipelined_fsm.y
 fx_out[29] <= pipelined_fsm:pipelined_fsm.y
 fx_out[30] <= pipelined_fsm:pipelined_fsm.y
 fx_out[31] <= pipelined_fsm:pipelined_fsm.y
+last_fx[0] <= last_fx[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[1] <= last_fx[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[2] <= last_fx[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[3] <= last_fx[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[4] <= last_fx[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[5] <= last_fx[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[6] <= last_fx[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[7] <= last_fx[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[8] <= last_fx[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[9] <= last_fx[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[10] <= last_fx[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[11] <= last_fx[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[12] <= last_fx[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[13] <= last_fx[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[14] <= last_fx[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[15] <= last_fx[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[16] <= last_fx[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[17] <= last_fx[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[18] <= last_fx[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[19] <= last_fx[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[20] <= last_fx[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[21] <= last_fx[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[22] <= last_fx[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[23] <= last_fx[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[24] <= last_fx[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[25] <= last_fx[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[26] <= last_fx[26]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[27] <= last_fx[27]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[28] <= last_fx[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[29] <= last_fx[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[30] <= last_fx[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+last_fx[31] <= last_fx[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 done <= done~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm
 clk => clk.IN4
-clk_en => clk_en.IN4
+clk_en => clk_en.IN1
 reset => reset.IN4
 valid_in => valid_sr.DATAB
 x[0] => x[0].IN3
@@ -69997,39 +70069,39 @@ x[28] => x[28].IN3
 x[29] => x[29].IN3
 x[30] => x[30].IN3
 x[31] => x[31].IN3
-valid <= valid_sr[21].DB_MAX_OUTPUT_PORT_TYPE
-y[0] <= fp_mul:fp_mul_2.result
-y[1] <= fp_mul:fp_mul_2.result
-y[2] <= fp_mul:fp_mul_2.result
-y[3] <= fp_mul:fp_mul_2.result
-y[4] <= fp_mul:fp_mul_2.result
-y[5] <= fp_mul:fp_mul_2.result
-y[6] <= fp_mul:fp_mul_2.result
-y[7] <= fp_mul:fp_mul_2.result
-y[8] <= fp_mul:fp_mul_2.result
-y[9] <= fp_mul:fp_mul_2.result
-y[10] <= fp_mul:fp_mul_2.result
-y[11] <= fp_mul:fp_mul_2.result
-y[12] <= fp_mul:fp_mul_2.result
-y[13] <= fp_mul:fp_mul_2.result
-y[14] <= fp_mul:fp_mul_2.result
-y[15] <= fp_mul:fp_mul_2.result
-y[16] <= fp_mul:fp_mul_2.result
-y[17] <= fp_mul:fp_mul_2.result
-y[18] <= fp_mul:fp_mul_2.result
-y[19] <= fp_mul:fp_mul_2.result
-y[20] <= fp_mul:fp_mul_2.result
-y[21] <= fp_mul:fp_mul_2.result
-y[22] <= fp_mul:fp_mul_2.result
-y[23] <= fp_mul:fp_mul_2.result
-y[24] <= fp_mul:fp_mul_2.result
-y[25] <= fp_mul:fp_mul_2.result
-y[26] <= fp_mul:fp_mul_2.result
-y[27] <= fp_mul:fp_mul_2.result
-y[28] <= fp_mul:fp_mul_2.result
-y[29] <= fp_mul:fp_mul_2.result
-y[30] <= fp_mul:fp_mul_2.result
-y[31] <= fp_mul:fp_mul_2.result
+valid <= valid_sr[20].DB_MAX_OUTPUT_PORT_TYPE
+y[0] <= fp_mul_real:fp_mul_2.result
+y[1] <= fp_mul_real:fp_mul_2.result
+y[2] <= fp_mul_real:fp_mul_2.result
+y[3] <= fp_mul_real:fp_mul_2.result
+y[4] <= fp_mul_real:fp_mul_2.result
+y[5] <= fp_mul_real:fp_mul_2.result
+y[6] <= fp_mul_real:fp_mul_2.result
+y[7] <= fp_mul_real:fp_mul_2.result
+y[8] <= fp_mul_real:fp_mul_2.result
+y[9] <= fp_mul_real:fp_mul_2.result
+y[10] <= fp_mul_real:fp_mul_2.result
+y[11] <= fp_mul_real:fp_mul_2.result
+y[12] <= fp_mul_real:fp_mul_2.result
+y[13] <= fp_mul_real:fp_mul_2.result
+y[14] <= fp_mul_real:fp_mul_2.result
+y[15] <= fp_mul_real:fp_mul_2.result
+y[16] <= fp_mul_real:fp_mul_2.result
+y[17] <= fp_mul_real:fp_mul_2.result
+y[18] <= fp_mul_real:fp_mul_2.result
+y[19] <= fp_mul_real:fp_mul_2.result
+y[20] <= fp_mul_real:fp_mul_2.result
+y[21] <= fp_mul_real:fp_mul_2.result
+y[22] <= fp_mul_real:fp_mul_2.result
+y[23] <= fp_mul_real:fp_mul_2.result
+y[24] <= fp_mul_real:fp_mul_2.result
+y[25] <= fp_mul_real:fp_mul_2.result
+y[26] <= fp_mul_real:fp_mul_2.result
+y[27] <= fp_mul_real:fp_mul_2.result
+y[28] <= fp_mul_real:fp_mul_2.result
+y[29] <= fp_mul_real:fp_mul_2.result
+y[30] <= fp_mul_real:fp_mul_2.result
+y[31] <= fp_mul_real:fp_mul_2.result
 
 
 |hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_angle:fp_angle
@@ -73704,7 +73776,7 @@ fl32[30] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 fl32[31] <= fixed[22].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_squared
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_squared
 clk => clk.IN1
 areset => areset.IN1
 a[0] => a[0].IN1
@@ -73772,41 +73844,41 @@ b[29] => b[29].IN1
 b[30] => b[30].IN1
 b[31] => b[31].IN1
 en => en.IN1
-result[0] <= fp_mul_final:fp_mul_final.q
-result[1] <= fp_mul_final:fp_mul_final.q
-result[2] <= fp_mul_final:fp_mul_final.q
-result[3] <= fp_mul_final:fp_mul_final.q
-result[4] <= fp_mul_final:fp_mul_final.q
-result[5] <= fp_mul_final:fp_mul_final.q
-result[6] <= fp_mul_final:fp_mul_final.q
-result[7] <= fp_mul_final:fp_mul_final.q
-result[8] <= fp_mul_final:fp_mul_final.q
-result[9] <= fp_mul_final:fp_mul_final.q
-result[10] <= fp_mul_final:fp_mul_final.q
-result[11] <= fp_mul_final:fp_mul_final.q
-result[12] <= fp_mul_final:fp_mul_final.q
-result[13] <= fp_mul_final:fp_mul_final.q
-result[14] <= fp_mul_final:fp_mul_final.q
-result[15] <= fp_mul_final:fp_mul_final.q
-result[16] <= fp_mul_final:fp_mul_final.q
-result[17] <= fp_mul_final:fp_mul_final.q
-result[18] <= fp_mul_final:fp_mul_final.q
-result[19] <= fp_mul_final:fp_mul_final.q
-result[20] <= fp_mul_final:fp_mul_final.q
-result[21] <= fp_mul_final:fp_mul_final.q
-result[22] <= fp_mul_final:fp_mul_final.q
-result[23] <= fp_mul_final:fp_mul_final.q
-result[24] <= fp_mul_final:fp_mul_final.q
-result[25] <= fp_mul_final:fp_mul_final.q
-result[26] <= fp_mul_final:fp_mul_final.q
-result[27] <= fp_mul_final:fp_mul_final.q
-result[28] <= fp_mul_final:fp_mul_final.q
-result[29] <= fp_mul_final:fp_mul_final.q
-result[30] <= fp_mul_final:fp_mul_final.q
-result[31] <= fp_mul_final:fp_mul_final.q
+result[0] <= fp_mul_actual:fp_mul_actual.q
+result[1] <= fp_mul_actual:fp_mul_actual.q
+result[2] <= fp_mul_actual:fp_mul_actual.q
+result[3] <= fp_mul_actual:fp_mul_actual.q
+result[4] <= fp_mul_actual:fp_mul_actual.q
+result[5] <= fp_mul_actual:fp_mul_actual.q
+result[6] <= fp_mul_actual:fp_mul_actual.q
+result[7] <= fp_mul_actual:fp_mul_actual.q
+result[8] <= fp_mul_actual:fp_mul_actual.q
+result[9] <= fp_mul_actual:fp_mul_actual.q
+result[10] <= fp_mul_actual:fp_mul_actual.q
+result[11] <= fp_mul_actual:fp_mul_actual.q
+result[12] <= fp_mul_actual:fp_mul_actual.q
+result[13] <= fp_mul_actual:fp_mul_actual.q
+result[14] <= fp_mul_actual:fp_mul_actual.q
+result[15] <= fp_mul_actual:fp_mul_actual.q
+result[16] <= fp_mul_actual:fp_mul_actual.q
+result[17] <= fp_mul_actual:fp_mul_actual.q
+result[18] <= fp_mul_actual:fp_mul_actual.q
+result[19] <= fp_mul_actual:fp_mul_actual.q
+result[20] <= fp_mul_actual:fp_mul_actual.q
+result[21] <= fp_mul_actual:fp_mul_actual.q
+result[22] <= fp_mul_actual:fp_mul_actual.q
+result[23] <= fp_mul_actual:fp_mul_actual.q
+result[24] <= fp_mul_actual:fp_mul_actual.q
+result[25] <= fp_mul_actual:fp_mul_actual.q
+result[26] <= fp_mul_actual:fp_mul_actual.q
+result[27] <= fp_mul_actual:fp_mul_actual.q
+result[28] <= fp_mul_actual:fp_mul_actual.q
+result[29] <= fp_mul_actual:fp_mul_actual.q
+result[30] <= fp_mul_actual:fp_mul_actual.q
+result[31] <= fp_mul_actual:fp_mul_actual.q
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_squared|fp_mul_final:fp_mul_final
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_squared|fp_mul_actual:fp_mul_actual
 clk => clk.IN1
 areset => areset.IN1
 en[0] => en[0].IN1
@@ -73874,41 +73946,41 @@ b[28] => b[28].IN1
 b[29] => b[29].IN1
 b[30] => b[30].IN1
 b[31] => b[31].IN1
-q[0] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[1] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[2] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[3] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[4] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[5] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[6] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[7] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[8] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[9] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[10] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[11] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[12] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[13] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[14] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[15] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[16] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[17] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[18] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[19] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[20] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[21] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[22] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[23] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[24] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[25] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[26] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[27] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[28] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[29] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[30] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[31] <= fp_mul_final_0002:fp_mul_final_inst.q
+q[0] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[1] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[2] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[3] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[4] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[5] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[6] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[7] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[8] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[9] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[10] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[11] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[12] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[13] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[14] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[15] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[16] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[17] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[18] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[19] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[20] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[21] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[22] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[23] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[24] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[25] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[26] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[27] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[28] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[29] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[30] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[31] <= fp_mul_actual_0002:fp_mul_actual_inst.q
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_squared|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_squared|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst
 a[0] => Equal0.IN45
 a[0] => prodXY_uid105_prod_uid47_fpMulTest_cma_a0[0][0].DATAIN
 a[1] => Equal0.IN44
@@ -74448,7 +74520,7 @@ areset => dspba_delay:prodXY_uid105_prod_uid47_fpMulTest_cma_delay.aclr
 areset => dspba_delay:redist1_expSum_uid44_fpMulTest_q_2.aclr
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_squared|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:fracXIsZero_uid17_fpMulTest_delay
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_squared|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:fracXIsZero_uid17_fpMulTest_delay
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -74456,7 +74528,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_squared|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:redist5_fracXIsZero_uid17_fpMulTest_q_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_squared|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:redist5_fracXIsZero_uid17_fpMulTest_q_2
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -74464,7 +74536,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_squared|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:expXIsMax_uid16_fpMulTest_delay
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_squared|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:expXIsMax_uid16_fpMulTest_delay
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -74472,7 +74544,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_squared|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:redist6_expXIsMax_uid16_fpMulTest_q_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_squared|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:redist6_expXIsMax_uid16_fpMulTest_q_2
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -74480,7 +74552,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_squared|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:excZ_y_uid29_fpMulTest_delay
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_squared|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:excZ_y_uid29_fpMulTest_delay
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -74488,7 +74560,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_squared|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:redist4_excZ_y_uid29_fpMulTest_q_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_squared|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:redist4_excZ_y_uid29_fpMulTest_q_2
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -74496,7 +74568,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_squared|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:fracXIsZero_uid31_fpMulTest_delay
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_squared|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:fracXIsZero_uid31_fpMulTest_delay
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -74504,7 +74576,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_squared|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:redist2_fracXIsZero_uid31_fpMulTest_q_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_squared|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:redist2_fracXIsZero_uid31_fpMulTest_q_2
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -74512,7 +74584,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_squared|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:expXIsMax_uid30_fpMulTest_delay
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_squared|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:expXIsMax_uid30_fpMulTest_delay
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -74520,7 +74592,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_squared|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:redist3_expXIsMax_uid30_fpMulTest_q_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_squared|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:redist3_expXIsMax_uid30_fpMulTest_q_2
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -74528,7 +74600,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_squared|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:excZ_x_uid15_fpMulTest_delay
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_squared|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:excZ_x_uid15_fpMulTest_delay
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -74536,7 +74608,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_squared|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:redist7_excZ_x_uid15_fpMulTest_q_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_squared|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:redist7_excZ_x_uid15_fpMulTest_q_2
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -74544,7 +74616,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_squared|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:signR_uid48_fpMulTest_delay
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_squared|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:signR_uid48_fpMulTest_delay
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -74552,7 +74624,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_squared|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:redist0_signR_uid48_fpMulTest_q_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_squared|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:redist0_signR_uid48_fpMulTest_q_2
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -74560,7 +74632,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_squared|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:prodXY_uid105_prod_uid47_fpMulTest_cma_delay
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_squared|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:prodXY_uid105_prod_uid47_fpMulTest_cma_delay
 clk => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 ena => ~NO_FANOUT~
@@ -74662,7 +74734,7 @@ xout[46] <= xin[46].DB_MAX_OUTPUT_PORT_TYPE
 xout[47] <= xin[47].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_squared|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:redist1_expSum_uid44_fpMulTest_q_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_squared|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:redist1_expSum_uid44_fpMulTest_q_2
 clk => delay_signals[0][0].CLK
 clk => delay_signals[0][1].CLK
 clk => delay_signals[0][2].CLK
@@ -74710,7 +74782,7 @@ xout[7] <= delay_signals[0][7].DB_MAX_OUTPUT_PORT_TYPE
 xout[8] <= delay_signals[0][8].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_1
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_1
 clk => clk.IN1
 areset => areset.IN1
 a[0] => a[0].IN1
@@ -74778,41 +74850,41 @@ b[29] => b[29].IN1
 b[30] => b[30].IN1
 b[31] => b[31].IN1
 en => en.IN1
-result[0] <= fp_mul_final:fp_mul_final.q
-result[1] <= fp_mul_final:fp_mul_final.q
-result[2] <= fp_mul_final:fp_mul_final.q
-result[3] <= fp_mul_final:fp_mul_final.q
-result[4] <= fp_mul_final:fp_mul_final.q
-result[5] <= fp_mul_final:fp_mul_final.q
-result[6] <= fp_mul_final:fp_mul_final.q
-result[7] <= fp_mul_final:fp_mul_final.q
-result[8] <= fp_mul_final:fp_mul_final.q
-result[9] <= fp_mul_final:fp_mul_final.q
-result[10] <= fp_mul_final:fp_mul_final.q
-result[11] <= fp_mul_final:fp_mul_final.q
-result[12] <= fp_mul_final:fp_mul_final.q
-result[13] <= fp_mul_final:fp_mul_final.q
-result[14] <= fp_mul_final:fp_mul_final.q
-result[15] <= fp_mul_final:fp_mul_final.q
-result[16] <= fp_mul_final:fp_mul_final.q
-result[17] <= fp_mul_final:fp_mul_final.q
-result[18] <= fp_mul_final:fp_mul_final.q
-result[19] <= fp_mul_final:fp_mul_final.q
-result[20] <= fp_mul_final:fp_mul_final.q
-result[21] <= fp_mul_final:fp_mul_final.q
-result[22] <= fp_mul_final:fp_mul_final.q
-result[23] <= fp_mul_final:fp_mul_final.q
-result[24] <= fp_mul_final:fp_mul_final.q
-result[25] <= fp_mul_final:fp_mul_final.q
-result[26] <= fp_mul_final:fp_mul_final.q
-result[27] <= fp_mul_final:fp_mul_final.q
-result[28] <= fp_mul_final:fp_mul_final.q
-result[29] <= fp_mul_final:fp_mul_final.q
-result[30] <= fp_mul_final:fp_mul_final.q
-result[31] <= fp_mul_final:fp_mul_final.q
+result[0] <= fp_mul_actual:fp_mul_actual.q
+result[1] <= fp_mul_actual:fp_mul_actual.q
+result[2] <= fp_mul_actual:fp_mul_actual.q
+result[3] <= fp_mul_actual:fp_mul_actual.q
+result[4] <= fp_mul_actual:fp_mul_actual.q
+result[5] <= fp_mul_actual:fp_mul_actual.q
+result[6] <= fp_mul_actual:fp_mul_actual.q
+result[7] <= fp_mul_actual:fp_mul_actual.q
+result[8] <= fp_mul_actual:fp_mul_actual.q
+result[9] <= fp_mul_actual:fp_mul_actual.q
+result[10] <= fp_mul_actual:fp_mul_actual.q
+result[11] <= fp_mul_actual:fp_mul_actual.q
+result[12] <= fp_mul_actual:fp_mul_actual.q
+result[13] <= fp_mul_actual:fp_mul_actual.q
+result[14] <= fp_mul_actual:fp_mul_actual.q
+result[15] <= fp_mul_actual:fp_mul_actual.q
+result[16] <= fp_mul_actual:fp_mul_actual.q
+result[17] <= fp_mul_actual:fp_mul_actual.q
+result[18] <= fp_mul_actual:fp_mul_actual.q
+result[19] <= fp_mul_actual:fp_mul_actual.q
+result[20] <= fp_mul_actual:fp_mul_actual.q
+result[21] <= fp_mul_actual:fp_mul_actual.q
+result[22] <= fp_mul_actual:fp_mul_actual.q
+result[23] <= fp_mul_actual:fp_mul_actual.q
+result[24] <= fp_mul_actual:fp_mul_actual.q
+result[25] <= fp_mul_actual:fp_mul_actual.q
+result[26] <= fp_mul_actual:fp_mul_actual.q
+result[27] <= fp_mul_actual:fp_mul_actual.q
+result[28] <= fp_mul_actual:fp_mul_actual.q
+result[29] <= fp_mul_actual:fp_mul_actual.q
+result[30] <= fp_mul_actual:fp_mul_actual.q
+result[31] <= fp_mul_actual:fp_mul_actual.q
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_1|fp_mul_final:fp_mul_final
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_1|fp_mul_actual:fp_mul_actual
 clk => clk.IN1
 areset => areset.IN1
 en[0] => en[0].IN1
@@ -74880,41 +74952,41 @@ b[28] => b[28].IN1
 b[29] => b[29].IN1
 b[30] => b[30].IN1
 b[31] => b[31].IN1
-q[0] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[1] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[2] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[3] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[4] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[5] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[6] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[7] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[8] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[9] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[10] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[11] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[12] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[13] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[14] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[15] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[16] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[17] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[18] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[19] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[20] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[21] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[22] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[23] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[24] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[25] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[26] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[27] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[28] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[29] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[30] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[31] <= fp_mul_final_0002:fp_mul_final_inst.q
+q[0] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[1] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[2] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[3] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[4] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[5] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[6] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[7] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[8] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[9] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[10] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[11] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[12] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[13] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[14] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[15] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[16] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[17] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[18] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[19] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[20] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[21] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[22] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[23] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[24] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[25] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[26] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[27] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[28] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[29] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[30] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[31] <= fp_mul_actual_0002:fp_mul_actual_inst.q
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_1|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_1|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst
 a[0] => Equal0.IN45
 a[0] => prodXY_uid105_prod_uid47_fpMulTest_cma_a0[0][0].DATAIN
 a[1] => Equal0.IN44
@@ -75454,7 +75526,7 @@ areset => dspba_delay:prodXY_uid105_prod_uid47_fpMulTest_cma_delay.aclr
 areset => dspba_delay:redist1_expSum_uid44_fpMulTest_q_2.aclr
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_1|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:fracXIsZero_uid17_fpMulTest_delay
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_1|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:fracXIsZero_uid17_fpMulTest_delay
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -75462,7 +75534,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_1|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:redist5_fracXIsZero_uid17_fpMulTest_q_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_1|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:redist5_fracXIsZero_uid17_fpMulTest_q_2
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -75470,7 +75542,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_1|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:expXIsMax_uid16_fpMulTest_delay
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_1|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:expXIsMax_uid16_fpMulTest_delay
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -75478,7 +75550,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_1|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:redist6_expXIsMax_uid16_fpMulTest_q_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_1|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:redist6_expXIsMax_uid16_fpMulTest_q_2
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -75486,7 +75558,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_1|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:excZ_y_uid29_fpMulTest_delay
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_1|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:excZ_y_uid29_fpMulTest_delay
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -75494,7 +75566,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_1|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:redist4_excZ_y_uid29_fpMulTest_q_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_1|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:redist4_excZ_y_uid29_fpMulTest_q_2
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -75502,7 +75574,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_1|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:fracXIsZero_uid31_fpMulTest_delay
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_1|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:fracXIsZero_uid31_fpMulTest_delay
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -75510,7 +75582,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_1|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:redist2_fracXIsZero_uid31_fpMulTest_q_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_1|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:redist2_fracXIsZero_uid31_fpMulTest_q_2
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -75518,7 +75590,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_1|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:expXIsMax_uid30_fpMulTest_delay
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_1|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:expXIsMax_uid30_fpMulTest_delay
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -75526,7 +75598,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_1|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:redist3_expXIsMax_uid30_fpMulTest_q_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_1|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:redist3_expXIsMax_uid30_fpMulTest_q_2
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -75534,7 +75606,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_1|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:excZ_x_uid15_fpMulTest_delay
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_1|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:excZ_x_uid15_fpMulTest_delay
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -75542,7 +75614,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_1|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:redist7_excZ_x_uid15_fpMulTest_q_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_1|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:redist7_excZ_x_uid15_fpMulTest_q_2
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -75550,7 +75622,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_1|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:signR_uid48_fpMulTest_delay
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_1|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:signR_uid48_fpMulTest_delay
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -75558,7 +75630,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_1|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:redist0_signR_uid48_fpMulTest_q_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_1|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:redist0_signR_uid48_fpMulTest_q_2
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -75566,7 +75638,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_1|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:prodXY_uid105_prod_uid47_fpMulTest_cma_delay
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_1|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:prodXY_uid105_prod_uid47_fpMulTest_cma_delay
 clk => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 ena => ~NO_FANOUT~
@@ -75668,7 +75740,7 @@ xout[46] <= xin[46].DB_MAX_OUTPUT_PORT_TYPE
 xout[47] <= xin[47].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_1|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:redist1_expSum_uid44_fpMulTest_q_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_1|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:redist1_expSum_uid44_fpMulTest_q_2
 clk => delay_signals[0][0].CLK
 clk => delay_signals[0][1].CLK
 clk => delay_signals[0][2].CLK
@@ -75863,7 +75935,7 @@ x_plus_half[30] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 x_plus_half[31] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_2
 clk => clk.IN1
 areset => areset.IN1
 a[0] => a[0].IN1
@@ -75931,41 +76003,41 @@ b[29] => b[29].IN1
 b[30] => b[30].IN1
 b[31] => b[31].IN1
 en => en.IN1
-result[0] <= fp_mul_final:fp_mul_final.q
-result[1] <= fp_mul_final:fp_mul_final.q
-result[2] <= fp_mul_final:fp_mul_final.q
-result[3] <= fp_mul_final:fp_mul_final.q
-result[4] <= fp_mul_final:fp_mul_final.q
-result[5] <= fp_mul_final:fp_mul_final.q
-result[6] <= fp_mul_final:fp_mul_final.q
-result[7] <= fp_mul_final:fp_mul_final.q
-result[8] <= fp_mul_final:fp_mul_final.q
-result[9] <= fp_mul_final:fp_mul_final.q
-result[10] <= fp_mul_final:fp_mul_final.q
-result[11] <= fp_mul_final:fp_mul_final.q
-result[12] <= fp_mul_final:fp_mul_final.q
-result[13] <= fp_mul_final:fp_mul_final.q
-result[14] <= fp_mul_final:fp_mul_final.q
-result[15] <= fp_mul_final:fp_mul_final.q
-result[16] <= fp_mul_final:fp_mul_final.q
-result[17] <= fp_mul_final:fp_mul_final.q
-result[18] <= fp_mul_final:fp_mul_final.q
-result[19] <= fp_mul_final:fp_mul_final.q
-result[20] <= fp_mul_final:fp_mul_final.q
-result[21] <= fp_mul_final:fp_mul_final.q
-result[22] <= fp_mul_final:fp_mul_final.q
-result[23] <= fp_mul_final:fp_mul_final.q
-result[24] <= fp_mul_final:fp_mul_final.q
-result[25] <= fp_mul_final:fp_mul_final.q
-result[26] <= fp_mul_final:fp_mul_final.q
-result[27] <= fp_mul_final:fp_mul_final.q
-result[28] <= fp_mul_final:fp_mul_final.q
-result[29] <= fp_mul_final:fp_mul_final.q
-result[30] <= fp_mul_final:fp_mul_final.q
-result[31] <= fp_mul_final:fp_mul_final.q
+result[0] <= fp_mul_actual:fp_mul_actual.q
+result[1] <= fp_mul_actual:fp_mul_actual.q
+result[2] <= fp_mul_actual:fp_mul_actual.q
+result[3] <= fp_mul_actual:fp_mul_actual.q
+result[4] <= fp_mul_actual:fp_mul_actual.q
+result[5] <= fp_mul_actual:fp_mul_actual.q
+result[6] <= fp_mul_actual:fp_mul_actual.q
+result[7] <= fp_mul_actual:fp_mul_actual.q
+result[8] <= fp_mul_actual:fp_mul_actual.q
+result[9] <= fp_mul_actual:fp_mul_actual.q
+result[10] <= fp_mul_actual:fp_mul_actual.q
+result[11] <= fp_mul_actual:fp_mul_actual.q
+result[12] <= fp_mul_actual:fp_mul_actual.q
+result[13] <= fp_mul_actual:fp_mul_actual.q
+result[14] <= fp_mul_actual:fp_mul_actual.q
+result[15] <= fp_mul_actual:fp_mul_actual.q
+result[16] <= fp_mul_actual:fp_mul_actual.q
+result[17] <= fp_mul_actual:fp_mul_actual.q
+result[18] <= fp_mul_actual:fp_mul_actual.q
+result[19] <= fp_mul_actual:fp_mul_actual.q
+result[20] <= fp_mul_actual:fp_mul_actual.q
+result[21] <= fp_mul_actual:fp_mul_actual.q
+result[22] <= fp_mul_actual:fp_mul_actual.q
+result[23] <= fp_mul_actual:fp_mul_actual.q
+result[24] <= fp_mul_actual:fp_mul_actual.q
+result[25] <= fp_mul_actual:fp_mul_actual.q
+result[26] <= fp_mul_actual:fp_mul_actual.q
+result[27] <= fp_mul_actual:fp_mul_actual.q
+result[28] <= fp_mul_actual:fp_mul_actual.q
+result[29] <= fp_mul_actual:fp_mul_actual.q
+result[30] <= fp_mul_actual:fp_mul_actual.q
+result[31] <= fp_mul_actual:fp_mul_actual.q
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_2|fp_mul_final:fp_mul_final
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_2|fp_mul_actual:fp_mul_actual
 clk => clk.IN1
 areset => areset.IN1
 en[0] => en[0].IN1
@@ -76033,41 +76105,41 @@ b[28] => b[28].IN1
 b[29] => b[29].IN1
 b[30] => b[30].IN1
 b[31] => b[31].IN1
-q[0] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[1] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[2] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[3] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[4] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[5] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[6] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[7] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[8] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[9] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[10] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[11] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[12] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[13] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[14] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[15] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[16] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[17] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[18] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[19] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[20] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[21] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[22] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[23] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[24] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[25] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[26] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[27] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[28] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[29] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[30] <= fp_mul_final_0002:fp_mul_final_inst.q
-q[31] <= fp_mul_final_0002:fp_mul_final_inst.q
+q[0] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[1] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[2] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[3] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[4] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[5] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[6] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[7] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[8] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[9] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[10] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[11] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[12] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[13] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[14] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[15] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[16] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[17] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[18] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[19] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[20] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[21] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[22] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[23] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[24] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[25] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[26] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[27] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[28] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[29] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[30] <= fp_mul_actual_0002:fp_mul_actual_inst.q
+q[31] <= fp_mul_actual_0002:fp_mul_actual_inst.q
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_2|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_2|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst
 a[0] => Equal0.IN45
 a[0] => prodXY_uid105_prod_uid47_fpMulTest_cma_a0[0][0].DATAIN
 a[1] => Equal0.IN44
@@ -76607,7 +76679,7 @@ areset => dspba_delay:prodXY_uid105_prod_uid47_fpMulTest_cma_delay.aclr
 areset => dspba_delay:redist1_expSum_uid44_fpMulTest_q_2.aclr
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_2|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:fracXIsZero_uid17_fpMulTest_delay
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_2|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:fracXIsZero_uid17_fpMulTest_delay
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -76615,7 +76687,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_2|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:redist5_fracXIsZero_uid17_fpMulTest_q_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_2|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:redist5_fracXIsZero_uid17_fpMulTest_q_2
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -76623,7 +76695,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_2|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:expXIsMax_uid16_fpMulTest_delay
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_2|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:expXIsMax_uid16_fpMulTest_delay
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -76631,7 +76703,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_2|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:redist6_expXIsMax_uid16_fpMulTest_q_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_2|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:redist6_expXIsMax_uid16_fpMulTest_q_2
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -76639,7 +76711,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_2|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:excZ_y_uid29_fpMulTest_delay
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_2|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:excZ_y_uid29_fpMulTest_delay
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -76647,7 +76719,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_2|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:redist4_excZ_y_uid29_fpMulTest_q_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_2|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:redist4_excZ_y_uid29_fpMulTest_q_2
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -76655,7 +76727,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_2|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:fracXIsZero_uid31_fpMulTest_delay
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_2|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:fracXIsZero_uid31_fpMulTest_delay
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -76663,7 +76735,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_2|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:redist2_fracXIsZero_uid31_fpMulTest_q_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_2|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:redist2_fracXIsZero_uid31_fpMulTest_q_2
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -76671,7 +76743,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_2|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:expXIsMax_uid30_fpMulTest_delay
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_2|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:expXIsMax_uid30_fpMulTest_delay
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -76679,7 +76751,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_2|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:redist3_expXIsMax_uid30_fpMulTest_q_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_2|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:redist3_expXIsMax_uid30_fpMulTest_q_2
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -76687,7 +76759,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_2|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:excZ_x_uid15_fpMulTest_delay
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_2|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:excZ_x_uid15_fpMulTest_delay
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -76695,7 +76767,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_2|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:redist7_excZ_x_uid15_fpMulTest_q_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_2|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:redist7_excZ_x_uid15_fpMulTest_q_2
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -76703,7 +76775,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_2|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:signR_uid48_fpMulTest_delay
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_2|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:signR_uid48_fpMulTest_delay
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -76711,7 +76783,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_2|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:redist0_signR_uid48_fpMulTest_q_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_2|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:redist0_signR_uid48_fpMulTest_q_2
 clk => delay_signals[0][0].CLK
 aclr => delay_signals[0][0].ACLR
 ena => delay_signals[0][0].ENA
@@ -76719,7 +76791,7 @@ xin[0] => delay_signals[0][0].DATAIN
 xout[0] <= delay_signals[0][0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_2|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:prodXY_uid105_prod_uid47_fpMulTest_cma_delay
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_2|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:prodXY_uid105_prod_uid47_fpMulTest_cma_delay
 clk => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 ena => ~NO_FANOUT~
@@ -76821,7 +76893,7 @@ xout[46] <= xin[46].DB_MAX_OUTPUT_PORT_TYPE
 xout[47] <= xin[47].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul:fp_mul_2|fp_mul_final:fp_mul_final|fp_mul_final_0002:fp_mul_final_inst|dspba_delay:redist1_expSum_uid44_fpMulTest_q_2
+|hello_world|first_nios2_system:inst|avalon_wrapper:pipelined_fsm_0|func_top:func_top|pipelined_fsm:pipelined_fsm|fp_mul_real:fp_mul_2|fp_mul_actual:fp_mul_actual|fp_mul_actual_0002:fp_mul_actual_inst|dspba_delay:redist1_expSum_uid44_fpMulTest_q_2
 clk => delay_signals[0][0].CLK
 clk => delay_signals[0][1].CLK
 clk => delay_signals[0][2].CLK
@@ -83036,34 +83108,32 @@ address => readdata[23].DATAIN
 address => readdata[21].DATAIN
 address => readdata[19].DATAIN
 address => readdata[18].DATAIN
-address => readdata[14].DATAIN
-address => readdata[12].DATAIN
-address => readdata[9].DATAIN
-address => readdata[8].DATAIN
+address => readdata[16].DATAIN
+address => readdata[15].DATAIN
+address => readdata[13].DATAIN
+address => readdata[11].DATAIN
 address => readdata[7].DATAIN
-address => readdata[6].DATAIN
-address => readdata[5].DATAIN
 address => readdata[4].DATAIN
-address => readdata[3].DATAIN
+address => readdata[1].DATAIN
 clock => ~NO_FANOUT~
 reset_n => ~NO_FANOUT~
 readdata[0] <= <GND>
-readdata[1] <= <GND>
+readdata[1] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[2] <= <GND>
-readdata[3] <= address.DB_MAX_OUTPUT_PORT_TYPE
+readdata[3] <= <GND>
 readdata[4] <= address.DB_MAX_OUTPUT_PORT_TYPE
-readdata[5] <= address.DB_MAX_OUTPUT_PORT_TYPE
-readdata[6] <= address.DB_MAX_OUTPUT_PORT_TYPE
+readdata[5] <= <GND>
+readdata[6] <= <GND>
 readdata[7] <= address.DB_MAX_OUTPUT_PORT_TYPE
-readdata[8] <= address.DB_MAX_OUTPUT_PORT_TYPE
-readdata[9] <= address.DB_MAX_OUTPUT_PORT_TYPE
+readdata[8] <= <GND>
+readdata[9] <= <GND>
 readdata[10] <= <GND>
-readdata[11] <= <GND>
-readdata[12] <= address.DB_MAX_OUTPUT_PORT_TYPE
-readdata[13] <= <GND>
-readdata[14] <= address.DB_MAX_OUTPUT_PORT_TYPE
-readdata[15] <= <GND>
-readdata[16] <= <GND>
+readdata[11] <= address.DB_MAX_OUTPUT_PORT_TYPE
+readdata[12] <= <GND>
+readdata[13] <= address.DB_MAX_OUTPUT_PORT_TYPE
+readdata[14] <= <GND>
+readdata[15] <= address.DB_MAX_OUTPUT_PORT_TYPE
+readdata[16] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[17] <= <GND>
 readdata[18] <= address.DB_MAX_OUTPUT_PORT_TYPE
 readdata[19] <= address.DB_MAX_OUTPUT_PORT_TYPE

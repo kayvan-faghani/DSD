@@ -32,7 +32,7 @@ module avalon_wrapper (
     logic [31:0] y, fx;
     logic        done;
     logic [31:0] last_word, last_fx;
-
+	logic done_prev;
     func_top func_top (
         .clk    (clk),
         .clk_en (clk_en),
@@ -42,63 +42,61 @@ module avalon_wrapper (
         .x      (ast_data_swapped_reg),
         .y      (y),
         .fx_out (fx),
+		  .last_fx(last_fx),
         .done   (done)
     );
 
     logic [31:0] y_final, word_count;
-    logic        sticky_done;
+    logic        last_done;
 	logic [5:0] drain_counter;
     always_ff @(posedge clk) begin
         if (reset) begin
             ast_data_swapped_reg <= 32'b0;
             ast_endofpacket_reg  <= 1'b0;
             y_final              <= 32'b0;
-            sticky_done          <= 1'b0;
+            last_done          <= 1'b0;
             clk_en               <= 1'b0;
             func_top_reset       <= 1'b1;
             word_count           <= 32'd0;
 				drain_counter 		   <= 32'd0;
 				ast_valid_reg 			<= 1'b0;
         end else begin
-            // Always register the streaming inputs
             ast_data_swapped_reg <= ast_data_swapped;
             ast_endofpacket_reg  <= ast_endofpacket;  // clean one-cycle pulse
 				ast_valid_reg 			<= ast_valid;
-				
+				done_prev <= done;
             if (ast_startofpacket) begin
                 func_top_reset <= 1'b0;
-                word_count     <= 32'd0;
-                sticky_done    <= 1'b0;
+                word_count     <= 32'd1;
+					 drain_counter <= `CORDIC_STAGES + 20;
+                last_done    <= 1'b0;
                 y_final        <= 32'b0;
-            end
-
-			  if (ast_valid) begin
+					 clk_en 		  <= 1'b1;
+				end
+				else if (ast_valid) begin
 					func_top_reset <= 1'b0;
 					word_count     <= word_count + 1;
-					drain_counter  <= `CORDIC_STAGES + 14;
+					drain_counter  <= `CORDIC_STAGES + 20;
 					clk_en         <= 1'b1;
-			  end else if (drain_counter > 0) begin
-					
+				end else if (drain_counter > 0) begin
 					drain_counter  <= drain_counter - 1;
 					clk_en         <= 1'b1;
-			  end else begin
+				end else begin
 					clk_en         <= 1'b0;
 				end
 				
 				
             if (ast_endofpacket_reg) begin
                 last_word <= ast_data_swapped_reg;
-                last_fx   <= fx;
             end
 
-            if (done) begin
-                y_final     <= y;
-                sticky_done <= 1'b1;
-            end
-
-            // Reading result clears state for next run
-            if (avs_read && avs_address == 2'd1 && sticky_done) begin
-                sticky_done    <= 1'b0;
+				if (done && !done_prev) begin
+					 y_final   <= y;
+					 last_done <= 1'b1;
+				end
+			
+            if (avs_read && avs_address == 2'd1 && last_done) begin
+                last_done    <= 1'b0;
                 clk_en         <= 1'b0;
                 func_top_reset <= 1'b1;
             end
@@ -109,11 +107,11 @@ module avalon_wrapper (
         avs_readdata = 32'b0;
         if (avs_read) begin
             case (avs_address)
-                2'd0: avs_readdata = {31'b0, sticky_done};
+                2'd0: avs_readdata = {31'b0, last_done};
                 2'd1: avs_readdata = y_final;
                 2'd2: avs_readdata = last_fx;
-                2'd3: avs_readdata = last_word;
-                default: avs_readdata = 32'hDEADBEEF;
+                2'd3: avs_readdata = word_count;
+                default: avs_readdata = 32'b0;
             endcase
         end
     end

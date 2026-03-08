@@ -8,6 +8,7 @@ module func_top(
     input  logic [31:0] x,
     output logic [31:0] y,
 	 output logic [31:0] fx_out,
+	 output logic [31:0] last_fx,
     output logic        done
 );
     logic [31:0] fx;
@@ -48,6 +49,7 @@ module func_top(
 				wb_valid[0] <= 0; wb_valid[1] <= 0;
 				wb_sel[0]   <= 0; wb_sel[1]   <= 0;
 				y <= 32'b0;
+				last_fx <= 32'b0;
             current_state <= CALCULATING;
         end
         else if (clk_en) begin
@@ -81,6 +83,7 @@ module func_top(
                     final_acc_1 <= result_acc_1;
                     final_acc_2 <= result_acc_2;
                     final_acc_3 <= result_acc_3;
+						  last_fx <= fx;
                 end
                 if (counter == 0) begin
                     done <= 1'b1;
@@ -95,7 +98,7 @@ module func_top(
         .areset(reset),
         .a     ((acc_sel == 2'd0 && pipeline_valid && clk_en) ? fx : 32'b0),
         .b     (acc_1),
-        .en    (clk_en),
+        .en    (1'b1),
         .result(result_acc_1)
     );
     fp_add fp_acc_2 (
@@ -103,7 +106,7 @@ module func_top(
         .areset(reset),
         .a     ((acc_sel == 2'd1 && pipeline_valid && clk_en) ? fx : 32'b0),
         .b     (acc_2),
-        .en    (clk_en),
+        .en    (1'b1),
         .result(result_acc_2)
     );
     fp_add fp_acc_3 (
@@ -111,7 +114,7 @@ module func_top(
         .areset(reset),
         .a     ((acc_sel == 2'd2 && pipeline_valid && clk_en) ? fx : 32'b0),
         .b     (acc_3),
-        .en    (clk_en),
+        .en    (1'b1),
         .result(result_acc_3)
     );
 
@@ -120,7 +123,7 @@ module func_top(
         .areset(reset),
         .a     (final_acc_1),
         .b     (final_acc_2),
-        .en    (clk_en),
+        .en    (1'b1),
         .result(result_add_1)
     );
     fp_add fp_add_2 (
@@ -128,7 +131,7 @@ module func_top(
         .areset(reset),
         .a     (result_add_1),
         .b     (final_acc_3),
-        .en    (clk_en),
+        .en    (1'b1),
         .result(result_final)
     );
 	 assign fx_out = fx; 

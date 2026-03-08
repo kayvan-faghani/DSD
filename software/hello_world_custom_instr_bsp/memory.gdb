@@ -3,7 +3,7 @@
 # Machine generated for CPU 'cpu' in SOPC Builder design 'first_nios2_system'
 # SOPC Builder design path: C:/DSD/DSD_git/DSD/template/first_nios2_system.sopcinfo
 #
-# Generated: Sat Mar 07 16:57:06 GMT 2026
+# Generated: Sun Mar 08 16:57:38 GMT 2026
 
 # DO NOT MODIFY THIS FILE
 #

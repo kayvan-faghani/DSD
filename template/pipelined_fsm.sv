@@ -20,7 +20,7 @@ module pipelined_fsm(
     logic [31:0] result_fp_mul_1_plus_half;
     logic [31:0] result_fp_mul_2;
 	 
-	 localparam PIPE_DEPTH = `CORDIC_STAGES + 4;
+	 localparam PIPE_DEPTH = `CORDIC_STAGES + 3;
     logic valid_sr [0:PIPE_DEPTH];
     always_ff @(posedge clk) begin
 		  if (reset) begin
@@ -71,20 +71,20 @@ module pipelined_fsm(
     //     .result(result_add)
     // );
 
-	fp_mul fp_mul_squared (
+	fp_mul_real fp_mul_squared (
 		 .clk   (clk),
 		 .areset(reset),
 		 .a     (x),
 		 .b     (x),
-		 .en    (clk_en),
+		 .en    (1'b1),
 		 .result(x_squared)
 	);
-    fp_mul fp_mul_1 (
+    fp_mul_real fp_mul_1 (
         .clk(clk),
         .areset(reset),
         .a(cos_out),
         .b(x_squared_delay[`CORDIC_STAGES-3]),
-        .en(clk_en),
+        .en(1'b1),
         .result(result_fp_mul_1)
     );
 
@@ -93,12 +93,12 @@ module pipelined_fsm(
         .x_plus_half(result_fp_mul_1_plus_half)
     );
 
-    fp_mul fp_mul_2 (
+    fp_mul_real fp_mul_2 (
         .clk(clk),
         .areset(reset),
         .a(result_fp_mul_1_plus_half),
         .b(x_delay[`CORDIC_STAGES+1]),
-        .en(clk_en),
+        .en(1'b1),
         .result(result_fp_mul_2)
     );
 

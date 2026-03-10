@@ -219,7 +219,7 @@ module first_nios2_system (
 	wire          rst_controller_reset_out_reset;                                         // rst_controller:reset_out -> [avalon_st_adapter:in_rst_0_reset, cpu:reset_n, irq_mapper:reset, jtag_uart:rst_n, led_pio:reset_n, mm_interconnect_0:cpu_reset_reset_bridge_in_reset_reset, msgdma_0:reset_n_reset_n, onchip_mem:reset, pipelined_fsm_0:reset, rst_translator:in_reset, sys_clk_timer:reset_n, sysid:reset_n]
 	wire          rst_controller_reset_out_reset_req;                                     // rst_controller:reset_req -> [cpu:reset_req, onchip_mem:reset_req, rst_translator:reset_req_in]
 
-	cordic_top cordic_0 (
+	cordic_top_reg cordic_0 (
 		.angle_in (cpu_custom_instruction_master_multi_slave_translator0_ci_master_dataa),  // nios_custom_instruction_slave_1.dataa
 		.cos_out  (cpu_custom_instruction_master_multi_slave_translator0_ci_master_result), //                                .result
 		.clk      (cpu_custom_instruction_master_multi_slave_translator0_ci_master_clk)     //                                .clk

@@ -16,6 +16,14 @@ module cordic(
 	 23'h000020
 	 };
 	 
+//	 localparam logic [`WORDLENGTH-1:0] atans [0:`CORDIC_STAGES-1] = '{
+//    23'h1921fb, 23'h0ed634, 23'h07D6DD, 23'h03FAB7,
+//    23'h01FF56, 23'h00FFEB, 23'h007FFD, 23'h004000,
+//    23'h002000, 23'h001000, 23'h000800, 23'h000400,
+//    23'h000200, 23'h000100, 23'h000080, 23'h000040,
+//    23'h000020, 23'h000010, 23'h000008, 23'h000004  // ← 3 new stages
+//	};
+
 	 localparam logic [`WORDLENGTH-1:0] k_inv = 23'h136e9e;
 	 
     logic signed [`CORDIC_STAGES:0] [`WORDLENGTH-1:0] x_array;

@@ -5,11 +5,11 @@
  version="1.0"
  fabric="QSYS">
  <!-- Format version 23.1 991 (Future versions may contain additional information.) -->
- <!-- 2026.03.08.16:49:23 -->
+ <!-- 2026.03.10.21:39:37 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1772988562</value>
+  <value>1773178777</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -2212,7 +2212,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="dataSlaveMapParam">
    <type>java.lang.String</type>
-   <value><![CDATA[<address-map><slave name='onchip_mem.s1' start='0x80000' end='0xDF000' type='altera_avalon_onchip_memory2.s1' /><slave name='cpu.debug_mem_slave' start='0x100800' end='0x101000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='sys_clk_timer.s1' start='0x101000' end='0x101020' type='altera_avalon_timer.s1' /><slave name='msgdma_0.csr' start='0x101020' end='0x101040' type='altera_msgdma.csr' /><slave name='pipelined_fsm_0.avalon_slave_0' start='0x101040' end='0x101050' type='pipelined_fsm.avalon_slave_0' /><slave name='led_pio.s1' start='0x101060' end='0x101070' type='altera_avalon_pio.s1' /><slave name='msgdma_0.descriptor_slave' start='0x101070' end='0x101080' type='altera_msgdma.descriptor_slave' /><slave name='sysid.control_slave' start='0x101080' end='0x101088' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart.avalon_jtag_slave' start='0x101088' end='0x101090' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></value>
+   <value><![CDATA[<address-map><slave name='onchip_mem.s1' start='0x80000' end='0xDF000' type='altera_avalon_onchip_memory2.s1' /><slave name='cpu.debug_mem_slave' start='0x100800' end='0x101000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='sys_clk_timer.s1' start='0x101080' end='0x1010A0' type='altera_avalon_timer.s1' /><slave name='msgdma_0.csr' start='0x1010A0' end='0x1010C0' type='altera_msgdma.csr' /><slave name='led_pio.s1' start='0x101140' end='0x101150' type='altera_avalon_pio.s1' /><slave name='msgdma_0.descriptor_slave' start='0x101150' end='0x101160' type='altera_msgdma.descriptor_slave' /><slave name='pipelined_fsm_0.avalon_slave_0' start='0x101160' end='0x101170' type='pipelined_fsm.avalon_slave_0' /><slave name='sysid.control_slave' start='0x101170' end='0x101178' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart.avalon_jtag_slave' start='0x101178' end='0x101180' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -2889,7 +2889,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>jtag_uart</moduleName>
     <slaveName>avalon_jtag_slave</slaveName>
     <name>jtag_uart.avalon_jtag_slave</name>
-    <baseAddress>1052808</baseAddress>
+    <baseAddress>1053048</baseAddress>
     <span>8</span>
    </memoryBlock>
    <memoryBlock>
@@ -2897,7 +2897,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>pipelined_fsm_0</moduleName>
     <slaveName>avalon_slave_0</slaveName>
     <name>pipelined_fsm_0.avalon_slave_0</name>
-    <baseAddress>1052736</baseAddress>
+    <baseAddress>1053024</baseAddress>
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -2905,7 +2905,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>sysid</moduleName>
     <slaveName>control_slave</slaveName>
     <name>sysid.control_slave</name>
-    <baseAddress>1052800</baseAddress>
+    <baseAddress>1053040</baseAddress>
     <span>8</span>
    </memoryBlock>
    <memoryBlock>
@@ -2913,7 +2913,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>msgdma_0</moduleName>
     <slaveName>csr</slaveName>
     <name>msgdma_0.csr</name>
-    <baseAddress>1052704</baseAddress>
+    <baseAddress>1052832</baseAddress>
     <span>32</span>
    </memoryBlock>
    <memoryBlock>
@@ -2929,7 +2929,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>msgdma_0</moduleName>
     <slaveName>descriptor_slave</slaveName>
     <name>msgdma_0.descriptor_slave</name>
-    <baseAddress>1052784</baseAddress>
+    <baseAddress>1053008</baseAddress>
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -2945,7 +2945,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>sys_clk_timer</moduleName>
     <slaveName>s1</slaveName>
     <name>sys_clk_timer.s1</name>
-    <baseAddress>1052672</baseAddress>
+    <baseAddress>1052800</baseAddress>
     <span>32</span>
    </memoryBlock>
    <memoryBlock>
@@ -2953,7 +2953,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>led_pio</moduleName>
     <slaveName>s1</slaveName>
     <name>led_pio.s1</name>
-    <baseAddress>1052768</baseAddress>
+    <baseAddress>1052992</baseAddress>
     <span>16</span>
    </memoryBlock>
   </interface>
@@ -10087,7 +10087,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMESTAMP</name>
-   <value>1772988562</value>
+   <value>1773178777</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.compatible</name>
@@ -10107,7 +10107,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.timestamp</name>
-   <value>1772988562</value>
+   <value>1773178777</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.vendor</name>
@@ -10123,7 +10123,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="timestamp">
    <type>int</type>
-   <value>1772988562</value>
+   <value>1773178777</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -10596,7 +10596,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x00101088</value>
+   <value>0x00101178</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -10647,7 +10647,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x00101040</value>
+   <value>0x00101160</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -10698,7 +10698,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x00101080</value>
+   <value>0x00101170</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -10749,7 +10749,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x00101020</value>
+   <value>0x001010a0</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -10851,7 +10851,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x00101070</value>
+   <value>0x00101150</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -10953,7 +10953,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x00101000</value>
+   <value>0x00101080</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -11004,7 +11004,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x00101060</value>
+   <value>0x00101140</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>

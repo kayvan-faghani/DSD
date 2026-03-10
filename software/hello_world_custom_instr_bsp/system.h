@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'first_nios2_system'
  * SOPC Builder design path: C:/DSD/DSD_git/DSD/template/first_nios2_system.sopcinfo
  *
- * Generated: Sun Mar 08 16:57:38 GMT 2026
+ * Generated: Tue Mar 10 21:54:05 GMT 2026
  */
 
 /*
@@ -187,19 +187,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart"
-#define ALT_STDERR_BASE 0x101088
+#define ALT_STDERR_BASE 0x101178
 #define ALT_STDERR_DEV jtag_uart
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart"
-#define ALT_STDIN_BASE 0x101088
+#define ALT_STDIN_BASE 0x101178
 #define ALT_STDIN_DEV jtag_uart
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart"
-#define ALT_STDOUT_BASE 0x101088
+#define ALT_STDOUT_BASE 0x101178
 #define ALT_STDOUT_DEV jtag_uart
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -226,7 +226,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart altera_avalon_jtag_uart
-#define JTAG_UART_BASE 0x101088
+#define JTAG_UART_BASE 0x101178
 #define JTAG_UART_IRQ 1
 #define JTAG_UART_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_NAME "/dev/jtag_uart"
@@ -244,7 +244,7 @@
  */
 
 #define ALT_MODULE_CLASS_led_pio altera_avalon_pio
-#define LED_PIO_BASE 0x101060
+#define LED_PIO_BASE 0x101140
 #define LED_PIO_BIT_CLEARING_EDGE_REGISTER 0
 #define LED_PIO_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define LED_PIO_CAPTURE 0
@@ -271,7 +271,7 @@
  */
 
 #define ALT_MODULE_CLASS_msgdma_0_csr altera_msgdma
-#define MSGDMA_0_CSR_BASE 0x101020
+#define MSGDMA_0_CSR_BASE 0x1010a0
 #define MSGDMA_0_CSR_BURST_ENABLE 0
 #define MSGDMA_0_CSR_BURST_WRAPPING_SUPPORT 0
 #define MSGDMA_0_CSR_CHANNEL_ENABLE 0
@@ -309,7 +309,7 @@
  */
 
 #define ALT_MODULE_CLASS_msgdma_0_descriptor_slave altera_msgdma
-#define MSGDMA_0_DESCRIPTOR_SLAVE_BASE 0x101070
+#define MSGDMA_0_DESCRIPTOR_SLAVE_BASE 0x101150
 #define MSGDMA_0_DESCRIPTOR_SLAVE_BURST_ENABLE 0
 #define MSGDMA_0_DESCRIPTOR_SLAVE_BURST_WRAPPING_SUPPORT 0
 #define MSGDMA_0_DESCRIPTOR_SLAVE_CHANNEL_ENABLE 0
@@ -376,7 +376,7 @@
  */
 
 #define ALT_MODULE_CLASS_pipelined_fsm_0 pipelined_fsm
-#define PIPELINED_FSM_0_BASE 0x101040
+#define PIPELINED_FSM_0_BASE 0x101160
 #define PIPELINED_FSM_0_IRQ -1
 #define PIPELINED_FSM_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define PIPELINED_FSM_0_NAME "/dev/pipelined_fsm_0"
@@ -391,7 +391,7 @@
 
 #define ALT_MODULE_CLASS_sys_clk_timer altera_avalon_timer
 #define SYS_CLK_TIMER_ALWAYS_RUN 0
-#define SYS_CLK_TIMER_BASE 0x101000
+#define SYS_CLK_TIMER_BASE 0x101080
 #define SYS_CLK_TIMER_COUNTER_SIZE 32
 #define SYS_CLK_TIMER_FIXED_PERIOD 0
 #define SYS_CLK_TIMER_FREQ 50000000
@@ -417,13 +417,13 @@
  */
 
 #define ALT_MODULE_CLASS_sysid altera_avalon_sysid_qsys
-#define SYSID_BASE 0x101080
+#define SYSID_BASE 0x101170
 #define SYSID_ID 0
 #define SYSID_IRQ -1
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1772988562
+#define SYSID_TIMESTAMP 1773178777
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 #endif /* __SYSTEM_H_ */

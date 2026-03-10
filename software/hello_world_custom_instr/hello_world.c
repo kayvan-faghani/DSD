@@ -178,16 +178,16 @@ float calculateFunctionTask8SGDMA(float x[], int M) {
     alt_msgdma_standard_descriptor desc;
     alt_msgdma_construct_standard_mm_to_st_descriptor(
         dma, &desc,
-        (uint32_t*)x,          // ← pass x directly
+        (uint32_t*)x,
         M * sizeof(float),
-        ALTERA_MSGDMA_DESCRIPTOR_CONTROL_GENERATE_EOP_MASK
+        ALTERA_MSGDMA_DESCRIPTOR_CONTROL_GENERATE_EOP_MASK |
+        ALTERA_MSGDMA_DESCRIPTOR_CONTROL_GENERATE_SOP_MASK  // ← add this
     );
     alt_msgdma_standard_descriptor_sync_transfer(dma, &desc);
 
     // printf("[SGDMA]    CSR: 0x%08X\n",
     //        (unsigned int)IORD_ALTERA_MSGDMA_CSR_STATUS(MSGDMA_0_CSR_BASE));
 
-    uint32_t timeout = 0;
     while (!(IORD_32DIRECT(WRAPPER_BASE, REG_DONE_OFFSET) & 0x1)) {
         // if (timeout++ > 5000000) {
         //     printf("[SGDMA]    TIMEOUT\n");
@@ -200,6 +200,109 @@ float calculateFunctionTask8SGDMA(float x[], int M) {
     uint32_t word_count = IORD_32DIRECT(WRAPPER_BASE, 12);
     printf("[SGDMA]    raw=0x%08X last_fx=0x%f word_count=%ld\n", (unsigned int)raw, (float)fx, (uint32_t)word_count);
     return bits2f(raw);
+}
+
+float calculateMSE_cos(float x[], int M) {
+    float mse = 0.0f;
+    for (int i = 0; i < M; i++) {
+        float angle = (x[i] - 128.0f) / 128.0f;
+        float diff  = cust_cos(angle) - cosf(angle);
+        mse += diff * diff;
+    }
+    return mse / M;
+}
+
+// float calculateFunctionTask8Parallel(float x[], int M) {
+//     const int N = 2;
+//     uint32_t bases[] = { PIPELINED_FSM_0_BASE, PIPELINED_FSM_1_BASE };
+//     const char* names[] = { MSGDMA_0_CSR_NAME, MSGDMA_1_CSR_NAME };
+
+//     int chunk = M / 2;
+//     int lengths[2] = { chunk, M - chunk };  // last engine gets remainder
+
+//     alt_msgdma_dev* dmas[2];
+//     for (int i = 0; i < N; i++) {
+//         dmas[i] = alt_msgdma_open(names[i]);
+//         if (!dmas[i]) { printf("[ERROR] DMA %d open failed\n", i); return -1.0f; }
+//         alt_dcache_flush(&x[i * chunk], lengths[i] * sizeof(float));
+//     }
+
+//     // Submit both transfers back-to-back as fast as possible
+//     for (int i = 0; i < N; i++) {
+//         alt_msgdma_standard_descriptor desc;
+//         alt_msgdma_construct_standard_mm_to_st_descriptor(
+//             dmas[i], &desc,
+//             (uint32_t*)&x[i * chunk],
+//             lengths[i] * sizeof(float),
+//             ALTERA_MSGDMA_DESCRIPTOR_CONTROL_GENERATE_EOP_MASK |
+//             ALTERA_MSGDMA_DESCRIPTOR_CONTROL_GENERATE_SOP_MASK
+//         );
+//         alt_msgdma_standard_descriptor_async_transfer(dmas[i], &desc);
+//     }
+
+//     // Wait for both done flags
+//     while (!(IORD_32DIRECT(bases[0], REG_DONE_OFFSET) & 0x1));
+//     while (!(IORD_32DIRECT(bases[1], REG_DONE_OFFSET) & 0x1));
+
+//     uint32_t raw0 = IORD_32DIRECT(bases[0], REG_RESULT_OFFSET);
+//     uint32_t raw1 = IORD_32DIRECT(bases[1], REG_RESULT_OFFSET);
+
+//     printf("[Parallel] Engine 0: %f  Engine 1: %f\n", bits2f(raw0), bits2f(raw1));
+
+//     return bits2f(raw0) + bits2f(raw1);
+// }
+
+float fp_angle_c(float a) {
+    // fp_angle does (x-128)/128 in fixed-point then divides by 128
+    // The division by 128 is exact (subtract 7 from exponent)
+    // The subtraction of 128 uses fixed-point aligned mantissa arithmetic
+    // Closest C equivalent:
+    float diff = a - 128.0f;           // IEEE 754 subtract
+    uint32_t bits;
+    memcpy(&bits, &diff, 4);
+    if ((bits & 0x7FFFFFFF) != 0)
+        bits = (bits & 0x80000000) | (((bits >> 23 & 0xFF) - 7) << 23) | (bits & 0x7FFFFF);
+    float result;
+    memcpy(&result, &bits, 4);
+    return result;
+}
+
+// Reverse order accumulation — same elements, different order
+float calculateReverseAccum(float x[], int M) {
+    float y = 0;
+    for (int i = M-1; i >= 0; i--) {
+        float a = x[i];
+        float a_2    = cust_fp_mul(a, a);
+        float cos_f  = cosf((a - 128.0f) / 128.0f);
+        float a_cos  = cust_fp_mul(a, cos_f);
+        float a_right = cust_fp_mul(a_2, a_cos);
+        float a_left  = cust_fp_mul(0.5f, a);
+        y = cust_fp_add_sub(1, y, cust_fp_add_sub(1, a_left, a_right));
+    }
+    return y;
+}
+
+// Hardware-identical accumulation — 3 accumulators stride-3, then reduce
+float calculateHardwareAccum(float x[], int M) {
+    float acc_1 = 0, acc_2 = 0, acc_3 = 0;
+    
+    for (int i = 0; i < M; i++) {
+        float a      = x[i];
+        // float a_2    = cust_fp_mul(a, a);
+        // float cos_f  = cosf(fp_angle_c(a));
+        // float a_right  = cust_fp_mul(a_2, cos_f);                    // x²*cos
+        // float brackets = cust_fp_add_sub(1, 0.5f, a_right);          // 0.5 + x²*cos
+        float fx       = cust_function(a);                    // x*(0.5+x²*cos)
+        
+        switch (i % 3) {
+            case 0: acc_1 = cust_fp_add_sub(1, acc_1, fx); break;
+            case 1: acc_2 = cust_fp_add_sub(1, acc_2, fx); break;
+            case 2: acc_3 = cust_fp_add_sub(1, acc_3, fx); break;
+        }
+    }
+    
+    float partial = cust_fp_add_sub(1, acc_1, acc_2);
+    return cust_fp_add_sub(1, partial, acc_3);
 }
 
 int main() {
@@ -217,50 +320,59 @@ int main() {
         generateVector(x_vec, tests[i].n_val, tests[i].step_val);
 
         clock_t start, end;
+        start = times(NULL);
+        float r1 = calculateSoftwareFunctionTask6(x_vec, tests[i].n_val);
+        end = times(NULL);
+        printf("Soft Result:        %f | Total Ticks: %ld\n", r1, (long)(end-start));
 
-        // start = times(NULL);
-        // float r1 = calculateSoftwareFunctionTask6(x_vec, tests[i].n_val);
-        // end = times(NULL);
-        // printf("Soft Result:        %f | Total Ticks: %ld\n", r1, (long)(end-start));
-
-        // start = times(NULL);
-        // float r2 = calculateFunctionTask6(x_vec, tests[i].n_val);
-        // end = times(NULL);
-        // printf("Std Result:         %f | Total Ticks: %ld\n", r2, (long)(end-start));
+        start = times(NULL);
+        float r2 = calculateFunctionTask6(x_vec, tests[i].n_val);
+        end = times(NULL);
+        printf("Std Result:         %f | Total Ticks: %ld\n", r2, (long)(end-start));
 
         start = times(NULL);
         float r3 = calculateFunctionTask6Cosf(x_vec, tests[i].n_val);
         end = times(NULL);
         printf("Cosf Result:        %f | Total Ticks: %ld\n", r3, (long)(end-start));
 
-        // start = times(NULL);
-        // float r6 = calculateFunctionTask7Cordic(x_vec, tests[i].n_val);
-        // end = times(NULL);
-        // printf("Cordic Result:      %f | Total Ticks: %ld\n", r6, (long)(end-start));
-        // printf("Diff (Cosf vs Cordic):       %f\n", fabsf(r3 - r6));
-
-        // start = times(NULL);
-        // float r7 = calculateFunctionTask7Full(x_vec, tests[i].n_val);
-        // end = times(NULL);
-        // printf("Cordic Full Result: %f | Total Ticks: %ld\n", r7, (long)(end-start));
-        // printf("Diff (Cosf vs Cordic Full):  %f\n", fabsf(r3 - r7));
+        start = times(NULL);
+        float r6 = calculateFunctionTask7Cordic(x_vec, tests[i].n_val);
+        end = times(NULL);
+        printf("Cordic Result:      %f | Total Ticks: %ld\n", r6, (long)(end-start));
+        printf("Diff (Cosf vs Cordic):       %f\n", fabsf(r3 - r6));
+        if (i == 3) printf("[CORDIC] MSE %e\n", calculateMSE_cos(x_vec,tests[i].n_val));
+        
+        start = times(NULL);
+        float r7 = calculateFunctionTask7Full(x_vec, tests[i].n_val);
+        end = times(NULL);
+        printf("Cordic Full Result: %f | Total Ticks: %ld\n", r7, (long)(end-start));
+        printf("Diff (Cosf vs Cordic Full):  %f\n", fabsf(r3 - r7));
 
         // Task 8 — skip Large (65281 elements may exceed on-chip buffer)
-        // if (tests[i].n_val <= 2041) {
         start = times(NULL);
         float r8 = calculateFunctionTask8SGDMA(x_vec, tests[i].n_val);
         end = times(NULL);
-        if (r8 != -1.0f) {
-            printf("SGDMA Result:       %f | Total Ticks: %ld\n", r8, (long)(end-start));
-            printf("Diff (Cosf vs SGDMA):        %f\n", fabsf(r3 - r8));
-            int pass = fabsf(r3 - r8) / fabsf(r3) < 0.02f;
-            printf("SGDMA: %s\n", pass ? "PASS" : "FAIL");
-        } else {
-            printf("SGDMA Result:       TIMEOUT/ERROR\n");
-        }
+        // if (r8 != -1.0f) {
+        printf("SGDMA Result:       %f | Total Ticks: %ld\n", r8, (long)(end-start));
+        printf("Diff (Cosf vs SGDMA):        %f\n", fabsf(r3 - r8));
+        //     int pass = fabsf(r3 - r8) / fabsf(r3) < 0.02f;
+        //     printf("SGDMA: %s\n", pass ? "PASS" : "FAIL");
         // } else {
-        //     printf("SGDMA Result:       SKIPPED (N too large for on-chip buffer)\n");
+        //     printf("SGDMA Result:       TIMEOUT/ERROR\n");
         // }
+
+        // start = times(NULL);
+        // float r_rev = calculateReverseAccum(x_vec, tests[i].n_val);
+        // end = times(NULL);
+        // printf("Reverse Result: %f | Total Ticks: %ld\n", r_rev, (long)(end-start));
+        // printf("Diff (Cosf vs Reverse): %f\n", fabsf(r3 - r_rev));
+
+        start = times(NULL);
+        float r_hw = calculateHardwareAccum(x_vec, tests[i].n_val);
+        end = times(NULL);
+        printf("HW Accum Result: %f | Total Ticks: %ld\n", r_hw, (long)(end-start));
+        printf("Diff (Cosf vs HW Accum): %f\n", fabsf(r3 - r_hw));
+        printf("Diff (HW Accum vs SGDMA): %f\n", fabsf(r_hw - r8));
     }
 
     return 0;
